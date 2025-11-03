@@ -12,7 +12,7 @@ services:
     hostname: publish
     container_name: publish
     ports:
-      - "6778:6778"
+      - "6779:6779"
     volumes:
       - ./:/data
     command: ["/bin/bash", "/data/publish.sh"]

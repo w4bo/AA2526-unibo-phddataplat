@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="270.74692mm"
+   height="144.71881mm"
+   viewBox="0 0 270.74692 144.71881"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.2 (ebf0e94, 2025-05-08)"
+   sodipodi:docname="svg1.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="1.6168981"
+     inkscape:cx="423.03221"
+     inkscape:cy="17.007874"
+     inkscape:window-width="3840"
+     inkscape:window-height="2054"
+     inkscape:window-x="2869"
+     inkscape:window-y="-11"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1">
+    <clipPath
+       id="clip0">
+      <rect
+         x="386"
+         y="353"
+         width="1062"
+         height="593"
+         id="rect1" />
+    </clipPath>
+  </defs>
+  <g
+     inkscape:label="Livello 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(6.8568047,-170.25937)">
+    <g
+       clip-path="url(#clip0)"
+       transform="matrix(0.26458333,0,0,0.26458333,-115.8875,73.554166)"
+       id="g12">
+      <path
+         d="m 600.5,845 h 824.88 v 3 H 600.5 Z m 822.88,-4.5 12,6 -12,6 z"
+         fill="#44546a"
+         id="path1" />
+      <path
+         d="M 1.5,-4.91359e-7 1.50015,470.75 h -3 L -1.5,4.91359e-7 Z M 6.00015,468.749 l -5.99999252,12 -6.00000748,-12 z"
+         fill="#44546a"
+         transform="matrix(1,0,0,-1,600.5,846.249)"
+         id="path2" />
+      <rect
+         x="600"
+         y="417"
+         width="705"
+         height="429"
+         stroke="#2f528f"
+         stroke-width="2"
+         stroke-miterlimit="8"
+         fill="#4472c4"
+         id="rect2" />
+      <rect
+         x="600"
+         y="542"
+         width="330"
+         height="304"
+         stroke="#ae5a21"
+         stroke-width="2"
+         stroke-miterlimit="8"
+         fill="#ed7d31"
+         id="rect3" />
+      <text
+         fill="#ffffff"
+         font-family="Arial, Arial_MSFontService, sans-serif"
+         font-weight="400"
+         font-size="36px"
+         transform="translate(707.286,664)"
+         id="text12">Normal<tspan
+   font-size="36px"
+   x="-29"
+   y="43"
+   id="tspan3">processing</tspan><tspan
+   font-size="36px"
+   x="-17"
+   y="86"
+   id="tspan4">capability</tspan><tspan
+   fill="#000000"
+   font-size="40px"
+   x="-296.55499"
+   y="-62"
+   id="tspan5">IOPS</tspan><tspan
+   fill="#000000"
+   font-size="28px"
+   x="-296.55499"
+   y="-26"
+   id="tspan6">(</tspan><tspan
+   fill="#000000"
+   font-size="28px"
+   x="-287.30499"
+   y="-26"
+   id="tspan7">Input/Output</tspan><tspan
+   fill="#000000"
+   font-size="28px"
+   x="-296.55499"
+   y="8"
+   id="tspan8">Operations</tspan><tspan
+   fill="#000000"
+   font-size="28px"
+   x="-296.55499"
+   y="41"
+   id="tspan9">Per Second)</tspan><tspan
+   font-size="72px"
+   x="336.49899"
+   y="-69"
+   id="tspan10">BIG</tspan><tspan
+   font-size="72px"
+   x="307.83899"
+   y="17"
+   id="tspan11">DATA</tspan><tspan
+   fill="#000000"
+   font-size="40px"
+   x="224.064"
+   y="248"
+   id="tspan12">Data volume</tspan></text>
+    </g>
+  </g>
+</svg>
