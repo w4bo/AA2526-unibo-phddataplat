@@ -1,0 +1,4298 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="slides1_files/libs/quarto-html/tabby.min.js"></script>
+<script src="slides1_files/libs/quarto-html/popper.min.js"></script>
+<script src="slides1_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="slides1_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="slides1_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="slides1_files/libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.6.40">
+
+  <meta name="author" content="Matteo Francia   DISI — University of Bologna   m.francia@unibo.it">
+  <title>Data Platforms and Artificial Intelligence</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="slides1_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="slides1_files/libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="slides1_files/libs/revealjs/dist/theme/quarto-6391498a111a1f00b0d941bda0c7e264.css">
+  <link href="slides1_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="slides1_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="slides1_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="slides1_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">Data Platforms and Artificial Intelligence</h1>
+  <p class="subtitle">Challenges and Applications</p>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Matteo Francia <br> DISI — University of Bologna <br> m.francia@unibo.it 
+</div>
+</div>
+</div>
+
+</section>
+<section id="data-platforms" class="title-slide slide level1 center">
+<h1>Data Platforms</h1>
+
+</section>
+
+<section id="data-platform" class="title-slide slide level1 center">
+<h1>Data platform</h1>
+<ul>
+<li>Data platform
+<ul>
+<li>An **** such as acquisition, storage, preparation, delivery, and governance, as well as a security layer for users and applications</li>
+<li>Rationale: relieve users from complexity of administration and provision
+<ul>
+<li>Not only technological skills, but also privacy, access control, etc.</li>
+<li>Users should only focus on functional aspects</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+
+<section id="nists-reference" class="title-slide slide level1 center">
+<h1>NIST’s reference</h1>
+<p>National Institute of Standards and Technology</p>
+<p><a href="https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.1500-6r2.pdf">https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.1500-6r2.pdf</a></p>
+</section>
+
+<section id="section" class="title-slide slide level1 center">
+<h1></h1>
+<p>Riferimento concettuale per le progettazione di un’architettura</p>
+</section>
+
+<section id="data-platform-1" class="title-slide slide level1 center">
+<h1>Data platform</h1>
+<ul>
+<li>We have services
+<ul>
+<li>To transform data</li>
+<li>To support the transformation</li>
+</ul></li>
+<li>The (DIKW) pyramid abstracts many techniques and algorithms
+<ul>
+<li>Standardization</li>
+<li>Integration</li>
+<li>Orchestration</li>
+<li>Accessibility through APIs</li>
+</ul></li>
+</ul>
+<p><strong>Supporting services</strong></p>
+<p><strong>Serve (deciding/consume)</strong></p>
+<p><strong>BI tools (e.g., Tableau)</strong></p>
+<p><strong>Analytics (analyzing/process)</strong></p>
+<p><strong>Networking, etc.</strong></p>
+<p><strong>Machine learning</strong></p>
+<p><strong>Ingestion (acquiring/collect)</strong></p>
+<ul>
+<li>Companies are collecting tons of data to enable advanced analytics
+<ul>
+<li>Raw data is difficult to obtain, interpret, and maintain</li>
+<li>Data is more and more heterogeneous</li>
+<li>There is need for curating data to make it <strong>consumable</strong></li>
+</ul></li>
+<li>Where are we <strong>processing</strong> data?
+<ul>
+<li>Getting <strong>storage</strong></li>
+<li>Need integrated and multilevel analytical skills and techniques</li>
+</ul></li>
+<li>Database
+<ul>
+<li><em>“A database is a </em> <strong><em>abstract data model</em></strong> <em>. Primarily, it is this structure that differentiates a database from a data file.”</em></li>
+</ul></li>
+</ul>
+<p>Relational</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: center;">fk1</th>
+<th style="text-align: center;"><em>pk</em></th>
+<th style="text-align: center;">fk2</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: center;"><em>pk</em></th>
+<th style="text-align: center;"></th>
+<th style="text-align: center;"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: center;"><em>pk</em></th>
+<th style="text-align: center;"></th>
+<th style="text-align: center;"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<p>Özsu M.T. (2018) Database. In: Encyclopedia of Database Systems. Springer, New York, NY. <a href="https://doi.org/10.1007/978-1-4614-8265-9_80734">https://doi.org/10.1007/978-1-4614-8265-9_80734</a></p>
+</section>
+
+<section id="ict-in-companies" class="title-slide slide level1 center">
+<h1>ICT in companies</h1>
+<p>Up to some years ago, the main goal of databases in companies has been that of storing <strong>operational data</strong> , i.e., data generated by operations carried out within business processes</p>
+<p>Computer science was seen as a <strong>subsidiary discipline</strong> that makes information management faster and cheaper, but does not create profits in itself</p>
+</section>
+
+<section id="the-evolution-of-information-systems" class="title-slide slide level1 center">
+<h1>The evolution of information systems</h1>
+<p><strong>capable of deeply impacting on the structure of business processes</strong></p>
+<p><strong>The twofold role</strong></p>
+<p><strong>of computer science</strong></p>
+<p><strong>Auxiliary technology to manage the company information system</strong></p>
+<p><strong>Organizational discipline that impacts on business processes, services, and company structure</strong></p>
+</section>
+
+<section id="the-new-role-of-computer-science-in-decision-making" class="title-slide slide level1 center">
+<h1>The new role of computer science in decision making</h1>
+<p>An <strong>exponential increase</strong> in operational data has made computers the only tools suitable for providing data for decision-making performed by business managers</p>
+<p>The massive use of techniques for analyzing enterprise data made information systems a <strong>key factor to achieve business goals</strong></p>
+</section>
+
+<section id="big-data-vs-small-data" class="title-slide slide level1 center">
+<h1>Big data vs small data</h1>
+<ul>
+<li>The progressive digitalization of services and systems generates an enormous mass of heterogeneous and real-time data</li>
+<li>Big Data must be transformed into Small Data so that it can be exploited for decision-making purposes</li>
+<li>Small data is data that is ‘small’ enough for human comprehension. It is data in a volume and format that makes it accessible, informative and actionable.</li>
+<li>To manage the transformation, we need:
+<ul>
+<li>Ad hoc Technology (e.g., NO SQL DBMS)</li>
+<li>Computing power (e.g., <strong>cloud &amp; cluster computing</strong> )</li>
+<li>Automated systems (e.g., <strong>artificial intelligence</strong> )</li>
+<li>Digital culture</li>
+<li>The right processes (i.e., digital ready processes)</li>
+</ul></li>
+</ul>
+
+<img data-src="img/phdslides_72.jpg" class="r-stretch"></section>
+
+<section id="a-typical-scenario" class="title-slide slide level1 center">
+<h1>A typical scenario…</h1>
+<p>… is that of a large company, with several branches, whose managers wish to quantify and evaluate the contribution given from each branch to the global profit</p>
+<p><em>a repository of information that collects and integrates data coming from different, heterogeneous sources making them available for analyses aimed at planning and decision making</em></p>
+<p>… is that of a large company, with several branches, whose managers wish to quantify and evaluate the contribution given from each branch to the global profit</p>
+</section>
+
+<section id="data-platform-2" class="title-slide slide level1 center">
+<h1>Data platform</h1>
+<p>Relational</p>
+<ul>
+<li>Data Warehouse
+<ul>
+<li><em>“A collection of data that supports decision-making processes. It provides the following features: subject-oriented, integrated and consistent, not volatile.”</em></li>
+</ul></li>
+</ul>
+<p>Operational (relational)databases</p>
+<p>Matteo Golfarelli and Stefano Rizzi. <em>Data warehouse design: Modern principles and methodologies</em> . McGraw-Hill, Inc., 2009.</p>
+</section>
+
+<section id="the-data-warehouse" class="title-slide slide level1 center">
+<h1>The Data Warehouse</h1>
+<ul>
+<li>In the middle of this process, a data warehouse is a data repository that fulfills the requirements</li>
+<li>A data warehouse is a collection of data that supports decision-making processes. It provides the following features:
+<ul>
+<li>It is subject-oriented;</li>
+<li>It is integrated and consistent;</li>
+<li>It shows its evolution over time and it is not volatile</li>
+</ul></li>
+</ul>
+</section>
+
+<section id="data-platform-dwh" class="title-slide slide level1 center">
+<h1>Data platform: DWH</h1>
+<ul>
+<li>Reduce stress on operational systems</li>
+<li>Integrate data sources</li>
+<li>No IT involvement to create reports</li>
+<li>One version of the truth</li>
+<li>Make better business decisions</li>
+</ul>
+<p>ticket</p>
+<p>computation</p>
+<p><em>operational</em></p>
+<p><em>database </em></p>
+<p>_ application-oriented_</p>
+<p><strong>subject-oriented</strong></p>
+</section>
+
+<section id="subject-oriented" class="title-slide slide level1 center">
+<h1>…subject-oriented</h1>
+
+</section>
+
+<section id="integrated-andconsistent" class="title-slide slide level1 center">
+<h1>…integrated andconsistent</h1>
+<p>Operational and</p>
+<p>external data</p>
+<p><img data-src="img/phdslides_75.png"></p>
+<p>Data warehouses take advantage of multiple data sources, such as data extracted from production and then stored to enterprise databases, or even data from a third party’s information systems. A data warehouse should provide a unified view of all the data.</p>
+<p><img data-src="img/phdslides_76.png"></p>
+<p><img data-src="img/phdslides_77.png"></p>
+<p><img data-src="img/phdslides_78.png"></p>
+<p><img data-src="img/phdslides_79.png"></p>
+<p><img data-src="img/phdslides_80.png"></p>
+</section>
+
+<section id="shows-its-temporal-evolution" class="title-slide slide level1 center">
+<h1>…shows its temporal evolution</h1>
+<p><img data-src="img/phdslides_81.png"></p>
+<p><img data-src="img/phdslides_82.png"></p>
+<p>Limited historical content,</p>
+<p>time is often not part of the</p>
+<p>keys, data are updated</p>
+<p>Rich historical content,</p>
+<p>time is part of the keys,</p>
+<p>a snapshot of data taken at a</p>
+<p>given time cannot be updated</p>
+</section>
+
+<section id="non-volatile" class="title-slide slide level1 center">
+<h1>…non volatile</h1>
+<ul>
+<li>no need for advanced transaction management techniques required by operational applications</li>
+<li>key problems are query-throughput and resilience</li>
+</ul>
+<p>Huge data volumes:</p>
+<p>from 50 GBs to some TBs</p>
+<p>in a few years</p>
+</section>
+
+<section id="two-layer-architectures" class="title-slide slide level1 center">
+<h1>Two-layer architectures</h1>
+<p>Operational data</p>
+<p>External data</p>
+<p>DATA MART:</p>
+<p>A subset or an aggregation of the data stored to a primary data warehouse. It includes a set of information pieces relevant to a specific business area, corporate department, or category of users.</p>
+<p>Data Warehouse</p>
+<p><strong><em>Data warehouse</em></strong></p>
+<p><strong><em>layer</em></strong></p>
+<p>Reporting tools</p>
+<p>What-if analysis</p>
+<p>tools</p>
+<p>Data mining</p>
+<p>tools</p>
+</section>
+
+<section id="the-multidimensional-model" class="title-slide slide level1 center">
+<h1>The multidimensional model</h1>
+<ul>
+<li>It is the key for representing and querying information in a DW</li>
+<li>**** where:
+<ul>
+<li>each cell stores numerical <strong><em>measures</em></strong> that quantify the fact from different points of view;</li>
+<li>each axis is a <strong><em>dimension</em></strong> for analyzing measure values;</li>
+<li>each dimension can be the root of a <strong><em>hierarchy</em></strong> of attributes used to aggregated measure values</li>
+</ul></li>
+</ul>
+</section>
+
+<section id="the-sales-cube" class="title-slide slide level1 center">
+<h1>The Sales cube</h1>
+
+</section>
+
+<section id="olap-operators" class="title-slide slide level1 center">
+<h1>OLAP operators</h1>
+
+</section>
+
+<section id="the-dimensional-fact-model" class="title-slide slide level1 center">
+<h1>The Dimensional Fact Model</h1>
+<ul>
+<li>The DFM is a graphical conceptual model for data mart design, devised to:
+<ul>
+<li>lend effective support to conceptual design</li>
+<li>create an environment in which user queries may be formulated intuitively</li>
+<li>make communication possible between designers and end users with the goal of formalizing requirement specifications</li>
+<li>build a stable platform for logical design ( <em>independently of the target logical model</em> )</li>
+<li>provide clear and expressive design documentation</li>
+</ul></li>
+<li>The conceptual representation generated by the DFM consists of a set of <strong><em>fact schemata</em></strong> that basically model facts, measures, dimensions, and hierarchies</li>
+</ul>
+</section>
+
+<section id="dfm-basic-concepts" class="title-slide slide level1 center">
+<h1>DFM: basic concepts</h1>
+<p>A <strong>fact</strong> is a concept relevant to decision-making processes. It typically models a set of events taking place within a company (e.g., sales, shipments, purchases, …). It is essential that a fact have dynamic properties or evolve in some way over time</p>
+<p>A <strong>measure</strong> is a numerical property of a fact and describes a quantitative fact aspect that is relevant to analysis (e.g., every sale is quantified by its receipts)</p>
+<p>A <strong>dimension</strong> is a fact property with a finite domain and describes an analysis coordinate of the fact. Typical dimensions for the sales fact are products, stores, and dates</p>
+<p><img data-src="img/phdslides_83.png"></p>
+<p><strong>A fact expresses a many-to-many relationship between its dimensions</strong></p>
+<p><em>Dimensional</em> _ _ <em>attribute</em> _ (_ <em>level</em> <em>)</em></p>
+<p>The general term <strong>dimensional attributes</strong> stands for the dimensions and other possible attributes, always with discrete values, that describe them (e.g., a product is described by its type, by the category to which it belongs, by its brand, and by the department in which it is sold)</p>
+<p>A <strong>hierarchy</strong> is a directed tree whose nodes are dimensional attributes and whose arcs model many-to-one associations between dimensional attribute pairs. It includes a dimension, positioned at the tree’s root, and all of the dimensional attributes that describe it</p>
+<p><img data-src="img/phdslides_84.jpg"></p>
+</section>
+
+<section id="dfm-vs.-erm" class="title-slide slide level1 center">
+<h1>DFM vs.&nbsp;ERM</h1>
+
+<img data-src="img/phdslides_85.png" class="r-stretch"></section>
+
+<section id="summarizing" class="title-slide slide level1 center">
+<h1>Summarizing</h1>
+
+</section>
+
+<section id="data-platform-oltp-vs-olap" class="title-slide slide level1 center">
+<h1>Data platform: OLTP vs OLAP</h1>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;"><strong><strong>OLAP</strong></strong></th>
+<th style="text-align: center;"></th>
+<th style="text-align: center;"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><strong>Nature</strong></td>
+<td style="text-align: center;">Constant transactions (queries/updates)</td>
+<td style="text-align: center;">Periodic large updates, complex queries</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>Examples</strong></td>
+<td style="text-align: center;">Accounting database, online retail transactions</td>
+<td style="text-align: center;">Reporting, decision support</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><strong>Type</strong></td>
+<td style="text-align: center;">Operational data</td>
+<td style="text-align: center;">Consolidated data</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>Data retention</strong></td>
+<td style="text-align: center;"><strong>Long-term (2-5 years)</strong></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><strong>Storage</strong></td>
+<td style="text-align: center;"><strong>Terabytes (TB) / Petabytes (PB)</strong></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>Users</strong></td>
+<td style="text-align: center;">Many</td>
+<td style="text-align: center;">Few</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><strong>Protection</strong></td>
+<td style="text-align: center;">Robust, constant data protection and fault tolerance</td>
+<td style="text-align: center;">Periodic protection</td>
+</tr>
+</tbody>
+</table>
+<p>From RELATIONAL to SCHEMALESS</p>
+</section>
+
+<section id="data-platform-3" class="title-slide slide level1 center">
+<h1>Data platform</h1>
+<p>Relational</p>
+<p>NoSQL(Non relational)</p>
+<p>[{</p>
+<p>“_id”: 1,</p>
+<p>“firstname”: “Alice”</p>
+<p>}, {</p>
+<p>“_id”: 2,</p>
+<p>“name”: “Bob”</p>
+<p>}]</p>
+<p>[</p>
+<p>(“k1”, “v1),</p>
+<p>(“k2”, “v2)</p>
+<p>]</p>
+<p>Operational (relational)databases</p>
+<ul>
+<li>Data lake
+<ul>
+<li>Couto et al.: <em>“A DL is a </em> <strong><em>store a varied amount of formats </em></strong> <em>in big data ecosystems, from unstructured, semi-structured, to structured data sources”</em></li>
+</ul></li>
+</ul>
+<p><img data-src="img/phdslides_86.jpg"></p>
+<p>Couto, Julia, et al.&nbsp;“A Mapping Study about Data Lakes: An Improved Definition and Possible Architectures.” <em>SEKE</em> . 2019.<a href="https://dunnsolutions.com/business-analytics/big-data-analytics/data-lake-consulting">https://dunnsolutions.com/business-analytics/big-data-analytics/data-lake-consulting</a></p>
+<p>Relational</p>
+<p>NoSQL (Non relational)</p>
+<p>Storage of Raw Data</p>
+<p>[{</p>
+<p>“_id”: 1,</p>
+<p>“firstname”: “Alice”</p>
+<p>}, {</p>
+<p>“_id”: 2,</p>
+<p>“name”: “Bob”</p>
+<p>}]</p>
+<p>[</p>
+<p>(“k1”, “v1),</p>
+<p>(“k2”, “v2)</p>
+<p>]</p>
+<p><img data-src="img/phdslides_87.png"></p>
+<p>Operational (relational)databases</p>
+<p><img data-src="img/phdslides_88.png"></p>
+<p><img data-src="img/phdslides_89.png"></p>
+<p><img data-src="img/phdslides_90.png"></p>
+</section>
+
+<section id="data-lake" class="title-slide slide level1 center">
+<h1>Data lake</h1>
+<ul>
+<li>” <em>If you think of a </em> <em>datamart</em> _ as a store of bottled water – cleansed and packaged and structured for easy consumption – the data lake is a large body of water in a more natural state._ ”
+<ul>
+<li><a href="https://jamesdixon.wordpress.com/2010/10/14/pentaho-hadoop-and-data-lakes/">James Dixon</a>, 2010</li>
+</ul></li>
+<li>” <em>A large storage system for raw, heterogeneous data, fed by multiple data sources, and that allows users to explore, extract and analyze the data.</em> ”
+<ul>
+<li>Sawadogo, P., Darmont, J. <strong>On data lake architectures and metadata management</strong> . <em>J </em> <em>Intell</em> _ Inf Syst_ 56, 97–120 (2021)</li>
+</ul></li>
+<li>” <em>A data lake is a central location that holds a large amount of data in its native, raw format.”</em>
+<ul>
+<li><a href="https://databricks.com/discover/data-lakes/introduction">Databricks</a>, 2021 #</li>
+</ul></li>
+</ul>
+<p>Data lakes were developed in response to the limitations of data warehouses. While data warehouses provide businesses with highly performant and scalable analytics, they are expensive, proprietary and can’t handle the modern use cases most companies are looking to address. Data lakes are often used to consolidate all of an organization’s data in a single, central location, where it can be saved “as is,” without the need to impose a schema (i.e.&nbsp;a formal structure for how the data is organized) up front like a data warehouse does. Data in all stages of the refinement process can be stored in a data lake: raw data can be ingested and stored right alongside an organization’s structured, tabular data sources (like database tables), as well as intermediate data tables generated in the process of refining raw data. Unlike most databases and data warehouses, data lakes can process all data types — including unstructured and semi-structured data like images, video, audio and documents — which are critical for today’s machine learning and advanced analytics use cases.</p>
+<ul>
+<li>The data lake started with the Apache Hadoop movement, using the Hadoop File System (HDFS) for cheap storage
+<ul>
+<li><em>Schema-on-read</em> architecture</li>
+<li>Agility of storing any data at low cost</li>
+<li>Eludes the problems of quality and governance</li>
+</ul></li>
+<li>A two-tier data lake + warehouse architecture is dominant in the industry
+<ul>
+<li>HDFS replaced by cloud data lakes (e.g., S3, ADLS, GCS)</li>
+<li>Data lake data directly accessible to a wide range of analytics engines</li>
+<li>A subset of data is “ETL-ed” to a data warehouse for important decision support and BI apps</li>
+</ul></li>
+</ul>
+<p>Armbrust, M., Ghodsi, A., Xin, R., &amp; Zaharia, M. (2021). <strong>Lakehouse: A New Generation of Open Platforms that Unify Data Warehousing and Advanced Analytics</strong> . <em>CIDR</em> .</p>
+<ul>
+<li>Downsides of data lakes
+<ul>
+<li>Security
+<ul>
+<li>All the data is stored and managed as files</li>
+<li>No fine-grained access control on the contents of files, but only coarse-grained access governing who can access what files or directories</li>
+</ul></li>
+<li>Quality
+<ul>
+<li>Hard to prevent data corruption and manage schema changes</li>
+<li>Challenging to ensure atomic operations when writing a group of files</li>
+<li>No roll-back mechanism</li>
+</ul></li>
+<li>Query performance
+<ul>
+<li>Formats are not optimized for fast access</li>
+</ul></li>
+</ul></li>
+<li>It is often said that the <em>lake</em> easily turns into a <em>swamp</em></li>
+</ul>
+</section>
+
+<section id="data-platform-dwh-vs-data-lake" class="title-slide slide level1 center">
+<h1>Data platform: DWH vs Data Lake</h1>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;"><strong><strong>Data lake</strong></strong></th>
+<th style="text-align: center;"></th>
+<th style="text-align: center;"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><strong>Data</strong></td>
+<td style="text-align: center;"><strong>Non-relational and relational</strong></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>Schema</strong></td>
+<td style="text-align: center;">Designed prior to implementation <strong>(schema-on-read)</strong></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><strong>Price/</strong> <strong>performance</strong></td>
+<td style="text-align: center;">Fastest query results using higher cost storage</td>
+<td style="text-align: center;">Query results getting faster using&nbsp;low-cost storage</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>Data quality</strong></td>
+<td style="text-align: center;"><strong>Any data</strong> , which may or may not be curated (e.g., raw data)</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><strong>Users</strong></td>
+<td style="text-align: center;"><strong>Data scientists</strong> , data developers, and business analysts (using curated data)</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>Analytics</strong></td>
+<td style="text-align: center;"><strong>Machine learning</strong> , predictive analytics, data discovery, and profiling.</td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<section id="data-platform-4" class="title-slide slide level1 center">
+<h1>Data platform</h1>
+<ul>
+<li>Data lakes have increasingly taken the role of data hubs
+<ul>
+<li>Eliminate up-front costs of ingestion and ETL since data are stored in original format</li>
+<li>Once in DL, data are available for analysis by everyone in the organization</li>
+</ul></li>
+<li>Drawing a sharp line been storage/computation/analysis is hard
+<ul>
+<li>Is a database just storage?</li>
+<li>What about SQL/OLAP?</li>
+</ul></li>
+<li>Blurring of the architectural borderlines
+<ul>
+<li>DL is often replaced by “data platform” or “data ecosystem”</li>
+<li>Encompass systems supporting data-intensive storage, computation, analysis</li>
+</ul></li>
+</ul>
+</section>
+
+<section id="example-of-data-platform-hadoop-based" class="title-slide slide level1 center">
+<h1>Example of data platform: Hadoop-based</h1>
+<ul>
+<li>A data platform on the Hadoop stack requires several tools</li>
+<li>How many levels of complexity are hidden here?</li>
+<li>How do you provision it?
+<ul>
+<li>Manual provisioning on-premises</li>
+<li>Semi-automatic provisioning on-premises</li>
+<li>Automatic provisioning in the cloud</li>
+</ul></li>
+</ul>
+<p>Storage .</p>
+<p>Resources .</p>
+<p>Application .</p>
+<p>GUI .</p>
+<p>Messaging .</p>
+<p>Orchestration .</p>
+<p>Map Reduce</p>
+<p>Batch</p>
+<p>Flink</p>
+<p>real-time</p>
+</section>
+
+<section id="data-lakehouse" class="title-slide slide level1 center">
+<h1>Data Lakehouse</h1>
+<ul>
+<li>Data warehouse architecture as we know today will replaced by a new</li>
+<li>architectural pattern, the Lakehouse
+<ul>
+<li>Based on open direct-access data formats, such as Apache Parquet</li>
+<li>Have first-class support for machine learning and data science</li>
+<li>Offer state-of-the-art performance</li>
+</ul></li>
+<li>Old architectures typically coupled compute and storage into an on-premises appliance
+<ul>
+<li>This forced enterprises to provision and pay for the peak of user load and data under management
+<ul>
+<li>Very costly as datasets grew</li>
+</ul></li>
+<li>More and more datasets were completely unstructured, e.g., video, audio, and text documents, which data warehouses could not store and query at all</li>
+</ul></li>
+</ul>
+<p><img data-src="img/phdslides_91.png"></p>
+<p>Data Fabric and Data Mesh Approaches with AI (<a href="https://doi.org/10.1007/978-1-4842-9253-2">https://doi.org/10.1007/978-1-4842-9253-2</a>)</p>
+<p><img data-src="img/phdslides_92.png"></p>
+<ul>
+<li>Data warehouse architecture as we know today will replaced by a new</li>
+<li>architectural pattern, the Lakehouse</li>
+<li>The data lakehouse enables storing all your data once in a data lake and efficiently doing AI and BI on that data directly at a massive scale
+<ul>
+<li>ACID transaction support</li>
+<li>Schema enforcement</li>
+<li>Data governance
+<ul>
+<li>All processes ensuring that data meet high quality standards throughout the whole lifecycles</li>
+<li>Including availability, usability, consistency, integrity, security</li>
+</ul></li>
+<li>Support for diverse workloads (e.g., data science, ML, SQL, analytics)</li>
+</ul></li>
+</ul>
+<p><a href="https://databricks.com/blog/2020/01/30/what-is-a-data-lakehouse.html">https://databricks.com/blog/2020/01/30/what-is-a-data-lakehouse.html</a></p>
+</section>
+
+<section id="section-1" class="title-slide slide level1 center">
+<h1></h1>
+<p>http://cidrdb.org/cidr2021/papers/cidr2021_paper17.pdf Data lakes were developed in response to the limitations of data warehouses. While data warehouses provide businesses with highly performant and scalable analytics, they are expensive, proprietary and can’t handle the modern use cases most companies are looking to address. Data lakes are often used to consolidate all of an organization’s data in a single, central location, where it can be saved “as is,” without the need to impose a schema (i.e.&nbsp;a formal structure for how the data is organized) up front like a data warehouse does. Data in all stages of the refinement process can be stored in a data lake: raw data can be ingested and stored right alongside an organization’s structured, tabular data sources (like database tables), as well as intermediate data tables generated in the process of refining raw data. Unlike most databases and data warehouses, data lakes can process all data types — including unstructured and semi-structured data like images, video, audio and documents — which are critical for today’s machine learning and advanced analytics use cases.</p>
+<ul>
+<li>Combine the key benefits of data lakes and data warehouses:
+<ul>
+<li>Low-cost storage in an open format accessible by a variety of systems from the former</li>
+<li>Powerful management and optimization features from the latter
+<ul>
+<li>ACID transactions, data versioning, auditing, indexing, caching, and query optimization.</li>
+</ul></li>
+</ul></li>
+<li>Key question: can we combine these benefits in an effective way?
+<ul>
+<li>Direct access means that they <strong>give up some aspects of data independence</strong> , which has been a cornerstone of relational DBMS design</li>
+<li><strong>Lakehouses</strong> __ are an especially good fit for cloud environments with separate compute and storage__ : different computing applications can run on-demand on completely separate computing nodes (e.g., a GPU cluster for ML) while directly accessing the same storage data</li>
+</ul></li>
+</ul>
+</section>
+
+<section id="data-independence" class="title-slide slide level1 center">
+<h1>Data Independence</h1>
+<ul>
+<li>Data independence can be explained using the three-schema architecture</li>
+<li>Data independence refers characteristic of being able to modify the schema at one level of the database system without altering the schema at the next higher level</li>
+</ul>
+
+<img data-src="img/phdslides_93.png" class="r-stretch"></section>
+
+<section id="data-lakehouse-1" class="title-slide slide level1 center">
+<h1>Data Lakehouse</h1>
+<ul>
+<li><strong>1</strong> <strong>st</strong> __ generation systems__ : data warehousing started with helping business leaders get analytical insights
+<ul>
+<li>Data in these warehouses would be written with <strong>schema-on-write</strong> , which ensured that the data model was optimized for downstream BI consumption</li>
+<li>Several challenges
+<ul>
+<li>They typically coupled compute and storage into an on-premises appliance
+<ul>
+<li>This forced enterprises to provision and pay for the peak of user load and data under management, very costly</li>
+</ul></li>
+<li>More and more datasets were completely unstructured, which DWHs could not store and query at all</li>
+</ul></li>
+</ul></li>
+</ul>
+<p>Armbrust, Michael, et al.&nbsp;“Lakehouse: a new generation of open platforms that unify data warehousing and advanced analytics.” <em>CIDR</em> . 2021.</p>
+</section>
+
+<section id="section-2" class="title-slide slide level1 center">
+<h1></h1>
+<p>https://dl.acm.org/doi/fullHtml/10.1145/3524284</p>
+<ul>
+<li><strong>2</strong> <strong>nd</strong> __ generation__ : offloading all the raw data into data lakes
+<ul>
+<li>The data lake is <strong>schema-on-read</strong> and stores any data at low cost, but on the other hand, punted the problem of data quality and governance</li>
+<li>In this architecture, a small subset of data in the lake would later be ETLed to a downstream data warehouse</li>
+<li>The use of open formats also made data lake data directly accessible to a wide range of other analytics engines, such as machine learning systems</li>
+<li>From 2015 onwards, cloud data lakes, such as S3, ADLS and GCS, started replacing HDFS
+<ul>
+<li>Superior durability (often &gt;10 nines), geo-replication, and most importantly, extremely low cost</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<img data-src="img/phdslides_94.png" class="r-stretch"><ul>
+<li>While the cloud data lake and warehouse architecture is ostensibly cheap, a two-tier architecture is highly complex for users
+<ul>
+<li>Data is first ETLed into lakes, and then again ELTed into warehouses</li>
+<li>Enterprise use cases now include advanced analytics such as machine learning, for which neither data lakes nor warehouses are ideal</li>
+<li>(Some) main problems:
+<ul>
+<li><strong>Reliability</strong> . Keeping the data lake and warehouse consistent is difficult and costly</li>
+<li>Data <strong>staleness</strong> . The data in the warehouse is stale compared to that of the data lake, with new data frequently taking days to load</li>
+<li><strong>Limited support for advanced analytics</strong> . Businesses want to ask predictive questions using their warehousing data, e.g., “which customers should I offer discounts to?” None of the leading machine learning systems directly work well on top of warehouses
+<ul>
+<li>Process large datasets using complex non-SQL code</li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+
+<section id="dataset-search-for-data-discovery-augmentation-and-explanation" class="title-slide slide level1 center">
+<h1>Dataset Search for Data Discovery, Augmentation, and Explanation</h1>
+<ul>
+<li>Is there a real need for many unstructured and integrated dataset?
+<ul>
+<li>Recent years have seen an explosion in our ability to collect and catalog immense amounts of data about our environment, society, and populace</li>
+<li>Governments, and organizations are increasingly making structured data available on the Web and in various repositories and data lakes</li>
+<li><strong>This opportunity is often missed due to a central technical barrier</strong> : it is currently nearly impossible for domain experts to weed through the vast amount of available information to discover datasets that are needed for their specific application</li>
+</ul></li>
+</ul>
+<p>Juliana Freire, keynote @ EDBT 2023</p>
+</section>
+
+<section id="data-lakehouse-2" class="title-slide slide level1 center">
+<h1>Data Lakehouse</h1>
+<ul>
+<li>Main features
+<ul>
+<li><strong>Store data in a low-cost object store</strong> using a standard file format such as Apache Parquet</li>
+<li><strong>Implement a transactional metadata layer</strong> on top of the object store that defines which objects are part of a table version</li>
+<li><strong>Implement management features </strong> within the metadata layer</li>
+</ul></li>
+<li>Challenges:
+<ul>
+<li>The metadata layer is insufficient to achieve good SQL performance
+<ul>
+<li><strong>Data warehouses use several techniques to get state-of-the-art performance</strong>
+<ul>
+<li>Storing hot data on fast devices such as SSDs, maintaining statistics, building efficient indexes, etc.</li>
+</ul></li>
+<li><strong>In a Lakehouse it is not possible to change the format</strong> , but it is possible to implement other optimizations that leave the data files unchanged</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+
+<section id="delta-lake" class="title-slide slide level1 center">
+<h1>Delta Lake</h1>
+<ul>
+<li><strong>Challenges</strong> :
+<ul>
+<li>Most <strong>cloud object stores are merely key-value stores</strong> , with no cross-key consistency</li>
+<li><strong>Multi-object updates are not atomic</strong> , there is no isolation between queries
+<ul>
+<li>If a query needs to update multiple objects in the table readers will see partial updates as the query updates each object individually</li>
+</ul></li>
+<li>For large tables with millions of objects, <strong>metadata operations are expensive</strong> . The latency of cloud object stores is so much higher that these data skipping checks can take longer than the actual query</li>
+</ul></li>
+</ul>
+<p>Armbrust, Michael, et al.&nbsp;“Delta lake: high-performance ACID table storage over cloud object stores.” Proceedings of the VLDB Endowment 13.12 (2020): 3411-3424.</p>
+<ul>
+<li>Delta Lake uses a <strong>transaction log </strong> that is compacted <strong>into Apache Parquet </strong> for significantly faster metadata operations for large tabular datasets
+<ul>
+<li>E.g., quickly search billions of table partitions for those relevant to a query</li>
+<li>The log is stored in the _____ <strong>delta_log</strong> subdirectory within the table</li>
+<li>It contains
+<ul>
+<li>Sequence of JSON objects with increasing, zero-padded numerical IDs to store the log records</li>
+<li>Occasional checkpoints for specific log objects that summarize the log up to that point</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<img data-src="img/phdslides_95.png" class="r-stretch"><ul>
+<li>Each log record object (e.g., 000003.json) contains an array of actions to apply to the previous version of the table to generate the next one</li>
+<li>Examples of actions are:
+<ul>
+<li>Change Metadata</li>
+<li>Add or Remove Files</li>
+</ul></li>
+<li>It is necessary to compress the log periodically into checkpoints
+<ul>
+<li>Checkpoints store all the non-redundant actions in the table’s log up to a certain log record ID, in Parquet format</li>
+<li>Some sets of actions are redundant and can be removed Read the _last_checkpoint object in the table’s log directory, if it exists, to obtain a recent checkpoint ID.</li>
+</ul></li>
+<li>Example of a write transaction
+<ul>
+<li>Identify a log record ID (i.e., looking forward from the last checkpoint ID). The transaction will then read the data at table version r (if needed) and attempt to write log record r + 1</li>
+<li>Read data at table version r, if required combine previous checkpoint and further log records</li>
+<li>Write any new data objects that the transaction aims to add to the table into new files in the correct data directories, generating the object names using GUIDs.
+<ul>
+<li>This step can happen in parallel</li>
+<li>At the end, these objects are ready to reference in a new log record.</li>
+</ul></li>
+<li>Attempt to write the transaction’s log record into the r + 1 .json log object, if no other client has written this object. <strong>This step needs to be atomic</strong> . If the step fails, the transaction can be retried; depending on the query’s semantics</li>
+<li>Optionally, write a new .parquet checkpoint for log record r + 1</li>
+</ul></li>
+<li>Creating the r + 1 .json record, needs to be atomic: only 1 client should succeed. Not all large-scale storage systems have an atomic put operation
+<ul>
+<li>Google Cloud Storage and Azure Blob Store support atomic put-if-absent operations</li>
+<li>HDFS, we use atomic renames to rename a temporary file to the target name</li>
+<li>Amazon S3 need ad-hoc protocols</li>
+</ul></li>
+</ul>
+</section>
+
+<section id="lakehouse" class="title-slide slide level1 center">
+<h1>Lakehouse</h1>
+<ul>
+<li><p>Metadata over data lake storage that can raise its abstraction level to implement ACID transactions and other management features</p></li>
+<li><p>Data lake storage systems such as S3 or HDFS only provide a low-level object store or filesystem interface where even simple operations, such as updating a table that spans multiple files, are not atomic</p></li>
+<li><p>Organizations soon began designing richer data management layers over these systems, starting with Apache Hive ACID, which tracks which data files are part of a Hive table at a given table version using an OLTP DBMS and allows operations to update this set transactionally</p></li>
+<li><p>Databricks began developing Delta Lake [ 10 ], which stores the information about which objects are part of a table in the data lake itself as a transaction log in Parquet format, enabling it to scale to billions of objects per table. Apache Iceberg [ 7 ], which started at Netflix, uses a similar design and supports both Parquet and ORC storage.</p></li>
+<li><p>Experience with these systems has shown that they generally provide similar or better performance to raw Parquet/ORC data lakes, while adding highly useful management features such as transactions, zero-copy coning and time travel to past versions of a table</p></li>
+<li><p>For example, Delta Lake can convert an existing directory of Parquet files into a Delta Lake table with zero copies just by adding a transaction log that starts with an entry that references all the existing files</p></li>
+<li><p>(SQL) Format-independent optimizations are</p>
+<ul>
+<li><strong>Caching</strong> : When using a transactional metadata layer such as Delta Lake, it is safe for a Lakehouse system to cache files from the cloud object store on faster storage devices such as SSDs and RAM on the processing nodes</li>
+<li><strong>Auxiliary data</strong> : maintain column min-max statistics for each data file in the table within the same Parquet file used to store the transaction log, which enables data skipping optimizations when the base data is clustered by particular columns</li>
+<li><strong>Data layout</strong> :
+<ul>
+<li>Record ordering: which records are clustered together and hence easiest to read together, e.g.&nbsp;ordering records using individual dimensions or space-filling curves such as Z-order</li>
+<li>Compression strategies differently for various groups of records, or other strategies</li>
+</ul></li>
+</ul></li>
+<li><p>Offer a declarative version of the DataFrame APIs which maps data preparation computations into Spark SQL query plans and can benefit from logical optimizations</p></li>
+</ul>
+</section>
+
+<section id="data-lakehouse-3" class="title-slide slide level1 center">
+<h1>Data lakehouse</h1>
+<ul>
+<li><strong>Data </strong> <strong>lakehouse</strong>
+<ul>
+<li>Data management architecture that combines the flexibility, cost-efficiency, and scale of data lakes with the data management and ACID transactions of data warehouses, enabling business intelligence (BI) and machine learning (ML) on all data</li>
+<li>Vendor lock in</li>
+</ul></li>
+</ul>
+<p><img data-src="img/phdslides_96.png"></p>
+<p><a href="https://www.databricks.com/glossary/data-lakehouse">https://www.databricks.com/glossary/data-lakehouse</a></p>
+<p><img data-src="img/phdslides_97.png"></p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;"></th>
+<th style="text-align: center;"><strong>Data warehouse</strong></th>
+<th style="text-align: center;"><strong>Data lake</strong></th>
+<th style="text-align: center;"><strong>Data lake</strong> <strong>house</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><strong>Data format</strong></td>
+<td style="text-align: center;">Closed, proprietary format</td>
+<td style="text-align: center;"><strong>Open format</strong> (e.g., Parquet)</td>
+<td style="text-align: center;">Open format</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>Types of data</strong></td>
+<td style="text-align: center;">Structured data, with limited support for semi-structured data</td>
+<td style="text-align: center;"><strong>All types</strong> : Structured data, semi-structured data, textual data, unstructured (raw) data</td>
+<td style="text-align: center;">All types: Structured data, semi-structured data, textual data, unstructured (raw) data</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><strong>Data access</strong></td>
+<td style="text-align: center;">SQL-only, no direct access to file</td>
+<td style="text-align: center;"><strong>Open APIs </strong> for direct access to files with SQL, R, Python and other languages</td>
+<td style="text-align: center;">Open APIs for direct access to files with SQL, R, Python and other languages</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>Reliability</strong></td>
+<td style="text-align: center;"><strong>High quality</strong> , reliable data with ACID transactions</td>
+<td style="text-align: center;">Low quality, data swamp</td>
+<td style="text-align: center;">High quality, reliable data with ACID transactions</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><strong>Governance and security</strong></td>
+<td style="text-align: center;"><strong>Fine-grained</strong> security and governance for row/columnar level for tables</td>
+<td style="text-align: center;">Poor governance as security needs to be applied to files</td>
+<td style="text-align: center;">Fine-grained security and governance for row/columnar level for tables</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>Performance</strong></td>
+<td style="text-align: center;"><strong>High</strong></td>
+<td style="text-align: center;">Low</td>
+<td style="text-align: center;">High</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><strong>Scalability</strong></td>
+<td style="text-align: center;">Scaling becomes exponentially more expensive</td>
+<td style="text-align: center;"><strong>Scales</strong> to hold any amount of data at low cost, regardless of type</td>
+<td style="text-align: center;">Scales to hold any amount of data at low cost, regardless of type</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>Use case support</strong></td>
+<td style="text-align: center;">Limited to BI, SQL applications and decision support</td>
+<td style="text-align: center;">Limited to machine learning</td>
+<td style="text-align: center;">One data architecture for BI, SQL and machine learning</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Key technologies used to implement open source Data Lakehouses
+<ul>
+<li>Databricks’ Delta Lake</li>
+<li>Apache Hudi</li>
+<li>Apache Iceberg</li>
+</ul></li>
+</ul>
+<p><a href="https://databricks.com/blog/2021/05/19/evolution-to-the-data-lakehouse.html">https://databricks.com/blog/2021/05/19/evolution-to-the-data-lakehouse.html</a></p>
+</section>
+
+<section id="polyglot-persistence" class="title-slide slide level1 center">
+<h1>Polyglot Persistence</h1>
+<p>Polyglot persistence</p>
+<p>To each application the appropriate DBMS</p>
+
+<img data-src="img/phdslides_98.png" class="r-stretch"></section>
+
+<section id="section-3" class="title-slide slide level1 center">
+<h1></h1>
+<p>A key-value data store could be used to store the shopping cart data before the order is confirmed by the customer and also store the session data so that the RDBMS is not used for this transient data. Key-value stores make sense here since the shopping cart is usually accessed by user ID and, once confirmed and paid by the customer, can be saved in the RDBMS. Similarly, session data is keyed by the session ID. If we need to recommend products to customers when they place products into their shopping carts—for example, ” your friends also bought these products” or ” your friends bought these accessories for this product”—then introducing a graph data store in the mix becomes relevant.</p>
+<p>Even using specialized relational databases for different purposes, such as data warehousing appliances or analytics appliances within the same application, can be viewed as polyglot persistence</p>
+<p>Polyglot persistence</p>
+<p>To each application the appropriate DBMS - works well for OLTP</p>
+<p>What about OLAP?</p>
+
+<img data-src="img/phdslides_99.png" class="r-stretch"><p>OLAP application</p>
+</section>
+
+<section id="section-4" class="title-slide slide level1 center">
+<h1></h1>
+<p>A key-value data store could be used to store the shopping cart data before the order is confirmed by the customer and also store the session data so that the RDBMS is not used for this transient data. Key-value stores make sense here since the shopping cart is usually accessed by user ID and, once confirmed and paid by the customer, can be saved in the RDBMS. Similarly, session data is keyed by the session ID. If we need to recommend products to customers when they place products into their shopping carts—for example, ” your friends also bought these products” or ” your friends bought these accessories for this product”—then introducing a graph data store in the mix becomes relevant.</p>
+<p>Even using specialized relational databases for different purposes, such as data warehousing appliances or analytics appliances within the same application, can be viewed as polyglot persistence</p>
+</section>
+
+<section id="polyglot-persistence-main-challenges" class="title-slide slide level1 center">
+<h1>Polyglot persistence: main challenges</h1>
+<ul>
+<li>Data model heterogeneity
+<ul>
+<li>Support multiple models in the same database</li>
+<li>Or integrate data from different databases using different query languages</li>
+</ul></li>
+<li>Schema heterogeneity
+<ul>
+<li>Inter-collection: different records in <strong>different</strong> collections have different schemas
+<ul>
+<li>Not a new problem: think federated databases, corporate mergers, etc.</li>
+</ul></li>
+<li>Intra-collection: different records in <strong>the same </strong> collection have different schemas
+<ul>
+<li>Emerged with NoSQL databases</li>
+</ul></li>
+</ul></li>
+<li>Data inconsistency
+<ul>
+<li>Reconcile inconsistent versions of the same data (inter- or intra-collection)</li>
+</ul></li>
+</ul>
+</section>
+
+<section id="section-5" class="title-slide slide level1 center">
+<h1></h1>
+<p>Data model heterogeneity is a problem for OLAP Schema het is a problem for OLAP Data inc is a problem for OLAP</p>
+</section>
+
+<section id="data-model-heterogeneity" class="title-slide slide level1 center">
+<h1>Data model heterogeneity</h1>
+<p><img data-src="img/phdslides_100.png"></p>
+<p><img data-src="img/phdslides_101.png"></p>
+<p><img data-src="img/phdslides_102.png"></p>
+<p><img data-src="img/phdslides_103.png"></p>
+<p><img data-src="img/phdslides_104.png"></p>
+<p>DM heterogeneity</p>
+</section>
+
+<section id="basic-solutions" class="title-slide slide level1 center">
+<h1>Basic solutions</h1>
+<ul>
+<li>Some DBMSs offer multi-model support
+<ul>
+<li>Extended RDBMSs
+<ul>
+<li>KV implementable as a table with two fields: a string key, and a blob value</li>
+<li>Cypher query language on top of a relational implementation of a graph</li>
+<li>Hstore data type in PostgreSQL for wide-column-like implementation</li>
+<li><strong>Scalabilty</strong> __ issue remains__</li>
+</ul></li>
+<li>Multi-model NoSQL DBMSs
+<ul>
+<li>ArangoDB, OrientDB</li>
+<li><strong>Support all NoSQL data models, but not the relational one</strong></li>
+</ul></li>
+</ul></li>
+<li>Some approaches suggest strategies to model everything within RDBMSs
+<ul>
+<li>DiScala, M., Abadi, D.J.: <strong>Automatic generation of normalized relational schemas from nested key-value data</strong> . In: <em>2016 ACM SIGMOD Int. Conf. on Management of Data</em> , pp.&nbsp;295-310. ACM (2016)</li>
+<li>Tahara, D., Diamond, T., Abadi, D.J.: <strong>Sinew: a SQL system for multi-structured data</strong> . In: <em>2014 ACM SIGMOD Int. Conf. on Management of Data</em> , pp.&nbsp;815-826. ACM (2014)</li>
+</ul></li>
+</ul>
+<p>DM heterogeneity</p>
+</section>
+
+<section id="a-taxonomy-for-distributed-solutions" class="title-slide slide level1 center">
+<h1>A taxonomy for distributed solutions</h1>
+<ul>
+<li>Federated database system
+<ul>
+<li><strong>Homogeneous</strong> data stores, exposes a <strong>single</strong> standard query interface</li>
+<li>Features a mediator-wrapper architecture, employs schema-mapping and entity-merging techniques for integration of relational data</li>
+</ul></li>
+<li>Polyglot system
+<ul>
+<li><strong>Homogeneous</strong> data stores, exposes <strong>multiple</strong> query interfaces</li>
+<li>Takes advantage of the semantic expressiveness of multiple interfaces (e.g., declarative, procedural)</li>
+</ul></li>
+<li>Multistore system
+<ul>
+<li><strong>Heterogeneous</strong> data stores, exposes a <strong>single</strong> query interface</li>
+<li>Provides a unified querying layer by adopting ontologies and applying schema-mapping and entity-resolution techniques</li>
+</ul></li>
+<li>Polystore system
+<ul>
+<li><strong>Heterogeneous</strong> data stores, exposes <strong>multiple</strong> query interfaces</li>
+<li>Choose from a variety of query interfaces to seamlessly query data residing in multiple data stores</li>
+</ul></li>
+</ul>
+<p>R. Tan, R. Chirkova, V. Gadepally and T. G. Mattson, ” <strong>Enabling query processing across heterogeneous data models: A survey,</strong> “&nbsp; <em>2017 IEEE International Conference on Big Data (Big Data)</em> , 2017, pp.&nbsp;3211-3220.</p>
+<p>DM heterogeneity</p>
+</section>
+
+<section id="advanced-solutions" class="title-slide slide level1 center">
+<h1>Advanced solutions</h1>
+<ul>
+<li>The challenge is to balance two often conflicting forces.
+<ul>
+<li><strong>Location Independence</strong> : A query is written and the system figures out which storage engine it targets</li>
+<li><strong>Semantic Completeness</strong> : A query can exploit the full set of features provided by a storage engine</li>
+</ul></li>
+<li>Example of a polystore
+<ul>
+<li>Island = a middleware application to support a set of operations on a given data model</li>
+<li>Shim = a wrapper to convert from the island’s query language to the target DB’s query language</li>
+</ul></li>
+</ul>
+<p><img data-src="img/phdslides_105.png"></p>
+<p>Vijay Gadepally, Kyle O’Brien, Adam Dziedzic, Aaron J. Elmore, Jeremy Kepner, Samuel Madden, Tim Mattson, Jennie Rogers, Zuohao She, Michael Stonebraker: Version 0.1 of the BigDAWG Polystore System. CoRR abs/1707.00721 (2017)</p>
+<p>DM heterogeneity</p>
+<ul>
+<li>BigDAWG middleware consists of
+<ul>
+<li><strong>Optimizer</strong> : parses the input query and creates a set of viable query plan trees with possible engines for each subquery</li>
+<li><strong>Monitor</strong> : uses performance data from prior queries to determine the query plan tree with the best engine for each subquery</li>
+<li><strong>Executor</strong> : figures out how to best join the collections and then executes the query</li>
+<li><strong>Migrator</strong> : moves data from engine to engine when the plan calls for such data motion</li>
+</ul></li>
+<li>… and of course we have metadata
+<ul>
+<li><strong>Catalog</strong> : stores metadata about the system
+<ul>
+<li>Databases: Databases, their engine membership, and connection authentication information.</li>
+<li>Objects: Data objects (i.e., tables), field-names, and object-to-database membership.</li>
+</ul></li>
+</ul></li>
+</ul>
+<p><img data-src="img/phdslides_106.png"></p>
+<p>Vijay Gadepally, Kyle O’Brien, Adam Dziedzic, Aaron J. Elmore, Jeremy Kepner, Samuel Madden, Tim Mattson, Jennie Rogers, Zuohao She, Michael Stonebraker: Version 0.1 of the BigDAWG Polystore System. CoRR abs/1707.00721 (2017)</p>
+<p>DM heterogeneity</p>
+<ul>
+<li>Most notable multistore/polystore proposals
+<ul>
+<li>BigDAWG
+<ul>
+<li>Focus on the ability to “move” data from one DB to another to improve query efficiency
+<ul>
+<li>V. Gadepally et al.&nbsp;<strong>Version 0.1 of the </strong> <strong>BigDAWG</strong> __ __ <strong>Polystore</strong> __ System__ . <em>CoRR</em> _ abs/1707.00721 _ (2017)</li>
+</ul></li>
+</ul></li>
+<li>Estocada
+<ul>
+<li>Focus on taking advantage of possible (consistent) redundancy and previous query results
+<ul>
+<li>R. Alotaibi et al.&nbsp;<strong>ESTOCADA: Towards Scalable </strong> <strong>Polystore</strong> __ Systems__ . <em>Proc. VLDB Endow</em> . 13(12): 2949-2952 (2020)</li>
+</ul></li>
+</ul></li>
+<li>Awesome
+<ul>
+<li>Focus on supporting common analytical functions
+<ul>
+<li>S. Dasgupta. <strong>Analytics-driven data ingestion and derivation in the AWESOME </strong> <strong>polystore</strong> . <em>IEEE </em> <em>BigData</em> _ 2016_ : 2555-2564</li>
+</ul></li>
+</ul></li>
+<li>CloudMdsQL
+<ul>
+<li>Focus on taking advantage of local data store native functionalities
+<ul>
+<li>B. Kolev et al.&nbsp;<strong>CloudMdsQL</strong> <strong>: querying heterogeneous cloud data stores with a common language</strong> <em>. Distributed Parallel Databases </em> 34(4): 463-503 (2016)</li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+
+<section id="beyond-data-model-heterogeneity" class="title-slide slide level1 center">
+<h1>Beyond data model heterogeneity</h1>
+<ul>
+<li>What else is there?</li>
+<li><strong>Entity resolution</strong>
+<ul>
+<li>Every approach needs some kind of integrated knowledge</li>
+<li>Ample research from federated database systems</li>
+<li>Usually “out-of-scope”</li>
+</ul></li>
+<li>Management of <strong>schema heterogeneity </strong> and <strong>data inconsistency</strong>
+<ul>
+<li>Usually addressed as different problems in the literature</li>
+</ul></li>
+</ul>
+</section>
+
+<section id="schema-heterogeneity" class="title-slide slide level1 center">
+<h1>Schema heterogeneity</h1>
+<ul>
+<li>Heterogeneous data stored with variant schemata and structural forms
+<ul>
+<li>Missing/additional attributes</li>
+<li>Different names/types of attributes</li>
+<li>Different nested structures</li>
+</ul></li>
+<li>Two main problems
+<ul>
+<li>Understand the data</li>
+<li>Query the data</li>
+</ul></li>
+</ul>
+<p>Schema heterogeneity</p>
+</section>
+
+<section id="understanding-the-data" class="title-slide slide level1 center">
+<h1>Understanding the data</h1>
+<ul>
+<li>Early work on XML
+<ul>
+<li>To deal with the widespread lack of DTDs and XSDs</li>
+<li>Extract regular expressions to described the content of elements in a set of XML documents</li>
+</ul></li>
+<li>Recent work on JSON
+<ul>
+<li><strong>Concise view</strong> : a single representation for all schema variations
+<ul>
+<li>Union of all attributes
+<ul>
+<li>M. Klettke et al.&nbsp;<strong>Schema extraction and structural outlier detection for JSON-based NoSQL data stores</strong> ., in: <em>Proc. BTW, volume 2105</em> , 2015, pp.&nbsp;425-444.</li>
+</ul></li>
+<li>A <em>skeleton </em> as the smallest set of core attributes according to a frequency-based formula
+<ul>
+<li>L. Wang et al.&nbsp;<strong>Schema management for document stores</strong> , <em>Proc. VLDB Endowment </em> 8 (2015) 922-933.</li>
+</ul></li>
+</ul></li>
+<li><strong>Comprehensive view</strong> : multiple representations (a different schema for every document)
+<ul>
+<li>D. S. Ruiz, et al <strong>. Inferring versioned schemas from NoSQL databases and its applications</strong> , in: <em>Proc. ER</em> , <em>2015</em> , pp.&nbsp;467-480.</li>
+</ul></li>
+<li><strong>Schema profile</strong> : <em>explain why </em> there are different schemas
+<ul>
+<li>E. Gallinucci et al.&nbsp;<strong>Schema profiling of document-oriented databases</strong> . <em>Inf. Syst</em> . 75: 13-25 (2018)</li>
+</ul></li>
+</ul></li>
+</ul>
+<p>Schema heterogeneity</p>
+</section>
+
+<section id="schema-profiling" class="title-slide slide level1 center">
+<h1>Schema profiling</h1>
+<ul>
+<li>Schema profiles explain
+<ul>
+<li>What are the differences between schemas</li>
+<li>When/why is one schema used instead of the other</li>
+</ul></li>
+<li>The problem of schema profiling is quite similar to a classification problem
+<ul>
+<li>Classifiers are also used to describe the rules for assigning a class to an observation based on the other observation features</li>
+<li>Based on the requirements collected from potential users, <strong>decision trees </strong> emerged as the most adequate</li>
+</ul></li>
+</ul>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: center;"><strong>SchemaID</strong></th>
+<th style="text-align: center;">User</th>
+<th style="text-align: center;">Activity</th>
+<th style="text-align: center;">Weight</th>
+<th style="text-align: center;">Duration</th>
+<th style="text-align: center;">Repetitions</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><strong>S1</strong></td>
+<td style="text-align: center;">Jack</td>
+<td style="text-align: center;">Run</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">108</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>S2</strong></td>
+<td style="text-align: center;">John</td>
+<td style="text-align: center;">Leg press</td>
+<td style="text-align: center;">80</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">23</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><strong>S1</strong></td>
+<td style="text-align: center;">Kate</td>
+<td style="text-align: center;">Walk</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">42</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>S3</strong></td>
+<td style="text-align: center;">John</td>
+<td style="text-align: center;">Push-ups</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">40</td>
+</tr>
+</tbody>
+</table>
+<p>Documents / Observations</p>
+<p>Schema heterogeneity</p>
+<p><img data-src="img/phdslides_107.png"></p>
+<p>The <strong>documents</strong> are the <strong>observations</strong></p>
+<p>The <strong>schema</strong> are the <strong>classes</strong></p>
+<p>Schema heterogeneity</p>
+<p><img data-src="img/phdslides_108.png"></p>
+<p>Value-based condition</p>
+<p>Schema heterogeneity</p>
+<p><img data-src="img/phdslides_109.png"></p>
+<p>Schema-based condition</p>
+<p>Value-based condition</p>
+<p>‘CardioOn’: false</p>
+<p>Schema heterogeneity</p>
+<p><img data-src="img/phdslides_110.png"></p>
+<p>Schema-based condition</p>
+<p>Value-based condition</p>
+<p>Schema heterogeneity</p>
+</section>
+
+<section id="preliminary-activities" class="title-slide slide level1 center">
+<h1>Preliminary activities</h1>
+<ul>
+<li>Semi-structured interviews with 5 users
+<ul>
+<li>Application domains: fitness equipment sales, software development</li>
+<li>Understand goals, requirements, visualization format</li>
+<li>Not one complete/correct dataset description</li>
+</ul></li>
+<li>Definition of schema profile characteristics
+<ul>
+<li>Explicativeness</li>
+<li>Precision</li>
+<li>Conciseness</li>
+</ul></li>
+</ul>
+<p>Schema heterogeneity</p>
+</section>
+
+<section id="explicativeness" class="title-slide slide level1 center">
+<h1>Explicativeness</h1>
+<ul>
+<li>Value-based (VB) conditions are preferred to schema-based (SB) ones
+<ul>
+<li>SB: <strong>acknowledge</strong> a difference between schemata</li>
+<li>VB: <strong>explain</strong> it in terms of the values taken by an attribute</li>
+</ul></li>
+<li>The less SB conditions, the more explicativeness</li>
+</ul>
+<p><img data-src="img/phdslides_111.png"></p>
+<p><img data-src="img/phdslides_112.png"></p>
+<p>Schema heterogeneity</p>
+</section>
+
+<section id="precision" class="title-slide slide level1 center">
+<h1>Precision</h1>
+<ul>
+<li>A decision tree is precise if all the leaves are pure
+<ul>
+<li>A leaf is <strong>pure</strong> if all its observations belong to the <strong>same class</strong></li>
+<li>Leaf vj is pure if <em>entropy(</em> <em>v</em> <em>j</em> <em>) = 0</em></li>
+</ul></li>
+<li><strong>Entropy </strong> is strictly related to <strong>precision</strong>
+<ul>
+<li>Divisive approaches typically stop only when the leaves are all pure</li>
+</ul></li>
+</ul>
+
+<img data-src="img/phdslides_113.png" class="r-stretch"><p>probability of schema <em>s</em> within leaf <em>v</em> <em>j</em></p>
+<p>Schema heterogeneity</p>
+</section>
+
+<section id="precision-and-conciseness" class="title-slide slide level1 center">
+<h1>Precision and conciseness</h1>
+<ul>
+<li><strong>Minimization of entropy </strong> often leads to <strong>splitting observations </strong> of the same class __ among several leaves__
+<ul>
+<li>Entropy’s sole focus is on node purity</li>
+<li>More frequent when the number of classes is high</li>
+</ul></li>
+<li>Typically, precision is more important than readability</li>
+<li>In schema profiling, this is a critical problem
+<ul>
+<li><strong>It conflicts with the conciseness requirement</strong> #</li>
+</ul></li>
+</ul>
+<p>In generic classification problems</p>
+<p>Schema heterogeneity</p>
+</section>
+
+<section id="conciseness" class="title-slide slide level1 center">
+<h1>Conciseness</h1>
+<ul>
+<li>A maximally concise schema profile is one where there is <strong>a single rule for each schema</strong></li>
+<li><strong><strong>Schema entropy</strong></strong> : inverts the original definition of entropy, relating it to the <strong>purity of the schemata </strong> instead of the purity of the leaves
+<ul>
+<li>Entropy: <strong>a leaf is pure</strong> if it contains only documents with the <strong>same class</strong></li>
+<li>Schema entropy: <strong>a schema is pure </strong> if all its documents are in the <strong>same leaf</strong></li>
+</ul></li>
+</ul>
+<p><img data-src="img/phdslides_114.png"></p>
+<p><img data-src="img/phdslides_115.png"></p>
+</section>
+
+<section id="section-6" class="title-slide slide level1 center">
+<h1></h1>
+<p>In generic classification problems</p>
+<p>Schema heterogeneity</p>
+<ul>
+<li>A maximally concise schema profile is one where there is <strong>a single rule for each schema</strong></li>
+<li><strong><strong>Schema entropy</strong></strong> : inverts the original definition of entropy, relating it to the <strong>purity of the schemata </strong> instead of the purity of the leaves
+<ul>
+<li>Entropy: <strong>a leaf is pure</strong> if it contains only documents with the <strong>same class</strong></li>
+<li>Schema entropy: <strong>a schema is pure </strong> if all its documents are in the <strong>same leaf</strong> #</li>
+</ul></li>
+</ul>
+<p>In generic classification problems</p>
+<p>Schema heterogeneity</p>
+</section>
+
+<section id="schema-profiling-example" class="title-slide slide level1 center">
+<h1>Schema profiling example</h1>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: center;"></th>
+<th style="text-align: center;"><strong>4</strong></th>
+<th style="text-align: center;"></th>
+<th style="text-align: center;"></th>
+<th style="text-align: center;"></th>
+<th style="text-align: center;"></th>
+<th style="text-align: center;"></th>
+<th style="text-align: center;"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">****</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">****</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">****</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">****</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Starting situation</strong></p>
+<p>E = 1,85 (maximum)</p>
+<p>SE = 0 (minimum)</p>
+<p><strong>Best outcome</strong></p>
+<p>E = 0</p>
+<p>SE = 0</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: center;"></th>
+<th style="text-align: center;"><strong><strong>3</strong></strong></th>
+<th style="text-align: center;"></th>
+<th style="text-align: center;"></th>
+<th style="text-align: center;"></th>
+<th style="text-align: center;"></th>
+<th style="text-align: center;"></th>
+<th style="text-align: center;"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><strong><strong>&nbsp;</strong></strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong><strong>&nbsp;</strong></strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><strong><strong>20</strong></strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong><strong>4</strong></strong></td>
+<td style="text-align: center;"><strong>4</strong></td>
+<td style="text-align: center;"><strong>3</strong></td>
+<td style="text-align: center;"><strong>3</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<p>E = 0,46</p>
+<p>SE = 0,16</p>
+<p>E = 1,38</p>
+<p>SE = 0</p>
+<p>Schema heterogeneity</p>
+</section>
+
+<section id="schema-profiling-algorithm" class="title-slide slide level1 center">
+<h1>Schema profiling algorithm</h1>
+<p>Introduced the notion of <em>schema entropy loss</em></p>
+<p>Defined a criterion for comparing two splits in the decision tree</p>
+<p><img data-src="img/phdslides_116.png"></p>
+<p><img data-src="img/phdslides_117.png"></p>
+<p>Schema heterogeneity</p>
+</section>
+
+<section id="querying-the-data" class="title-slide slide level1 center">
+<h1>Querying the data</h1>
+<ul>
+<li>One thing is understanding the data, another thing is enabling querying over heterogeneous data</li>
+<li>What we need
+<ul>
+<li>Integration techniques to solve schema heterogeneity and produce a global knowledge</li>
+<li>Query rewriting techniques to translate queries on the global knowledge to queries on the actual schemas</li>
+</ul></li>
+<li>(Focus on OLAP queries)</li>
+</ul>
+<p>Schema heterogeneity</p>
+</section>
+
+<section id="integration-techniques" class="title-slide slide level1 center">
+<h1>Integration techniques</h1>
+
+<img data-src="img/phdslides_118.png" class="r-stretch"><ul>
+<li>Integration at the intensional level
+<ul>
+<li>Schema matching and mapping
+<ul>
+<li>A match is a correspondence between attributes</li>
+<li>A mapping is a function to explain the relationship between attributes
+<ul>
+<li>E.g., S1.FullName = CONCAT(S2.FirstName, S2.LastName)</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>Integration at the extensional level
+<ul>
+<li>Entity resolution (a.k.a. record linkage or duplicate detection)
+<ul>
+<li>Identifying (or linking, or grouping) different records referring to the same real-world entity</li>
+<li>Aims at removing redundancy and increasing conciseness</li>
+</ul></li>
+<li>Data fusion
+<ul>
+<li>Fuse records on the same real-world entity into a single record and resolve possible conflicts</li>
+<li>Aims at increasing correctness of data</li>
+</ul></li>
+</ul></li>
+</ul>
+<p>E. Rahm, P.A. Bernstein, <strong>A survey of approaches to automatic schema matching</strong> , <em>VLDB J.</em> 10 (4) (2001)</p>
+<p>Mandreoli, F., &amp; Montangero, M. (2019). <strong>Dealing</strong> __ with data __ <strong>heterogeneity</strong> __ in a data fusion __ <strong>perspective</strong> <strong>: </strong> <strong>models</strong> <strong>, </strong> <strong>methodologies</strong> <strong>, and </strong> <strong>algorithms</strong> . In&nbsp; <em>Data Handling in Science and Technology</em> &nbsp;(Vol. 31, pp.&nbsp;235-270). Elsevier.</p>
+<p>Schema heterogeneity</p>
+</section>
+
+<section id="olap-querying" class="title-slide slide level1 center">
+<h1>OLAP querying</h1>
+<p>A first approach to OLAP on heterogeneous data</p>
+<p><img data-src="img/phdslides_119.png"></p>
+<p><img data-src="img/phdslides_120.png"></p>
+<p>Gallinucci, E., Golfarelli, M., &amp; Rizzi, S. (2019). <strong>Approximate OLAP of document-oriented databases: A variety-aware approach</strong> <em>. Information Systems</em> , 85, 114-130.</p>
+<p>Schema heterogeneity</p>
+<ul>
+<li>Some limitations
+<ul>
+<li>Expensive querying
+<ul>
+<li>Does not scale well with the number of schemas</li>
+</ul></li>
+<li>Expensive integration
+<ul>
+<li>High levels of heterogeneity imply complex rewriting rules (requiring knowledge and time)</li>
+<li>Assuming to be <em>always </em> able to obtain a global schema is a bit pretentious</li>
+</ul></li>
+</ul></li>
+</ul>
+<p>Schema heterogeneity</p>
+<ul>
+<li>Some limitations
+<ul>
+<li>Expensive querying
+<ul>
+<li>Does not scale well with the number of schemas</li>
+</ul></li>
+<li>Expensive integration
+<ul>
+<li>High levels of heterogeneity imply complex rewriting rules (requiring knowledge and time)</li>
+<li>Assuming to be <em>always </em> able to obtain a global schema is a bit pretentious
+<ul>
+<li><em>“One does not simply define a global schema”</em></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+<p><img data-src="img/phdslides_121.jpg"></p>
+<p>Schema heterogeneity</p>
+</section>
+
+<section id="new-integration-techniques" class="title-slide slide level1 center">
+<h1>New integration techniques</h1>
+
+<img data-src="img/phdslides_122.png" class="r-stretch"><p>Curry, E. (2020). Dataspaces: Fundamentals, Principles, and Techniques. <em>Real-time Linked Dataspaces: Enabling Data Ecosystems for Intelligent Systems</em> , 45-62.</p>
+<p>Schema heterogeneity</p>
+<ul>
+<li>Replace the global schema with a <em>dataspace</em>
+<ul>
+<li>A dataspace is a lightweight integration approach providing basic query expressive power on a variety of data sources, bypassing the complexity of traditional integration approaches and possibly returning best-effort or approximate answers
+<ul>
+<li>Franklin, M., Halevy, A., &amp; Maier, D. (2005). <strong>From databases to dataspaces: a new abstraction for information management</strong> .&nbsp; <em>ACM </em> <em>Sigmod</em> _ Record_ ,&nbsp; <em>34</em> (4), 27-33.</li>
+</ul></li>
+</ul></li>
+<li>Replace traditional integration with a <em>pay-as-you-go</em> approach
+<ul>
+<li>The system incrementally understands and integrates the data over time by asking users to confirm matches as the system runs
+<ul>
+<li>Jeffery, S. R., Franklin, M. J., &amp; Halevy, A. Y. (2008, June). <strong>Pay-as-you-go user feedback for dataspace systems</strong> . In <em>Proceedings of the 2008 ACM SIGMOD international conference on Management of data </em> (pp.&nbsp;847-860).</li>
+</ul></li>
+</ul></li>
+</ul>
+<p>Curry, E. (2020). Dataspaces: Fundamentals, Principles, and Techniques. <em>Real-time Linked Dataspaces: Enabling Data Ecosystems for Intelligent Systems</em> , 45-62.</p>
+<p>Schema heterogeneity</p>
+<ul>
+<li>Introducing new concepts
+<ul>
+<li>Entities: representation of a real-world entity
+<ul>
+<li>E.g., customers, products, orders, etc.</li>
+</ul></li>
+<li>Features: univocal representation of a group of semantically equivalent attributes
+<ul>
+<li>E.g., CustomerName = { S1.name, S2.fullname, S3.customer, S4.cName, … }</li>
+<li>Mapping functions must be defined/definable between every couple</li>
+</ul></li>
+</ul></li>
+<li>The dataspace becomes an abstract view in terms of features and entities</li>
+</ul>
+<p>Schema heterogeneity</p>
+</section>
+
+<section id="new-olap-querying" class="title-slide slide level1 center">
+<h1>New OLAP querying</h1>
+<p>What it looks like</p>
+<p><img data-src="img/phdslides_123.png"></p>
+<p><img data-src="img/phdslides_124.png"></p>
+<p>Forresi, C., Gallinucci, E., Golfarelli, M., &amp; Hamadou, H. B. (2021). <strong>A </strong> <strong>dataspace-based</strong> __ __ <strong>framework</strong> __ for OLAP __ <strong>analyses</strong> __ in a high-__ <strong>variety</strong> __ __ <strong>multistore</strong> .&nbsp; <em>The VLDB Journal</em> ,&nbsp; <em>30</em> (6), 1017-1040.</p>
+<p>Schema heterogeneity</p>
+<ul>
+<li>Previous issues
+<ul>
+<li>Expensive querying
+<ul>
+<li>Schema heterogeneity solved at query time</li>
+<li>Requires complex - but feasible - algorithms</li>
+</ul></li>
+<li>Expensive integration
+<ul>
+<li>Pay-as-you-go approach is quicker, iterative, and more flexible</li>
+<li>Dataspace is conceptual, untied to logical data modeling</li>
+</ul></li>
+</ul></li>
+<li>Now we have a multistore dealing with multipledata models and schema heterogeneity</li>
+</ul>
+<p><img data-src="img/phdslides_125.png"></p>
+<p>Forresi, C., Gallinucci, E., Golfarelli, M., &amp; Hamadou, H. B. (2021). <strong>A </strong> <strong>dataspace-based</strong> __ __ <strong>framework</strong> __ for OLAP __ <strong>analyses</strong> __ in a high-__ <strong>variety</strong> __ __ <strong>multistore</strong> .&nbsp; <em>The VLDB Journal</em> ,&nbsp; <em>30</em> (6), 1017-1040.</p>
+</section>
+
+<section id="data-inconsistency" class="title-slide slide level1 center">
+<h1>Data inconsistency</h1>
+<ul>
+<li>Intra-collection
+<ul>
+<li>Due to denormalized data modeling</li>
+</ul></li>
+<li>Inter-collection
+<ul>
+<li>Due to analytical data offloading
+<ul>
+<li>To reduce costs and optimize performance, the historical depth of databases is kept limited</li>
+<li>After some years, data are offloaded to cheaper/bigger storages, e.g., cloud storages, data lakes</li>
+<li>Offloading implies a change of data model, a change of schema, and obviously an overlapping of instances with the original data</li>
+</ul></li>
+<li>Due to multi-cloud architectures
+<ul>
+<li>Enables the exploitation of data spread across different providers and architectures, all the while overcoming data silos through data virtualization</li>
+<li>Typical in presence of many company branches</li>
+</ul></li>
+</ul></li>
+<li>Solutions?
+<ul>
+<li>Traditional ETL</li>
+<li>Solve inconsistencies on-the-fly</li>
+</ul></li>
+</ul>
+<p>Data inconsistency</p>
+</section>
+
+<section id="data-fusion" class="title-slide slide level1 center">
+<h1>Data fusion</h1>
+<ul>
+<li>Merge operator
+<ul>
+<li>Originally introduced as “full outer join merge”
+<ul>
+<li>Naumann, F., Freytag, J. C., &amp; Leser, U. (2004). <strong>Completeness of integrated information sources</strong> .&nbsp; <em>Information Systems</em> ,&nbsp; <em>29</em> (7), 583-615.</li>
+</ul></li>
+<li>Aims to keep as much information as possible when joining the records of two schemas
+<ul>
+<li>Avoid any loss of records</li>
+<li>Resolve mappings by providing transcoded output</li>
+<li>Resolving conflicts whenever necessary</li>
+</ul></li>
+</ul></li>
+</ul>
+<p><img data-src="img/phdslides_126.png"></p>
+<p>Data inconsistency</p>
+<ul>
+<li>Merge operator
+<ul>
+<li>Originally introduced as “full outer join merge”
+<ul>
+<li>Naumann, F., Freytag, J. C., &amp; Leser, U. (2004). <strong>Completeness of integrated information sources</strong> .&nbsp; <em>Information Systems</em> ,&nbsp; <em>29</em> (7), 583-615.</li>
+</ul></li>
+<li>Aims to keep as much information as possible when joining the records of two schemas
+<ul>
+<li>Avoid any loss of records</li>
+<li>Resolve mappings by providing transcoded output</li>
+<li>Resolving conflicts whenever necessary</li>
+</ul></li>
+</ul></li>
+</ul>
+<p><img data-src="img/phdslides_127.png"></p>
+<p><em>Schema </em></p>
+<p><em>matching</em></p>
+<p>Data inconsistency</p>
+<p><img data-src="img/phdslides_128.png"></p>
+<p>Data inconsistency</p>
+</section>
+
+<section id="on-the-fly-data-fusion" class="title-slide slide level1 center">
+<h1>On-the-fly data fusion</h1>
+<ul>
+<li>Merge operator in a query plan
+<ul>
+<li>Take the data from heterogeneoussources (in different colors)</li>
+<li>Extract records of the single entites(e.g., customer, products)</li>
+<li>Merge each entity</li>
+<li>Join and produce the final result</li>
+</ul></li>
+<li>Now we have a multistore dealing with multiple data models,schema heterogeneity, and datainconsistency
+<ul>
+<li>Are we done? Not yet!</li>
+</ul></li>
+</ul>
+<p><img data-src="img/phdslides_129.png"></p>
+<ul>
+<li>Main issue: performance
+<ul>
+<li>Collections accessed more than once</li>
+<li>Most effort pulled to the middleware</li>
+</ul></li>
+<li>What can we do about it?
+<ul>
+<li>Exploit more the local DBMSs</li>
+<li>Exploit local data modelling</li>
+<li>Carry out multi-entity merges</li>
+</ul></li>
+<li>Issues
+<ul>
+<li>Several query plans could be devised</li>
+<li>Hard to find the most efficient one</li>
+</ul></li>
+</ul>
+<p><img data-src="img/phdslides_130.png"></p>
+<p>Query optimization</p>
+</section>
+
+<section id="logical-optimization" class="title-slide slide level1 center">
+<h1>Logical optimization</h1>
+<ul>
+<li>Logical rules to transform a query plan into a more efficent one
+<ul>
+<li>Predicate push-down: applying selection predicates as close to the source as possible
+<ul>
+<li>Not always feasible (e.g., in presence of inconsistent data)</li>
+</ul></li>
+<li>Column pruning: extracting the only attributes relevant for the query
+<ul>
+<li>Not for granted when writing a custom query language</li>
+</ul></li>
+<li>Join sequence reordering: changing the order to do binary joins
+<ul>
+<li>Not so easy when merges are involved as well</li>
+<li>Not so easy when data comes from different sources</li>
+</ul></li>
+</ul></li>
+</ul>
+<p>Query optimization</p>
+</section>
+
+<section id="same-query-several-query-plans" class="title-slide slide level1 center">
+<h1>Same query, several query plans</h1>
+<p>Consistent representation of customers, orders, and orderlines</p>
+<ul>
+<li>What is the most efficient solution?
+<ul>
+<li>Single-entity merge and subsequent joins</li>
+<li>Nest relational data and multi-merge with documents</li>
+<li>Join relational data and multi-merge with flattened documents</li>
+</ul></li>
+<li>Depends on several factors
+<ul>
+<li>On the capabilities of each DBMS/middleware</li>
+<li>On the presence of indexes and statistics</li>
+<li>On the resources available to each DBMS/middleware</li>
+<li>On the number of records involved on each side</li>
+</ul></li>
+<li>… which can change over time</li>
+</ul>
+<p><img data-src="img/phdslides_131.png"></p>
+<p><img data-src="img/phdslides_132.png"></p>
+<p>Query optimization</p>
+</section>
+
+<section id="cost-modelling" class="title-slide slide level1 center">
+<h1>Cost modelling</h1>
+<ul>
+<li>Cost-based evaluation of different plans
+<ul>
+<li>White-box cost modelling
+<ul>
+<li>Associate theoretical formulas to each query operators, then build up the cost of a query by summing the cost of each operation</li>
+<li>Cost can be determined in terms of disk I/O, CPU, network</li>
+<li>Requires an enormous effort to effectively model the many factors that contribute to query costs in a complex and heterogeneous environment like a multistore</li>
+</ul></li>
+<li>Black-box cost modelling
+<ul>
+<li>Hide the behavior of an execution engine within a black-box, where the known information is mostly limited to the issued queries and the given response times</li>
+<li>Cost is determined in terms of time</li>
+<li>Easily adapts to evolving environments</li>
+<li>Suffers from cold-start</li>
+</ul></li>
+</ul></li>
+</ul>
+<p>Query optimization</p>
+<p><img data-src="img/phdslides_133.png"></p>
+<p>White-box cost modellingexample</p>
+<p><img data-src="img/phdslides_134.png"></p>
+<p>Forresi, C., Francia, M., Gallinucci, E., &amp; Golfarelli, M. (2021). Optimizing execution plans in a multistore. In Advances in Databases and Information Systems: 25th European Conference, ADBIS 2021.</p>
+<p>Query optimization</p>
+<p>Black-box cost modellingexample</p>
+<p><img data-src="img/phdslides_135.png"></p>
+<p><img data-src="img/phdslides_136.png"></p>
+<p><img data-src="img/phdslides_137.png"></p>
+<p><img data-src="img/phdslides_138.png"></p>
+<p>Forresi, C., Francia, M., Gallinucci, E., &amp; Golfarelli, M. (2022). Cost-based Optimization of Multistore Query Plans. Information Systems Frontiers, 1-27.</p>
+</section>
+
+<section id="smart-data-platform-management" class="title-slide slide level1 center">
+<h1>Smart Data Platform Management</h1>
+<p>Challenges and Applications</p>
+</section>
+
+<section id="data-platform-5" class="title-slide slide level1 center">
+<h1>Data platform</h1>
+<ul>
+<li>We have services
+<ul>
+<li>To transform data</li>
+<li>To support the transformation</li>
+</ul></li>
+<li>The (DIKW) pyramid abstracts many techniques and algorithms
+<ul>
+<li>Standardization</li>
+<li>Integration</li>
+<li>Orchestration</li>
+<li>Accessibility through APIs</li>
+</ul></li>
+</ul>
+<p><strong>Supporting services</strong></p>
+<p><strong>Serve (deciding/consume)</strong></p>
+<p><strong>BI tools (e.g., Tableau)</strong></p>
+<p><strong>Analytics (analyzing/process)</strong></p>
+<p><strong>Networking, etc.</strong></p>
+<p><strong>Machine learning</strong></p>
+<p><strong>Ingestion (acquiring/collect)</strong></p>
+
+<img data-src="img/phdslides_139.png" class="r-stretch"></section>
+
+<section id="data-platform-related-job-positions" class="title-slide slide level1 center">
+<h1>Data platform: related job positions</h1>
+<ul>
+<li><strong>Data platform engineer</strong>
+<ul>
+<li>Orchestrate the successful implementation of cloud technologies within the data infrastructure of their business</li>
+<li>Solid understanding of impact database types and implementation</li>
+<li>Responsible for purchasing decisions for cloud services and approval of data architectures</li>
+</ul></li>
+<li><strong>Data architect</strong>
+<ul>
+<li>Team members who understand all aspects of a data platform’s architecture</li>
+<li>Work closely with the data platform engineers to create data workflows</li>
+<li>Responsible for designing and testing new database architectures and planning both data and architecture migrations</li>
+</ul></li>
+<li><strong>Data pipeline engineer</strong>
+<ul>
+<li>Responsible for planning, architecting, and building large-scale data processing systems</li>
+</ul></li>
+<li><strong>Data analyst</strong>
+<ul>
+<li>Analyze data systems, creating automated systems for retrieving data from the data platform</li>
+<li>Cloud data analysts are more commonly members of the business user population</li>
+</ul></li>
+<li><strong>Data scientist</strong>
+<ul>
+<li>Analyze and interpret complex digital data</li>
+<li>Work with new technologies (e.g., machine learning) to deepen the business’ understanding and gain new insights</li>
+</ul></li>
+</ul>
+</section>
+
+<section id="from-devops" class="title-slide slide level1 center">
+<h1>From DevOps…</h1>
+<p><strong>DevOps</strong> combines development and operations to increase the efficiency, speed, and security of software development and delivery compared to traditional processes.</p>
+<p>DevOps practices enable software development (dev) and operations (ops) teams to accelerate delivery through automation, collaboration, fast feedback, and iterative improvement</p>
+<p><img data-src="img/phdslides_140.png"></p>
+<p><a href="https://about.gitlab.com/topics/devops/">https://about.gitlab.com/topics/devops/</a> (accessed 2023-06-03)</p>
+<p><img data-src="img/phdslides_141.png"></p>
+</section>
+
+<section id="to-dataops" class="title-slide slide level1 center">
+<h1>… to DataOps</h1>
+<p><strong>DataOps</strong> refers to a general process aimed to shorten the end-to-end data analytic life-cycle time by introducing automation in the data collection, validation, and verification process</p>
+
+<img data-src="img/phdslides_142.png" class="r-stretch"><p>Munappy, A. R., Mattos, D. I., Bosch, J., Olsson, H. H., &amp; Dakkak, A. (2020, June). From ad-hoc data analytics to dataops. In <em>Proceedings of the International Conference on Software and System Processes</em> (pp.&nbsp;165-174).</p>
+</section>
+
+<section id="dataops" class="title-slide slide level1 center">
+<h1>DataOps</h1>
+<p><img data-src="img/phdslides_143.png"></p>
+<ul>
+<li>From DevOps to DataOps
+<ul>
+<li><em>“A collaborative data management practice focused on improving the </em> <em>communication, integration and automation of data flows between </em> <em>data managers and data consumers across an organization”</em></li>
+<li>Data analytics improved in terms of velocity, quality, predictability and scale of software engineering and deployment</li>
+</ul></li>
+<li>Some key rules
+<ul>
+<li>Establish progress and performance measurements at every stage</li>
+<li>Automate as many stages of the data flow as possible</li>
+<li>Establish governance discipline ( <em>governance-as-code</em> )</li>
+<li>Design process for growth and extensibility</li>
+</ul></li>
+</ul>
+<p><img data-src="img/phdslides_144.png"></p>
+<p>Gartner, 2020 <a href="https://www.gartner.com/smarterwithgartner/how-dataops-amplifies-data-and-analytics-business-value">https://www.gartner.com/smarterwithgartner/how-dataops-amplifies-data-and-analytics-business-value</a>Andy Palmer, 2015 <a href="https://www.tamr.com/blog/from-devops-to-dataops-by-andy-palmer/">https://www.tamr.com/blog/from-devops-to-dataops-by-andy-palmer/</a> William Vorhies, 2017 <a href="https://www.datasciencecentral.com/profiles/blogs/dataops-it-s-a-secret">https://www.datasciencecentral.com/profiles/blogs/dataops-it-s-a-secret</a></p>
+</section>
+
+<section id="data-fabric" class="title-slide slide level1 center">
+<h1>Data fabric</h1>
+<ul>
+<li>“vision for data management […] that seamlessly connects different clouds, whether they are private, public, or hybrid environments.” (2016)</li>
+<li>Frictionless access and sharing of data in a distributed data environment
+<ul>
+<li>Enables a <strong>single and consistent data management framework</strong> , which allows seamless data access and processing by design across otherwise siloed storage</li>
+<li>Leverages <strong>human and machine capabilities to access data </strong> in place or support its consolidation where appropriate</li>
+<li><strong>Continuously identifies and connects data </strong> from disparate applications to discover unique, business-relevant relationships between the available data points</li>
+</ul></li>
+<li>It is a unified architecture with an integrated set of technologies and services
+<ul>
+<li>Designed to deliver integrated and enriched data – at the right time, in the right method, and to the right data consumer – in support of both operational and analytical workloads</li>
+<li>Combines key data management technologies – such as <strong>data catalog</strong> , <strong>data governance</strong> , <strong>data integration</strong> , <strong>data pipelining</strong> , and <strong>data orchestration</strong></li>
+</ul></li>
+</ul>
+<p><a href="https://cloud.netapp.com/hubfs/Data-Fabric/Data%20Fabric%20WP%20April%202017.pdf">https://cloud.netapp.com/hubfs/Data-Fabric/Data%20Fabric%20WP%20April%202017.pdf</a> (accessed 2023-06-23)Gartner, 2019 <a href="https://www.gartner.com/en/newsroom/press-releases/2019-02-18-gartner-identifies-top-10-data-and-analytics-technolo">https://www.gartner.com/en/newsroom/press-releases/2019-02-18-gartner-identifies-top-10-data-and-analytics-technolo</a> Gartner, 2021 <a href="https://www.gartner.com/smarterwithgartner/data-fabric-architecture-is-key-to-modernizing-data-management-and-integration">https://www.gartner.com/smarterwithgartner/data-fabric-architecture-is-key-to-modernizing-data-management-and-integration</a> K2View Whitepaper: What is a Data Fabric? The Complete Guide, 2021</p>
+</section>
+
+<section id="data-fabric-1" class="title-slide slide level1 center">
+<h1>Data Fabric</h1>
+<ul>
+<li><strong>Catalog all your data</strong> : including business glossary and design-time and runtime metadata</li>
+<li><strong>Enable self-service capabilities</strong> : data discovery, profiling, exploration, quality assessment, consumption of data-as-a-product</li>
+<li><strong>Provide a knowledge graph</strong> : Visualizing how data, people, processes, systems, etc. are interconnected, deriving additional actionable insight</li>
+<li><strong>Provide intelligent (smart) information integration</strong> : Supporting IT staff and business users alike in their data integration and transformation, data virtualization, and federation tasks</li>
+<li><strong>Derive insight from metadata</strong> : Orchestrating and automating tasks and jobs for data integration, data engineering, and data governance end to end</li>
+<li><strong>Enforce local and global data rules/policies</strong> : Including AI/ML-based automated generation, adjustments, and enforcement of rules and policies</li>
+<li><strong>Manage an end-to-end unified lifecycle</strong> : Implementing a coherent and consistent lifecycle end to end of all Data Fabric tasks across various platforms, personas, and organizations</li>
+<li><strong>Enforce data and AI governance</strong> : Broadening the scope of traditional data governance to include AI artefacts, for example, AI models, pipelines</li>
+</ul>
+<p>Is this brand new?</p>
+</section>
+
+<section id="data-fabric-2" class="title-slide slide level1 center">
+<h1>Data fabric</h1>
+<ul>
+<li><strong>It is a design concept</strong>
+<ul>
+<li>It optimizes data management by automating repetitive tasks</li>
+<li>According to Gartner estimates, 25% of data management vendors will provide a complete framework for data fabric by 2024 – up from 5% today</li>
+</ul></li>
+</ul>
+<p><img data-src="img/phdslides_145.png"></p>
+<p><img data-src="img/phdslides_146.png"></p>
+<p>Gartner, 2021 <a href="https://www.gartner.com/smarterwithgartner/data-fabric-architecture-is-key-to-modernizing-data-management-and-integration">https://www.gartner.com/smarterwithgartner/data-fabric-architecture-is-key-to-modernizing-data-management-and-integration</a></p>
+<p>K2View, 2021 <a href="https://www.k2view.com/top-data-fabric-vendors">https://www.k2view.com/top-data-fabric-vendors</a></p>
+</section>
+
+<section id="section-7" class="title-slide slide level1 center">
+<h1></h1>
+<p>Top Players https://solutionsreview.com/data-management/the-best-data-fabric-tools-and-software/ https://em360tech.com/top-10/data-modelling-fabric Predictions https://live-datastaxd8.pantheonsite.io/sites/default/files/2021-02/Predicts_2021_Data__735776_ndx.pdf</p>
+<p><img data-src="img/phdslides_147.png"></p>
+<p><a href="https://www.irion-edm.com/data-management-insights/gartner-data-summit-irion-representative-vendor-for-data-fabric-technology/">https://www.irion-edm.com/data-management-insights/gartner-data-summit-irion-representative-vendor-for-data-fabric-technology/</a></p>
+<p><img data-src="img/phdslides_148.png"></p>
+<p>Gartner, 2021 <a href="https://www.gartner.com/smarterwithgartner/data-fabric-architecture-is-key-to-modernizing-data-management-and-integration">https://www.gartner.com/smarterwithgartner/data-fabric-architecture-is-key-to-modernizing-data-management-and-integration</a></p>
+</section>
+
+<section id="data-mesh" class="title-slide slide level1 center">
+<h1>Data mesh</h1>
+<ul>
+<li>Distributed data architecture, under centralized governance and standardization for interoperability, enabled by a shared and harmonized self-serve data infrastructure
+<ul>
+<li>Domain-oriented decentralized data ownership
+<ul>
+<li>Decentralization and distribution of responsibility to people who are closest to the data, in order to support continuous change and scalability</li>
+<li>Each domain exposes its own op/analytical APIs</li>
+</ul></li>
+<li><strong>Data as a product </strong> ( <em>quantum</em> )
+<ul>
+<li>Products must be discoverable, addressable, trustworthy, self-describing, secure</li>
+</ul></li>
+<li>Self-serve data infrastructure as a platform
+<ul>
+<li>High-level abstraction of infrastructure to provision and manage the lifecycle of data products</li>
+</ul></li>
+<li>Federated computational governance
+<ul>
+<li>A governance model that embraces decentralization and domain self-sovereignty, interoperability through global standardization, a dynamic topology, automated execution of decisions by the platform</li>
+</ul></li>
+</ul></li>
+</ul>
+<p>Zhamak Dehghani, 2019 <a href="https://martinfowler.com/articles/data-monolith-to-mesh.html">https://martinfowler.com/articles/data-monolith-to-mesh.html</a>Zhamak Dehghani, 2020 <a href="https://martinfowler.com/articles/data-mesh-principles.html">https://martinfowler.com/articles/data-mesh-principles.html</a></p>
+</section>
+
+<section id="section-8" class="title-slide slide level1 center">
+<h1></h1>
+<p>https://www.youtube.com/watch?v=_bmYXWCxF_Q</p>
+<ul>
+<li>Data Mesh organizes data around <strong>business domain owners </strong> and transforms relevant data assets (data sources) to <strong>data products</strong> that can be consumed by distributed business users from various business domains or functions
+<ul>
+<li>Data products are created, governed, and used in an <strong>autonomous, decentralized</strong> , and self-service manner</li>
+<li><strong>Self-service capabilities</strong> , which we have already referenced as a Data Fabric capability, enable business organizations to entertain a data marketplace with shopping-for-data characteristics</li>
+</ul></li>
+</ul>
+
+<img data-src="img/phdslides_149.png" class="r-stretch"></section>
+
+<section id="what-makes-data-a-product" class="title-slide slide level1 center">
+<h1>What makes data a product?</h1>
+<ul>
+<li>A <strong>data product </strong> is raw data transformed into a business context
+<ul>
+<li>Data products are registered in <strong>knowledge catalog </strong> through specifications (XML, JSON, etc.)</li>
+<li>Main features
+<ul>
+<li><strong>Data product description</strong> : The data product needs to be well described</li>
+<li><strong>Access methods</strong> : for example, REST APIs, SQL, NoSQL, etc., and where to find the data asset</li>
+<li><strong>Policies and rules</strong> : who is allowed to consume the data product for what purpose</li>
+<li><strong>SLAs</strong> : agreements regarding the data product availability, performance characteristics, functions, cost of data product usage</li>
+<li><strong>Defined format</strong> : A data product needs to be described using a defined format</li>
+<li><strong>Cataloged</strong> : All data products need to be registered in the knowledge catalog. Data products need to be searchable and discoverable by potential data product consumers and business user</li>
+</ul></li>
+<li>Data products themselves are not stored in the knowledge catalog</li>
+</ul></li>
+</ul>
+</section>
+
+<section id="data-mesh-vs-data-fabric" class="title-slide slide level1 center">
+<h1>Data mesh vs data fabric</h1>
+<ul>
+<li>They are design concepts, not things
+<ul>
+<li>They are not mutually exclusive</li>
+<li>They are architectural frameworks, not architectures
+<ul>
+<li>The frameworks must be adapted and customized to your needs, data, processes, and terminology</li>
+<li>Gartner estimates 25% of data management vendors will provide a complete data fabric solution by 2024 – up from 5% today</li>
+</ul></li>
+</ul></li>
+</ul>
+<p>Alex Woodie, 2021 <a href="https://www.datanami.com/2021/10/25/data-mesh-vs-data-fabric-understanding-the-differences/">https://www.datanami.com/2021/10/25/data-mesh-vs-data-fabric-understanding-the-differences/</a> Dave Wells, 2021 <a href="https://www.eckerson.com/articles/data-architecture-complex-vs-complicated">https://www.eckerson.com/articles/data-architecture-complex-vs-complicated</a></p>
+<ul>
+<li>Both provide an architectural framework to access data across multiple technologies and platforms
+<ul>
+<li><strong>Data fabric</strong>
+<ul>
+<li>Attempts to centralize and coordinate data management</li>
+<li>Tackles the complexity of data and metadata in a smart way that works well together</li>
+<li>Focus on the architectural, technical capabilities, and intelligent analysis to produce active metadata supporting a smarter, AI-infused system to orchestrate various data integration styles</li>
+</ul></li>
+<li><strong>Data mesh</strong>
+<ul>
+<li>Emphasis on decentralization and data domain autonomy</li>
+<li>Focuses on organizational change; it is more about people and process</li>
+<li>Data are primarily organized around domain owners who create business-focused data products, which can be aggregated and consumed across distributed consumers</li>
+</ul></li>
+</ul></li>
+</ul>
+<p>Alex Woodie, 2021 <a href="https://www.datanami.com/2021/10/25/data-mesh-vs-data-fabric-understanding-the-differences/">https://www.datanami.com/2021/10/25/data-mesh-vs-data-fabric-understanding-the-differences/</a> Dave Wells, 2021 <a href="https://www.eckerson.com/articles/data-architecture-complex-vs-complicated">https://www.eckerson.com/articles/data-architecture-complex-vs-complicated</a></p>
+
+<img data-src="img/phdslides_150.png" class="r-stretch"><ul>
+<li>Data Fabric and Mesh are the results from the data architecture evolution
+<ul>
+<li><strong>Many capabilities were in existence already long before</strong> the terms were coined</li>
+</ul></li>
+<li>Take away:
+<ul>
+<li>Abstract the “building blocks” of such platforms</li>
+<li>Let them evolve according to scalability and flexibility requirements</li>
+</ul></li>
+</ul>
+</section>
+
+<section id="some-references" class="title-slide slide level1 center">
+<h1>(Some) References</h1>
+<p><img data-src="img/phdslides_151.jpg"></p>
+<p><img data-src="img/phdslides_152.png"></p>
+<p><img data-src="img/phdslides_153.png"></p>
+</section>
+
+<section id="metadata-challenges" class="title-slide slide level1 center">
+<h1>Metadata Challenges</h1>
+<ul>
+<li>Lacking smart support to govern the complexity of data and transformations</li>
+<li>Data transformations must be governed to prevent DP turning into a swamp
+<ul>
+<li>Amplified in data science, with data scientists prevailing data architects</li>
+<li>Leverage descriptive metadata and maintenance to keep control over data</li>
+</ul></li>
+<li>Knowledge representation
+<ul>
+<li>Which metadata must be captured</li>
+<li>How should metadata be organized</li>
+</ul></li>
+<li>Knowledge exploitation
+<ul>
+<li>Which features do metadata enable</li>
+</ul></li>
+</ul>
+<p>Knowledge representation</p>
+</section>
+
+<section id="knowledge-representation" class="title-slide slide level1 center">
+<h1>Knowledge representation</h1>
+<ul>
+<li>A classification of metadata
+<ul>
+<li><strong>Technical</strong> metadata
+<ul>
+<li>Capture the form and structure of each dataset</li>
+<li>E.g.: type of data (text, JSON, Avro); structure of the data (the fields and their types)</li>
+</ul></li>
+<li><strong>Operational</strong> metadata
+<ul>
+<li>Capture lineage, quality, profile, and provenance of the data</li>
+<li>E.g.: source and target locations of data, size, number of records, and lineage</li>
+</ul></li>
+<li><strong>Business</strong> metadata
+<ul>
+<li>Captures what it all means to the user</li>
+<li>E.g.: business names, descriptions, tags, quality, and masking rules for privacy</li>
+</ul></li>
+</ul></li>
+</ul>
+<p>A. LaPlante, B. Sharma, <strong>Architecting Data Lakes</strong> , <em>O’Reilly Media</em> , Sebastopol, 2018.</p>
+<p>Knowledge representation</p>
+<ul>
+<li>Another classification of metadata
+<ul>
+<li><strong>Intra-object </strong> metadata
+<ul>
+<li><em>Properties</em> provide a general description of an object in the form of key-value pairs</li>
+<li><em>Summaries and previews </em> provide an overview of the content or structure of an object</li>
+<li><em>Semantic metadata</em> are annotations that help understand the meaning of data</li>
+</ul></li>
+<li><strong>Inter-object</strong> metadata
+<ul>
+<li><em>Objects groupings</em> organize objects into collections, each object being able to belong simultaneously to several collections</li>
+<li><em>Similarity links </em> reflect the strength of the similarity between two objects</li>
+<li><em>Parenthood relationships </em> reflect the fact that an object can be the result of joining several others</li>
+</ul></li>
+<li><strong>Global</strong> metadata
+<ul>
+<li><em>Semantic resources</em> , i.e., knowledge bases (ontologies, taxonomies, thesauri, dictionaries) used to generate other metadata and improve analyses</li>
+<li><em>Indexes</em> , i.e., data structures that help find an object quickly</li>
+<li><em>Logs</em> , used to track user interactions with the data lake</li>
+</ul></li>
+</ul></li>
+</ul>
+<p>Sawadogo, P. N., Scholly, E., Favre, C., Ferey, E., Loudcher, S., &amp; Darmont, J. (2019, September). <strong>Metadata systems for data lakes: models and features</strong> . In _ European conference on advances in databases and information systems _ (pp.&nbsp;440-451). Springer, Cham.</p>
+<p><img data-src="img/phdslides_154.png"></p>
+<p>Sawadogo, P. N., Scholly, E., Favre, C., Ferey, E., Loudcher, S., &amp; Darmont, J. (2019, September). <strong>Metadata systems for data lakes: models and features</strong> . In <em>European conference on advances in databases and information systems</em> (pp.&nbsp;440-451). Springer, Cham.</p>
+<p>Knowledge representation</p>
+<p><img data-src="img/phdslides_155.png"></p>
+<p><img data-src="img/phdslides_156.png"></p>
+<p>Few details given on metamodel and functionalities.</p>
+<p>No metadata collected on operations.</p>
+<p>Hai, R., Geisler, S., &amp; Quix, C. (2016, June). <strong>Constance: An intelligent data lake system</strong> . In&nbsp; <em>Proceedings of the 2016 international conference on management of data</em> &nbsp;(pp.&nbsp;2097-2100).</p>
+<p>Knowledge representation</p>
+<p><img data-src="img/phdslides_157.png"></p>
+<p><img data-src="img/phdslides_158.png"></p>
+<p>No discussion about the functionalities provided.</p>
+<p>No metadata collected on operations and agents.</p>
+<p>Quix, C., Hai, R., &amp; Vatov, I. (2016). <strong>GEMMS: A Generic and Extensible Metadata Management System for Data Lakes</strong> . In&nbsp; <em>CAiSE</em> _ forum_ &nbsp;(Vol. 129).</p>
+<p>Knowledge representation</p>
+<p><img data-src="img/phdslides_159.png"></p>
+<p>Crawls Google’s storage systems to extract basic metadata on datasets and their relationship with other datasets.</p>
+<p>Performs metadata inference, e.g., to determine the schema of a non-self-describing dataset, to trace the provenance of data through a sequence of processing services, or to annotate data with their semantics.</p>
+<p><img data-src="img/phdslides_160.png"></p>
+<p>Strictly coupled with the Google platform.</p>
+<p>Mainly focuses on object description and searches.</p>
+<p>No formal description of the metamodel.</p>
+<p>Halevy, A. Y., Korn, F., Noy, N. F., Olston, C., Polyzotis, N., Roy, S., &amp; Whang, S. E. (2016). <strong>Managing Google’s data lake: an overview of the Goods system</strong> .&nbsp; <em>IEEE Data Eng. Bull.</em> ,&nbsp; <em>39</em> (3), 5-14.</p>
+<p>Knowledge representation</p>
+<p><img data-src="img/phdslides_161.png"></p>
+<p>Version graphs represent data versions.</p>
+<p>Model graphs represent application metadata, i.e., how data are interpreted for use.</p>
+<p>Lineage graphs capture usage information.</p>
+<p><img data-src="img/phdslides_162.png"></p>
+<p>Not enough details given to clarify which metadata are actually handled.</p>
+<p>Functionalities are described at a high level.</p>
+<p>Hellerstein, J. M., Sreekanti, V., Gonzalez, J. E., Dalton, J., Dey, A., Nag, S., … &amp; Sun, E. (2017, January). <strong>Ground: A Data Context Service</strong> . In&nbsp; <em>CIDR</em> .</p>
+<p>Knowledge representation</p>
+<p><img data-src="img/phdslides_163.png"></p>
+<p><img data-src="img/phdslides_164.png"></p>
+<p>Support users in creating and optimizing the data processing pipelines.</p>
+<p>Only goal-related metadata are collected.</p>
+<p><img data-src="img/phdslides_165.png"></p>
+<p>Maccioni, A., &amp; Torlone, R. (2018, June). <strong>KAYAK: a framework for just-in-time data preparation in a data lake</strong> . In&nbsp; <em>International Conference on Advanced Information Systems Engineering</em> &nbsp;(pp.&nbsp;474-489). Springer, Cham.</p>
+<p>Knowledge representation</p>
+<p><img data-src="img/phdslides_166.png"></p>
+<p><strong>Technical</strong></p>
+<p><em>Operational</em></p>
+<p><strong>Business</strong></p>
+<p>Francia, M., Gallinucci, E., Golfarelli, M., Leoni, A. G., Rizzi, S., &amp; Santolini, N. (2021). <strong>Making data platforms smarter with MOSES</strong> . <em>Future Generation Computer Systems</em> , 125, 299-313.</p>
+<p>Knowledge representation</p>
+<p><img data-src="img/phdslides_167.png"></p>
+<p>Francia, M., Gallinucci, E., Golfarelli, M., Leoni, A. G., Rizzi, S., &amp; Santolini, N. (2021). <strong>Making data platforms smarter with MOSES</strong> . <em>Future Generation Computer Systems</em> , 125, 299-313.</p>
+<p>Knowledge representation</p>
+<p><img data-src="img/phdslides_168.png"></p>
+<p>Not pre-defined</p>
+<p>Domain-independent,</p>
+<p>extensible</p>
+<p>Francia, M., Gallinucci, E., Golfarelli, M., Leoni, A. G., Rizzi, S., &amp; Santolini, N. (2021). <strong>Making data platforms smarter with MOSES</strong> . <em>Future Generation Computer Systems</em> , 125, 299-313.</p>
+<p>Knowledge representation</p>
+<p><img data-src="img/phdslides_169.png"></p>
+<p>Tune the trade-off between the level of detail of the functionalities and the required computational effort</p>
+<p>Francia, M., Gallinucci, E., Golfarelli, M., Leoni, A. G., Rizzi, S., &amp; Santolini, N. (2021). <strong>Making data platforms smarter with MOSES</strong> . <em>Future Generation Computer Systems</em> , 125, 299-313.</p>
+<p>Knowledge representation</p>
+<p><img data-src="img/phdslides_170.png"></p>
+<p>Francia, M., Gallinucci, E., Golfarelli, M., Leoni, A. G., Rizzi, S., &amp; Santolini, N. (2021). <strong>Making data platforms smarter with MOSES</strong> . <em>Future Generation Computer Systems</em> , 125, 299-313.</p>
+<p>Knowledge representation</p>
+<p><img data-src="img/phdslides_171.png"></p>
+<p>Functionalities</p>
+<p>Semantic enrichment</p>
+<p>Data indexing</p>
+<p>Link generation</p>
+<p>Data polymorphism</p>
+<p>Data versioning</p>
+<p>Usage tracking</p>
+<p>Francia, M., Gallinucci, E., Golfarelli, M., Leoni, A. G., Rizzi, S., &amp; Santolini, N. (2021). <strong>Making data platforms smarter with MOSES</strong> . <em>Future Generation Computer Systems</em> , 125, 299-313.</p>
+<p>Knowledge representation</p>
+<p>How would you implement the meta-model?</p>
+<p>Knowledge representation</p>
+</section>
+
+<section id="the-property-graph-data-model" class="title-slide slide level1 center">
+<h1>The Property Graph Data Model</h1>
+<ul>
+<li>Born in the database community
+<ul>
+<li>Meant to be queried and processed</li>
+<li><em>THERE IS NO STANDARD!</em></li>
+</ul></li>
+<li>Two main constructs: nodes and edges
+<ul>
+<li>Nodes represent entities,</li>
+<li>Edges relate pairs of nodes, and may represent different types of relationships</li>
+</ul></li>
+<li>Nodes and edges might be labeled,</li>
+<li>and may have a set of properties represented as attributes (key-value pairs)***</li>
+<li>Further assumptions:
+<ul>
+<li>Edges are directed,</li>
+<li>Multi-graphs are allowed</li>
+</ul></li>
+<li><em>*** Note: in </em> <em>some</em> _ _ <em>definitions</em> _ (_ <em>the</em> _ _ <em>least</em> <em>) </em> <em>edges</em> _ are _ <em>not</em> _ _ <em>allowed</em> _ to _ <em>have</em> _ _ <em>attributes</em> #</li>
+</ul>
+<p>A W3C standard is being developed, but still does not exist.</p>
+<p>Knowledge representation</p>
+</section>
+
+<section id="formal-definition" class="title-slide slide level1 center">
+<h1>Formal Definition</h1>
+<p><img data-src="img/phdslides_172.png"></p>
+<p><img data-src="img/phdslides_173.png"></p>
+<p><img data-src="img/phdslides_174.png"></p>
+<p>Extracted from: R. Angles et al.&nbsp;Foundations of Modern Query Languages for Graph Databases</p>
+</section>
+
+<section id="section-9" class="title-slide slide level1 center">
+<h1></h1>
+<p>Total function is just another name for a regular function. It just emphasizes the function is defined for all elements of its domain. Partial function may only apply to a subset of the elements in the domain</p>
+<p>Knowledge representation</p>
+</section>
+
+<section id="example-of-property-graph" class="title-slide slide level1 center">
+<h1>Example of Property Graph</h1>
+<p><img data-src="img/phdslides_175.png"></p>
+<p>Formal definition:</p>
+<p><img data-src="img/phdslides_176.png"></p>
+<p>Knowledge representation</p>
+</section>
+
+<section id="traversal-navigation" class="title-slide slide level1 center">
+<h1>Traversal Navigation</h1>
+<ul>
+<li>We define the graph traversal pattern as: “the ability to rapidly traverse structures to an arbitrary depth (e.g., tree structures, cyclic structures) and with an arbitrary path description (e.g.&nbsp;friends that work together, roads below a certain congestion threshold)” [Marko Rodriguez]</li>
+<li>Totally opposite to set theory (on which relational databases are based on)
+<ul>
+<li>Sets of elements are operated by means of the relational algebra #</li>
+</ul></li>
+</ul>
+<p>Let them think of it as follows: fix a set of starting points. Explore the graph from there according to the pattern provided EXAMPLE: Let’s go back to the movies example. Find the actors that acted together in two or more movies. PATTERN: (actor)-(movie)-(actor2) AND (actor)-(movie2)-(actor2)</p>
+<p>Realize that there are three sources of complexity: Number of starting points 2)</p>
+<p>Knowledge representation</p>
+</section>
+
+<section id="traversing-data-in-a-rdbms" class="title-slide slide level1 center">
+<h1>Traversing Data in a RDBMS</h1>
+<p>In the relational theory, it is equivalent to joining data (schema level) and select data (based on a value)</p>
+
+<img data-src="img/phdslides_177.png" class="r-stretch"><p>SELECT *</p>
+<p>FROM user u, user_order uo, orders o, items i</p>
+<p>WHERE u.user = uo.user AND uo.orderId = o.orderId AND i.lineItemId = i.LineItemId</p>
+<p>AND u.user = ‘Alice’</p>
+</section>
+
+<section id="section-10" class="title-slide slide level1 center">
+<h1></h1>
+<p>Traversing data = navigating data</p>
+<p>Join: Schema level Traverse: Ocurrence level</p>
+<p>Formula de DBD de row index join (el numero d’instancies total importa, encara que poques facin join). En relacional el cost depèn de la profunditat (num joins que he de fer) I també del nombre total de tuples de la taula destí.</p>
+</section>
+
+<section id="example-of-data-platform-moses" class="title-slide slide level1 center">
+<h1>Example of data platform: MOSES</h1>
+<p><img data-src="img/phdslides_178.png"></p>
+<ul>
+<li>Example of a data platform (MOSES)</li>
+<li>Functional architecture
+<ul>
+<li>Components of MOSES are in orange</li>
+<li>Others are standard components in charge of producing/consuming, processing, storing, and visualizing data</li>
+<li>The orchestrator (e.g., Oozie) manages (e.g., schedules) the data transformation processes</li>
+</ul></li>
+</ul>
+<p>Metadata Extractor</p>
+<p><img data-src="img/phdslides_179.png"></p>
+<p><img data-src="img/phdslides_180.png"></p>
+<p>Metadata Search</p>
+<p>Engine</p>
+<p><img data-src="img/phdslides_181.png"></p>
+<p><img data-src="img/phdslides_182.png"></p>
+<p><img data-src="img/phdslides_183.png"></p>
+<p><img data-src="img/phdslides_184.png"></p>
+<p>Provenance Manager</p>
+<p><img data-src="img/phdslides_185.png"></p>
+<p><img data-src="img/phdslides_186.png"></p>
+<p><img data-src="img/phdslides_187.png"></p>
+<p><img data-src="img/phdslides_188.png"></p>
+<p>Custom components</p>
+<p><img data-src="img/phdslides_189.png"></p>
+<p><img data-src="img/phdslides_190.png"></p>
+<p><img data-src="img/phdslides_191.png"></p>
+<p><img data-src="img/phdslides_192.png"></p>
+<p><img data-src="img/phdslides_193.png"></p>
+<p><img data-src="img/phdslides_194.png"></p>
+<p><img data-src="img/phdslides_195.png"></p>
+<p>Process Interfaces</p>
+<p>MOSES Interfaces</p>
+<p>Other Interfaces</p>
+<p>Workflow Administration</p>
+<p>Francia, M., Gallinucci, E., Golfarelli, M., Rizzi, S. et al.&nbsp;(2021). Making data platforms smarter with MOSES. Future Generation Computer Systems, 125, 299-313.</p>
+<p>Knowledge exploitation</p>
+</section>
+
+<section id="capturing-the-metadata" class="title-slide slide level1 center">
+<h1>Capturing the metadata</h1>
+<ul>
+<li>Pull strategy
+<ul>
+<li>The system actively collects new metadata</li>
+<li>Requires scheduling: when does the system activate itself?
+<ul>
+<li>Event-based (CRUD)</li>
+<li>Time-based</li>
+</ul></li>
+<li>Requires wrappers: what does the system capture?
+<ul>
+<li>Based on data type and/or application</li>
+<li>A comprehensive monitoring is practically unfeasible</li>
+</ul></li>
+</ul></li>
+<li>Push strategy
+<ul>
+<li>The system passively receives new metadata</li>
+<li>Requires an API layer</li>
+<li>Mandatory for operational metadata</li>
+</ul></li>
+</ul>
+<p>Knowledge representation</p>
+</section>
+
+<section id="knowledge-representation-1" class="title-slide slide level1 center">
+<h1>Knowledge representation</h1>
+<ul>
+<li>A classification of functionalities enabled by metadata
+<ul>
+<li>Semantic enrichment
+<ul>
+<li>Generating a description of the context of data, e.g., with tags, to make them more interpretable and understandable</li>
+</ul></li>
+<li>Data indexing
+<ul>
+<li>Data structures to retrieve datasets based on specific characteristics (keywords or patterns)</li>
+</ul></li>
+<li>Link generation and conservation
+<ul>
+<li>Detecting similarity relationships or integrating preexisting links between datasets</li>
+</ul></li>
+<li>Data polymorphism
+<ul>
+<li>Storing multiple representations of the same data to avoid repeating pre-processing and speed up analyses</li>
+</ul></li>
+<li>Data versioning
+<ul>
+<li>Support data changes while conserving previous states</li>
+</ul></li>
+<li>Usage tracking
+<ul>
+<li>Records the interactions between users and the data</li>
+</ul></li>
+</ul></li>
+</ul>
+<p>Sawadogo, P. N., Scholly, E., Favre, C., Ferey, E., Loudcher, S., &amp; Darmont, J. (2019, September). <strong>Metadata systems for data lakes: models and features.</strong> In <em>European conference on advances in databases and information systems </em> (pp.&nbsp;440-451). Springer, Cham.</p>
+</section>
+
+<section id="managing-data-platforms" class="title-slide slide level1 center">
+<h1>Managing data platforms</h1>
+<ul>
+<li>Data provenance</li>
+<li>Compression</li>
+<li>Data profiling</li>
+<li>Entity resolution</li>
+<li>Data versioning</li>
+<li>…</li>
+</ul>
+</section>
+
+<section id="data-profiling" class="title-slide slide level1 center">
+<h1>Data profiling</h1>
+<ul>
+<li>Data profiling
+<ul>
+<li>A broad range of methods to efficiently analyze a given data set</li>
+<li>E.g., in a <strong>functional dependencies</strong> and association rules</li>
+</ul></li>
+</ul>
+
+<img data-src="img/phdslides_196.png" class="r-stretch"><p>Naumann, Felix. “Data profiling revisited.” <em>ACM SIGMOD Record</em> 42.4 (2014): 40-49.</p>
+<ul>
+<li>Use cases
+<ul>
+<li><strong>Query optimization</strong>
+<ul>
+<li>Performed by DBMS to support query optimization with statistics about tables and columns</li>
+<li>Profiling results can be used to estimate the selectivity of operators and the cost of a query plan</li>
+</ul></li>
+<li><strong>Data cleansing</strong> (typical use case is profiling data)
+<ul>
+<li>Prepare a cleansing process by revealing errors (e.g., in formatting), missing values or outliers</li>
+</ul></li>
+<li><strong>Data integration and analytics</strong></li>
+</ul></li>
+<li>Challenges?</li>
+</ul>
+<p>Naumann, Felix. “Data profiling revisited.” <em>ACM SIGMOD Record</em> 42.4 (2014): 40-49.</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: center;">a</th>
+<th style="text-align: center;">b</th>
+<th style="text-align: center;">c</th>
+<th style="text-align: center;">d</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">4</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Challenges
+<ul>
+<li>The results of data profiling are <strong>computationally complex</strong> to discover
+<ul>
+<li>E.g., discovering keys/dependencies usually involves some sorting step for each considered column</li>
+</ul></li>
+<li>Verification of <strong>complex constraints on column combinations</strong> in a database
+<ul>
+<li>What is the complexity of this task?</li>
+</ul></li>
+</ul></li>
+</ul>
+<p>Naumann, Felix. “Data profiling revisited.” <em>ACM SIGMOD Record</em> 42.4 (2014): 40-49.</p>
+<p>Knowledge exploitation</p>
+</section>
+
+<section id="object-profiling-and-search" class="title-slide slide level1 center">
+<h1>Object profiling and search</h1>
+<ul>
+<li>Discoverability is a key requirement for data platforms
+<ul>
+<li>Simple searches to let users locate “known” information</li>
+<li>Data exploration to let users uncover “unknown” information</li>
+<li>Common goal: identification and description of Objects</li>
+</ul></li>
+<li>Two levels of querying
+<ul>
+<li>Metadata level (most important)</li>
+<li>Data level (can be coupled with the first one)</li>
+</ul></li>
+</ul>
+<p>Knowledge exploitation</p>
+<ul>
+<li>Basic search
+<ul>
+<li>MATCH (o:Object)-[]-(:Project {name:“ABC”})RETURN o
+<ul>
+<li>Return all objects of a given project</li>
+</ul></li>
+<li>MATCH (o:Object)-[]-(d:DataLakeArea)WHERE d.name = “Landing” AND o.name LIKE “2021_%”AND o.size &lt; 100.000RETURN o
+<ul>
+<li>Return small objects with a given name pattern in the landing area</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<img data-src="img/phdslides_197.png" class="r-stretch"></section>
+
+<section id="section-11" class="title-slide slide level1 center">
+<h1></h1>
+<p>100000 kb = 100 mb</p>
+<p>Knowledge exploitation</p>
+<ul>
+<li>Schema-driven search
+<ul>
+<li>MATCH (o:Object)-[]-(:Schema)-[]-(a:Attribute), (a)-[]-(:Domain {name: “FiscalCode”})RETURN o
+<ul>
+<li>Return objects that contain informationreferring to a given Domain</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<img data-src="img/phdslides_198.png" class="r-stretch"></section>
+
+<section id="section-12" class="title-slide slide level1 center">
+<h1></h1>
+<p>100000 kb = 100 mb</p>
+<p>Knowledge exploitation</p>
+<ul>
+<li>Provenance-driven search
+<ul>
+<li>MATCH (obj1:Object)-[:readsFrom]-(o:Operation)-[:writesTo]-(obj2:Object)CREATE (obj1)-[:ancestorOf]-&gt;(obj2)</li>
+<li>MATCH (:Object {id:123})-[:ancestorOf*]-(obj:Object)RETURN obj
+<ul>
+<li>Discover objects obtained from a given ancestor</li>
+</ul></li>
+<li>MATCH (obj:Object)-[:ancestorOf*]-(:Object {id:123})RETURN obj
+<ul>
+<li>Discover object(s) from which another has originated</li>
+</ul></li>
+<li>Example: a ML team wants to use datasets that were publicized as <em>canonical </em> for certain domains, but they find these datasets being too “groomed” for ML
+<ul>
+<li>Provenance links can be used to browse upstream and identify the less-groomed datasets that were used to derive the canonical datasets</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<img data-src="img/phdslides_199.png" class="r-stretch"></section>
+
+<section id="section-13" class="title-slide slide level1 center">
+<h1></h1>
+<p>100000 kb = 100 mb</p>
+<p>Knowledge exploitation</p>
+<ul>
+<li>Similarity-driven search
+<ul>
+<li>MATCH (:Object {id:123})-[r:similarTo]-(o:Object)WHERE r.similarityType=“affinity”RETURN o
+<ul>
+<li>Discover datasets to be merged in a certain query</li>
+</ul></li>
+<li>MATCH (:Object {id:123})-[r:similarTo]-(o:Object)WHERE r.similarityType=“joinability”RETURN o
+<ul>
+<li>Discover datasets to be joined in a certain query</li>
+</ul></li>
+<li>Group similar objects and enrich the search results
+<ul>
+<li>List the main objects from each group</li>
+<li>Restrict the search to the objects of a single group</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<img data-src="img/phdslides_200.png" class="r-stretch"></section>
+
+<section id="section-14" class="title-slide slide level1 center">
+<h1></h1>
+<p>100000 kb = 100 mb</p>
+<p>Knowledge exploitation</p>
+<ul>
+<li>Semantics-driven search
+<ul>
+<li>MATCH (o:Object)-[:isDescribedBy]-(:OntologyTerm {uri:“http://…”})RETURN o</li>
+<li>MATCH (o:Object)-[*]-(any), (any)-[:isDescribedBy]-(:OntologyTerm {uri:“http://…”})RETURN o
+<ul>
+<li>Search objects without having any knowledge of theirphysical or intensional properties, but simply exploitingtheir traceability to a certain semantic concept</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<img data-src="img/phdslides_201.png" class="r-stretch"></section>
+
+<section id="section-15" class="title-slide slide level1 center">
+<h1></h1>
+<p>100000 kb = 100 mb</p>
+<p>Knowledge exploitation</p>
+<ul>
+<li>Profiling
+<ul>
+<li>MATCH (o:Object)-[]-(:OntologyType {name:“Table”}), (o)-[]-(s:Schema)-[]-(a:Attribute), (o)-[r:similarTo]-(o2:Object), (o)-[:ancestorOf]-(o3:Object), (o4:Object)-[:ancestorOf]-(o)RETURN o, s, a, r, o2, o3, o4
+<ul>
+<li>Shows an object’s properties, list the relationships with other objects in terms of similarity and provenance</li>
+<li>Compute a representation of the intensional features that mostly characterize a group of objects(see slides on schema heterogeneity)</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<img data-src="img/phdslides_202.png" class="r-stretch"></section>
+
+<section id="section-16" class="title-slide slide level1 center">
+<h1></h1>
+<p>100000 kb = 100 mb</p>
+<p>Knowledge exploitation</p>
+</section>
+
+<section id="provenance-and-versioning" class="title-slide slide level1 center">
+<h1>Provenance and versioning</h1>
+<ul>
+<li>Provenance: metadata pertaining to the history of a data item
+<ul>
+<li>Any information that describes the production process of an end product</li>
+<li>Encompasses meta-data about entities, data, processes, activities, and persons involved in the production process</li>
+<li>Essentially, it describes a transformation pipeline, including the origin of objects and the operations they are subject to</li>
+</ul></li>
+</ul>
+<p>J.Wang, D. Crawl, S. Purawat, M. H. Nguyen, I. Altintas, <strong>Big data provenance: Challenges, state of the art and opportunities</strong> , in: <em>Proc. </em> <em>BigData</em> , Santa Clara, CA, USA, 2015, pp.&nbsp;2509–2516.</p>
+<p>M. Herschel, R. Diestelk¨amper, H. Ben Lahmar, <strong>A survey on provenance: What for? What form? What from?</strong> , <em>VLDB J.</em> 26 (6) (2017) 881–906.</p>
+</section>
+
+<section id="section-17" class="title-slide slide level1 center">
+<h1></h1>
+<p>100000 kb = 100 mb</p>
+</section>
+
+<section id="data-provenance" class="title-slide slide level1 center">
+<h1>Data provenance</h1>
+<ul>
+<li>Provenance (also referred to as lineage, pedigree, parentage, genealogy)
+<ul>
+<li>The description of the origins of data and the process by which it arrived at the database</li>
+<li>Not only data products (e.g., tables, files), but also the processes that created them</li>
+</ul></li>
+<li>Use cases
+<ul>
+<li>Business domain. <em>Users traditionally work with an </em> <strong><em>need to be identified </em></strong> <em>and corrected to avoid costly errors in business forecasting.</em></li>
+<li>Scientific/research domain. <strong><em>copyright</em></strong> _ of data are significant when using third-party data in such a loosely connected network._</li>
+</ul></li>
+</ul>
+<p>Simmhan, Yogesh L., Beth Plale, and Dennis Gannon. “A survey of data provenance techniques.” <em>Computer Science Department, Indiana University, Bloomington IN</em> 47405 (2005): 69.</p>
+<ul>
+<li>Astronomers are creating an international Virtual Observatory
+<ul>
+<li>A <strong>provision of the computational resources</strong> needed to exploit the data scientifically</li>
+<li>Astronomy changed from being an individualistic to a <strong>collective enterprise</strong></li>
+<li>Telescope time is devoted/allocated to systematic sky surveys and analysis is performed using data from the archives</li>
+<li>Astronomers are <strong>increasingly relying on data that they did not take themselves</strong></li>
+<li>Raw data bear <strong>many instrumental signatures that must be removed</strong> in the process of generating data products</li>
+</ul></li>
+</ul>
+<p><img data-src="img/phdslides_203.jpg"></p>
+<p>Mann, Bob. “Some data derivation and provenance issues in astronomy.” <em>Workshop on Data Derivation and Provenance, Chicago</em> . 2002.<a href="https://www.esa.int/Science_Exploration/Space_Science/Webb/Webb_inspects_the_heart_of_the_Phantom_Galaxy">https://www.esa.int/Science_Exploration/Space_Science/Webb/Webb_inspects_the_heart_of_the_Phantom_Galaxy</a> (accessed 2022-08-01)</p>
+<p><img data-src="img/phdslides_204.png"></p>
+<p>Simmhan, Yogesh L., Beth Plale, and Dennis Gannon. “A survey of data provenance techniques.” <em>Computer Science Department, Indiana University, Bloomington IN</em> 47405 (2005): 69.</p>
+<ul>
+<li>Granularity
+<ul>
+<li><strong>Fine-grained</strong> (instance level): tracking data items (e.g., a tuple in a dataset) transformations</li>
+<li><strong>Coarse-grained</strong> (schema-level): tracking dataset transformations</li>
+</ul></li>
+<li>Queries
+<ul>
+<li><strong>Where</strong> provenance: given some output, which inputs did the output come from?</li>
+<li><strong>How</strong> provenance: given some output, how were the inputs manipulated?</li>
+<li><strong>Why</strong> provenance: given some output, why was data generated?
+<ul>
+<li>E.g., in the form of a proof tree that locates source data items contributing to its creation</li>
+</ul></li>
+</ul></li>
+</ul>
+<p>Simmhan, Yogesh L., Beth Plale, and Dennis Gannon. “A survey of data provenance techniques.” <em>Computer Science Department, Indiana University, Bloomington IN</em> 47405 (2005): 69.Ikeda, Robert, and Jennifer Widom. <em>Data lineage: A survey</em> . Stanford InfoLab, 2009.</p>
+<p>Knowledge exploitation</p>
+</section>
+
+<section id="provenance-and-versioning-1" class="title-slide slide level1 center">
+<h1>Provenance and versioning</h1>
+<ul>
+<li>An important aspect is the granularity of provenance
+<ul>
+<li>Fine-grained provenance is typically used for single vertical applications
+<ul>
+<li>It requires to collect huge amounts of detailed information to enable a very detailed tracing</li>
+</ul></li>
+<li>Coarse-grained provenance is appropriate to ensure a broad coverage of highly heterogeneous transformations possibly involving several applications and datasets</li>
+</ul></li>
+<li>Choosing a granularity is the result of a trade-off between accuracy and computational effort
+<ul>
+<li>Storing only the name and the version of a clustering algorithm enables an approximate reproducibility of the results</li>
+<li>Storing all its parameters makes this functionality much more accurate</li>
+</ul></li>
+</ul>
+</section>
+
+<section id="data-provenance-1" class="title-slide slide level1 center">
+<h1>Data provenance</h1>
+<ul>
+<li>Data provenance, an example of data management
+<ul>
+<li>Metadata pertaining to the history of a data item</li>
+<li>Pipeline including the origin of objects and operations they are subjected to</li>
+<li>We have a standard: <a href="https://www.w3.org/TR/prov-dm/">https://www.w3.org/TR/prov-dm/</a></li>
+</ul></li>
+</ul>
+<p><img data-src="img/phdslides_205.png"></p>
+<p><a href="https://www.w3.org/TR/prov-dm/">https://www.w3.org/TR/prov-dm/</a></p>
+<ul>
+<li><strong>Entity</strong>
+<ul>
+<li>Physical/conceptual things</li>
+</ul></li>
+<li><strong>Activity</strong>
+<ul>
+<li>Dynamic aspects of the world, such as actions</li>
+<li>How entities come into existence, often making use of previously existing entities</li>
+</ul></li>
+<li><strong>Agent</strong>
+<ul>
+<li>A person, a piece of software</li>
+<li>Takes a role in an activity such that the agent can be assigned some degree of responsibility for the activity taking place</li>
+</ul></li>
+</ul>
+<p><img data-src="img/phdslides_206.png"></p>
+<p><a href="https://www.w3.org/TR/2013/NOTE-prov-primer-20130430/">https://www.w3.org/TR/2013/NOTE-prov-primer-20130430/</a></p>
+<p>Knowledge exploitation</p>
+</section>
+
+<section id="provenance-and-versioning-2" class="title-slide slide level1 center">
+<h1>Provenance and versioning</h1>
+<ul>
+<li>PROV: a standard for provenance modeling
+<ul>
+<li>Several tools exists for managing PROV metadata
+<ul>
+<li><a href="https://openprovenance.org/services/view/translator">https://openprovenance.org/services/view/translator</a></li>
+<li><a href="https://lucmoreau.github.io/ProvToolbox/">https://lucmoreau.github.io/ProvToolbox/</a></li>
+<li><a href="https://prov.readthedocs.io/en/latest/">https://prov.readthedocs.io/en/latest/</a></li>
+</ul></li>
+<li>Compliance with PROV ensures integration with existing tools for querying and visualization</li>
+</ul></li>
+</ul>
+
+<img data-src="img/phdslides_207.png" class="r-stretch"><p>L. Moreau, P. T. Groth, <strong>Provenance: An Introduction to PROV</strong> , <em>Synthesis Lectures on the Semantic Web: Theory and Technology</em> , Morgan &amp; Claypool Publishers, 2013.</p>
+</section>
+
+<section id="section-18" class="title-slide slide level1 center">
+<h1></h1>
+<p>https://www.openphactsfoundation.org/wp/wp-content/uploads/2016/05/140609_Cologne_IPAW-2014_Paul-Groth_Provenance.pdf</p>
+<p>Knowledge exploitation</p>
+<ul>
+<li>Provenance functionalities (activated by metadata)
+<ul>
+<li><strong>Data quality</strong>
+<ul>
+<li>Monitoring accuracy, precision, and recall of produced objects to notify the data scientist when a transformation pipeline is not behaving as expected</li>
+</ul></li>
+<li><strong>Debugging</strong>
+<ul>
+<li>Inferring the cause of pipeline failures is challenging and requires an investigation of the overall processing history, including input objects and the environmental settings</li>
+</ul></li>
+<li><strong>Reproducibility</strong>
+<ul>
+<li>Re-execution of all or part of the operations belonging to a pipeline</li>
+</ul></li>
+<li><strong>Trustworthiness</strong>
+<ul>
+<li>Help data scientists to trust the objects produced by tracing them back to their sources and storing the agents who operated on those objects</li>
+</ul></li>
+<li><strong>Versioning</strong>
+<ul>
+<li>Marking a generated object and its versions (e.g., due to changes in a database schema) helps in identifying relevant objects along with their semantic versions, and to operate with legacy objects</li>
+</ul></li>
+</ul></li>
+</ul>
+<p>Knowledge exploitation</p>
+</section>
+
+<section id="graph-db-and-centrality-measures" class="title-slide slide level1 center">
+<h1>Graph DB and Centrality Measures</h1>
+<ul>
+<li>Measures of centrality
+<ul>
+<li><strong>Betweenness centrality (A)</strong>
+<ul>
+<li>Number of shortest paths between two nodes that pass from a certain node</li>
+</ul></li>
+<li><strong>Closeness centrality (B)</strong>
+<ul>
+<li>Sum of distances to all other nodes.</li>
+</ul></li>
+<li><strong>Eigenvector centrality (C)</strong>
+<ul>
+<li>The score of a node is influenced by score of adjacent nodes (Page rank)</li>
+</ul></li>
+<li><strong>Degree centrality (D)</strong>
+<ul>
+<li>Number of adjacent nodes</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<img data-src="img/phdslides_208.png" class="r-stretch"><p>Knowledge exploitation</p>
+</section>
+
+<section id="provenance-and-versioning-3" class="title-slide slide level1 center">
+<h1>Provenance and versioning</h1>
+<ul>
+<li>Some current research directions
+<ul>
+<li>Expand PROV to better suite big data scenarios
+<ul>
+<li>Y. Gao, X. Chen and X. Du, <strong>A Big Data Provenance Model for Data Security Supervision Based on PROV-DM Model</strong> , in <em>IEEE Access</em> , vol.&nbsp;8, pp.&nbsp;38742-38752, 2020.</li>
+</ul></li>
+<li>Define provenance-based approaches to measure the quality of big data
+<ul>
+<li>Taleb, I., Serhani, M.A., Bouhaddioui, C. et al.&nbsp;<strong>Big data quality framework: a holistic approach to continuous quality management</strong> . <em>J Big Data </em> 8, 76 (2021).</li>
+</ul></li>
+<li>An outline of the challenges, including granularity identification, integration, security concerns
+<ul>
+<li>A. Chacko and S. D. Madhu Kumar, <strong>Big data provenance research directions</strong> ,&nbsp; <em>TENCON 2017 - 2017 IEEE Region 10 Conference</em> , 2017, pp.&nbsp;651-656, doi: 10.1109/TENCON.2017.8227942.</li>
+</ul></li>
+<li>Blockchain-based provenance systems
+<ul>
+<li>Dang, T. K., &amp; Duong, T. A. (2021). <strong>An effective and elastic blockchain-based provenance preserving solution for the open data</strong> .&nbsp; <em>International Journal of Web Information Systems</em> .</li>
+<li>Ruan, P., Dinh, T. T. A., Lin, Q., Zhang, M., Chen, G., &amp; Ooi, B. C. (2021). <strong>LineageChain</strong> <strong>: a fine-grained, secure and efficient data provenance system for blockchains</strong> .&nbsp; <em>The VLDB Journal</em> ,&nbsp; <em>30</em> (1), 3-24.</li>
+</ul></li>
+</ul></li>
+</ul>
+<p>Knowledge exploitation</p>
+</section>
+
+<section id="orchestration-support" class="title-slide slide level1 center">
+<h1>Orchestration support</h1>
+<ul>
+<li>The orchestrator is the component in charge of controlling the execution of computation activities
+<ul>
+<li>Either through a regular scheduling of the activities</li>
+<li>Or by triggering a process in response to a certain event</li>
+</ul></li>
+<li>Several entities (either processes or human beings) can cover this role to activate some data processes #</li>
+</ul>
+<p>100000 kb = 100 mb</p>
+<p>Knowledge exploitation</p>
+<ul>
+<li>Orchestration functionalities (activated by metadata)
+<ul>
+<li>Dynamic/condition-based behavior
+<ul>
+<li>Decide <em>what</em> data process should be activated under different conditions</li>
+<li>Decide <em>how</em> to tune the parameters in case of parametric data processes</li>
+</ul></li>
+<li>Triggering
+<ul>
+<li>Decide <em>when</em> to trigger a certain data process</li>
+</ul></li>
+<li>Scoping
+<ul>
+<li>Assess the trustworthiness of objects to decide <em>if</em> a certain data process should be activated or not</li>
+</ul></li>
+<li>Resource estimation/prediction
+<ul>
+<li>Decide the optimal amount of resources required to terminate successfully while leaving sufficient resources to the other concurrent process, based on previous executions and current settings</li>
+<li>Negotiate the resources with the cluster’s resource manager #</li>
+</ul></li>
+</ul></li>
+</ul>
+<p>100000 kb = 100 mb</p>
+<p>Knowledge exploitation</p>
+
+<img data-src="img/phdslides_209.png" class="r-stretch"><ul>
+<li>Orchestration requirements &amp; challenges</li>
+</ul>
+<p>Barika, M., Garg, S., Zomaya, A. Y., Wang, L., Moorsel, A. V., &amp; Ranjan, R. (2019). <strong>Orchestrating big data analysis workflows in the cloud: research challenges, survey, and future directions</strong> .&nbsp; <em>ACM Computing Surveys (CSUR)</em> ,&nbsp; <em>52</em> (5), 1-41.</p>
+</section>
+
+<section id="section-19" class="title-slide slide level1 center">
+<h1></h1>
+<p>100000 kb = 100 mb</p>
+<p>Knowledge exploitation</p>
+<ul>
+<li>Orchestration requirements
+<ul>
+<li>R1 Compute/CPU resource provisioning
+<ul>
+<li>Determine the right amount of resources</li>
+<li>Continuously monitor and manage them in a dynamic execution environment</li>
+</ul></li>
+<li>R2 Storage
+<ul>
+<li>Choose the right cloud storage resource, data location, and format (if the application is parametric)</li>
+</ul></li>
+<li>R3 Data movement
+<ul>
+<li>Dynamically transfer large datasets between compute and storage resources</li>
+</ul></li>
+<li>R4 Synchronization and asynchronization
+<ul>
+<li>Manage the control and data flow dependencies across analytics tasks</li>
+</ul></li>
+</ul></li>
+</ul>
+<p>Barika, M., Garg, S., Zomaya, A. Y., Wang, L., Moorsel, A. V., &amp; Ranjan, R. (2019). <strong>Orchestrating big data analysis workflows in the cloud: research challenges, survey, and future directions</strong> .&nbsp; <em>ACM Computing Surveys (CSUR)</em> ,&nbsp; <em>52</em> (5), 1-41.</p>
+</section>
+
+<section id="section-20" class="title-slide slide level1 center">
+<h1></h1>
+<p>100000 kb = 100 mb</p>
+<p>Knowledge exploitation</p>
+<ul>
+<li>Orchestration requirements
+<ul>
+<li>R5 Analytic task scheduling and execution
+<ul>
+<li>Scheduling and coordinating the execution of workflow tasks across diverse sets of big data programming models</li>
+<li>Tracking and capturing provenance of data</li>
+</ul></li>
+<li>R6 Service Level Agreement
+<ul>
+<li>Executions may need to meet user-defined QoS requirements (e.g., a strict execution deadline)</li>
+</ul></li>
+<li>R7 Security
+<ul>
+<li>Beyond standard encryption approaches: private (anonymous) computation, verification of outcomes in multi-party settings, placement of components according to security policies</li>
+</ul></li>
+<li>R8 Monitoring and Failure-Tolerance
+<ul>
+<li>Ensure that everything is streamlined and executed as anticipated</li>
+<li>As failures could happen at any time, handle those failures when they occur or predicting them before they happen</li>
+</ul></li>
+</ul></li>
+</ul>
+<p>Barika, M., Garg, S., Zomaya, A. Y., Wang, L., Moorsel, A. V., &amp; Ranjan, R. (2019). <strong>Orchestrating big data analysis workflows in the cloud: research challenges, survey, and future directions</strong> .&nbsp; <em>ACM Computing Surveys (CSUR)</em> ,&nbsp; <em>52</em> (5), 1-41.</p>
+</section>
+
+<section id="section-21" class="title-slide slide level1 center">
+<h1></h1>
+<p>100000 kb = 100 mb</p>
+<p>Knowledge exploitation</p>
+<ul>
+<li>Orchestration challenges
+<ul>
+<li>Cloud Platform Heterogeneity
+<ul>
+<li><strong>Integration</strong> (different APIs, virtualization formats, pricing policies, hardware/software configurations)</li>
+<li><strong>Workflow Migration </strong> (e.g., to aspire to specific QoS features in the target cloud or better price)</li>
+</ul></li>
+<li>Cloud Resource Management
+<ul>
+<li><strong>Resource Provisioning </strong> (selecting the right configuration of virtual resources; the resource configuration search space grows exponentially, and the problem is often NP-complete)</li>
+<li><strong>Resource-based Big Data Programming Frameworks Management </strong> (automatically select the configurations for both IaaS-level resource and PaaS-level framework to consistently accomplish the anticipated workflow-level SLA requirements, while maximizing the utilization of cloud datacenter resources)</li>
+<li><strong>Resource Volatility </strong> (at different levels: VM-level, big data progressing framework-level and workflow task-level)</li>
+</ul></li>
+</ul></li>
+</ul>
+<p>Barika, M., Garg, S., Zomaya, A. Y., Wang, L., Moorsel, A. V., &amp; Ranjan, R. (2019). <strong>Orchestrating big data analysis workflows in the cloud: research challenges, survey, and future directions</strong> .&nbsp; <em>ACM Computing Surveys (CSUR)</em> ,&nbsp; <em>52</em> (5), 1-41.</p>
+</section>
+
+<section id="section-22" class="title-slide slide level1 center">
+<h1></h1>
+<p>100000 kb = 100 mb</p>
+<p>Knowledge exploitation</p>
+<ul>
+<li>Orchestration challenges
+<ul>
+<li>Data-related
+<ul>
+<li><strong>Storage</strong> (where the data will be residing, which data format will be used)</li>
+<li><strong>Movement</strong> (minimize transfer rates, exploit <em>data locality </em> in task-centric or worker-centric way)</li>
+<li><strong>Provenance</strong> (trade-off expressiveness with overhead)</li>
+<li><strong>Indexing</strong> (which dataset is worth indexing and how)</li>
+<li><strong>Security and Privacy </strong> (cryptography, access control, integrity, masking, etc.)</li>
+</ul></li>
+</ul></li>
+</ul>
+<p>Barika, M., Garg, S., Zomaya, A. Y., Wang, L., Moorsel, A. V., &amp; Ranjan, R. (2019). <strong>Orchestrating big data analysis workflows in the cloud: research challenges, survey, and future directions</strong> .&nbsp; <em>ACM Computing Surveys (CSUR)</em> ,&nbsp; <em>52</em> (5), 1-41.</p>
+<p>Knowledge exploitation</p>
+<ul>
+<li>Orchestration challenges
+<ul>
+<li>Workflow-related
+<ul>
+<li><strong>Specification Language </strong> (devising a high level, technology-/cloud-independent workflow language)</li>
+<li><strong>Initialization</strong> (subdivision into fragments considering dependencies, constraints, etc.)</li>
+<li><strong>Parallelization and Scheduling </strong> (with super-workflows defined at application and task level)</li>
+<li><strong>Fault-Tolerance</strong> (thing can go wrong at workflow-, application-, and cloud-level)</li>
+<li><strong>Security</strong> (securing workflow logic and computation)</li>
+</ul></li>
+</ul></li>
+</ul>
+<p>Barika, M., Garg, S., Zomaya, A. Y., Wang, L., Moorsel, A. V., &amp; Ranjan, R. (2019). <strong>Orchestrating big data analysis workflows in the cloud: research challenges, survey, and future directions</strong> .&nbsp; <em>ACM Computing Surveys (CSUR)</em> ,&nbsp; <em>52</em> (5), 1-41.</p>
+</section>
+
+<section id="section-23" class="title-slide slide level1 center">
+<h1></h1>
+<p>100000 kb = 100 mb</p>
+</section>
+
+<section id="compression" class="title-slide slide level1 center">
+<h1>Compression</h1>
+<ul>
+<li>Summarization / compression
+<ul>
+<li>Present a concise representation of a dataset in a comprehensible and informative manner</li>
+</ul></li>
+</ul>
+
+<img data-src="img/phdslides_210.png" class="r-stretch"><p>Ahmed, Mohiuddin. “Data summarization: a survey.” <em>Knowledge and Information Systems</em> 58.2 (2019): 249-273.</p>
+</section>
+
+<section id="entity-resolution" class="title-slide slide level1 center">
+<h1>Entity resolution</h1>
+<ul>
+<li>Entity resolution
+<ul>
+<li>(also known as entity matching, linking)</li>
+<li>Find records that refer to the same entity across different data sources (e.g., data files, books, websites, and databases)</li>
+</ul></li>
+</ul>
+
+<img data-src="img/phdslides_211.png" class="r-stretch"><p>Papadakis, George, et al.&nbsp;“Blocking and filtering techniques for entity resolution: A survey.” <em>ACM Computing Surveys (CSUR)</em> 53.2 (2020): 1-42.</p>
+</section>
+
+<section id="data-versioning" class="title-slide slide level1 center">
+<h1>Data versioning</h1>
+<ul>
+<li>Version control
+<ul>
+<li>A class of systems responsible for managing changes to computer programs, documents, or data collections</li>
+<li>Changes are identified by a number/letter code, termed the revision/version number</li>
+</ul></li>
+<li>However, data pipelines are not only about code bult also about
+<ul>
+<li>Model Version control</li>
+<li>Data Version Control</li>
+<li>Model Parameter Tracking</li>
+<li>Model Performance Comparison</li>
+</ul></li>
+</ul>
+<p><img data-src="img/phdslides_212.png"></p>
+<p>Support CRUD (Create, Read, Update, Delete) operations with versions</p>
+<p>E.g., on AWS (PUT, GET, DELETE), what about update?</p>
+<p><img data-src="img/phdslides_213.png"></p>
+<p><img data-src="img/phdslides_214.png"></p>
+<p><img data-src="img/phdslides_215.png"></p>
+<p><a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/versioning-workflows.html">https://docs.aws.amazon.com/AmazonS3/latest/userguide/versioning-workflows.html</a> (accessed 2022-08-01)</p>
+</section>
+
+<section id="tuning-data-pipelines" class="title-slide slide level1 center">
+<h1>Tuning Data Pipelines</h1>
+
+</section>
+
+<section id="crisp-dm" class="title-slide slide level1 center">
+<h1>CRISP-DM</h1>
+<ul>
+<li>The&nbsp; <strong>CR</strong> oss&nbsp; <strong>I</strong> ndustry&nbsp; <strong>S</strong> tandard&nbsp; <strong>P</strong> rocess for&nbsp; <strong>D</strong> ata&nbsp; <strong>M</strong> ining ( <em>CRISP-DM</em> ) is a process model that serves as the base for a <a href="https://www.datascience-pm.com/data-science-process/">data science process</a>. It has six sequential phases:
+<ul>
+<li>Business understanding&nbsp;– What does the business need?</li>
+<li>Data understanding&nbsp;– What data do we have / need? Is it clean?</li>
+<li>Data preparation&nbsp;– How do we organize the data for modeling?</li>
+<li>Modeling&nbsp;– What modeling techniques should we apply?</li>
+<li>Evaluation&nbsp;– Which model best meets the business objectives?</li>
+<li>Deployment&nbsp;– How do stakeholders access the results?</li>
+</ul></li>
+</ul>
+
+<img data-src="img/phdslides_216.png" class="r-stretch"></section>
+
+<section id="pipelines-for-ml-tasks" class="title-slide slide level1 center">
+<h1>Pipelines for ML tasks</h1>
+<p><img data-src="img/phdslides_217.png"></p>
+<p><img data-src="img/phdslides_218.png"></p>
+<ul>
+<li>Tuning pipelines is hard
+<ul>
+<li>At each <strong>step</strong> , a technique must be selected</li>
+<li>For each technique, a set of <strong>hyper-parameters</strong> must be set</li>
+<li>Each <strong>hyper-parameter has its own search space</strong></li>
+</ul></li>
+</ul>
+<p><img data-src="img/phdslides_219.png"></p>
+</section>
+
+<section id="automl" class="title-slide slide level1 center">
+<h1>AutoML</h1>
+<ul>
+<li>AutoML aims at automating the ML pipeline instantiation:
+<ul>
+<li>it is difficult to consider all the constraints together;</li>
+<li>it is not transparent;</li>
+<li>it doesn’t allow a proper knowledge augmentation.</li>
+</ul></li>
+</ul>
+
+<img data-src="img/phdslides_220.png" class="r-stretch"><p>Thornton, et al.&nbsp;Auto-WEKA: Combined selection and hyperparameter optimization of classification algorithms. In Proceedings of the 19th ACM SIGKDD international conference on Knowledge discovery and data mining (pp.&nbsp;847-855).Feurer, Matthias, et al.&nbsp;“Auto-sklearn 2.0: Hands-free automl via meta-learning.” The Journal of Machine Learning Research 23.1 (2022): 11936-11996.</p>
+</section>
+
+<section id="hamlet" class="title-slide slide level1 center">
+<h1>HAMLET</h1>
+<ul>
+<li><a href="https://github.com/QueueInc/HAMLET">HAMLET</a>: Human-centric AutoML via Logic and Argumentation</li>
+<li>HAMLET leverages :
+<ul>
+<li>Logic to give a structure to the knowledge;</li>
+<li>Argumentation to deal with inconsistencies, and revise the results.</li>
+</ul></li>
+</ul>
+<p><img data-src="img/phdslides_221.png"></p>
+<p><a href="https://github.com/QueueInc/HAMLET">https://github.com/QueueInc/HAMLET</a> Francia M., Giovanelli J., and Pisano P. ”HAMLET: A framework for Human-centered AutoML via Structured Argumentation.” Future Generation Computer Systems 142 (2023): 182-194.</p>
+<ul>
+<li>The LogicalKB enables:
+<ul>
+<li>the Data Scientist to structure the ML constraints;</li>
+<li>the AutoML tool to encode the explored results</li>
+</ul></li>
+</ul>
+<p><img data-src="img/phdslides_222.png"></p>
+<ul>
+<li>The Problem Graph allows to:
+<ul>
+<li>consider all the ML constraints together;</li>
+<li>set up the AutoML search space;</li>
+<li>discuss and argument about the results.</li>
+</ul></li>
+</ul>
+<p><img data-src="img/phdslides_223.png"></p>
+<ul>
+<li>The Data Scientist iterates on:
+<ul>
+<li>editing the LogicalKB;</li>
+<li>consulting the Problem Graph;</li>
+<li>running the AutoML tool;</li>
+<li>discussing the AutoML insights.</li>
+</ul></li>
+</ul>
+<p><img data-src="img/phdslides_224.png"></p>
+</section>
+
+<section id="kb-and-problem-graph" class="title-slide slide level1 center">
+<h1>KB and Problem Graph</h1>
+<p><img data-src="img/phdslides_225.png"></p>
+<p><strong>pipeline</strong></p>
+<p><strong>).</strong></p>
+<p><strong>.</strong></p>
+<p><strong>).</strong></p>
+<p><strong>algorithms</strong></p>
+<p><strong>).</strong></p>
+<p><strong>).</strong></p>
+<p><img data-src="img/phdslides_226.png"></p>
+<p><strong>pipeline</strong></p>
+<p><strong>).</strong></p>
+<p><strong>).</strong></p>
+<p><strong>).</strong></p>
+<p><strong>algorithms</strong></p>
+<p><strong>).</strong></p>
+<p><strong>).</strong></p>
+<p># Forbid Normalization when using DT</p>
+<p>c1 : ⇒ forbidden(⟨N ⟩, Dt).</p>
+<p><img data-src="img/phdslides_227.png"></p>
+<p><strong>pipeline</strong></p>
+<p><strong>).</strong></p>
+<p><strong>).</strong></p>
+<p><strong>).</strong></p>
+<p><strong>algorithms</strong></p>
+<p><strong>).</strong></p>
+<p><strong>).</strong></p>
+<p># Forbid Normalization when using DT</p>
+<p>c1 : ⇒ forbidden(⟨N ⟩, Dt).</p>
+<p># Mandatory Normalization in Classification Pipelines</p>
+<p>c2 : ⇒ mandatory(⟨N ⟩, Cl).</p>
+<p><img data-src="img/phdslides_228.png"></p>
+<p><strong>pipeline</strong></p>
+<p><strong>).</strong></p>
+<p><strong>).</strong></p>
+<p><strong>).</strong></p>
+<p><strong>algorithms</strong></p>
+<p><strong>).</strong></p>
+<p><strong>).</strong></p>
+<p># Forbid Normalization when using DT</p>
+<p>c1 : ⇒ forbidden(⟨N ⟩, Dt).</p>
+<p># Mandatory Normalization in Classification Pipelines</p>
+<p>c2 : ⇒ mandatory(⟨N ⟩, Cl).</p>
+<p><img data-src="img/phdslides_229.png"></p>
+<p><strong>pipeline</strong></p>
+<p><strong>).</strong></p>
+<p><strong>).</strong></p>
+<p><strong>).</strong></p>
+<p><strong>algorithms</strong></p>
+<p><strong>).</strong></p>
+<p><strong>).</strong></p>
+<p># Forbid Normalization when using DT</p>
+<p>c1 : ⇒ forbidden(⟨N ⟩, Dt).</p>
+<p># Mandatory Normalization in Classification Pipelines</p>
+<p>c2 : ⇒ mandatory(⟨N ⟩, Cl).</p>
+<p># Resolve conflict between c1 and c2sup (c1, c2).</p>
+</section>
+
+<section id="evaluation" class="title-slide slide level1 center">
+<h1>Evaluation</h1>
+<ul>
+<li>Settings:
+<ul>
+<li><strong>Baseline</strong> : 1 optimization it. of 60 mins;</li>
+<li><strong>PKB</strong> (Preliminary Knowledge Base): 1 optimization it. of 60 mins with non-empty LogicalKB;</li>
+<li><strong>IKA</strong> (Iterative Knowledge Augmentation): 4 optimization it. of 15 mins with empty LogicalKB;</li>
+<li><strong>PKB + IKA: </strong> 4 optimization it. of 15 mins with non-empty LogicalKB.</li>
+</ul></li>
+</ul>
+<p><img data-src="img/phdslides_230.png"></p>
+<ul>
+<li>Settings:
+<ul>
+<li><strong>Baseline</strong> : 1 optimization it. of 60 mins;</li>
+<li><strong>PKB</strong> (Preliminary Knowledge Base): 1 optimization it. of 60 mins with non-empty LogicalKB;</li>
+<li><strong>IKA</strong> (Iterative Knowledge Augmentation): 4 optimization it. of 15 mins with empty LogicalKB;</li>
+<li><strong>PKB + IKA: </strong> 4 optimization it. of 15 mins with non-empty LogicalKB.</li>
+</ul></li>
+</ul>
+<p><img data-src="img/phdslides_231.png"></p>
+<p>Comparison with AutoML tools</p>
+<p><img data-src="img/phdslides_232.png"></p>
+</section>
+
+<section id="hamlet-1" class="title-slide slide level1 center">
+<h1>HAMLET</h1>
+<ul>
+<li>Key features:
+<ul>
+<li>knowledge injection;</li>
+<li>representation via an human- and</li>
+<li>machine-readable medium;</li>
+<li>insight discovery;</li>
+<li>dealing with possible arising inconsistencies.</li>
+</ul></li>
+<li>Future directions:
+<ul>
+<li>make constraints fuzzy;</li>
+<li>improve recommendation algorithm;</li>
+<li>enhance HAMLET with meta-learning;</li>
+<li>manage cross-cutting constraints (e.g., ethic, legal).</li>
+</ul></li>
+</ul>
+
+<img data-src="img/phdslides_233.png" class="r-stretch"></section>
+
+<section id="advanced-analytics" class="title-slide slide level1 center">
+<h1>Advanced Analytics</h1>
+<p>Applications and Challenges</p>
+<ul>
+<li>High availability and accessibility attract new data scientists
+<ul>
+<li><strong>High</strong> competence in business domain</li>
+<li><strong>Low</strong> competence in computer science</li>
+</ul></li>
+<li>Since the ’70s, relational queries to retrieve data
+<ul>
+<li>Comprehension of formal languages and DBMS</li>
+<li><strong>Advanced analytics (semi-automatic transformation)</strong>
+<ul>
+<li>“Information” and “Knowledge” levels</li>
+</ul></li>
+</ul></li>
+</ul>
+<p><strong>Wisdom</strong></p>
+<p><strong>(Decisions)</strong></p>
+<p><strong>analytics</strong></p>
+<p><strong>Knowledge</strong></p>
+<p><strong>(Data Mining)</strong></p>
+<p>Hand-free scenarios</p>
+<p><img data-src="img/phdslides_234.png"></p>
+<p><strong>Information</strong></p>
+<p><strong>(Data Warehouse, OLAP)</strong></p>
+<p><img data-src="img/phdslides_235.png"></p>
+<p><strong>Data</strong></p>
+<p><strong>(Operational DB, OLTP)</strong></p>
+<ul>
+<li>Many problems to address:
+<ul>
+<li>Query recommendation based on contextual data
+<ul>
+<li>E.g., augmented reality and digital twins</li>
+</ul></li>
+<li>Definition of interest</li>
+<li>Diversification</li>
+<li>Compression</li>
+<li>Natural Language and Vocalization</li>
+</ul></li>
+</ul>
+</section>
+
+<section id="application-scope" class="title-slide slide level1 center">
+<h1>Application scope</h1>
+<ul>
+<li>Enable analytics through augmented reality [1]
+<ul>
+<li>E.g., an inspector analyzing production rates</li>
+</ul></li>
+<li>Sense the context through augmented devices
+<ul>
+<li>E.g., smart glasses</li>
+<li>Detect interaction and <strong>engagement</strong> [1]</li>
+</ul></li>
+<li>Produce analytical reports
+<ul>
+<li><strong>Relevant</strong> to the sensed context</li>
+<li>Cardinality <strong>constraint</strong></li>
+<li><strong>Near real-time</strong></li>
+</ul></li>
+</ul>
+<p>Analytical Reports</p>
+<p><img data-src="img/phdslides_236.png"></p>
+<p><img data-src="img/phdslides_237.png"></p>
+<p>[1] Francia, Matteo, Matteo Golfarelli, and Stefano Rizzi. “A-BI+: a framework for Augmented Business Intelligence.” <em>Information Systems</em> 92 (2020): 101520.[2] Yu-Chuan Su, Kristen Grauman: Detecting Engagement in Egocentric Video. ECCV (5) 2016: 454-471</p>
+</section>
+
+<section id="section-24" class="title-slide slide level1 center">
+<h1></h1>
+<p>Sistemi come recommender system di Amazon possono usare dati contestuali (e.g, la posizione), tuttavia Ci sono differenze sia differenze di «metodo» / «framework» che di «recommendation» «Metodo» - Amazon si basa su verità «più storiche», noi interpretiamo e «mixiamo» un contesto real-time costituito da più oggetti interessanti rilevati (e/o ingaggiati) dal sistema - Il nostro sistema è «end-to-end», cioè riguarda anche la gestione e linking dei dati per la costruzione delle query</p>
+<p>«Recommendation», formalmente noi usiamo un approccio ibrido (mentre i classici sono item-based o collaborative) - Mix di conoscenza real-time con storica: Non siamo strettamente log-based (i.e., il contesto ci serve per un cold-start problem). Mentre il consiglio di amazon è «altri utenti hanno acquistato/visualizzato anche…»- Cardinalità del risultato per fare fit di un device augmented- Diversification di query diverse, non di una singola query</p>
+
+<img data-src="img/phdslides_238.jpg" class="r-stretch"></section>
+
+<section id="is-aolap-out-of-reachobject-recognition-yolo-5egocentric-computer-vision-6" class="title-slide slide level1 center">
+<h1>Is AOLAP out of reach?Object recognition (YOLO [5])Egocentric computer vision [6]</h1>
+<p>[5] Redmon, J., &amp; Farhadi, A. (2017). YOLO9000: better, faster, stronger. In <em>Proceedings of the IEEE conference on computer vision and pattern recognition</em> (pp.&nbsp;7263-7271).</p>
+<p>[6] Fathi, A., Farhadi, A., &amp; Rehg, J. M. (2011, November). Understanding egocentric activities. In&nbsp;2011 International Conference on Computer Vision&nbsp;(pp.&nbsp;407-414). IEEE.</p>
+</section>
+
+<section id="augmented-olap" class="title-slide slide level1 center">
+<h1>Augmented OLAP</h1>
+<ul>
+<li>Augmented OLAP, a 3D marriage
+<ul>
+<li>Augmented reality
+<ul>
+<li>Real-time information [2]</li>
+</ul></li>
+<li>Business intelligence
+<ul>
+<li>OLAP: get data facts</li>
+</ul></li>
+<li>Recommendation
+<ul>
+<li>Pick relevant data facts</li>
+</ul></li>
+</ul></li>
+</ul>
+<p>Augmented Reality</p>
+<p>(real-time)</p>
+<p>Inputs</p>
+<p>Output</p>
+<p>Query Log</p>
+<p>(experience)</p>
+<p>Data Mart</p>
+<p>&amp; Mappings</p>
+<p>(a-priori)</p>
+<p><img data-src="img/phdslides_239.png"></p>
+<p><img data-src="img/phdslides_240.png"></p>
+<p>[2] Angelo Croatti, Alessandro Ricci: Towards the Web of Augmented Things. ICSA Workshops 2017: 80-87</p>
+</section>
+
+<section id="what-can-we-sense" class="title-slide slide level1 center">
+<h1>What can we sense?</h1>
+
+<img data-src="img/phdslides_241.png" class="r-stretch"><ul>
+<li>Data Mart: repository of multidimensional cubes
+<ul>
+<li>Cubes representing business facts</li>
+</ul></li>
+<li><strong>Data dictionary</strong>
+<ul>
+<li>What we can recognize (i.e., md-elements)</li>
+<li><strong>Context</strong> : subset of md-elements</li>
+</ul></li>
+<li><strong>Mappings</strong> to sets of md-elements
+<ul>
+<li>A-priori interest</li>
+</ul></li>
+</ul>
+<p>&lt;Object, Seat&gt; <em>dist</em> = 1m</p>
+<p>&lt;Object, BikeExcite&gt; <em>dist</em> = 2m</p>
+<p>&lt;Location, RoomA.1&gt;</p>
+<p>&lt;Date, 16/10/2018&gt;</p>
+<p>&lt;Role, Controller&gt;</p>
+<p>Quantity</p>
+<p>Revenues</p>
+<p>AssembledItems</p>
+<p>AssemblyTime</p>
+</section>
+
+<section id="recommendation" class="title-slide slide level1 center">
+<h1>Recommendation</h1>
+
+<img data-src="img/phdslides_242.png" class="r-stretch"><ul>
+<li>Context interpretation
+<ul>
+<li>Given context <em>T</em> over the data dictionary</li>
+<li>Project _ T_ to an <strong>image of fragments</strong> <em>I</em> through mappings
+<ul>
+<li><strong>Fragment</strong> : intuitively a “small” query</li>
+</ul></li>
+</ul></li>
+<li>Add the log
+<ul>
+<li>Get queries with positive feedback from <em>similar</em> contexts
+<ul>
+<li>Enrich <em>I</em> to <em>I*</em> with <em>unperceived</em> elements from <em>T</em></li>
+</ul></li>
+<li>Each fragment has <em>contextual and log relevance</em></li>
+</ul></li>
+<li>Query generation
+<ul>
+<li>Cannot directly translate <em>I*</em> into a well-formed query</li>
+<li>High cardinality <em>I*</em> = hardly interpretable “monster query”</li>
+</ul></li>
+</ul>
+<p>Analytical Reports</p>
+<p><em>recommended</em> <em>queries</em></p>
+<p><em>relevant queries</em></p>
+<p>&lt;Object, Seat&gt; <em>dist</em> = 1m</p>
+<p>&lt;Object, BikeExcite&gt; <em>dist</em> = 2m</p>
+<p>&lt;Location, RoomA.1&gt;</p>
+<p>&lt;Date, 16/10/2018&gt;</p>
+<p>&lt;Role, Controller&gt;</p>
+<p>Query generation</p>
+</section>
+
+<section id="query-generation" class="title-slide slide level1 center">
+<h1>Query generation</h1>
+<ul>
+<li>Generate queries from image <em>I* </em> of fragments
+<ul>
+<li>Each fragment is a query</li>
+<li>Depth-first exploration with pruning rules
+<ul>
+<li><strong>Query cardinality can only increase</strong></li>
+<li><strong>Some queries are redundant</strong></li>
+</ul></li>
+</ul></li>
+</ul>
+<p>{Month,Part,Product},</p>
+<p>{(Product=BikeExcite)},</p>
+<p>{Quantity,AssembledItems}</p>
+<p>{Month,Part,Product},</p>
+<p>{(Product=BikeExcite)},</p>
+<p>{Quantity,AssembledItems}</p>
+<p><strong>},</strong></p>
+<p><strong>)},</strong></p>
+<p><strong></strong></p>
+<p>{Year,Part,Product},</p>
+<p>{(Product=BikeExcite)},</p>
+<p>{Quantity,AssembledItems}</p>
+<p>{Product},</p>
+<p>{(Product=BikeExcite)},</p>
+<p>{Quantity}</p>
+<p>{Month,Product},</p>
+<p>{(Product=BikeExcite)},</p>
+<p>{Quantity,AssembledItems}</p>
+<p>{Month,Product},</p>
+<p>{(Product=BikeExcite)},</p>
+<p>{Quantity,AssembledItems}</p>
+<p>{Year,Product},</p>
+<p>{(Product=BikeExcite)},</p>
+<p>{Quantity,AssembledItems}</p>
+<p>{Part,Type},</p>
+<p>{(Type=Bike)},</p>
+<p>{}</p>
+<p>{Month,Part,Type},</p>
+<p>{(Type=Bike)},</p>
+<p>{AssembledItems}</p>
+<p>{Month,Part,Type},</p>
+<p>{(Type=Bike)},</p>
+<p>{AssembledItems}</p>
+<p>{Month},</p>
+<p>{},</p>
+<p>{AssembledItems}</p>
+<p>{Year,Part,Type},</p>
+<p>{(Type=Bike)},</p>
+<p>{AssembledItems}</p>
+<p><strong>},</strong></p>
+<p><strong>{},</strong></p>
+<p><strong></strong></p>
+<p>{Year},</p>
+<p>{},</p>
+<p>{AssembledItems}</p>
+</section>
+
+<section id="query-selection" class="title-slide slide level1 center">
+<h1>Query selection</h1>
+<ul>
+<li>Given #queries ( <em>rq</em> ), maximize the covered fragments and minimize their overlapping
+<ul>
+<li>E.g., given two queries <strong><em>q’</em></strong></li>
+<li><strong><em>(q’) </em></strong> <em>– </em> <em>sim(q, q’) * (</em> <em>rel</em> <em>(q) + </em> <em>rel</em> <em>(q’)) / 2</em></li>
+<li>Weighted Maximum Coverage Problem (NP-hard)</li>
+<li>Greedy: iteratively pick query maximizing <em>rel</em> <em>T</em>
+<ul>
+<li>Only a few query are retrieved, not expensive</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<img data-src="img/phdslides_243.png" class="r-stretch"></section>
+
+<section id="effectiveness" class="title-slide slide level1 center">
+<h1>Effectiveness</h1>
+<p><img data-src="img/phdslides_244.jpg"></p>
+<p><img data-src="img/phdslides_245.jpg"></p>
+<p><em>|T| = 12, </em> <em>rq</em> _ = 4_</p>
+<ul>
+<li>Best query (with user exp.)</li>
+<li>After 2 visits: 0.95, 4 visits: 0.98</li>
+<li>Best query (no user exp.)</li>
+</ul>
+<p><img data-src="img/phdslides_246.png"></p>
+</section>
+
+<section id="efficiency" class="title-slide slide level1 center">
+<h1>Efficiency</h1>
+
+<img data-src="img/phdslides_247.png" class="r-stretch"></section>
+
+<section id="research-directions" class="title-slide slide level1 center">
+<h1>Research directions</h1>
+<ul>
+<li>Analytics in <strong>augmented reality</strong>
+<ul>
+<li>Support analytical queries in hand-free scenarios</li>
+<li><strong>Recommend relevant data facts</strong> from a real-world context</li>
+</ul></li>
+<li>Research directions
+<ul>
+<li>Provide (fast) query previews
+<ul>
+<li>Estimate the execution time of each query</li>
+<li>Address query caching and multi-query optimization issues</li>
+</ul></li>
+<li>Correlate context-awareness to <strong>data quality</strong> [3]
+<ul>
+<li>Relevance, amount, and completeness [4]</li>
+</ul></li>
+</ul></li>
+</ul>
+<p>[3] Stephanie Watts, Ganesan Shankaranarayanan, Adir Even: Data quality assessment in context: A cognitive perspective. Decis. Support Syst. 48(1): 202-211 (2009)</p>
+<p>[4] Diane M. Strong, Yang W. Lee, Richard Y. Wang: Data Quality in Context. Commun. ACM 40(5): 103-110 (1997)</p>
+</section>
+
+<section id="motivation" class="title-slide slide level1 center">
+<h1>Motivation</h1>
+<ul>
+<li>Enable analytics through <strong>natural language</strong></li>
+<li>OLAP provides <strong>low-level</strong> operators [1]
+<ul>
+<li>Users need to have knowledge on the multidimensional model…</li>
+<li>… or even programming skills</li>
+</ul></li>
+<li>We introduce COOL (COnversational OLap) [3]
+<ul>
+<li><strong>Translate</strong> natural language into formal queries</li>
+</ul></li>
+</ul>
+
+<img data-src="img/phdslides_248.png" class="r-stretch"><p>[1] Panos Vassiliadis, Patrick Marcel, Stefano Rizzi: Beyond roll-up’s and drill-down’s: An intentional analytics model to reinvent OLAP. <strong>Inf</strong> <strong>ormation</strong> __ Systems__ . (2019)</p>
+<p>[2] Matteo Francia, Matteo Golfarelli, Stefano Rizzi: A-BI+: A framework for Augmented Business Intelligence. <strong>Inf</strong> <strong>ormation</strong> __ Systems__ . (2020)</p>
+<p>[3] Matteo Francia, Enrico Gallinucci, Matteo Golfarelli: COOL: A Framework for Conversational OLAP. <strong>Inf</strong> <strong>ormation</strong> __ Systems__ . (2021)</p>
+</section>
+
+<section id="section-25" class="title-slide slide level1 center">
+<h1></h1>
+<p>DIFF: [17] returns tuples that maximize difference between cells of a cube given as input Profile user exploration to recommend which unvisited parts of the cube RELAXoperator allows toverify whether a pattern observed at a certain level of detail ispresent at a coarser level of detail too [19] Alternative operators have also been proposed in theCinecubes method [7,8]. The goal of this effort is to facilitateautomated reporting, given an original OLAP query as input.To achieve this purpose two operators (expressed asacts) areproposed, namely, (a)put-in-context, i.e., compare the result ofthe original query to query results over similar, sibling values;and (b)give-details, where drill-downs of the original query’sgroupers are performed.</p>
+</section>
+
+<section id="cool-architecture" class="title-slide slide level1 center">
+<h1>COOL: architecture</h1>
+<p><img data-src="img/phdslides_249.png"></p>
+<p><img data-src="img/phdslides_250.png"></p>
+<p>Metadata</p>
+<p>&amp; values</p>
+<p>Automatic</p>
+<p>KB feeding</p>
+<p>Manual KB enrichment</p>
+</section>
+
+<section id="section-26" class="title-slide slide level1 center">
+<h1></h1>
+<p>DIFF: [17] returns tuples that maximize difference between cells of a cube given as input Profile user exploration to recommend which unvisited parts of the cube RELAXoperator allows toverify whether a pattern observed at a certain level of detail ispresent at a coarser level of detail too [19] Alternative operators have also been proposed in theCinecubes method [7,8]. The goal of this effort is to facilitateautomated reporting, given an original OLAP query as input.To achieve this purpose two operators (expressed asacts) areproposed, namely, (a)put-in-context, i.e., compare the result ofthe original query to query results over similar, sibling values;and (b)give-details, where drill-downs of the original query’sgroupers are performed.</p>
+<p><em>Sales by Customer and Month</em></p>
+<p><img data-src="img/phdslides_251.png"></p>
+<p><img data-src="img/phdslides_252.png"></p>
+<p><img data-src="img/phdslides_253.png"></p>
+<p>Annotated parse forest</p>
+<p>Disambiguation</p>
+<p>&amp; Enhancement</p>
+<p>Execution &amp; Visualization</p>
+<p><img data-src="img/phdslides_254.png"></p>
+<p><img data-src="img/phdslides_255.png"></p>
+<p>Metadata</p>
+<p>&amp; values</p>
+<p>Automatic</p>
+<p>KB feeding</p>
+<p>Manual KB enrichment</p>
+</section>
+
+<section id="cool-interpretation" class="title-slide slide level1 center">
+<h1>COOL: interpretation</h1>
+<p>⟨GPSJ⟩ ::= ⟨MC⟩⟨GC⟩⟨SC⟩</p>
+<p>⟨MC⟩ ::= (⟨Agg⟩⟨Mea⟩ | ⟨Cnt⟩⟨Fct⟩)+</p>
+<p>⟨GC⟩ ::= “𝑔𝑟𝑜𝑢𝑝 𝑏𝑦” ⟨Attr⟩+⟨SC⟩ ::= “𝑤ℎ𝑒𝑟𝑒” ⟨SCA⟩⟨SCA⟩ ::= ⟨SCN⟩ “𝑎𝑛𝑑” ⟨SCA⟩ | ⟨SCN⟩⟨SCN⟩ ::= “𝑛𝑜𝑡” ⟨SSC⟩ | ⟨SSC⟩⟨SSC⟩ ::= ⟨Attr⟩⟨Cop⟩⟨Val⟩ | ⟨Attr⟩⟨Val⟩ | ⟨Val⟩⟨Cop⟩ ::= “=” | “&lt;&gt;” | “&gt;” | “&lt;” | “≥” | “≤”⟨Agg⟩ ::= “𝑠𝑢𝑚” | “𝑎𝑣𝑔” | “𝑚𝑖𝑛” | “𝑚𝑎𝑥”⟨Cnt⟩ ::= “𝑐𝑜𝑢𝑛𝑡” | “𝑐𝑜𝑢𝑛𝑡 𝑑𝑖𝑠𝑡𝑖𝑛𝑐𝑡”⟨Fct⟩ ::= Domain-specific facts⟨Mea⟩ ::= Domain-specific measures⟨Attr⟩ ::= Domain-specific attributes⟨Val⟩ ::= Domain-specific values</p>
+<p><em>T</em> _ = _ <em>«return the average sales in 2019 per store region»</em></p>
+<ul>
+<li>Why grammars?
+<ul>
+<li>In the OLAP domain, GPSJ queries do not have very complex structures
+<ul>
+<li>Our grammar can support the translation without apriori training or external ontologies</li>
+<li>Grammar produces “explainable” trees</li>
+</ul></li>
+<li>Data cubes can contain data from highly-specific domains for which
+<ul>
+<li>We could not have a big corpus of data to train (deep) machine learning models</li>
+<li>We could not have (open) ontologies to support translation</li>
+</ul></li>
+<li>We also tried Dependency Trees from Stanford NLP
+<ul>
+<li>However, the structure of the tree is highly variable</li>
+<li>(Empirically) Using n-grams enables good flexibility and robustness for COOL</li>
+</ul></li>
+</ul></li>
+<li>Tokenization
+<ul>
+<li>Our `tokenization and mapping` does not leverage stemming or lemmatization
+<ul>
+<li>We assume that even if users are not expert on the OLAP paradigm, they know the business domain</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+
+<section id="section-27" class="title-slide slide level1 center">
+<h1></h1>
+<p>Jagadish: The linguistic parse trees in our system are dependency parse trees, in which each node is a word/phrase specified by the user while each edge is a linguistic dependency relationship be- tween two words/phrases. The</p>
+<p><em><a href="https://corenlp.run/">https://corenlp.run/</a></em> _ _</p>
+<p><em>return the average of the sales</em></p>
+<p><em>return the average sales</em></p>
+<p><img data-src="img/phdslides_256.png"></p>
+<p><img data-src="img/phdslides_257.png"></p>
+</section>
+
+<section id="section-28" class="title-slide slide level1 center">
+<h1></h1>
+<p>Jagadish: The linguistic parse trees in our system are dependency parse trees, in which each node is a word/phrase specified by the user while each edge is a linguistic dependency relationship be- tween two words/phrases. The</p>
+<p>Given <em>T</em> _ = _ <em>«return, the, average, sales, in, 2019, per, store, region»</em></p>
+<p><em>Example of mappings</em></p>
+<p><em>T = «return, the, average, sales, in, 2019, per, store, region»</em></p>
+<p><em>M</em> <em>1</em> _ = «select, avg, _ <em>UnitSales</em> <em>, where, 2019, group by, region»</em></p>
+<p><em>T = «return, the, average, sales, in, 2019, per, store, region»</em></p>
+<p><em>M</em> <em>2</em> _ = «select, avg, _ <em>UnitSales</em> <em>, where, 2019, group by, </em> <em>StoreSales</em> <em>, region»</em></p>
+</section>
+
+<section id="section-29" class="title-slide slide level1 center">
+<h1></h1>
+<p>Jagadish: The linguistic parse trees in our system are dependency parse trees, in which each node is a word/phrase specified by the user while each edge is a linguistic dependency relationship be- tween two words/phrases. The</p>
+
+<img data-src="img/phdslides_258.png" class="r-stretch"></section>
+
+<section id="effectiveness-1" class="title-slide slide level1 center">
+<h1>Effectiveness</h1>
+<ul>
+<li>40 users with heterogeneous OLAP skills
+<ul>
+<li>Asked to translate (Italian) analytic goals into English</li>
+<li>Users provided good feedback on the interface…</li>
+<li>… as well as on the interpretation accuracy</li>
+</ul></li>
+</ul>
+<table class="caption-top">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;"></th>
+<th style="text-align: center;"><strong>Full Query</strong></th>
+<th style="text-align: center;"></th>
+<th style="text-align: center;"><strong>OLAP operator</strong></th>
+<th style="text-align: center;"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><strong>OLAP Familiarity</strong></td>
+<td style="text-align: center;"><strong>Accuracy</strong></td>
+<td style="text-align: center;"><strong>Time (s)</strong></td>
+<td style="text-align: center;"><strong>Accuracy</strong></td>
+<td style="text-align: center;"><strong>Time (s)</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Low</td>
+<td style="text-align: center;">0.91</td>
+<td style="text-align: center;">141</td>
+<td style="text-align: center;">0.86</td>
+<td style="text-align: center;">102</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">High</td>
+<td style="text-align: center;">0.91</td>
+<td style="text-align: center;">97</td>
+<td style="text-align: center;">0.92</td>
+<td style="text-align: center;">71</td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<section id="efficiency-1" class="title-slide slide level1 center">
+<h1>Efficiency</h1>
+
+<img data-src="img/phdslides_259.png" class="r-stretch"></section>
+
+<section id="cool-in-action" class="title-slide slide level1 center">
+<h1>COOL in Action!</h1>
+<p><img data-src="img/phdslides_260.png"></p>
+<p>[3] Matteo Francia, Enrico Gallinucci, Matteo Golfarelli: Conversational OLAP in Action. <strong>EDBT (best demo award)</strong> 2021: 646-649</p>
+<p><img data-src="img/phdslides_261.png"></p>
+<p><img data-src="img/phdslides_262.png"></p>
+</section>
+
+<section id="research-directions-1" class="title-slide slide level1 center">
+<h1>Research directions</h1>
+<ul>
+<li>COOL (Conversational OLAP)
+<ul>
+<li>Support the translation of a natural language conversation into an OLAP session</li>
+<li>Analyze data without requiring technological skills
+<ul>
+<li>Add conversational capabilities to Augmented OLAP</li>
+</ul></li>
+</ul></li>
+<li>Towards an end-to-end conversational solution
+<ul>
+<li>Create <strong>query summaries</strong> that can be returned as short vocal messages</li>
+<li>Identify <strong>insights</strong> out of a large amount of data</li>
+<li>Identify the “right” <strong>storytelling</strong> and user-system interaction</li>
+</ul></li>
+</ul>
+
+</section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<div class="footer footer-default">
+<p>Matteo Francia - Data Platforms and Artificial Intelligence - A.Y. 2025/26</p>
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="slides1_files/libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="slides1_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="slides1_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="slides1_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="slides1_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="slides1_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="slides1_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="slides1_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="slides1_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="slides1_files/libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': true,
+'pdfSeparateFragments': true,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: true,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'bottom-right',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1280,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+    window.document.addEventListener("DOMContentLoaded", function (event) {
+      const toggleBodyColorMode = (bsSheetEl) => {
+        const mode = bsSheetEl.getAttribute("data-mode");
+        const bodyEl = window.document.querySelector("body");
+        if (mode === "dark") {
+          bodyEl.classList.add("quarto-dark");
+          bodyEl.classList.remove("quarto-light");
+        } else {
+          bodyEl.classList.add("quarto-light");
+          bodyEl.classList.remove("quarto-dark");
+        }
+      }
+      const toggleBodyColorPrimary = () => {
+        const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+        if (bsSheetEl) {
+          toggleBodyColorMode(bsSheetEl);
+        }
+      }
+      toggleBodyColorPrimary();  
+      const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+      tabsets.forEach(function(tabset) {
+        const tabby = new Tabby('#' + tabset.id);
+      });
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp('/' + window.location.host + '/');
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+        const config = {
+          allowHTML: true,
+          maxWidth: 500,
+          delay: 100,
+          arrow: false,
+          appendTo: function(el) {
+              return el.closest('section.slide') || el.parentElement;
+          },
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start',
+        };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
+          config['offset'] = [0,0];
+          config['maxWidth'] = 700;
+        window.tippy(el, config); 
+      }
+      const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+      for (var i=0; i<noterefs.length; i++) {
+        const ref = noterefs[i];
+        tippyHover(ref, function() {
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+          try { href = new URL(href).hash; } catch {}
+          const id = href.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
+        });
+      }
+      const findCites = (el) => {
+        const parentEl = el.parentElement;
+        if (parentEl) {
+          const cites = parentEl.dataset.cites;
+          if (cites) {
+            return {
+              el,
+              cites: cites.split(' ')
+            };
+          } else {
+            return findCites(el.parentElement)
+          }
+        } else {
+          return undefined;
+        }
+      };
+      var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+      for (var i=0; i<bibliorefs.length; i++) {
+        const ref = bibliorefs[i];
+        const citeInfo = findCites(ref);
+        if (citeInfo) {
+          tippyHover(citeInfo.el, function() {
+            var popup = window.document.createElement('div');
+            citeInfo.cites.forEach(function(cite) {
+              var citeDiv = window.document.createElement('div');
+              citeDiv.classList.add('hanging-indent');
+              citeDiv.classList.add('csl-entry');
+              var biblioDiv = window.document.getElementById('ref-' + cite);
+              if (biblioDiv) {
+                citeDiv.innerHTML = biblioDiv.innerHTML;
+              }
+              popup.appendChild(citeDiv);
+            });
+            return popup.innerHTML;
+          });
+        }
+      }
+    });
+    </script>
+    
+
+</body></html>
