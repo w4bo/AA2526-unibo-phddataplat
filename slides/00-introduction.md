@@ -27,9 +27,9 @@ Research topics
 
 Web page: [https://big-unibo.github.io/phd-course-data-platforms-2526/](https://big-unibo.github.io/phd-course-data-platforms-2526/)
 
-- *Lecture 1* (Fri 2026-11-07, 13.00 - 17.00, room 2.7 -- Cesena Campus): Introduction to Big Data
-- *Lecture 2* (Fri 2026-11-21, 13.00 - 17.00, room 2.7 -- Cesena Campus): Data Platforms and Polyglot Persistence
-- *Lecture 3* (Fri 2026-11-28, 13.00 - 17.00, room 2.7 -- Cesena Campus): Smart Management of Data Platforms
+- *Lecture 1* (Fri 2025-11-07, 13.00 - 17.00, room 2.7 -- Cesena Campus): Introduction to Big Data
+- *Lecture 2* (Fri 2025-11-21, 13.00 - 17.00, room 2.7 -- Cesena Campus): Data Platforms and Polyglot Persistence
+- *Lecture 3* (Fri 2025-11-28, 13.00 - 17.00, room 2.7 -- Cesena Campus): Smart Management of Data Platforms
 
 # "Exam"
 
