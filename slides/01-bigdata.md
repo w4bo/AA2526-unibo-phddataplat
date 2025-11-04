@@ -581,7 +581,7 @@ HDFS is not ideal for some use cases:
 
 # Parquet
 
-A columnar storage format for efficient querying of  __nested structures__  in a  __flat format__
+A columnar storage format for efficient querying of __nested structures__ in a __flat format__
 
 * Supported by most frameworks and query engines
 
