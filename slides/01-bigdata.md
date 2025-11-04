@@ -1,4 +1,6 @@
-# What we are going to do
+{{< include 00-introduction.md >}}
+
+# Lecture 1: what we are going to do {background-color="#121011"}
 
 * Introduction to Big Data
 * Architectures
@@ -8,7 +10,7 @@
     * Data processing (batch, interactive, streaming)
   * Reference architectures
 
-# Introduction to Big Data {background-color="#C2E2FA"}
+# Introduction to Big Data {background-color="#121011"}
 
 # Why data matters
 
@@ -50,9 +52,10 @@ When does data become _big_ ?
 
 ![Big data](./img/svg1.svg)
 
-* "Big data  __exceeds the reach of commonly used hardware__  environments  __and software __ tools to capture, manage, and process it with in a tolerable elapsed time for its user population."  _Teradata Magazine article, 2011_
-* "Big data refers to data sets whose  __size is beyond the ability of typical__ database  __software__  tools to capture, store, manage and analyze." _The McKinsey Global Institute, 2012_
-* "Big data is data sets that are  __so voluminous and complex that traditional__ data processing application  __softwares__  __are inadequate__ to deal with them." _Wikipedia_
+* "Big data _exceeds the reach of commonly used HW and SW_ environments to capture, manage, and process it with in a tolerable elapsed time." </br> Teradata Magazine article (2011)
+* "Big data refers to data sets whose _size is beyond the ability of typical database software_  tools to capture, store, manage and analyze." </br> The McKinsey Global Institute (2012)
+
+* "Big data is data sets that are _so voluminous and complex that traditional data processing application softwares are inadequate_ to deal with them." </br> Wikipedia
 
 # Big data as a noun – The V's
 
@@ -228,9 +231,7 @@ Getting value from data is not (only) a matter of storage
 :::
 ::::
 
-# Architectures {background-color="#C2E2FA"} 
-
-# Architectures
+# Architectures {background-color="#121011"} 
 
 * Hardware-wise
 * Software-wise
@@ -387,7 +388,7 @@ With the success of cloud services, the *"independent storage and compute"* solu
 * Data must be persistent, 24/7
 * Compute nodes are activated only on demand
 
-# Data storage {background-color="#C2E2FA"}
+# Data storage {background-color="#121011"}
 
 - Distributed file system
 - Distributed databases
@@ -485,7 +486,6 @@ The standby NN stays updated by:
 # HDFS: federation
 
 ![Federation](./img/svg7.svg)
-
 
 The size of the block pool is limited by the memory size of the NN
 
@@ -592,7 +592,7 @@ One column per primitive type
 
 ![Parquet file format](img/phdslides_33.png)
 
-# Distributed databases {background-color="#C2E2FA"}
+# Distributed databases {background-color="#121011"}
 
 New types of databases have emerged
 
@@ -922,6 +922,7 @@ Collection answering the blue query
 ]
 ```
 
+:::{.fragment}
 Collection answering the purple query
 
 ```json
@@ -948,6 +949,7 @@ Collection answering the purple query
   }
 ]
 ```
+:::
 :::
 ::::
 
@@ -1025,12 +1027,13 @@ The _one-size-fits-all_ is "no more" (more on this in the next lectures)
 :::
 :::{.column width="50%"}
 
+:::{.fragment}
 ![Polyglot persistence](img/phdslides_41.png)
-
+:::
 :::
 ::::
  
-# Data processing {background-color="#C2E2FA"}
+# Data processing {background-color="#121011"}
 
 Main kinds of data processing
 
@@ -1135,17 +1138,20 @@ Slow due to data replication and disk I/O
 
 # Spark
 
+::::{.columns}
+:::{.column width=40%}
 Spark project started in 2009
 
 * Developed at UC Berkeley's AMPLab by Matei Zaharia
 * Open sourced 2010, Apache project from 2013
   * In 2014, Zaharia founded Databricks
   * Written in Scala; supports Java and Python
-* Currently the most used tool for batch (big data) analyses of
-
-# Data sharing in Spark
-
+* Currently the most used tool for batch (big data) analyses
+:::
+:::{.column width=60%}
 ![Spark](img/spark.png)
+:::
+::::
 
 # Spark pillars: RDD
 
@@ -1221,7 +1227,7 @@ Spark uses a  _master/slave architecture_  with one central coordinator (_driver
 * Together they form a Spark  _application_
 * The architecture is independent of the cluster manager that Spark runs on
 
-![Master-slave](./img/spark-tasks.png)
+![Master-slave](./img/spark-ms.png)
 
 # Spark architecture (in YARN)
 
@@ -1236,7 +1242,7 @@ _Executor_  =  **Container**
 
 _Cluster Manager_ =  **Resource Manager (RM)**
 
-# Reference architectures {background-color="#C2E2FA"}
+# Reference architectures {background-color="#121011"}
 
 # Reference architectures
 
@@ -1417,9 +1423,9 @@ _"Broad maturation of streaming systems combined with robust frameworks for unbo
 
 ![Hadoop-based deployment](img/phdslides_67.png)
 
-# The technological stack
+# The technological stack beyond Hadoop
 
-![Beyond Hadoop](img/phdslides_68.png)
+<img src="img/phdslides_68.png" class="center-img" />
 
 # On-premises vs cloud
 
@@ -1439,17 +1445,15 @@ Cloud providers are mature and offer comprehensive support for big data ecosyste
 
 A model for enabling  **minimal management effort** or service provider interaction
 
-* On-demand self-service (consume services when you want)
-* Broad network access (consume services from anywhere)
-* Broad network deployment (deploy services anywhere)
-* Resource pooling (infrastructure, virtual platforms, and applications)
-* Rapid elasticity (enable horizontal scalability)
-* Measured service (pay for the service you consume as you consume)
-* Reliability (fault-tolerance handled by the provider)
+* *On-demand self-service* (consume services when you want)
+* *Broad network access* (consume services from anywhere)
+* *Broad network deployment* (deploy services anywhere)
+* *Resource pooling* (infrastructure, virtual platforms, and applications)
+* *Rapid elasticity* (enable horizontal scalability)
+* *Measured service* (pay for the service you consume as you consume)
+* *Reliability* (fault-tolerance handled by the provider)
 
-# Conclusions {background-color="#C2E2FA"}
-
-# Conclusions
+# Conclusions {background-color="#121011"}
 
 Learned the basis of big data (a summary of the Master's degree course)
 
