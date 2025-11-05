@@ -16,7 +16,7 @@
 
 __Data-Driven Innovation__
 
-  * Use of data and  **analytics**  to foster new products, processes and markets
+  * Use of data and  **analytics** to foster new products, processes, and markets
   * Drive discovery and execution of innovation, achieving new services with a business value
 
 __Analytics__
@@ -31,7 +31,7 @@ __Advanced Analytics__
 
 __Augmented Analytics__
 
-* Use of technologies such as machine learning and AI to assist with data preparation, insight generation and insight explanation to augment how people explore and analyze data
+* Use of technologies such as machine learning and AI to assist with data preparation, insight generation, and insight explanation to augment how people explore and analyze data
 
 [https://www.gartner.com/en/information-technology/glossary](https://www.gartner.com/en/information-technology/glossary) (accessed 2022-08-01)
 
@@ -41,21 +41,21 @@ __Augmented Analytics__
 
 # Define big data
 
-The term _big data_ comes in two flavors
+The term _big data_ comes in two flavors.
 
-* Noun: "We have  _big data_"
-* Adjective: "We use  _big data_ tools"
+* Noun: "We have _big data_"
+* Adjective: "We use _big data_ tools"
 
 # Big data as a noun
 
-When does data become _big_ ?
+When does data become _big_?
 
 ![Big data](./img/svg1.svg)
 
-* "Big data _exceeds the reach of commonly used HW and SW_ environments to capture, manage, and process it with in a tolerable elapsed time." </br> Teradata Magazine article (2011)
-* "Big data refers to data sets whose _size is beyond the ability of typical database software_  tools to capture, store, manage and analyze." </br> The McKinsey Global Institute (2012)
+* "Big data _exceeds the reach of commonly used HW and SW_ environments to capture, manage, and process it within a tolerable elapsed time." </br> Teradata Magazine article (2011)
+* "Big data refers to data sets whose _size is beyond the ability of typical database software_ tools to capture, store, manage, and analyze." </br> The McKinsey Global Institute (2012)
 
-* "Big data is data sets that are _so voluminous and complex that traditional data processing application softwares are inadequate_ to deal with them." </br> Wikipedia
+* "Big data is data sets that are _so voluminous and complex that traditional data processing application software is inadequate_ to deal with them." </br> Wikipedia
 
 # Big data as a noun – The V's
 
@@ -115,7 +115,7 @@ The big-data cube [@meijer2012your]
 
 # Big data as an adjective
 
-* When used as a noun, the boundary between  _normal_  and  _big_  data is vague
+* When used as a noun, the boundary between _normal_ and _big_ data is vague
 * When used as an adjective, its meaning is more specific
   * *Big data architecture* (e.g., the Lambda architecture)
   * *Big data tools* (e.g., Apache Spark)
@@ -202,17 +202,17 @@ The big-data cube [@meijer2012your]
 
 ![The long tail](img/phdslides_18.png)
 
-The highest value does not come from the small set of highly popular items, but from the long list of niche items
+The highest value does not come from the small set of highly popular items, but from the long list of niche items.
 
-* Put together, the  _insignificant_  data is actually the most valuable
+* Put together, the _insignificant_ data is actually the most valuable
 * The inverse of the 80-20 Pareto rule
     - Pareto principle (80/20 rule): 20% of the causes generate 80% of the value, suggesting focus on the main drivers.
     - Long Tail model: the accumulation of many niche elements outweighs the mainstream.
-    - Applications (e.g., Amazon): collecting as much data as possible enable greater customer satisfaction and higher overall value.
+    - Applications (e.g., Amazon): collecting as much data as possible enables greater customer satisfaction and higher overall value.
 
 # Bigger = Smarter (?)
 
-Getting value from data is not (only) a matter of storage
+Getting value from data is not (only) a matter of storage.
 
 * Any example?
 
@@ -246,7 +246,7 @@ Big data is _big_
 * It doesn't fit a single drive
 * It doesn't fit a single (typical) machine
 
-Processing big data requires a lot of computing resources
+Processing big data requires substantial computing resources.
 
 * Simply scaling only the disk is not an option
 
@@ -267,7 +267,7 @@ _Symmetric Multi Processing_ (SMP)
 
 # Scale up
 
-Add more processors and RAM, buying a more expensive and robust server
+Add more processors and RAM, and buy a more expensive and robust server.
 
 * Pros
   * Less power consumption than running multiple servers
@@ -277,7 +277,7 @@ Add more processors and RAM, buying a more expensive and robust server
   * Less networking equipment
 * Cons
   * PRICE
-  * Greater risk of hardware failure causing bigger outages
+  * Greater risk of hardware failure, causing bigger outages
   * Generally severe vendor lock-in
   * Not long-term: limited upgradeability in the future
 
@@ -291,12 +291,12 @@ Add more processors and RAM, buying a more expensive and robust server
 
  _Massively Parallel Processing_ (MPP)
 
-- There are several processors, equipped with their own RAM and disks, collaborating to solve a single problem by splitting it in several independent tasks
+- There are several processors, equipped with their own RAM and disks, collaborating to solve a single problem by splitting it into several independent tasks
 - It is also called shared-nothing architecture
 
 # Scale out
 
-Adding more servers with less processors and RAM
+Adding more servers with fewer processors and RAM
 
 * Pros
   * Much cheaper than scaling vertically
@@ -315,7 +315,7 @@ Adding more servers with less processors and RAM
 * You are not tied to expensive, proprietary offerings from a single vendor
 * You can choose standardized, commonly available hardware from a large range of vendors to build your cluster
 * [Commodity](https://it.wikipedia.org/wiki/Commodity) ≠ Low-end!
-  * Cheap components with high failure rate can be a false economy
+  * Cheap components with a high failure rate can be a false economy
 * Example of commodity hardware specifications:
   * Processor: 12-core i7-8700 CPU @ 3.20GHz
   * Memory: 64 GB RAM
@@ -324,7 +324,7 @@ Adding more servers with less processors and RAM
 * Yahoo!'s Hadoop installation:
   * 100,000 CPUs in > 60,000 computers (as of 2017)
   * Used to support research for Ad Systems and Web Search
-  * Also used to do scaling tests to support development of Hadoop
+  * Also used to do scaling tests to support the development of Hadoop
 
 # Cluster
 
@@ -346,7 +346,6 @@ A **cluster** is a group of linked computers (nodes) that work together so close
 * Racks are connected by a higher-level network or switch
   * Intra-rack bandwidth >> inter-rack bandwidth
 
-
 :::
 :::{.column width="30%"}
 
@@ -365,7 +364,7 @@ Having a single large cluster that is tantalizing to many organizations
 
 * No data silos, simpler governance
 
-Multiple clusters are inevitable within medium-large enterprise settings
+Multiple clusters are inevitable within medium- to large-sized enterprise settings.
 
 * Resiliency: every cluster sits within a single point of failure due to geography
 * Legal separation
@@ -375,7 +374,7 @@ Multiple clusters are inevitable within medium-large enterprise settings
 
 With the success of cloud services, the *"independent storage and compute"* solution for big data clusters is on the rise
 
-*Network is no more a problem*
+*Network is no longer a problem*
 
 * *Data locality is* (?)
 
@@ -395,7 +394,7 @@ With the success of cloud services, the *"independent storage and compute"* solu
 
 # The data lake
 
-Big data stored in a DFS usually become a _data lake_: A central location that holds a large amount of data in its native, raw format
+Big data stored in a DFS usually becomes a _data lake_: a central location that holds large amounts of data in its native, raw format.
 
 ![Data lake](img/phdslides_30.jpg)
 
@@ -407,7 +406,6 @@ Different implementations of data lakes, relying on similar principles
 * AWS S3
 * Azure Data Lake
 * GCP Colossus
-
 
 # HDFS
 
@@ -442,26 +440,26 @@ Why this big?
 
 ![Namenodes and datanodes](./img/svg5.svg)
 
-Nodes in an HDFS cluster operate in a master-slave pattern
+Nodes in an HDFS cluster operate in a master-slave pattern.
 
 * Namenode (NN) - the master
-  * Persistently maintains the filesystem treeand all files' and directories' metadata
+  * Persistently maintains the filesystem tree and all files' and directories' metadata
   * Keeps in memory the location of each block for a given file (_block pool_)
 * Datanodes (DNs) - the slaves
   * Store and retrieve blocks
-  * Periodically report to the NN with thelist of blocks they are storing;
+  * Periodically report to the NN with the list of blocks they are storing;
     * _Heartbeats_ are sent to the DN to signal their active state (every 10 minutes by default)
 
 # HDFS: the SPoF
 
 ![Name Node is a single point of failure](./img/svg6.svg)
 
-The NN is a single point of failure: without it, the filesystem cannot be used
+The NN is a single point of failure: without it, the filesystem cannot be used.
 
 * *Backup solution*: NN writes its persistent state to multiple filesystems, preventing loss of data
 * *Secondary NN solution*
   * A separate machine regularly connects with the primary NN to build snapshots of its persistent data.
-  * These  _checkpoints_ can be used to restart a failed NN without having to replay the entire journal of file-system actions.
+  * These _checkpoints_ can be used to restart a failed NN without having to replay the entire journal of file-system actions.
 
 # High-Availability
 
@@ -469,7 +467,7 @@ The NN is a single point of failure: without it, the filesystem cannot be used
 
 * Service continues while faults are detected, reported, and repaired offline  
 
-Backups and secondary NNs prevent data loss  
+Backups and secondary NNs prevent data loss.  
 
 * But restarting an NN on large clusters can take 30+ minutes  
 
@@ -487,9 +485,9 @@ The standby NN stays updated by:
 
 ![Federation](./img/svg7.svg)
 
-The size of the block pool is limited by the memory size of the NN
+The size of the block pool is limited by the memory size of the NN.
 
-* May incur in scaling issues on very large clusters with many files
+* May incur scaling issues on very large clusters with many files
 
 Solution: configure additional NNs
 
@@ -525,7 +523,7 @@ To carry out proper choices, Hadoop must be aware of the cluster topology that i
 
 * Block storage and process allocation (data locality) need such information
 
-Nodes are organized in racks, racks are organized in data centers
+Nodes are organized in racks, and racks are organized in data centers.
 
 * Hadoop models such concepts in a tree-like fashion and computes the distance between nodes as their distance on the tree.
 
@@ -533,7 +531,7 @@ Nodes are organized in racks, racks are organized in data centers
 
 ![Replication](./img/svg9.svg)
 
-Each data block is independently replicated at multiple DNs in order to improve performance and robustness
+Each data block is independently replicated at multiple DNs in order to improve performance and robustness.
 
 * Replication is aware of the cluster topology
 
@@ -543,7 +541,7 @@ The default replication factor is 3:
 * *Replica 2* is stored on a node (n2) in a rack  (r2) different from the one of n1 (off-rack)
 * *Replica 3* is stored on a node, different from n2, but that belongs to r2
 
-Replicas can be rebalanced when nodes are added or unavailable
+Replicas can be rebalanced when nodes are added or unavailable.
 
 # HDFS: not always the best fit
 
@@ -587,14 +585,14 @@ A columnar storage format for efficient querying of __nested structures__ in a _
 
 One column per primitive type
 
-* The structure of the record is captured for each value by two integers:  _repetition level_ and  _definition level_
+* The structure of the record is captured for each value by two integers: _repetition level_ and _definition level_
 * Enough to fully reconstruct the nested structures
 
 ![Parquet file format](img/phdslides_33.png)
 
 # Distributed databases {background-color="#121011"}
 
-New types of databases have emerged
+New types of databases have emerged.
 
 # Strengths of RDBMSs?
 
@@ -736,9 +734,9 @@ Today, *NoSQL* indicates *DBMSs* adopting a *different data model from the relat
 
 ```json
 [
-    { "Product": "P1", "Name": "Beer", "Price": 6, "Quantity": "0.4L"},
-    { "Product": "P2", "Name": "Milk", "Price": 1, "Expiration": "2024-11-30"},
-    { "Product": "P3", "Name": "Pizza", "Price": 6, "Ingredients": [...]},
+ { "Product": "P1", "Name": "Beer", "Price": 6, "Quantity": "0.4L"},
+ { "Product": "P2", "Name": "Milk", "Price": 1, "Expiration": "2024-11-30"},
+ { "Product": "P3", "Name": "Pizza", "Price": 6, "Ingredients": [...]},
 ]
 ```
 
@@ -886,8 +884,8 @@ db.collection.find({ status: "active", age: { $gt: 30 } })  // filter by conditi
 
 ```js
 db.collection.updateMany(
-  { status: "active" },           // filter
-  { $set: { verified: true } }    // update specific field(s)
+ { status: "active" },           // filter
+ { $set: { verified: true } }    // update specific field(s)
 )
 ```
 
@@ -911,14 +909,14 @@ Collection answering the blue query
 
 ```json
 [
-  {
+ {
     "_id": 1,
     "name": "Martin",
     "adrs": [
-      { "street": "Adam", "city": "Chicago", "state": "Illinois", "code": 60007 },
-      { "street": "9th", "city": "New York", "state": "New York", "code": 10001 }
-    ]
-  }
+ { "street": "Adam", "city": "Chicago", "state": "Illinois", "code": 60007 },
+ { "street": "9th", "city": "New York", "state": "New York", "code": 10001 }
+ ]
+ }
 ]
 ```
 
@@ -927,26 +925,26 @@ Collection answering the purple query
 
 ```json
 [
-  {
+ {
     "_id": 1,
     "customer": "1",
     "orderpayments": [
-      { 
+ { 
         "card": 457,
         "billadrs": { "street": "Adam", "city": "Chicago", "state": "Illinois", "code": 60007 } 
       
-      },
-      { 
+ },
+ { 
         "card": 457,
         "billadrs": { "street": "9th", "city": "New York", "state": "New York", "code": 10001 }
-      }
-    ],
+ }
+ ],
     "products": [
-      { "id": 1, "name": "Cola", "price": 10.4 },
-      { "id": 2, "name": "Beer", "price": 14.4 }
-    ],
+ { "id": 1, "name": "Cola", "price": 10.4 },
+ { "id": 2, "name": "Beer", "price": 14.4 }
+ ],
     "shipadrs": { "street": "9th", "city": "New York", "state": "New York", "code": 10001 }
-  }
+ }
 ]
 ```
 :::
@@ -965,27 +963,27 @@ Collection answering the purple query
 
 ```json
 [
-  {
+ {
     "_id": 1,
     "name": "Martin",
     "adrs": [
-      { "street": "Adam", "city": "Chicago", "state": "Illinois", "code": 60007 },
-      { "street": "9th", "city": "New York", "state": "New York", "code": 10001 }
-    ],
+ { "street": "Adam", "city": "Chicago", "state": "Illinois", "code": 60007 },
+ { "street": "9th", "city": "New York", "state": "New York", "code": 10001 }
+ ],
     "orders": [
-      {
+ {
         "orderpayments": [
-          { "card": 457, "billadrs": { "street": "Adam", "city": "Chicago", "state": "Illinois", "code": 60007 } },
-          { "card": 457, "billadrs": { "street": "9th", "city": "New York", "state": "New York", "code": 10001 } }
-        ],
+ { "card": 457, "billadrs": { "street": "Adam", "city": "Chicago", "state": "Illinois", "code": 60007 } },
+ { "card": 457, "billadrs": { "street": "9th", "city": "New York", "state": "New York", "code": 10001 } }
+ ],
         "products": [
-          { "id": 1, "name": "Cola", "price": 10.4 },
-          { "id": 2, "name": "Beer", "price": 14.4 }
-        ]
-      }
-    ],
+ { "id": 1, "name": "Cola", "price": 10.4 },
+ { "id": 2, "name": "Beer", "price": 14.4 }
+ ]
+ }
+ ],
     "shipadrs": { "street": "9th", "city": "New York", "state": "New York", "code": 10001 }
-  }
+ }
 ]
 ```
 
@@ -1054,9 +1052,9 @@ What we need
 
 # YARN (Yet Another Resource Negotiator)
 
-Assign resources for applications to run their processes
+Assign resources for applications to run their processes.
 
-Similarly to HDFS, two daemons
+Similar to HDFS, two daemons
 
 * *Resource Manager* (RM) - the master
   * The ultimate authority that arbitrates resources among all the applications
@@ -1065,15 +1063,14 @@ Similarly to HDFS, two daemons
 
 # Data locality
 
-When computations involves large set of data, *it is cheaper (i.e. faster) to rather than data to code*
+When computations involve a large set of data, *it is cheaper (i.e., faster) to move code to data rather than data to code*
 
 * Exploit cluster topology and data block replication to apply the data locality principle
 * The following cases respect the order the resource manager prefers:
   * Process and data on the same node
-  * Process and data on the different node of the same rack
+  * Process and data on the different nodes of the same rack
   * Process and data on different racks of the same data center
   * Process and data on different racks of the different data centers
-
 
 # Typical Workflow of Large-Data Problem
 
@@ -1089,14 +1086,14 @@ When computations involves large set of data, *it is cheaper (i.e. faster) to ra
 
 ![Map and Reduce (Fold) operations](./img/svg13.svg)
 
-`MAP` takes a function `f` and applies it to every item
+`MAP` takes a function `f` and applies it to every item.
 
-- The application of  `f` to each item can be  _parallelized_ (in different machines) since each functional application happens in isolation.
+- The application of  `f` to each item can be _parallelized_ (in different machines) since each functional application happens in isolation.
 
-`FOLD` iteratively applies a function `g` to aggregate results
+`FOLD` iteratively applies a function `g` to aggregate results.
 
-- Has more  _restrictions on data locality_, items must be "brought together" before `g` can be applied.
-- Some applications do not require  `g`  to be applied to all items.
+- Has more _restrictions on data locality_, items must be "brought together" before `g` can be applied.
+- Some applications do not require  `g` to be applied to all items.
   - If elements in the list can be divided into groups, `g` *aggregations can proceed in parallel*.
 
 # Disambiguation of MapReduce
@@ -1112,7 +1109,7 @@ Hadoop MapReduce *is an open-source implementation* of the MapReduce programming
 
 # Sort
 
-Return all the domains indexed by Google and the number of pages in each, ordered by the number of pages
+Return all the domains indexed by Google and the number of pages in each, ordered by the number of pages.
 
 * The programming model does not support this per se
   * But the implementations do: the *shuffle stage* performs grouping and ordering!
@@ -1122,9 +1119,9 @@ Return all the domains indexed by Google and the number of pages in each, ordere
 * With 1 reducer, we get sorted output
 * With many reducers, we get partly sorted output (unless: TotalOrderPartitioner)
 
-# Two stage MapReduce
+# Two-stage MapReduce
 
-As map-reduce calculations get more complex, it's useful to break them down into stages
+As map-reduce calculations get more complex, it's useful to break them down into stages.
 
 * The output of the first stage serves as input to the next one
 * The **different subsequent stages**
@@ -1143,10 +1140,10 @@ Slow due to data replication and disk I/O
 Spark project started in 2009
 
 * Developed at UC Berkeley's AMPLab by Matei Zaharia
-* Open sourced 2010, Apache project from 2013
+* Open sourced in 2010, Apache project from 2013
   * In 2014, Zaharia founded Databricks
   * Written in Scala; supports Java and Python
-* Currently the most used tool for batch (big data) analyses
+* Currently, the most used tool for batch (big data) analyses
 :::
 :::{.column width=60%}
 ![Spark](img/spark.png)
@@ -1155,34 +1152,33 @@ Spark project started in 2009
 
 # Spark pillars: RDD
 
-RDDs (resilient distributed datasets) are immutable distributed collection of objects
+RDDs (resilient distributed datasets) are an immutable distributed collection of objects.
 
-* **__Resilient__** : automatically rebuild on failure
-* **__Distributed__** : the objects belonging to a given collection are split into  _partitions _ and spread across the nodes
+* **Resilient**: automatically rebuild on failure
+* **Distributed**: the objects belonging to a given collection are split into _partitions _ and spread across the nodes
   * RDDs can contain any type of Python, Java, or Scala objects
   * Distribution allows for scalability and locality-aware scheduling
-  * Partitioning allows to control parallel processing
+  * Partitioning allows control of parallel processing
 
-Fundamental characteristics (mostly from  _pure functional programming_)
+Fundamental characteristics (mostly from _pure functional programming_)
 
-* **__Immutable__** : once created, it can't be modified
-* **__Lazily evaluated__** : optimization before execution
-* **__Cacheable__** : can persist in memory, spill to disk if necessary
-* **__Type inference__** : data types are not declared but inferred (≠ dynamic typing)
+* **Immutable**: once created, it can't be modified
+* **Lazily evaluated**: optimization before execution
+* **Cacheable**: can persist in memory, spill to disk if necessary
+* **Type inference**: data types are not declared but inferred (≠ dynamic typing)
 
 # Spark pillars: DAG
 
-Based on the user application and on the lineage graphs, Spark computes a  **logical execution plan** in the form of a DAG
+Based on the user application and on the lineage graphs, Spark computes a  **logical execution plan** in the form of a DAG.
 
 * Which is later transformed into a physical execution plan
 
 The DAG (Directed Acyclic Graph) is  **a sequence of computations performed on data**
 
-* Nodes are  __RDDs__
+* Nodes are __RDDs__
 * Edges are operations on RDDs
 * The graph is Directed: transformations from a partition A to a partition B
 * The graph is Acyclic: transformations cannot return an old partition
-
 
 # Spark sample DAG
 
@@ -1191,9 +1187,9 @@ Word count
 ```scala
 textFile = sc.textFile("hdfs://...")
 counts = textFile
-                .flatMap(line => line.split(" "))
-                .map(lambda word: (word, 1))
-                .reduceByKey(lambda a, b: a + b)
+ .flatMap(line => line.split(" "))
+ .map(lambda word: (word, 1))
+ .reduceByKey(lambda a, b: a + b)
 counts.saveAsTextFile("hdfs://...")
 ```
 
@@ -1201,7 +1197,7 @@ counts.saveAsTextFile("hdfs://...")
 
 # DAG decomposed into stages
 
-The execution plan is compiled into physical  __stages__
+The execution plan is compiled into physical __stages__
 
 * Stages' boundaries are defined by shuffle operations
 * Operations with narrow dependencies are pipelined as much as possible
@@ -1210,8 +1206,7 @@ The execution plan is compiled into physical  __stages__
 
 # Stages decomposed into tasks
 
-
-The fundamental unit of execution is the one of  __tasks__
+The fundamental unit of execution is the one of __tasks__
 
 * A task is created for each partition in the new RDD
 * Tasks are scheduled and assigned to the worker nodes based on data locality
@@ -1221,10 +1216,10 @@ The fundamental unit of execution is the one of  __tasks__
 
 # Spark architecture
 
-Spark uses a  _master/slave architecture_  with one central coordinator (_driver_) and many distributed workers (_executors_)
+Spark uses a _master/slave architecture_ with one central coordinator (_driver_) and many distributed workers (_executors_)
 
 * The driver and each executor are independent Java processes
-* Together they form a Spark  _application_
+* Together they form a Spark _application_
 * The architecture is independent of the cluster manager that Spark runs on
 
 ![Master-slave](./img/spark-ms.png)
@@ -1233,10 +1228,10 @@ Spark uses a  _master/slave architecture_  with one central coordinator (_driver
 
 _Driver Program _ ≅  **Application**
 
-* Driver can be run  _externally _ from the client (e.g., spark-shell) or  _internally _ from the AMP (e.g., for production jobs)
+* Driver can be run _externally _ from the client (e.g., spark-shell) or _internally _ from the AMP (e.g., for production jobs)
 * The  **Application master process (AMP)** is not shown for simplicity
 
-_Executor_  =  **Container**
+_Executor_ =  **Container**
 
 * Executors are run and monitored by the  **Node Manager (NM)**
 
@@ -1252,8 +1247,7 @@ A stack of many components
 * Coexistence of batch and streaming (Lambda vs Kappa)
 * The technological stack
 
-
-# National Institute of Standards and Technology's reference archtiecture
+# National Institute of Standards and Technology's reference architecture
 
 ![[Reference architecture](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.1500-6r2.pdf)](./img/nist.jpg)
 
@@ -1316,7 +1310,6 @@ Big Data Framework Provider
 
 # Microsoft's reference
 
-
 *Data sources*
 
 - Data stores, static files, real-time sources
@@ -1357,16 +1350,15 @@ Big Data Framework Provider
 
 # Lambda vs Kappa
 
-Batch and streaming analyses follow different principles
+Batch and streaming analyses follow different principles.
 
-* *Batch*: large amounts of data at-rest with fault-tolerance
-* *Streaming*: small amount of continuously incoming data without fault-tolerance
+* *Batch*: large amounts of data at rest with fault-tolerance
+* *Streaming*: a small amount of continuously incoming data without fault-tolerance
 
 Two philosophies to make them coexist
 
 * *Lambda*
 * *Kappa*
-
 
 # Lambda architecture
 
@@ -1398,12 +1390,12 @@ Cons of Lambda
 Can we do better?
 
 * Well-designed streaming systems provide a strict superset of batch functionality
-* Introduce correctness (exactly-once semantics, strong consistency) and the result of a streaming job is the same of batch job
+* Introduce correctness (exactly-once semantics, strong consistency) and the result of a streaming job is the same as that of a batch job
 * A streaming engine can handle a bounded dataset
 
 # Kappa architecture
 
-All data flows through a single path using a stream processing system
+All data flows through a single path using a stream processing system.
 
 * Similar to the Lambda Architecture’s speed layer, all event processing occurs on the input stream and is stored as a real-time view  
 * To recompute the full dataset (as in the batch layer of Lambda), simply replay the stream  
@@ -1417,7 +1409,7 @@ All data flows through a single path using a stream processing system
   * Google Cloud Dataflow
   * Apache Flink
 
-_"Broad maturation of streaming systems combined with robust frameworks for unbounded data processing will in time allow for the relegation of the Lambda Architecture to the antiquity of big data history where it belongs"_
+_"Broad maturation of streaming systems combined with robust frameworks for unbounded data processing will, in time, allow for the relegation of the Lambda Architecture to the antiquity of big data history where it belongs"_
 
 # The technological stack
 
@@ -1429,7 +1421,7 @@ _"Broad maturation of streaming systems combined with robust frameworks for unbo
 
 # On-premises vs cloud
 
-First installations where primarily on-premises
+First installations were primarily on-premises
 
 * *Installation*: how do I set up a new machine?
 * *Networking*: how do I cable dozens of machines?
@@ -1437,7 +1429,7 @@ First installations where primarily on-premises
 * *Upgrade*: how do I extend the cluster with new services/machines?
 * (energy and cooling, software licenses, insurance...)
 
-Cloud providers are mature and offer comprehensive support for big data ecosystems
+Cloud providers are mature and offer comprehensive support for big data ecosystems.
 
 * Forget all that is above
 

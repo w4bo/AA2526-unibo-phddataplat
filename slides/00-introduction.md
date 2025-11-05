@@ -44,4 +44,4 @@ Or... submit a paper! We have an open special issue on this topic
 * Journal: Electronics, IF 2.6
 * Closes Dec 31, 2025 (let me know if you are interested and need more time!)
 
-**We are open to collaborations :)**
+**We are open to collaborations:)**

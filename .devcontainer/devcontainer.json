@@ -5,6 +5,9 @@
     "image": "w4bo/python:1.0.4",
     "workspaceMount": "source=${localWorkspaceFolder},target=/home,type=bind",
     "workspaceFolder": "/home",
+    "features": {
+        "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {}
+    },
     "customizations": {
         "vscode": {
             "settings": {
