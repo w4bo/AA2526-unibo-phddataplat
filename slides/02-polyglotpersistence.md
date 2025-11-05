@@ -583,10 +583,12 @@ White-box cost modellingexample [@DBLP:conf/adbis/ForresiFGG21]
 :::
 :::{.column width="50%"}
 :::
-:::
+::::
 
 #
 
 Black-box cost modellingexample [@DBLP:journals/isf/ForresiFGG23]
 
 ![](img/polyglot12.png)
+
+# References

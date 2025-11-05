@@ -1072,7 +1072,7 @@ When computations involve a large set of data, *it is cheaper (i.e., faster) to 
   * Process and data on different racks of the same data center
   * Process and data on different racks of the different data centers
 
-# Typical Workflow of Large-Data Problem
+# Typical Workflow of Big-Data Problem
 
 1. Iterate over a large number of records
 1. Extract something of interest from each

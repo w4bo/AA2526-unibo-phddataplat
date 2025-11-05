@@ -1,439 +1,206 @@
-
-
-# Smart Data Platform Management
-
-Challenges and Applications
-
-# Data platform
-
-* We have services
-  * To transform data
-  * To support the transformation
-* The (DIKW) pyramid abstracts many techniques and algorithms
-  * Standardization
-  * Integration
-  * Orchestration
-  * Accessibility through APIs
-
-**Supporting services**
-
-**Serve (deciding/consume)**
-
-**BI tools (e.g., Tableau)**
-
-**Analytics (analyzing/process)**
-
-**Networking, etc.**
-
-**Machine learning**
-
-**Ingestion (acquiring/collect)**
-
-![](img/phdslides_139.png)
-
-# Data platform: related job positions
-
-* **Data platform engineer**
-  * Orchestrate the successful implementation of cloud technologies within the data infrastructure of their business
-  * Solid understanding of impact database types and implementation
-  * Responsible for purchasing decisions for cloud services and approval of data architectures
-* **Data architect**
-  * Team members who understand all aspects of a data platform's architecture
-  * Work closely with the data platform engineers to create data workflows
-  * Responsible for designing and testing new database architectures and planning both data and architecture migrations
-* **Data pipeline engineer**
-  * Responsible for planning, architecting, and building large-scale data processing systems
-* **Data analyst**
-  * Analyze data systems, creating automated systems for retrieving data from the data platform
-  * Cloud data analysts are more commonly members of the business user population
-* **Data scientist**
-  * Analyze and interpret complex digital data
-  * Work with new technologies (e.g., machine learning) to deepen the business' understanding and gain new insights
-
-# From DevOps…
-
-__DevOps__ combines development and operations to increase the efficiency, speed, and security of software development and delivery compared to traditional processes.
-
-DevOps practices enable software development (dev) and operations (ops) teams to accelerate delivery through automation, collaboration, fast feedback, and iterative improvement
-
-![](img/phdslides_140.png)
-
-[https://about.gitlab.com/topics/devops/](https://about.gitlab.com/topics/devops/) (accessed 2023-06-03)
-
-![](img/phdslides_141.png)
-
-# … to DataOps
-
-__DataOps__ refers to a general process aimed to shorten the end-to-end data analytic life-cycle time by introducing automation in the data collection, validation, and verification process
-
-![](img/phdslides_142.png)
-
-Munappy, A. R., Mattos, D. I., Bosch, J., Olsson, H. H., & Dakkak, A. (2020, June). From ad-hoc data analytics to dataops. In _Proceedings of the International Conference on Software and System Processes_ (pp. 165-174).
-
-# DataOps
-
-![](img/phdslides_143.png)
-
-* From DevOps to DataOps
-  * _"A collaborative data management practice focused on improving the _ _communication, integration and automation of data flows between _ _data managers and data consumers across an organization"_
-  * Data analytics improved in terms of velocity, quality, predictability and scale of software engineering and deployment
-* Some key rules
-  * Establish progress and performance measurements at every stage
-  * Automate as many stages of the data flow as possible
-  * Establish governance discipline ( _governance-as-code_ )
-  * Design process for growth and extensibility
-
-![](img/phdslides_144.png)
-
-Gartner, 2020 [https://www.gartner.com/smarterwithgartner/how-dataops-amplifies-data-and-analytics-business-value](https://www.gartner.com/smarterwithgartner/how-dataops-amplifies-data-and-analytics-business-value)Andy Palmer, 2015 [https://www.tamr.com/blog/from-devops-to-dataops-by-andy-palmer/](https://www.tamr.com/blog/from-devops-to-dataops-by-andy-palmer/) William Vorhies, 2017 [https://www.datasciencecentral.com/profiles/blogs/dataops-it-s-a-secret](https://www.datasciencecentral.com/profiles/blogs/dataops-it-s-a-secret)
-
-# Data fabric
-
-* "vision for data management […] that seamlessly connects different clouds, whether they are private, public, or hybrid environments." (2016)
-* Frictionless access and sharing of data in a distributed data environment
-  * Enables a __single and consistent data management framework__ , which allows seamless data access and processing by design across otherwise siloed storage
-  * Leverages __human and machine capabilities to access data __ in place or support its consolidation where appropriate
-  * __Continuously identifies and connects data __ from disparate applications to discover unique, business-relevant relationships between the available data points
-* It is a unified architecture with an integrated set of technologies and services
-  * Designed to deliver integrated and enriched data – at the right time, in the right method, and to the right data consumer – in support of both operational and analytical workloads
-  * Combines key data management technologies – such as __data catalog__ , __data governance__ , __data integration__ , __data pipelining__ , and __data orchestration__
-
-[https://cloud.netapp.com/hubfs/Data-Fabric/Data%20Fabric%20WP%20April%202017.pdf](https://cloud.netapp.com/hubfs/Data-Fabric/Data%20Fabric%20WP%20April%202017.pdf) (accessed 2023-06-23)Gartner, 2019 [https://www.gartner.com/en/newsroom/press-releases/2019-02-18-gartner-identifies-top-10-data-and-analytics-technolo](https://www.gartner.com/en/newsroom/press-releases/2019-02-18-gartner-identifies-top-10-data-and-analytics-technolo) Gartner, 2021 [https://www.gartner.com/smarterwithgartner/data-fabric-architecture-is-key-to-modernizing-data-management-and-integration](https://www.gartner.com/smarterwithgartner/data-fabric-architecture-is-key-to-modernizing-data-management-and-integration) K2View Whitepaper: What is a Data Fabric? The Complete Guide, 2021
-
-# Data Fabric
-
-  * __Catalog all your data__: including business glossary and design-time and runtime metadata
-  * __Enable self-service capabilities__: data discovery, profiling, exploration, quality assessment, consumption of data-as-a-product
-  * __Provide a knowledge graph__: Visualizing how data, people, processes, systems, etc. are interconnected, deriving additional actionable insight
-  * __Provide intelligent (smart) information integration__: Supporting IT staff and business users alike in their data integration and transformation, data virtualization, and federation tasks
-  * __Derive insight from metadata__: Orchestrating and automating tasks and jobs for data integration, data engineering, and data governance end to end
-  * __Enforce local and global data rules/policies__: Including AI/ML-based automated generation, adjustments, and enforcement of rules and policies
-  * __Manage an end-to-end unified lifecycle__: Implementing a coherent and consistent lifecycle end to end of all Data Fabric tasks across various platforms, personas, and organizations
-  * __Enforce data and AI governance__: Broadening the scope of traditional data governance to include AI artefacts, for example, AI models, pipelines
-
-Is this brand new?
-
-# Data fabric
-
-* __It is a design concept__
-  * It optimizes data management by automating repetitive tasks
-  * According to Gartner estimates, 25% of data management vendors will provide a complete framework for data fabric by 2024 – up from 5% today
-
-![](img/phdslides_145.png)
-
-![](img/phdslides_146.png)
-
-Gartner, 2021 [https://www.gartner.com/smarterwithgartner/data-fabric-architecture-is-key-to-modernizing-data-management-and-integration](https://www.gartner.com/smarterwithgartner/data-fabric-architecture-is-key-to-modernizing-data-management-and-integration)
-
-K2View, 2021 [https://www.k2view.com/top-data-fabric-vendors](https://www.k2view.com/top-data-fabric-vendors)
-
-#
-
-Top Players 
-https://solutionsreview.com/data-management/the-best-data-fabric-tools-and-software/ 
-https://em360tech.com/top-10/data-modelling-fabric 
-Predictions
-https://live-datastaxd8.pantheonsite.io/sites/default/files/2021-02/Predicts_2021_Data__735776_ndx.pdf
-
-![](img/phdslides_147.png)
-
-[https://www.irion-edm.com/data-management-insights/gartner-data-summit-irion-representative-vendor-for-data-fabric-technology/](https://www.irion-edm.com/data-management-insights/gartner-data-summit-irion-representative-vendor-for-data-fabric-technology/)
-
-![](img/phdslides_148.png)
-
-Gartner, 2021 [https://www.gartner.com/smarterwithgartner/data-fabric-architecture-is-key-to-modernizing-data-management-and-integration](https://www.gartner.com/smarterwithgartner/data-fabric-architecture-is-key-to-modernizing-data-management-and-integration)
-
-# Data mesh
-
-* Distributed data architecture, under centralized governance and standardization for interoperability, enabled by a shared and harmonized self-serve data infrastructure
-  * Domain-oriented decentralized data ownership
-    * Decentralization and distribution of responsibility to people who are closest to the data, in order to support continuous change and scalability
-    * Each domain exposes its own op/analytical APIs
-  * __Data as a product __ ( _quantum_ )
-    * Products must be discoverable, addressable, trustworthy, self-describing, secure
-  * Self-serve data infrastructure as a platform
-    * High-level abstraction of infrastructure to provision and manage the lifecycle of data products
-  * Federated computational governance
-    * A governance model that embraces decentralization and domain self-sovereignty, interoperability through global standardization, a dynamic topology, automated execution of decisions by the platform
-
-Zhamak Dehghani, 2019 [https://martinfowler.com/articles/data-monolith-to-mesh.html](https://martinfowler.com/articles/data-monolith-to-mesh.html)Zhamak Dehghani, 2020 [https://martinfowler.com/articles/data-mesh-principles.html](https://martinfowler.com/articles/data-mesh-principles.html)
-
-#
-
-https://www.youtube.com/watch?v=_bmYXWCxF_Q
-
-* Data Mesh organizes data around __business domain owners __ and transforms relevant data assets (data sources) to __data products__ that can be consumed by distributed business users from various business domains or functions
-  * Data products are created, governed, and used in an __autonomous, decentralized__ , and self-service manner
-  * __Self-service capabilities__ , which we have already referenced as a Data Fabric capability, enable business organizations to entertain a data marketplace with shopping-for-data characteristics
-
-![](img/phdslides_149.png)
-
-# What makes data a product?
-
-* A __data product __ is raw data transformed into a business context
-  * Data products are registered in __knowledge catalog __ through specifications (XML, JSON, etc.)
-  * Main features
-    * __Data product description__: The data product needs to be well described
-    * __Access methods__: for example, REST APIs, SQL, NoSQL, etc., and where to find the data asset
-    * __Policies and rules__: who is allowed to consume the data product for what purpose
-    * __SLAs__: agreements regarding the data product availability, performance characteristics, functions, cost of data product usage
-    * __Defined format__: A data product needs to be described using a defined format
-    * __Cataloged__: All data products need to be registered in the knowledge catalog. Data products need to be searchable and discoverable by potential data product consumers and business user
-  * Data products themselves are not stored in the knowledge catalog
-
-# Data mesh vs data fabric
-
-* They are design concepts, not things
-  * They are not mutually exclusive
-  * They are architectural frameworks, not architectures
-    * The frameworks must be adapted and customized to your needs, data, processes, and terminology
-    * Gartner estimates 25% of data management vendors will provide a complete data fabric solution by 2024 – up from 5% today
-
-Alex Woodie, 2021 [https://www.datanami.com/2021/10/25/data-mesh-vs-data-fabric-understanding-the-differences/](https://www.datanami.com/2021/10/25/data-mesh-vs-data-fabric-understanding-the-differences/) Dave Wells, 2021 [https://www.eckerson.com/articles/data-architecture-complex-vs-complicated](https://www.eckerson.com/articles/data-architecture-complex-vs-complicated)
-
-* Both provide an architectural framework to access data across multiple technologies and platforms
-  * __Data fabric__
-    * Attempts to centralize and coordinate data management
-    * Tackles the complexity of data and metadata in a smart way that works well together
-    * Focus on the architectural, technical capabilities, and intelligent analysis to produce active metadata supporting a smarter, AI-infused system to orchestrate various data integration styles
-  * __Data mesh__
-    * Emphasis on decentralization and data domain autonomy
-    * Focuses on organizational change; it is more about people and process
-    * Data are primarily organized around domain owners who create business-focused data products, which can be aggregated and consumed across distributed consumers
-
-Alex Woodie, 2021 [https://www.datanami.com/2021/10/25/data-mesh-vs-data-fabric-understanding-the-differences/](https://www.datanami.com/2021/10/25/data-mesh-vs-data-fabric-understanding-the-differences/) Dave Wells, 2021 [https://www.eckerson.com/articles/data-architecture-complex-vs-complicated](https://www.eckerson.com/articles/data-architecture-complex-vs-complicated)
-
-![](img/phdslides_150.png)
-
-* Data Fabric and Mesh are the results from the data architecture evolution
-  * __Many capabilities were in existence already long before__ the terms were coined
-* Take away:
-  * Abstract the "building blocks" of such platforms
-  * Let them evolve according to scalability and flexibility requirements
-
-# (Some) References
-
-![](img/phdslides_151.jpg)
-
-![](img/phdslides_152.png)
-
-![](img/phdslides_153.png)
-
 # Metadata Challenges
 
-  * Lacking smart support to govern the complexity of data and transformations
-  * Data transformations must be governed to prevent DP turning into a swamp
-    * Amplified in data science, with data scientists prevailing data architects
-    * Leverage descriptive metadata and maintenance to keep control over data
+Lacking smart support to govern the complexity of data and transformations
 
-* Knowledge representation
-  * Which metadata must be captured
-  * How should metadata be organized
-* Knowledge exploitation
-  * Which features do metadata enable
+Data transformations must be governed to prevent DP turning into a swamp
+
+  * Amplified in data science, with data scientists prevailing data architects
+  * Leverage descriptive metadata and maintenance to keep control over data
 
 Knowledge representation
+
+  * Which metadata must be captured
+  * How should metadata be organized
+
+Knowledge exploitation
+
+  * Which features do metadata enable
 
 # Knowledge representation
 
-* A classification of metadata
-  * __Technical__ metadata
+A classification of metadata [@sharma2016architecting]
+
+* __Technical__ metadata
     * Capture the form and structure of each dataset
     * E.g.: type of data (text, JSON, Avro); structure of the data (the fields and their types)
-  * __Operational__ metadata
+* __Operational__ metadata
     * Capture lineage, quality, profile, and provenance of the data
     * E.g.: source and target locations of data, size, number of records, and lineage
-  * __Business__ metadata
+* __Business__ metadata
     * Captures what it all means to the user
     * E.g.: business names, descriptions, tags, quality, and masking rules for privacy
 
-A. LaPlante, B. Sharma, __Architecting Data Lakes__ , _O'Reilly Media_ , Sebastopol, 2018.
+#
 
-Knowledge representation
+Another classification of metadata [@DBLP:conf/adbis/SawadogoSFFLD19]
 
-* Another classification of metadata
-  * __Intra-object __ metadata
+* __Intra-object__ metadata
     * _Properties_ provide a general description of an object in the form of key-value pairs
-    * _Summaries and previews _ provide an overview of the content or structure of an object
+    * _Summaries and previews_ provide an overview of the content or structure of an object
     * _Semantic metadata_ are annotations that help understand the meaning of data
-  * __Inter-object__ metadata
+* __Inter-object__ metadata
     * _Objects groupings_ organize objects into collections, each object being able to belong simultaneously to several collections
-    * _Similarity links _ reflect the strength of the similarity between two objects
-    * _Parenthood relationships _ reflect the fact that an object can be the result of joining several others
-  * __Global__ metadata
+    * _Similarity links_ reflect the strength of the similarity between two objects
+    * _Parenthood relationships_ reflect the fact that an object can be the result of joining several others
+* __Global__ metadata
     * _Semantic resources_ , i.e., knowledge bases (ontologies, taxonomies, thesauri, dictionaries) used to generate other metadata and improve analyses
     * _Indexes_ , i.e., data structures that help find an object quickly
     * _Logs_ , used to track user interactions with the data lake
 
-Sawadogo, P. N., Scholly, E., Favre, C., Ferey, E., Loudcher, S., & Darmont, J. (2019, September). __Metadata systems for data lakes: models and features__ . In _ European conference on advances in databases and information systems _ (pp. 440-451). Springer, Cham.
+#
 
-![](img/phdslides_154.png)
+![[@DBLP:conf/adbis/SawadogoSFFLD19]](img/phdslides_154.png)
 
-Sawadogo, P. N., Scholly, E., Favre, C., Ferey, E., Loudcher, S., & Darmont, J. (2019, September). __Metadata systems for data lakes: models and features__ . In _European conference on advances in databases and information systems_ (pp. 440-451). Springer, Cham.
+#
 
-Knowledge representation
-
-![](img/phdslides_155.png)
-
+::::{.columns}
+:::{.column width="50%"}
 ![](img/phdslides_156.png)
+:::
+:::{.column width="50%"}
+![Constance: [@DBLP:conf/sigmod/HaiGQ16]](img/phdslides_155.png)
+:::
+::::
 
-Few details given on metamodel and functionalities.
+- Few details given on metamodel and functionalities.
+- No metadata collected on operations.
 
-No metadata collected on operations.
+#
 
-Hai, R., Geisler, S., & Quix, C. (2016, June). __Constance: An intelligent data lake system__ . In  _Proceedings of the 2016 international conference on management of data_  (pp. 2097-2100).
-
-Knowledge representation
-
+::::{.columns}
+:::{.column width="50%"}
 ![](img/phdslides_157.png)
+:::
+:::{.column width="50%"}
+![GEMMS: [@DBLP:conf/caise/QuixHV16]](img/phdslides_158.png)
+:::
+::::
 
-![](img/phdslides_158.png)
 
-No discussion about the functionalities provided.
+- No discussion about the functionalities provided.
+- No metadata collected on operations and agents.
 
-No metadata collected on operations and agents.
+#
 
-Quix, C., Hai, R., & Vatov, I. (2016). __GEMMS: A Generic and Extensible Metadata Management System for Data Lakes__ . In  _CAiSE_ _ forum_  (Vol. 129).
-
-Knowledge representation
-
-![](img/phdslides_159.png)
-
-Crawls Google's storage systems to extract basic metadata on datasets and their relationship with other datasets.
-
-Performs metadata inference, e.g., to determine the schema of a non-self-describing dataset, to trace the provenance of data through a sequence of processing services, or to annotate data with their semantics.
-
+::::{.columns}
+:::{.column width="50%"}
 ![](img/phdslides_160.png)
+:::
+:::{.column width="50%"}
+![GOODS: [@DBLP:journals/debu/HalevyKNOPRW16]](img/phdslides_159.png)
+:::
+::::
 
-Strictly coupled with the Google platform.
+- Crawls Google's storage systems to extract basic metadata on datasets and their relationship with other datasets.
+- Performs metadata inference, e.g., to determine the schema of a non-self-describing dataset, to trace the provenance of data through a sequence of processing services, or to annotate data with their semantics.
+  - Strictly coupled with the Google platform.
+  - Mainly focuses on object description and searches.
+  - No formal description of the metamodel.
 
-Mainly focuses on object description and searches.
+#
 
-No formal description of the metamodel.
-
-Halevy, A. Y., Korn, F., Noy, N. F., Olston, C., Polyzotis, N., Roy, S., & Whang, S. E. (2016). __Managing Google's data lake: an overview of the Goods system__ .  _IEEE Data Eng. Bull._ ,  _39_ (3), 5-14.
-
-Knowledge representation
-
+::::{.columns}
+:::{.column width="50%"}
 ![](img/phdslides_161.png)
+:::
+:::{.column width="50%"}
+![Ground: [@DBLP:conf/cidr/HellersteinSGSA17]](img/phdslides_162.png)
+:::
+::::
 
-Version graphs represent data versions.
+- Version graphs represent data versions.
+- Model graphs represent application metadata, i.e., how data are interpreted for use.
+- Lineage graphs capture usage information.
+- Not enough details given to clarify which metadata are actually handled.
+- Functionalities are described at a high level.
 
-Model graphs represent application metadata, i.e., how data are interpreted for use.
+#
 
-Lineage graphs capture usage information.
-
-![](img/phdslides_162.png)
-
-Not enough details given to clarify which metadata are actually handled.
-
-Functionalities are described at a high level.
-
-Hellerstein, J. M., Sreekanti, V., Gonzalez, J. E., Dalton, J., Dey, A., Nag, S., ... & Sun, E. (2017, January). __Ground: A Data Context Service__ . In  _CIDR_ .
-
-Knowledge representation
-
+::::{.columns}
+:::{.column width="50%"}
 ![](img/phdslides_163.png)
+:::
+:::{.column width="50%"}
+![KAYAK: [@maccioni2018kayak]](img/phdslides_164.png)
+![KAYAK: [@maccioni2018kayak]](img/phdslides_165.png)
+:::
+::::
 
-![](img/phdslides_164.png)
+- Support users in creating and optimizing the data processing pipelines.
+- Only goal-related metadata are collected.
 
-Support users in creating and optimizing the data processing pipelines.
+#
 
-Only goal-related metadata are collected.
+![MOSES: [@DBLP:journals/fgcs/FranciaGGLRS21]](img/phdslides_166.png)
 
-![](img/phdslides_165.png)
+Three areas:
 
-Maccioni, A., & Torlone, R. (2018, June). __KAYAK: a framework for just-in-time data preparation in a data lake__ . In  _International Conference on Advanced Information Systems Engineering_  (pp. 474-489). Springer, Cham.
+- **Technical** (blue)
+- **Operational** (green)
+- **Business** (red)
 
-Knowledge representation
-
-![](img/phdslides_166.png)
-
-**Technical**
-
-_Operational_
-
-**Business**
-
-Francia, M., Gallinucci, E., Golfarelli, M., Leoni, A. G., Rizzi, S., & Santolini, N. (2021). __Making data platforms smarter with MOSES__ . _Future Generation Computer Systems_ , 125, 299-313.
-
-Knowledge representation
+#
 
 ![](img/phdslides_167.png)
 
-Francia, M., Gallinucci, E., Golfarelli, M., Leoni, A. G., Rizzi, S., & Santolini, N. (2021). __Making data platforms smarter with MOSES__ . _Future Generation Computer Systems_ , 125, 299-313.
+#
 
-Knowledge representation
+![](img/meta01.png)
 
-![](img/phdslides_168.png)
+- Not pre-defined
+- Domain-independent
+- Extensible
 
-Not pre-defined
+#
 
-Domain-independent,
-
-extensible
-
-Francia, M., Gallinucci, E., Golfarelli, M., Leoni, A. G., Rizzi, S., & Santolini, N. (2021). __Making data platforms smarter with MOSES__ . _Future Generation Computer Systems_ , 125, 299-313.
-
-Knowledge representation
-
-![](img/phdslides_169.png)
+![](img/meta02.png)
 
 Tune the trade-off between the level of detail of the functionalities and the required computational effort
 
-Francia, M., Gallinucci, E., Golfarelli, M., Leoni, A. G., Rizzi, S., & Santolini, N. (2021). __Making data platforms smarter with MOSES__ . _Future Generation Computer Systems_ , 125, 299-313.
+#
 
-Knowledge representation
+![](img/meta03.png)
 
-![](img/phdslides_170.png)
+#
 
-Francia, M., Gallinucci, E., Golfarelli, M., Leoni, A. G., Rizzi, S., & Santolini, N. (2021). __Making data platforms smarter with MOSES__ . _Future Generation Computer Systems_ , 125, 299-313.
-
-Knowledge representation
-
-![](img/phdslides_171.png)
-
-Functionalities
-
-Semantic enrichment
-
-Data indexing
-
-Link generation
-
-Data polymorphism
-
-Data versioning
-
+| Functionality           | Supported                                      |
+|-------------------------|------------------------------------------------|
+| Semantic enrichment     | Yes                                            |
+| Data indexing           | No                                            |
+| Link generation         | Yes                                            |
+| Data polymorphism       | Yes                                            |
+| Data versioning         | Yes                                            |
 Usage tracking
 
-Francia, M., Gallinucci, E., Golfarelli, M., Leoni, A. G., Rizzi, S., & Santolini, N. (2021). __Making data platforms smarter with MOSES__ . _Future Generation Computer Systems_ , 125, 299-313.
-
-Knowledge representation
-
-How would you implement the meta-model?
-
-Knowledge representation
+# How would you implement the meta-model?
 
 # The Property Graph Data Model
 
-* Born in the database community
+Born in the database community
+
   * Meant to be queried and processed
   * _THERE IS NO STANDARD!_
-* Two main constructs: nodes and edges
+
+Two main constructs: nodes and edges
+
   * Nodes represent entities,
   * Edges relate pairs of nodes, and may represent different types of relationships
-* Nodes and edges might be labeled,
-* and may have a set of properties represented as attributes (key-value pairs)\*\*\*
-* Further assumptions:
+
+Nodes and edges might be labeled,
+  * and may have a set of properties represented as attributes (key-value pairs)\*\*\*
+
+Further assumptions:
+
   * Edges are directed,
   * Multi-graphs are allowed
-* _\*\*\* Note: in _ _some_ _ _ _definitions_ _ (_ _the_ _ _ _least_ _) _ _edges_ _ are _ _not_ _ _ _allowed_ _ to _ _have_ _ _ _attributes_
+
+_\*\*\* Note: in _ _some_ _ _ _definitions_ _ (_ _the_ _ _ _least_ _) _ _edges_ _ are _ _not_ _ _ _allowed_ _ to _ _have_ _ _ _attributes_
+
 #
 
 A W3C standard is being developed, but still does not exist.
 
-Knowledge representation
+#
 
 # Formal Definition
 
@@ -450,7 +217,7 @@ Extracted from: R. Angles et al. Foundations of Modern Query Languages for Graph
 Total function is just another name for a regular function. It just emphasizes the function is defined for all elements of its domain.
 Partial function may only apply to a subset of the elements in the domain
 
-Knowledge representation
+#
 
 # Example of Property Graph
 
@@ -460,12 +227,14 @@ Formal definition:
 
 ![](img/phdslides_176.png)
 
-Knowledge representation
+#
 
 # Traversal Navigation
 
-* We define the graph traversal pattern as: "the ability to rapidly traverse structures to an arbitrary depth (e.g., tree structures, cyclic structures) and with an arbitrary path description (e.g. friends that work together, roads below a certain congestion threshold)"  [Marko Rodriguez]
-* Totally opposite to set theory (on which relational databases are based on)
+We define the graph traversal pattern as: "the ability to rapidly traverse structures to an arbitrary depth (e.g., tree structures, cyclic structures) and with an arbitrary path description (e.g. friends that work together, roads below a certain congestion threshold)"  [Marko Rodriguez]
+
+Totally opposite to set theory (on which relational databases are based on)
+
   * Sets of elements are operated by means of the relational algebra
 #
 
@@ -478,7 +247,7 @@ Realize that there are three sources of complexity:
 Number of starting points
 2) 
 
-Knowledge representation
+#
 
 # Traversing Data in a RDBMS
 
@@ -507,7 +276,8 @@ Formula de DBD de row index join (el numero d'instancies total importa, encara q
 
 ![](img/phdslides_178.png)
 
-* Example of a data platform (MOSES)
+Example of a data platform (MOSES)
+
 * Functional architecture
   * Components of MOSES are in orange
   * Others are standard components in charge of producing/consuming, processing, storing, and visualizing data
@@ -571,7 +341,8 @@ Knowledge exploitation
 
 # Capturing the metadata
 
-* Pull strategy
+Pull strategy
+
   * The system actively collects new metadata
   * Requires scheduling: when does the system activate itself?
     * Event-based (CRUD)
@@ -579,16 +350,19 @@ Knowledge exploitation
   * Requires wrappers: what does the system capture?
     * Based on data type and/or application
     * A comprehensive monitoring is practically unfeasible
-* Push strategy
+
+Push strategy
+
   * The system passively receives new metadata
   * Requires an API layer
   * Mandatory for operational metadata
 
-Knowledge representation
+#
 
 # Knowledge representation
 
-* A classification of functionalities enabled by metadata
+A classification of functionalities enabled by metadata
+
   * Semantic enrichment
     * Generating a description of the context of data, e.g., with tags, to make them more interpretable and understandable
   * Data indexing
@@ -615,7 +389,8 @@ Sawadogo, P. N., Scholly, E., Favre, C., Ferey, E., Loudcher, S., & Darmont, J. 
 
 # Data profiling
 
-* Data profiling
+Data profiling
+
   * A broad range of methods to efficiently analyze a given data set
   * E.g., in a  **functional dependencies** and association rules
 
@@ -623,14 +398,16 @@ Sawadogo, P. N., Scholly, E., Favre, C., Ferey, E., Loudcher, S., & Darmont, J. 
 
 Naumann, Felix. "Data profiling revisited." _ACM SIGMOD Record_ 42.4 (2014): 40-49.
 
-* Use cases
+Use cases
+
   * **Query optimization**
     * Performed by DBMS to support query optimization with statistics about tables and columns
     * Profiling results can be used to estimate the selectivity of operators and the cost of a query plan
   * **Data cleansing** (typical use case is profiling data)
     * Prepare a cleansing process by revealing errors (e.g., in formatting), missing values or outliers
   * **Data integration and analytics**
-* Challenges?
+
+Challenges?
 
 Naumann, Felix. "Data profiling revisited." _ACM SIGMOD Record_ 42.4 (2014): 40-49.
 
@@ -639,7 +416,8 @@ Naumann, Felix. "Data profiling revisited." _ACM SIGMOD Record_ 42.4 (2014): 40-
 | 1 | 1 | 2 | 2 |
 | 1 | 2 | 1 | 4 |
 
-* Challenges
+Challenges
+
   * The results of data profiling are  **computationally complex**  to discover
     * E.g., discovering keys/dependencies usually involves some sorting step for each considered column
   * Verification of  **complex constraints on column combinations** in a database
@@ -651,17 +429,21 @@ Knowledge exploitation
 
 # Object profiling and search
 
-* Discoverability is a key requirement for data platforms
+Discoverability is a key requirement for data platforms
+
   * Simple searches to let users locate "known" information
   * Data exploration to let users uncover "unknown" information
   * Common goal: identification and description of Objects
-* Two levels of querying
+
+Two levels of querying
+
   * Metadata level (most important)
   * Data level (can be coupled with the first one)
 
 Knowledge exploitation
 
-* Basic search
+Basic search
+
   * MATCH (o:Object)-[]-(:Project {name:"ABC"})RETURN o
     * Return all objects of a given project
   * MATCH (o:Object)-[]-(d:DataLakeArea)WHERE d.name = "Landing" AND o.name LIKE "2021_%"AND o.size < 100.000RETURN o
@@ -675,7 +457,8 @@ Knowledge exploitation
 
 Knowledge exploitation
 
-* Schema-driven search
+Schema-driven search
+
   * MATCH (o:Object)-[]-(:Schema)-[]-(a:Attribute),   (a)-[]-(:Domain {name: "FiscalCode"})RETURN o
     * Return objects that contain informationreferring to a given Domain
 
@@ -687,7 +470,8 @@ Knowledge exploitation
 
 Knowledge exploitation
 
-* Provenance-driven search
+Provenance-driven search
+
   * MATCH (obj1:Object)-[:readsFrom]-(o:Operation)-[:writesTo]-(obj2:Object)CREATE (obj1)-[:ancestorOf]->(obj2)
   * MATCH (:Object {id:123})-[:ancestorOf\*]-(obj:Object)RETURN obj
     * Discover objects obtained from a given ancestor
@@ -704,7 +488,8 @@ Knowledge exploitation
 
 Knowledge exploitation
 
-* Similarity-driven search
+Similarity-driven search
+
   * MATCH (:Object {id:123})-[r:similarTo]-(o:Object)WHERE r.similarityType="affinity"RETURN o
     * Discover datasets to be merged in a certain query
   * MATCH (:Object {id:123})-[r:similarTo]-(o:Object)WHERE r.similarityType="joinability"RETURN o
@@ -721,7 +506,8 @@ Knowledge exploitation
 
 Knowledge exploitation
 
-* Semantics-driven search
+Semantics-driven search
+
   * MATCH (o:Object)-[:isDescribedBy]-(:OntologyTerm {uri:"http://..."})RETURN o
   * MATCH (o:Object)-[\*]-(any),   (any)-[:isDescribedBy]-(:OntologyTerm {uri:"http://..."})RETURN o
     * Search objects without having any knowledge of theirphysical or intensional properties, but simply exploitingtheir traceability to a certain semantic concept
@@ -734,7 +520,8 @@ Knowledge exploitation
 
 Knowledge exploitation
 
-* Profiling
+Profiling
+
   * MATCH (o:Object)-[]-(:OntologyType {name:"Table"}),   (o)-[]-(s:Schema)-[]-(a:Attribute),   (o)-[r:similarTo]-(o2:Object),   (o)-[:ancestorOf]-(o3:Object),   (o4:Object)-[:ancestorOf]-(o)RETURN o, s, a, r, o2, o3, o4
     * Shows an object's properties, list the relationships with other objects in terms of similarity and provenance
     * Compute a representation of the intensional features that mostly characterize a group of objects(see slides on schema heterogeneity)
@@ -749,7 +536,8 @@ Knowledge exploitation
 
 # Provenance and versioning
 
-* Provenance: metadata pertaining to the history of a data item
+Provenance: metadata pertaining to the history of a data item
+
   * Any information that describes the production process of an end product
   * Encompasses meta-data about entities, data, processes, activities, and persons involved in the production process
   * Essentially, it describes a transformation pipeline, including the origin of objects and the operations they are subject to
@@ -764,16 +552,20 @@ M. Herschel, R. Diestelk¨amper, H. Ben Lahmar, __A survey on provenance: What f
 
 # Data provenance
 
-* Provenance (also referred to as lineage, pedigree, parentage, genealogy)
+Provenance (also referred to as lineage, pedigree, parentage, genealogy)
+
   * The description of the origins of data and the process by which it arrived at the database
   * Not only data products (e.g., tables, files), but also the processes that created them
-* Use cases
+
+Use cases
+
   * Business domain. _Users traditionally work with an _ **_need to be identified _** _and corrected to avoid costly errors in business forecasting._
   * Scientific/research domain.  **_copyright_** _ of data are significant when using third-party data in such a loosely connected network._
 
 Simmhan, Yogesh L., Beth Plale, and Dennis Gannon. "A survey of data provenance techniques." _Computer Science Department, Indiana University, Bloomington IN_ 47405 (2005): 69.
 
-* Astronomers are creating an international Virtual Observatory
+Astronomers are creating an international Virtual Observatory
+
   * A  **provision of the computational resources** needed to exploit the data scientifically
   * Astronomy changed from being an individualistic to a  **collective enterprise**
   * Telescope time is devoted/allocated to systematic sky surveys and analysis is performed using data from the archives
@@ -788,10 +580,13 @@ Mann, Bob. "Some data derivation and provenance issues in astronomy." _Workshop 
 
 Simmhan, Yogesh L., Beth Plale, and Dennis Gannon. "A survey of data provenance techniques." _Computer Science Department, Indiana University, Bloomington IN_ 47405 (2005): 69.
 
-* Granularity
+Granularity
+
   * **Fine-grained**  (instance level): tracking data items (e.g., a tuple in a dataset) transformations
   * **Coarse-grained**  (schema-level): tracking dataset transformations
-* Queries
+
+Queries
+
   * **Where**  provenance: given some output, which inputs did the output come from?
   * **How**  provenance: given some output, how were the inputs manipulated?
   * **Why**  provenance: given some output, why was data generated?
@@ -803,17 +598,21 @@ Knowledge exploitation
 
 # Provenance and versioning
 
-* An important aspect is the granularity of provenance
+An important aspect is the granularity of provenance
+
   * Fine-grained provenance is typically used for single vertical applications
     * It requires to collect huge amounts of detailed information to enable a very detailed tracing
   * Coarse-grained provenance is appropriate to ensure a broad coverage of highly heterogeneous transformations possibly involving several applications and datasets
-* Choosing a granularity is the result of a trade-off between accuracy and computational effort
+
+Choosing a granularity is the result of a trade-off between accuracy and computational effort
+
   * Storing only the name and the version of a clustering algorithm enables an approximate reproducibility of the results
   * Storing all its parameters makes this functionality much more accurate
 
 # Data provenance
 
-* Data provenance, an example of data management
+Data provenance, an example of data management
+
   * Metadata pertaining to the history of a data item
   * Pipeline including the origin of objects and operations they are subjected to
   * We have a standard: [https://www.w3.org/TR/prov-dm/](https://www.w3.org/TR/prov-dm/)
@@ -822,12 +621,17 @@ Knowledge exploitation
 
 [https://www.w3.org/TR/prov-dm/](https://www.w3.org/TR/prov-dm/)
 
-* **Entity**
+**Entity**
+
   * Physical/conceptual things
-* **Activity**
+
+**Activity**
+
   * Dynamic aspects of the world, such as actions
   * How entities come into existence, often making use of previously existing entities
-* **Agent**
+
+**Agent**
+
   * A person, a piece of software
   * Takes a role in an activity such that the agent can be assigned some degree of responsibility for the activity taking place
 
@@ -839,7 +643,8 @@ Knowledge exploitation
 
 # Provenance and versioning
 
-* PROV: a standard for provenance modeling
+PROV: a standard for provenance modeling
+
   * Several tools exists for managing PROV metadata
     * [https://openprovenance.org/services/view/translator](https://openprovenance.org/services/view/translator)
     * [https://lucmoreau.github.io/ProvToolbox/](https://lucmoreau.github.io/ProvToolbox/)
@@ -856,7 +661,8 @@ https://www.openphactsfoundation.org/wp/wp-content/uploads/2016/05/140609_Cologn
 
 Knowledge exploitation
 
-* Provenance functionalities (activated by metadata)
+Provenance functionalities (activated by metadata)
+
   * __Data quality__
     * Monitoring accuracy, precision, and recall of produced objects to notify the data scientist when a transformation pipeline is not behaving as expected
   * __Debugging__
@@ -872,7 +678,8 @@ Knowledge exploitation
 
 # Graph DB and Centrality Measures
 
-* Measures of centrality
+Measures of centrality
+
   * __Betweenness centrality (A)__
     * Number of shortest paths between two nodes that pass from a certain node
   * __Closeness centrality (B)__
@@ -888,7 +695,8 @@ Knowledge exploitation
 
 # Provenance and versioning
 
-* Some current research directions
+Some current research directions
+
   * Expand PROV to better suite big data scenarios
     * Y. Gao, X. Chen and X. Du, __A Big Data Provenance Model for Data Security Supervision Based on PROV-DM Model__ , in _IEEE Access_ , vol. 8, pp. 38742-38752, 2020.
   * Define provenance-based approaches to measure the quality of big data
@@ -903,17 +711,21 @@ Knowledge exploitation
 
 # Orchestration support
 
-* The orchestrator is the component in charge of controlling the execution of computation activities
+The orchestrator is the component in charge of controlling the execution of computation activities
+
   * Either through a regular scheduling of the activities
   * Or by triggering a process in response to a certain event
-* Several entities (either processes or human beings) can cover this role to activate some data processes
+
+Several entities (either processes or human beings) can cover this role to activate some data processes
+
 #
 
 100000 kb = 100 mb
 
 Knowledge exploitation
 
-* Orchestration functionalities (activated by metadata)
+Orchestration functionalities (activated by metadata)
+
   * Dynamic/condition-based behavior
     * Decide _what_ data process should be activated under different conditions
     * Decide _how_ to tune the parameters in case of parametric data processes
@@ -932,7 +744,7 @@ Knowledge exploitation
 
 ![](img/phdslides_209.png)
 
-* Orchestration requirements & challenges
+Orchestration requirements & challenges
 
 Barika, M., Garg, S., Zomaya, A. Y., Wang, L., Moorsel, A. V., & Ranjan, R. (2019). __Orchestrating big data analysis workflows in the cloud: research challenges, survey, and future directions__ .  _ACM Computing Surveys (CSUR)_ ,  _52_ (5), 1-41.
 
@@ -942,7 +754,8 @@ Barika, M., Garg, S., Zomaya, A. Y., Wang, L., Moorsel, A. V., & Ranjan, R. (201
 
 Knowledge exploitation
 
-* Orchestration requirements
+Orchestration requirements
+
   * R1 Compute/CPU resource provisioning
     * Determine the right amount of resources
     * Continuously monitor and manage them in a dynamic execution environment
@@ -961,7 +774,8 @@ Barika, M., Garg, S., Zomaya, A. Y., Wang, L., Moorsel, A. V., & Ranjan, R. (201
 
 Knowledge exploitation
 
-* Orchestration requirements
+Orchestration requirements
+
   * R5 Analytic task scheduling and execution
     * Scheduling and coordinating the execution of workflow tasks across diverse sets of big data programming models
     * Tracking and capturing provenance of data
@@ -981,7 +795,8 @@ Barika, M., Garg, S., Zomaya, A. Y., Wang, L., Moorsel, A. V., & Ranjan, R. (201
 
 Knowledge exploitation
 
-* Orchestration challenges
+Orchestration challenges
+
   * Cloud Platform Heterogeneity
     * __Integration__ (different APIs, virtualization formats, pricing policies, hardware/software configurations)
     * __Workflow Migration __ (e.g., to aspire to specific QoS features in the target cloud or better price)
@@ -998,7 +813,8 @@ Barika, M., Garg, S., Zomaya, A. Y., Wang, L., Moorsel, A. V., & Ranjan, R. (201
 
 Knowledge exploitation
 
-* Orchestration challenges
+Orchestration challenges
+
   * Data-related
     * __Storage__ (where the data will be residing, which data format will be used)
     * __Movement__ (minimize transfer rates, exploit _data locality _ in task-centric or worker-centric way)
@@ -1010,7 +826,8 @@ Barika, M., Garg, S., Zomaya, A. Y., Wang, L., Moorsel, A. V., & Ranjan, R. (201
 
 Knowledge exploitation
 
-* Orchestration challenges
+Orchestration challenges
+
   * Workflow-related
     * __Specification Language __ (devising a high level, technology-/cloud-independent workflow language)
     * __Initialization__ (subdivision into fragments considering dependencies, constraints, etc.)
@@ -1026,7 +843,8 @@ Barika, M., Garg, S., Zomaya, A. Y., Wang, L., Moorsel, A. V., & Ranjan, R. (201
 
 # Compression
 
-* Summarization / compression
+Summarization / compression
+
   * Present a concise representation of a dataset in a comprehensible and informative manner
 
 ![](img/phdslides_210.png)
@@ -1035,7 +853,8 @@ Ahmed, Mohiuddin. "Data summarization: a survey." _Knowledge and Information Sys
 
 # Entity resolution
 
-* Entity resolution
+Entity resolution
+
   * (also known as entity matching, linking)
   * Find records that refer to the same entity across different data sources (e.g., data files, books, websites, and databases)
 
@@ -1045,10 +864,13 @@ Papadakis, George, et al. "Blocking and filtering techniques for entity resoluti
 
 # Data versioning
 
-* Version control
+Version control
+
   * A class of systems responsible for managing changes to computer programs, documents, or data collections
   * Changes are identified by a number/letter code, termed the revision/version number
-* However, data pipelines are not only about code bult also about
+
+However, data pipelines are not only about code bult also about
+
   * Model Version control
   * Data Version Control
   * Model Parameter Tracking
@@ -1072,7 +894,8 @@ E.g., on AWS (PUT, GET, DELETE), what about update?
 
 # CRISP-DM
 
-* The  __CR__ oss  __I__ ndustry  __S__ tandard  __P__ rocess for  __D__ ata  __M__ ining ( _CRISP-DM_ ) is a process model that serves as the base for a [data science process](https://www.datascience-pm.com/data-science-process/). It has six sequential phases:
+The  __CR__ oss  __I__ ndustry  __S__ tandard  __P__ rocess for  __D__ ata  __M__ ining ( _CRISP-DM_ ) is a process model that serves as the base for a [data science process](https://www.datascience-pm.com/data-science-process/). It has six sequential phases:
+
   * Business understanding – What does the business need?
   * Data understanding – What data do we have / need? Is it clean?
   * Data preparation – How do we organize the data for modeling?
@@ -1088,7 +911,8 @@ E.g., on AWS (PUT, GET, DELETE), what about update?
 
 ![](img/phdslides_218.png)
 
-* Tuning pipelines is hard
+Tuning pipelines is hard
+
   * At each __step__ , a technique must be selected
   * For each technique, a set of __hyper-parameters__ must be set
   * Each __hyper-parameter has its own search space__
@@ -1097,7 +921,8 @@ E.g., on AWS (PUT, GET, DELETE), what about update?
 
 # AutoML
 
-* AutoML aims at automating the ML pipeline instantiation:
+AutoML aims at automating the ML pipeline instantiation:
+
   * it is difficult to consider all the constraints together;
   * it is not transparent;
   * it doesn't allow a proper knowledge augmentation.
@@ -1108,8 +933,10 @@ Thornton, et al. Auto-WEKA: Combined selection and hyperparameter optimization o
 
 # HAMLET
 
-* [HAMLET](https://github.com/QueueInc/HAMLET): Human-centric AutoML via Logic and Argumentation
-* HAMLET leverages:
+[HAMLET](https://github.com/QueueInc/HAMLET): Human-centric AutoML via Logic and Argumentation
+
+HAMLET leverages:
+
   * Logic to give a structure to the knowledge;
   * Argumentation to deal with inconsistencies,  and revise the results.
 
@@ -1117,20 +944,23 @@ Thornton, et al. Auto-WEKA: Combined selection and hyperparameter optimization o
 
 [https://github.com/QueueInc/HAMLET](https://github.com/QueueInc/HAMLET) Francia M., Giovanelli J., and Pisano P. "HAMLET: A framework for Human-centered AutoML via Structured Argumentation." Future Generation Computer Systems 142 (2023): 182-194.
 
-* The LogicalKB enables:
+The LogicalKB enables:
+
   * the Data Scientist to structure the ML constraints;
   * the AutoML tool to encode the explored results
 
 ![](img/phdslides_222.png)
 
-* The Problem Graph allows to:
+The Problem Graph allows to:
+
   * consider all the ML constraints together;
   * set up the AutoML search space;
   * discuss and argument about the results.
 
 ![](img/phdslides_223.png)
 
-* The Data Scientist iterates on:
+The Data Scientist iterates on:
+
   * editing the LogicalKB;
   * consulting the Problem Graph;
   * running the AutoML tool;
@@ -1252,7 +1082,8 @@ c2: ⇒   mandatory(⟨N ⟩, Cl).
 
 # Evaluation
 
-* Settings:
+Settings:
+
   * __Baseline__: 1 optimization it. of 60 mins;
   * __PKB__ (Preliminary Knowledge Base):  1 optimization it. of 60 mins with non-empty LogicalKB;
   * __IKA__ (Iterative Knowledge Augmentation): 4 optimization it. of 15 mins with empty LogicalKB;
@@ -1260,7 +1091,8 @@ c2: ⇒   mandatory(⟨N ⟩, Cl).
 
 ![](img/phdslides_230.png)
 
-* Settings:
+Settings:
+
   * __Baseline__: 1 optimization it. of 60 mins;
   * __PKB__ (Preliminary Knowledge Base):  1 optimization it. of 60 mins with non-empty LogicalKB;
   * __IKA__ (Iterative Knowledge Augmentation): 4 optimization it. of 15 mins with empty LogicalKB;
@@ -1274,13 +1106,16 @@ Comparison with AutoML tools
 
 # HAMLET
 
-* Key features:
+Key features:
+
   * knowledge injection;
   * representation via an human- and
   * machine-readable medium;
   * insight discovery;
   * dealing with possible arising  inconsistencies.
-* Future directions:
+
+Future directions:
+
   * make constraints fuzzy;
   * improve recommendation algorithm;
   * enhance HAMLET with meta-learning;
@@ -1292,10 +1127,13 @@ Comparison with AutoML tools
 
 Applications and Challenges
 
-* High availability and accessibility attract new data scientists
+High availability and accessibility attract new data scientists
+
   * **High**  competence in business domain
   * **Low**  competence in computer science
-* Since the '70s, relational queries to retrieve data
+
+Since the '70s, relational queries to retrieve data
+
   * Comprehension of formal languages and DBMS
   * **Advanced analytics (semi-automatic transformation)**
     * "Information" and "Knowledge" levels
@@ -1324,7 +1162,8 @@ Hand-free scenarios
 
 **(Operational DB, OLTP)**
 
-* Many problems to address:
+Many problems to address:
+
   * Query recommendation based on contextual data
     * E.g., augmented reality and digital twins
   * Definition of interest
@@ -1334,12 +1173,17 @@ Hand-free scenarios
 
 # Application scope
 
-* Enable analytics through augmented reality [1]
+Enable analytics through augmented reality [1]
+
   * E.g., an inspector analyzing production rates
-* Sense the context through augmented devices
+
+Sense the context through augmented devices
+
   * E.g., smart glasses
   * Detect interaction and  **engagement**  [1]
-* Produce analytical reports
+
+Produce analytical reports
+
   * **Relevant** to the sensed context
   * Cardinality  **constraint**
   * **Near real-time**
@@ -1373,7 +1217,8 @@ Ci sono differenze sia differenze di «metodo» / «framework» che di «recomme
 
 # Augmented OLAP
 
-* Augmented OLAP, a 3D marriage
+Augmented OLAP, a 3D marriage
+
   * Augmented reality
     * Real-time information [2]
   * Business intelligence
@@ -1409,12 +1254,17 @@ Data Mart
 
 ![](img/phdslides_241.png)
 
-* Data Mart: repository of multidimensional cubes
+Data Mart: repository of multidimensional cubes
+
   * Cubes representing business facts
-* **Data dictionary**
+
+**Data dictionary**
+
   * What we can recognize (i.e., md-elements)
   * **Context**: subset of md-elements
-* **Mappings**  to sets of md-elements
+
+**Mappings**  to sets of md-elements
+
   * A-priori interest
 
 <Object, Seat> _dist_ = 1m
@@ -1439,15 +1289,20 @@ AssemblyTime
 
 ![](img/phdslides_242.png)
 
-* Context interpretation
+Context interpretation
+
   * Given context _T_ over the data dictionary
   * Project _ T_ to an  **image of fragments** _I_ through mappings
     * **Fragment**: intuitively a "small" query
-* Add the log
+
+Add the log
+
   * Get queries with positive feedback from _similar_ contexts
     * Enrich _I_ to _I\*_ with _unperceived_ elements from _T_
   * Each fragment has _contextual and log relevance_
-* Query generation
+
+Query generation
+
   * Cannot directly translate _I\*_  into a well-formed query
   * High cardinality _I\*_ = hardly interpretable "monster query"
 
@@ -1471,7 +1326,8 @@ Query generation
 
 # Query generation
 
-* Generate queries from image _I\* _ of fragments
+Generate queries from image _I\* _ of fragments
+
   * Each fragment is a query
   * Depth-first exploration with pruning rules
     * **Query cardinality can only increase**
@@ -1569,7 +1425,8 @@ Query generation
 
 # Query selection
 
-* Given \#queries ( _rq_ ), maximize the covered fragments and minimize their overlapping
+Given \#queries ( _rq_ ), maximize the covered fragments and minimize their overlapping
+
     * E.g., given two queries  **_q'_**
     * **_(q') _** _– _ _sim(q, q') \* (_ _rel_ _(q) \+ _ _rel_ _(q')) / 2_
   * Weighted Maximum Coverage Problem (NP-hard)
@@ -1598,10 +1455,13 @@ _|T| = 12, _ _rq_ _ = 4_
 
 # Research directions
 
-* Analytics in  **augmented reality**
+Analytics in  **augmented reality**
+
   * Support analytical queries in hand-free scenarios
   * **Recommend relevant data facts** from a real-world context
-* Research directions
+
+Research directions
+
   * Provide (fast) query previews
     * Estimate the execution time of each query
     * Address query caching and multi-query optimization issues
@@ -1614,11 +1474,15 @@ _|T| = 12, _ _rq_ _ = 4_
 
 # Motivation
 
-* Enable analytics through  **natural language**
-* OLAP provides  **low-level**  operators [1]
+Enable analytics through  **natural language**
+
+OLAP provides  **low-level**  operators [1]
+
   * Users need to have knowledge on the multidimensional model…
   * … or even programming skills
-* We introduce COOL (COnversational OLap) [3]
+
+We introduce COOL (COnversational OLap) [3]
+
   * **Translate**  natural language into formal queries
 
 ![](img/phdslides_248.png)
@@ -1699,7 +1563,8 @@ Manual KB enrichment
 
 _T_ _ = _ _«return the average sales in 2019 per store region»_
 
-* Why grammars?
+Why grammars?
+
   * In the OLAP domain, GPSJ queries do not have very complex structures
     * Our grammar can support the translation without apriori training or external ontologies
     * Grammar produces "explainable" trees
@@ -1709,7 +1574,9 @@ _T_ _ = _ _«return the average sales in 2019 per store region»_
   * We also tried Dependency Trees from Stanford NLP
     * However, the structure of the tree is highly variable
     * (Empirically) Using n-grams enables good flexibility and robustness for COOL
-* Tokenization
+
+Tokenization
+
   * Our \`tokenization and mapping\` does not leverage stemming or lemmatization
     * We assume that even if users are not expert on the OLAP paradigm, they know the business domain
 
@@ -1751,7 +1618,8 @@ Jagadish: The linguistic parse trees in our system are dependency parse trees, i
 
 # Effectiveness
 
-* 40 users with heterogeneous OLAP skills
+40 users with heterogeneous OLAP skills
+
   * Asked to translate (Italian) analytic goals into English
   * Users provided good feedback on the interface...
   * ... as well as on the interpretation accuracy
@@ -1778,11 +1646,16 @@ Jagadish: The linguistic parse trees in our system are dependency parse trees, i
 
 # Research directions
 
-* COOL (Conversational OLAP)
+COOL (Conversational OLAP)
+
   * Support the translation of a natural language conversation into an OLAP session
   * Analyze data without requiring technological skills
     * Add conversational capabilities to Augmented OLAP
-* Towards an end-to-end conversational solution
+
+Towards an end-to-end conversational solution
+
   * Create  **query summaries**  that can be returned as short vocal messages
   * Identify  **insights**  out of a large amount of data
   * Identify the "right"  **storytelling**  and user-system interaction
+
+# References
