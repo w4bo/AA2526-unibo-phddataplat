@@ -177,13 +177,17 @@ Matteo Francia <br> DISI — University of Bologna <br> m.francia@unibo.it
 <h1>Polyglot persistence: main challenges</h1>
 <p>Data model heterogeneity</p>
 <ul>
-<li><p>Support multiple models in the same database</p></li>
-<li><p>Or integrate data from different databases using different query languages #</p></li>
-<li><p>Inter-collection: different records in <strong>different</strong> collections have different schemas</p></li>
-<li><p>Not a new problem: think federated databases, corporate mergers, etc.</p></li>
-<li><p>Intra-collection: different records in <strong>the same</strong> collection have different schemas</p></li>
-<li><p>Emerged with NoSQL databases</p></li>
-<li><p>Reconcile inconsistent versions of the same data (inter- or intra-collection)</p></li>
+<li>Support multiple models in the same database</li>
+<li>Or integrate data from different databases using different query languages</li>
+</ul>
+<p>Inter-collection: different records in <strong>different</strong> collections have different schemas</p>
+<ul>
+<li>Not a new problem: think federated databases, corporate mergers, etc.</li>
+</ul>
+<p>Intra-collection: different records in <strong>the same</strong> collection have different schemas</p>
+<ul>
+<li>Emerged with NoSQL databases</li>
+<li>Reconcile inconsistent versions of the same data (inter- or intra-collection)</li>
 </ul>
 </section>
 
@@ -211,13 +215,13 @@ Matteo Francia <br> DISI — University of Bologna <br> m.francia@unibo.it
 </ul>
 <p>Some approaches suggest strategies to model everything within RDBMSs</p>
 <ul>
-<li><span class="citation" data-cites="DBLP:conf/sigmod/DiScalaA16">(<a href="#/section-9" role="doc-biblioref" onclick="">DiScala and Abadi 2016</a>)</span></li>
-<li><span class="citation" data-cites="DBLP:conf/sigmod/TaharaDA14">(<a href="#/section-9" role="doc-biblioref" onclick="">Tahara, Diamond, and Abadi 2014</a>)</span></li>
+<li><span class="citation" data-cites="DBLP:conf/sigmod/DiScalaA16">(<a href="#/section-10" role="doc-biblioref" onclick="">DiScala and Abadi 2016</a>)</span></li>
+<li><span class="citation" data-cites="DBLP:conf/sigmod/TaharaDA14">(<a href="#/section-10" role="doc-biblioref" onclick="">Tahara, Diamond, and Abadi 2014</a>)</span></li>
 </ul>
 </section>
 
 <section id="a-taxonomy-for-distributed-solutions-dblpconfbigdataconftancgm17" class="title-slide slide level1 center">
-<h1>A taxonomy for distributed solutions <span class="citation" data-cites="DBLP:conf/bigdataconf/TanCGM17">(<a href="#/section-9" role="doc-biblioref" onclick="">Tan et al. 2017</a>)</span></h1>
+<h1>A taxonomy for distributed solutions <span class="citation" data-cites="DBLP:conf/bigdataconf/TanCGM17">(<a href="#/section-10" role="doc-biblioref" onclick="">Tan et al. 2017</a>)</span></h1>
 <p>Federated database system</p>
 <ul>
 <li><strong>Homogeneous</strong> data stores, exposes a <strong>single</strong> standard query interface</li>
@@ -253,7 +257,7 @@ Matteo Francia <br> DISI — University of Bologna <br> m.francia@unibo.it
 <li><em>Shim</em> = a wrapper to convert from the island’s query language to the target DB’s query language</li>
 </ul>
 
-<img data-src="img/phdslides_105.png" class="r-stretch quarto-figure-center"><p class="caption">BigDAWG <span class="citation" data-cites="DBLP:books/mc/19/MattsonRE14">(<a href="#/section-9" role="doc-biblioref" onclick="">Mattson, Rogers, and Elmore 2019</a>)</span></p></section>
+<img data-src="img/phdslides_105.png" class="r-stretch quarto-figure-center"><p class="caption">BigDAWG <span class="citation" data-cites="DBLP:books/mc/19/MattsonRE14">(<a href="#/section-10" role="doc-biblioref" onclick="">Mattson, Rogers, and Elmore 2019</a>)</span></p></section>
 
 <section id="advanced-solutions-1" class="title-slide slide level1 center">
 <h1>Advanced solutions</h1>
@@ -264,16 +268,12 @@ Matteo Francia <br> DISI — University of Bologna <br> m.francia@unibo.it
 <li><strong>Executor</strong>: figures out how to best join the collections and then executes the query</li>
 <li><strong>Migrator</strong>: moves data from engine to engine when the plan calls for such data motion</li>
 </ul>
-</section>
-
-<section id="advanced-solutions-2" class="title-slide slide level1 center">
-<h1>Advanced solutions</h1>
-<p>… and of course we have metadata</p>
 
 <img data-src="img/phdslides_106.png" class="r-stretch quarto-figure-center"><p class="caption">Middleware</p></section>
 
 <section id="section" class="title-slide slide level1 center">
 <h1></h1>
+<p>… and of course we have metadata</p>
 <p><strong>Catalog</strong>: stores metadata about the system</p>
 <ul>
 <li>Databases: Databases, their engine membership, and connection authentication information.</li>
@@ -286,10 +286,10 @@ Matteo Francia <br> DISI — University of Bologna <br> m.francia@unibo.it
 <h1></h1>
 <p>Most notable multistore/polystore proposals</p>
 <ul>
-<li>BigDAWG: Focus on the ability to “move” data from one DB to another to improve query efficiency <span class="citation" data-cites="DBLP:books/mc/19/MattsonRE14">(<a href="#/section-9" role="doc-biblioref" onclick="">Mattson, Rogers, and Elmore 2019</a>)</span></li>
-<li>Estocada: Focus on taking advantage of possible (consistent) redundancy and previous query results <span class="citation" data-cites="DBLP:journals/pvldb/AlotaibiCDLMY20">(<a href="#/section-9" role="doc-biblioref" onclick="">Alotaibi et al. 2020</a>)</span></li>
-<li>Awesome: Focus on supporting common analytical functions <span class="citation" data-cites="DBLP:conf/bigdataconf/DasguptaCG16">(<a href="#/section-9" role="doc-biblioref" onclick="">Dasgupta, Coakley, and Gupta 2016</a>)</span></li>
-<li>CloudMdsQL: Focus on taking advantage of local data store native functionalities <span class="citation" data-cites="DBLP:journals/dpd/KolevVBJPP16">(<a href="#/section-9" role="doc-biblioref" onclick="">Kolev et al. 2016</a>)</span></li>
+<li>BigDAWG: Focus on the ability to “move” data from one DB to another to improve query efficiency <span class="citation" data-cites="DBLP:books/mc/19/MattsonRE14">(<a href="#/section-10" role="doc-biblioref" onclick="">Mattson, Rogers, and Elmore 2019</a>)</span></li>
+<li>Estocada: Focus on taking advantage of possible (consistent) redundancy and previous query results <span class="citation" data-cites="DBLP:journals/pvldb/AlotaibiCDLMY20">(<a href="#/section-10" role="doc-biblioref" onclick="">Alotaibi et al. 2020</a>)</span></li>
+<li>Awesome: Focus on supporting common analytical functions <span class="citation" data-cites="DBLP:conf/bigdataconf/DasguptaCG16">(<a href="#/section-10" role="doc-biblioref" onclick="">Dasgupta, Coakley, and Gupta 2016</a>)</span></li>
+<li>CloudMdsQL: Focus on taking advantage of local data store native functionalities <span class="citation" data-cites="DBLP:journals/dpd/KolevVBJPP16">(<a href="#/section-10" role="doc-biblioref" onclick="">Kolev et al. 2016</a>)</span></li>
 </ul>
 </section>
 
@@ -336,11 +336,11 @@ Matteo Francia <br> DISI — University of Bologna <br> m.francia@unibo.it
 <ul>
 <li><strong>Concise view</strong>: a single representation for all schema variations
 <ul>
-<li>Union of all attributes <span class="citation" data-cites="DBLP:conf/btw/KlettkeSS15">(<a href="#/section-9" role="doc-biblioref" onclick="">Klettke, Störl, and Scherzinger 2015</a>)</span></li>
-<li>A <em>skeleton </em> as the smallest set of core attributes according to a frequency-based formula <span class="citation" data-cites="DBLP:journals/pvldb/WangHZS15">(<a href="#/section-9" role="doc-biblioref" onclick="">Wang et al. 2015</a>)</span></li>
+<li>Union of all attributes <span class="citation" data-cites="DBLP:conf/btw/KlettkeSS15">(<a href="#/section-10" role="doc-biblioref" onclick="">Klettke, Störl, and Scherzinger 2015</a>)</span></li>
+<li>A <em>skeleton </em> as the smallest set of core attributes according to a frequency-based formula <span class="citation" data-cites="DBLP:journals/pvldb/WangHZS15">(<a href="#/section-10" role="doc-biblioref" onclick="">Wang et al. 2015</a>)</span></li>
 </ul></li>
-<li><strong>Comprehensive view</strong>: multiple representations (a different schema for every document) <span class="citation" data-cites="DBLP:conf/er/RuizMM15">(<a href="#/section-9" role="doc-biblioref" onclick="">Ruiz, Morales, and Molina 2015</a>)</span></li>
-<li><strong>Schema profile</strong>: <em>explain why </em> there are different schemas <span class="citation" data-cites="DBLP:journals/is/GallinucciGR18">(<a href="#/section-9" role="doc-biblioref" onclick="">Gallinucci, Golfarelli, and Rizzi 2018</a>)</span></li>
+<li><strong>Comprehensive view</strong>: multiple representations (a different schema for every document) <span class="citation" data-cites="DBLP:conf/er/RuizMM15">(<a href="#/section-10" role="doc-biblioref" onclick="">Ruiz, Morales, and Molina 2015</a>)</span></li>
+<li><strong>Schema profile</strong>: <em>explain why </em> there are different schemas <span class="citation" data-cites="DBLP:journals/is/GallinucciGR18">(<a href="#/section-10" role="doc-biblioref" onclick="">Gallinucci, Golfarelli, and Rizzi 2018</a>)</span></li>
 </ul>
 </section>
 
@@ -550,7 +550,7 @@ Matteo Francia <br> DISI — University of Bologna <br> m.francia@unibo.it
 <div class="column" style="width:80%;">
 <p>Integration at the intensional level</p>
 <ul>
-<li>Schema matching and mapping <span class="citation" data-cites="DBLP:journals/vldb/RahmB01">(<a href="#/section-9" role="doc-biblioref" onclick="">Rahm and Bernstein 2001</a>)</span>
+<li>Schema matching and mapping <span class="citation" data-cites="DBLP:journals/vldb/RahmB01">(<a href="#/section-10" role="doc-biblioref" onclick="">Rahm and Bernstein 2001</a>)</span>
 <ul>
 <li>A match is a correspondence between attributes</li>
 <li>A mapping is a function to explain the relationship between attributes
@@ -566,7 +566,7 @@ Matteo Francia <br> DISI — University of Bologna <br> m.francia@unibo.it
 <li>Identifying (or linking, or grouping) different records referring to the same real-world entity</li>
 <li>Aims at removing redundancy and increasing conciseness</li>
 </ul></li>
-<li>Data fusion <span class="citation" data-cites="mandreoli2019dealing">(<a href="#/section-9" role="doc-biblioref" onclick="">Mandreoli and Montangero 2019</a>)</span>
+<li>Data fusion <span class="citation" data-cites="mandreoli2019dealing">(<a href="#/section-10" role="doc-biblioref" onclick="">Mandreoli and Montangero 2019</a>)</span>
 <ul>
 <li>Fuse records on the same real-world entity into a single record and resolve possible conflicts</li>
 <li>Aims at increasing correctness of data</li>
@@ -587,7 +587,7 @@ Matteo Francia <br> DISI — University of Bologna <br> m.francia@unibo.it
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="img/phdslides_120.png"></p>
-<figcaption><span class="citation" data-cites="DBLP:journals/is/GallinucciGR19">(<a href="#/section-9" role="doc-biblioref" onclick="">Gallinucci, Golfarelli, and Rizzi 2019</a>)</span></figcaption>
+<figcaption><span class="citation" data-cites="DBLP:journals/is/GallinucciGR19">(<a href="#/section-10" role="doc-biblioref" onclick="">Gallinucci, Golfarelli, and Rizzi 2019</a>)</span></figcaption>
 </figure>
 </div>
 </div></div>
@@ -609,29 +609,29 @@ Matteo Francia <br> DISI — University of Bologna <br> m.francia@unibo.it
 </ul>
 </section>
 
-<section id="one-does-not-simply-define-a-global-schema" class="title-slide slide level1 center">
-<h1><em>“One does not simply define a global schema”</em></h1>
+<section id="section-2" class="title-slide slide level1 center">
+<h1></h1>
 
-<img data-src="img/phdslides_121.jpg" class="r-stretch"></section>
+<img data-src="img/phdslides_121.jpg" class="r-stretch quarto-figure-center"><p class="caption"><em>“One does not simply define a global schema”</em></p></section>
 
 <section id="new-integration-techniques" class="title-slide slide level1 center">
 <h1>New integration techniques</h1>
 
-<img data-src="img/phdslides_122.png" class="r-stretch quarto-figure-center"><p class="caption"><span class="citation" data-cites="DBLP:books/sp/20/Curry20a">(<a href="#/section-9" role="doc-biblioref" onclick="">Curry 2020</a>)</span></p></section>
+<img data-src="img/phdslides_122.png" class="r-stretch quarto-figure-center"><p class="caption"><span class="citation" data-cites="DBLP:books/sp/20/Curry20a">(<a href="#/section-10" role="doc-biblioref" onclick="">Curry 2020</a>)</span></p></section>
 
-<section id="section-2" class="title-slide slide level1 center">
+<section id="section-3" class="title-slide slide level1 center">
 <h1></h1>
-<p>Replace the global schema with a <em>dataspace</em> <span class="citation" data-cites="DBLP:books/sp/20/Curry20a">(<a href="#/section-9" role="doc-biblioref" onclick="">Curry 2020</a>)</span></p>
+<p>Replace the global schema with a <em>dataspace</em> <span class="citation" data-cites="DBLP:books/sp/20/Curry20a">(<a href="#/section-10" role="doc-biblioref" onclick="">Curry 2020</a>)</span></p>
 <ul>
-<li>A dataspace is a lightweight integration approach providing basic query expressive power on a variety of data sources, bypassing the complexity of traditional integration approaches and possibly returning best-effort or approximate answers <span class="citation" data-cites="DBLP:journals/sigmod/FranklinHM05">(<a href="#/section-9" role="doc-biblioref" onclick="">Franklin, Halevy, and Maier 2005</a>)</span></li>
+<li>A dataspace is a lightweight integration approach providing basic query expressive power on a variety of data sources, bypassing the complexity of traditional integration approaches and possibly returning best-effort or approximate answers <span class="citation" data-cites="DBLP:journals/sigmod/FranklinHM05">(<a href="#/section-10" role="doc-biblioref" onclick="">Franklin, Halevy, and Maier 2005</a>)</span></li>
 </ul>
 <p>Replace traditional integration with a <em>pay-as-you-go</em> approach.</p>
 <ul>
-<li>The system incrementally understands and integrates the data over time by asking users to confirm matches as the system runs <span class="citation" data-cites="DBLP:conf/sigmod/JefferyFH08">(<a href="#/section-9" role="doc-biblioref" onclick="">Jeffery, Franklin, and Halevy 2008</a>)</span></li>
+<li>The system incrementally understands and integrates the data over time by asking users to confirm matches as the system runs <span class="citation" data-cites="DBLP:conf/sigmod/JefferyFH08">(<a href="#/section-10" role="doc-biblioref" onclick="">Jeffery, Franklin, and Halevy 2008</a>)</span></li>
 </ul>
 </section>
 
-<section id="section-3" class="title-slide slide level1 center">
+<section id="section-4" class="title-slide slide level1 center">
 <h1></h1>
 <p>Introducing new concepts</p>
 <ul>
@@ -659,7 +659,7 @@ Matteo Francia <br> DISI — University of Bologna <br> m.francia@unibo.it
 </div></div>
 </section>
 
-<section id="section-4" class="title-slide slide level1 center">
+<section id="section-5" class="title-slide slide level1 center">
 <h1></h1>
 <div class="columns">
 <div class="column" style="width:80%;">
@@ -676,7 +676,7 @@ Matteo Francia <br> DISI — University of Bologna <br> m.francia@unibo.it
 <li>Dataspace is conceptual, untied to logical data modeling</li>
 </ul></li>
 </ul>
-<p>Now we have a multistore dealing with multiple data models and schema heterogeneity <span class="citation" data-cites="DBLP:journals/vldb/ForresiGGH21">(<a href="#/section-9" role="doc-biblioref" onclick="">Forresi, Gallinucci, et al. 2021</a>)</span></p>
+<p>Now we have a multistore dealing with multiple data models and schema heterogeneity <span class="citation" data-cites="DBLP:journals/vldb/ForresiGGH21">(<a href="#/section-10" role="doc-biblioref" onclick="">Forresi, Gallinucci, et al. 2021</a>)</span></p>
 </div><div class="column" style="width:20%;">
 <p><img data-src="img/phdslides_125.png"></p>
 </div></div>
@@ -713,7 +713,7 @@ Matteo Francia <br> DISI — University of Bologna <br> m.francia@unibo.it
 <h1>Data fusion</h1>
 <p>Merge operator</p>
 <ul>
-<li>Originally introduced as “full outer join merge” <span class="citation" data-cites="DBLP:journals/is/NaumannFL04">(<a href="#/section-9" role="doc-biblioref" onclick="">Naumann, Freytag, and Leser 2004</a>)</span></li>
+<li>Originally introduced as “full outer join merge” <span class="citation" data-cites="DBLP:journals/is/NaumannFL04">(<a href="#/section-10" role="doc-biblioref" onclick="">Naumann, Freytag, and Leser 2004</a>)</span></li>
 <li>Aims to keep as much information as possible when joining the records of two schemas
 <ul>
 <li>Avoid any loss of records</li>
@@ -724,11 +724,11 @@ Matteo Francia <br> DISI — University of Bologna <br> m.francia@unibo.it
 
 <img data-src="img/phdslides_126.png" class="r-stretch"></section>
 
-<section id="section-5" class="title-slide slide level1 center">
+<section id="section-6" class="title-slide slide level1 center">
 <h1></h1>
 <p>Merge operator</p>
 <ul>
-<li>Originally introduced as “full outer join merge” <span class="citation" data-cites="DBLP:journals/is/NaumannFL04">(<a href="#/section-9" role="doc-biblioref" onclick="">Naumann, Freytag, and Leser 2004</a>)</span></li>
+<li>Originally introduced as “full outer join merge” <span class="citation" data-cites="DBLP:journals/is/NaumannFL04">(<a href="#/section-10" role="doc-biblioref" onclick="">Naumann, Freytag, and Leser 2004</a>)</span></li>
 <li>Aims to keep as much information as possible when joining the records of two schemas
 <ul>
 <li>Avoid any loss of records</li>
@@ -739,7 +739,7 @@ Matteo Francia <br> DISI — University of Bologna <br> m.francia@unibo.it
 
 <img data-src="img/polyglot10.png" class="r-stretch"></section>
 
-<section id="section-6" class="title-slide slide level1 center">
+<section id="section-7" class="title-slide slide level1 center">
 <h1></h1>
 <p>Merge operator</p>
 
@@ -765,7 +765,7 @@ Matteo Francia <br> DISI — University of Bologna <br> m.francia@unibo.it
 </div></div>
 </section>
 
-<section id="section-7" class="title-slide slide level1 center">
+<section id="section-8" class="title-slide slide level1 center">
 <h1></h1>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -854,9 +854,9 @@ Matteo Francia <br> DISI — University of Bologna <br> m.francia@unibo.it
 </ul>
 </section>
 
-<section id="section-8" class="title-slide slide level1 center">
+<section id="section-9" class="title-slide slide level1 center">
 <h1></h1>
-<p>White-box cost modellingexample <span class="citation" data-cites="DBLP:conf/adbis/ForresiFGG21">(<a href="#/section-9" role="doc-biblioref" onclick="">Forresi, Francia, et al. 2021</a>)</span></p>
+<p>White-box cost modellingexample <span class="citation" data-cites="DBLP:conf/adbis/ForresiFGG21">(<a href="#/section-10" role="doc-biblioref" onclick="">Forresi, Francia, et al. 2021</a>)</span></p>
 <div class="columns">
 <div class="column" style="width:50%;">
 <p><img data-src="img/phdslides_133.png"> <img data-src="img/phdslides_134.png"></p>
@@ -865,9 +865,9 @@ Matteo Francia <br> DISI — University of Bologna <br> m.francia@unibo.it
 </div></div>
 </section>
 
-<section id="section-9" class="title-slide slide level1 smaller scrollable">
+<section id="section-10" class="title-slide slide level1 smaller scrollable">
 <h1></h1>
-<p>Black-box cost modellingexample <span class="citation" data-cites="DBLP:journals/isf/ForresiFGG23">(<a href="#/section-9" role="doc-biblioref" onclick="">Forresi et al. 2023</a>)</span></p>
+<p>Black-box cost modellingexample <span class="citation" data-cites="DBLP:journals/isf/ForresiFGG23">(<a href="#/section-10" role="doc-biblioref" onclick="">Forresi et al. 2023</a>)</span></p>
 
 
 <img data-src="img/polyglot12.png" class="r-stretch"><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
