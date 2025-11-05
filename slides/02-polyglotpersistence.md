@@ -18,12 +18,14 @@ Data model heterogeneity
 
 * Support multiple models in the same database
 * Or integrate data from different databases using different query languages
-#
-* Inter-collection: different records in __different__ collections have different schemas
-* Not a new problem: think federated databases, corporate mergers, etc.
-* Intra-collection: different records in __the same__ collection have different schemas
-* Emerged with NoSQL databases
 
+Inter-collection: different records in __different__ collections have different schemas
+
+* Not a new problem: think federated databases, corporate mergers, etc.
+
+Intra-collection: different records in __the same__ collection have different schemas
+
+* Emerged with NoSQL databases
 * Reconcile inconsistent versions of the same data (inter- or intra-collection)
 
 # Data model heterogeneity
@@ -93,13 +95,11 @@ BigDAWG middleware consists of
 * __Executor__: figures out how to best join the collections and then executes the query
 * __Migrator__: moves data from engine to engine when the plan calls for such data motion
 
-# Advanced solutions
-
-... and of course we have metadata
-
 ![Middleware](img/phdslides_106.png)
 
-#
+# 
+
+... and of course we have metadata
 
 __Catalog__: stores metadata about the system
 
@@ -354,9 +354,9 @@ Some limitations
     * High levels of heterogeneity imply complex rewriting rules (requiring knowledge and time)
     * Assuming to be _always_ able to obtain a global schema is a bit pretentious
 
-# _"One does not simply define a global schema"_
+# 
 
-![](img/phdslides_121.jpg)
+![_"One does not simply define a global schema"_](img/phdslides_121.jpg)
 
 # New integration techniques
 
