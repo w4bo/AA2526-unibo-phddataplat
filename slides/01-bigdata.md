@@ -123,6 +123,10 @@ The big-data cube [@meijer2012your]
 
 # Why the hype?
 
+![Big data and AI hype ([XAIX](https://www.justetf.com/en/etf-profile.html?isin=IE00BGV5VN51))](img/etf-bigdata.png)
+
+# Why the hype?
+
 - [The Tropical Island With the Hot Domain Name](https://www.bloomberg.com/news/articles/2023-08-31/ai-startups-create-digital-demand-for-anguilla-s-website-domain-name)
 - [These Prisoners Are Training AI](https://www.wired.com/story/prisoners-training-ai-finland/)
 - [Amazon Mechanical Turk](https://www.mturk.com/)
