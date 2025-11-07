@@ -1,3 +1,9 @@
+## [1.0.9](https://github.com/w4bo/AA2526-unibo-phddataplat/compare/1.0.8...1.0.9) (2025-11-07)
+
+### Bug Fixes
+
+* update slides ([58feabb](https://github.com/w4bo/AA2526-unibo-phddataplat/commit/58feabb85cf2b7cde3c1b5c1c330628e180530c3))
+
 ## [1.0.8](https://github.com/w4bo/AA2526-unibo-phddataplat/compare/1.0.7...1.0.8) (2025-11-07)
 
 ### Bug Fixes
