@@ -38,10 +38,10 @@ To get CFUs, write and send me a short essay (about 4/5 pages using [this IEEE](
 * Deepen at least one of the covered topics
 * Discuss relationships between your research interests and the topics presented in the course
 
-Or... submit a paper! We have an open special issue on this topic
+Or... submit a paper! We have an open special issue on these topics
 
 * [Data Management, Integration, and Interoperability ](https://www.mdpi.com/journal/electronics/special_issues/Q710A28880)
 * Journal: Electronics, IF 2.6
 * Closes Dec 31, 2025 (let me know if you are interested and need more time!)
 
-**We are open to collaborations:)**
+**We are open to collaborations :)**

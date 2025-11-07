@@ -291,7 +291,7 @@ Add more processors and RAM, and buy a more expensive and robust server.
 
  _Massively Parallel Processing_ (MPP)
 
-- There are several processors, equipped with their own RAM and disks, collaborating to solve a single problem by splitting it into several independent tasks
+- Several processors, equipped with their own RAM and disks, collaborating to solve a single problem by splitting it into several independent tasks
 - It is also called shared-nothing architecture
 
 # Scale out
@@ -312,7 +312,8 @@ Adding more servers with fewer processors and RAM
 
 # Commodity hardware
 
-* You are not tied to expensive, proprietary offerings from a single vendor
+You are not tied to expensive, proprietary offerings from a single vendor
+
 * You can choose standardized, commonly available hardware from a large range of vendors to build your cluster
 * [Commodity](https://it.wikipedia.org/wiki/Commodity) ≠ Low-end!
   * Cheap components with a high failure rate can be a false economy
@@ -325,13 +326,14 @@ Adding more servers with fewer processors and RAM
   * 100,000 CPUs in > 60,000 computers (as of 2017)
   * Used to support research for Ad Systems and Web Search
   * Also used to do scaling tests to support the development of Hadoop
+* [Data centers in the world](https://brightlio.com/largest-data-centers-in-the-world/)
 
 # Cluster
 
 ::::{.columns}
 :::{.column width="70%"}
 
-A **cluster** is a group of linked computers (nodes) that work together so closely they function as a single computer.
+A **cluster** is a group of linked computers (nodes) that work together as a "single" computer.
 
 * Typically connected via fast LAN
 * Shared-nothing: each node is a self-contained system capable of independent operation
@@ -590,6 +592,10 @@ One column per primitive type
 
 ![Parquet file format](img/phdslides_33.png)
 
+#
+
+![File compression](img/parquetcompression.png)
+
 # Distributed databases {background-color="#121011"}
 
 New types of databases have emerged.
@@ -818,6 +824,26 @@ Each DB contains one or more *graphs*
 - Arcs are stored as physical pointers
 
 ![Property graph](img/slides72.png)
+
+# Graph: storage
+
+**Index-free adjacency**
+
+- Each node directly references its adjacent (neighboring) nodes
+- Accessing relationships is simply a memory pointer lookup
+
+Graph processing time 
+
+- Proportional to the amount of data processed
+- Not increasing exponentially with the number of relationships traversed
+
+# 
+
+[Implementing a graph as a relational database](https://dist.neo4j.com/wp-content/uploads/20181218005826/non-native-graph-database-relying-on-index.png)
+
+#
+
+[Index-free adjacency](https://dist.neo4j.com/wp-content/uploads/20181218005743/native-graph-technology-index-free-adjacency.png)
 
 # Graph: querying
 
