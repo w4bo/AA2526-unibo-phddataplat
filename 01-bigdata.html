@@ -266,13 +266,13 @@ Matteo Francia <br> DISI — University of Bologna <br> m.francia@unibo.it
 <li>Deepen at least one of the covered topics</li>
 <li>Discuss relationships between your research interests and the topics presented in the course</li>
 </ul>
-<p>Or… submit a paper! We have an open special issue on this topic</p>
+<p>Or… submit a paper! We have an open special issue on these topics</p>
 <ul>
 <li><a href="https://www.mdpi.com/journal/electronics/special_issues/Q710A28880">Data Management, Integration, and Interoperability</a></li>
 <li>Journal: Electronics, IF 2.6</li>
 <li>Closes Dec 31, 2025 (let me know if you are interested and need more time!)</li>
 </ul>
-<p><strong>We are open to collaborations:)</strong></p>
+<p><strong>We are open to collaborations :)</strong></p>
 </section>
 
 <section id="lecture-1-what-we-are-going-to-do" class="title-slide slide level1 center" data-background-color="#121011">
@@ -606,7 +606,7 @@ Matteo Francia <br> DISI — University of Bologna <br> m.francia@unibo.it
 
 <img data-src="img/svg4.svg" class="r-stretch quarto-figure-center"><p class="caption">Massively Parallel Processing</p><p><em>Massively Parallel Processing</em> (MPP)</p>
 <ul>
-<li>There are several processors, equipped with their own RAM and disks, collaborating to solve a single problem by splitting it into several independent tasks</li>
+<li>Several processors, equipped with their own RAM and disks, collaborating to solve a single problem by splitting it into several independent tasks</li>
 <li>It is also called shared-nothing architecture</li>
 </ul>
 </section>
@@ -635,8 +635,8 @@ Matteo Francia <br> DISI — University of Bologna <br> m.francia@unibo.it
 
 <section id="commodity-hardware" class="title-slide slide level1 center">
 <h1>Commodity hardware</h1>
+<p>You are not tied to expensive, proprietary offerings from a single vendor</p>
 <ul>
-<li>You are not tied to expensive, proprietary offerings from a single vendor</li>
 <li>You can choose standardized, commonly available hardware from a large range of vendors to build your cluster</li>
 <li><a href="https://it.wikipedia.org/wiki/Commodity">Commodity</a> ≠ Low-end!
 <ul>
@@ -655,6 +655,7 @@ Matteo Francia <br> DISI — University of Bologna <br> m.francia@unibo.it
 <li>Used to support research for Ad Systems and Web Search</li>
 <li>Also used to do scaling tests to support the development of Hadoop</li>
 </ul></li>
+<li><a href="https://brightlio.com/largest-data-centers-in-the-world/">Data centers in the world</a></li>
 </ul>
 </section>
 
@@ -662,7 +663,7 @@ Matteo Francia <br> DISI — University of Bologna <br> m.francia@unibo.it
 <h1>Cluster</h1>
 <div class="columns">
 <div class="column" style="width:70%;">
-<p>A <strong>cluster</strong> is a group of linked computers (nodes) that work together so closely they function as a single computer.</p>
+<p>A <strong>cluster</strong> is a group of linked computers (nodes) that work together as a “single” computer.</p>
 <ul>
 <li>Typically connected via fast LAN</li>
 <li>Shared-nothing: each node is a self-contained system capable of independent operation
@@ -975,6 +976,11 @@ Matteo Francia <br> DISI — University of Bologna <br> m.francia@unibo.it
 
 <img data-src="img/phdslides_33.png" class="r-stretch quarto-figure-center"><p class="caption">Parquet file format</p></section>
 
+<section id="section-1" class="title-slide slide level1 center">
+<h1></h1>
+
+<img data-src="img/parquetcompression.png" class="r-stretch quarto-figure-center"><p class="caption">File compression</p></section>
+
 <section id="distributed-databases" class="title-slide slide level1 center" data-background-color="#121011">
 <h1>Distributed databases</h1>
 <p>New types of databases have emerged.</p>
@@ -1284,6 +1290,30 @@ Matteo Francia <br> DISI — University of Bologna <br> m.francia@unibo.it
 </ul>
 
 <img data-src="img/slides72.png" class="r-stretch quarto-figure-center"><p class="caption">Property graph</p></section>
+
+<section id="graph-storage" class="title-slide slide level1 center">
+<h1>Graph: storage</h1>
+<p><strong>Index-free adjacency</strong></p>
+<ul>
+<li>Each node directly references its adjacent (neighboring) nodes</li>
+<li>Accessing relationships is simply a memory pointer lookup</li>
+</ul>
+<p>Graph processing time</p>
+<ul>
+<li>Proportional to the amount of data processed</li>
+<li>Not increasing exponentially with the number of relationships traversed</li>
+</ul>
+</section>
+
+<section id="section-2" class="title-slide slide level1 center">
+<h1></h1>
+<p><a href="https://dist.neo4j.com/wp-content/uploads/20181218005826/non-native-graph-database-relying-on-index.png">Implementing a graph as a relational database</a></p>
+</section>
+
+<section id="section-3" class="title-slide slide level1 center">
+<h1></h1>
+<p><a href="https://dist.neo4j.com/wp-content/uploads/20181218005743/native-graph-technology-index-free-adjacency.png">Index-free adjacency</a></p>
+</section>
 
 <section id="graph-querying" class="title-slide slide level1 center">
 <h1>Graph: querying</h1>
