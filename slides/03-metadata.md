@@ -55,7 +55,7 @@ Another classification of metadata [@DBLP:conf/adbis/SawadogoSFFLD19]
 
 ::::{.columns}
 :::{.column width="50%"}
-![](img/phdslides_156.png)
+![[@DBLP:conf/adbis/SawadogoSFFLD19]](img/phdslides_156.png)
 :::
 :::{.column width="50%"}
 ![Constance: [@DBLP:conf/sigmod/HaiGQ16]](img/phdslides_155.png)
@@ -69,7 +69,7 @@ Another classification of metadata [@DBLP:conf/adbis/SawadogoSFFLD19]
 
 ::::{.columns}
 :::{.column width="50%"}
-![](img/phdslides_157.png)
+![[@DBLP:conf/adbis/SawadogoSFFLD19]](img/phdslides_157.png)
 :::
 :::{.column width="50%"}
 ![GEMMS: [@DBLP:conf/caise/QuixHV16]](img/phdslides_158.png)
@@ -84,7 +84,7 @@ Another classification of metadata [@DBLP:conf/adbis/SawadogoSFFLD19]
 
 ::::{.columns}
 :::{.column width="50%"}
-![](img/phdslides_160.png)
+![[@DBLP:conf/adbis/SawadogoSFFLD19]](img/phdslides_160.png)
 :::
 :::{.column width="50%"}
 ![GOODS: [@DBLP:journals/debu/HalevyKNOPRW16]](img/phdslides_159.png)
@@ -118,7 +118,7 @@ Another classification of metadata [@DBLP:conf/adbis/SawadogoSFFLD19]
 
 ::::{.columns}
 :::{.column width="50%"}
-![](img/phdslides_163.png)
+![[@DBLP:conf/adbis/SawadogoSFFLD19]](img/phdslides_163.png)
 :::
 :::{.column width="50%"}
 ![KAYAK: [@maccioni2018kayak]](img/phdslides_164.png)
@@ -129,7 +129,7 @@ Another classification of metadata [@DBLP:conf/adbis/SawadogoSFFLD19]
 - Support users in creating and optimizing the data processing pipelines.
 - Only goal-related metadata are collected.
 
-#
+# MOSES
 
 ![MOSES: [@DBLP:journals/fgcs/FranciaGGLRS21]](img/phdslides_166.png)
 
@@ -141,11 +141,11 @@ Three areas:
 
 #
 
-![](img/phdslides_167.png)
+![Example of instance](img/phdslides_167.png)
 
 #
 
-![](img/meta01.png)
+![MOSES: [@DBLP:journals/fgcs/FranciaGGLRS21]](img/meta01.png)
 
 - Not pre-defined
 - Domain-independent
@@ -153,24 +153,24 @@ Three areas:
 
 #
 
-![](img/meta02.png)
+![MOSES: [@DBLP:journals/fgcs/FranciaGGLRS21]](img/meta02.png)
 
 Tune the trade-off between the level of detail of the functionalities and the required computational effort
 
 #
 
-![](img/meta03.png)
+![MOSES: [@DBLP:journals/fgcs/FranciaGGLRS21]](img/meta03.png)
 
 #
 
-| Functionality           | Supported                                      |
-|-------------------------|------------------------------------------------|
-| Semantic enrichment     | Yes                                            |
-| Data indexing           | No                                            |
-| Link generation         | Yes                                            |
-| Data polymorphism       | Yes                                            |
-| Data versioning         | Yes                                            |
-Usage tracking
+| Functionality           | Supported |
+|-------------------------|-----------|
+| Semantic enrichment     | Yes       |
+| Data indexing           | No        |
+| Link generation         | Yes       |
+| Data polymorphism       | Yes       |
+| Data versioning         | Yes       |
+| Usage tracking          | Yes       |
 
 # How would you implement the meta-model?
 

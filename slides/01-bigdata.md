@@ -734,9 +734,24 @@ Today, *NoSQL* indicates *DBMSs* adopting a *different data model from the relat
 
 ```json
 [
- { "Product": "P1", "Name": "Beer", "Price": 6, "Quantity": "0.4L"},
- { "Product": "P2", "Name": "Milk", "Price": 1, "Expiration": "2024-11-30"},
- { "Product": "P3", "Name": "Pizza", "Price": 6, "Ingredients": [...]},
+    {
+        "Product": "P1",
+        "Name": "Beer",
+        "Price": 6,
+        "Quantity": "0.4L"
+    },
+    {
+        "Product": "P2",
+        "Name": "Milk",
+        "Price": 1,
+        "Expiration": "2024-11-30"
+    },
+    {
+        "Product": "P3",
+        "Name": "Pizza",
+        "Price": 6,
+        "Ingredients": [...]
+    }
 ]
 ```
 
@@ -884,8 +899,8 @@ db.collection.find({ status: "active", age: { $gt: 30 } })  // filter by conditi
 
 ```js
 db.collection.updateMany(
- { status: "active" },           // filter
- { $set: { verified: true } }    // update specific field(s)
+    { status: "active" },           // filter
+    { $set: { verified: true } }    // update specific field(s)
 )
 ```
 
@@ -909,14 +924,14 @@ Collection answering the blue query
 
 ```json
 [
- {
+  {
     "_id": 1,
     "name": "Martin",
     "adrs": [
- { "street": "Adam", "city": "Chicago", "state": "Illinois", "code": 60007 },
- { "street": "9th", "city": "New York", "state": "New York", "code": 10001 }
- ]
- }
+      { "street": "Adam", "city": "Chicago", "state": "Illinois", "code": 60007 },
+      { "street": "9th", "city": "New York", "state": "New York", "code": 10001 }
+    ]
+  }
 ]
 ```
 
@@ -925,26 +940,25 @@ Collection answering the purple query
 
 ```json
 [
- {
-    "_id": 1,
-    "customer": "1",
-    "orderpayments": [
- { 
-        "card": 457,
-        "billadrs": { "street": "Adam", "city": "Chicago", "state": "Illinois", "code": 60007 } 
-      
- },
- { 
-        "card": 457,
-        "billadrs": { "street": "9th", "city": "New York", "state": "New York", "code": 10001 }
- }
- ],
-    "products": [
- { "id": 1, "name": "Cola", "price": 10.4 },
- { "id": 2, "name": "Beer", "price": 14.4 }
- ],
-    "shipadrs": { "street": "9th", "city": "New York", "state": "New York", "code": 10001 }
- }
+  {
+    "_id":1,
+    "customer":"1",
+    "orderpayments":[
+      {
+        "card":457,
+        "billadrs": { "street":"Adam", "city":"Chicago", "state":"Illinois", "code":60007 }
+      },
+      {
+        "card":457,
+        "billadrs": { "street":"9th", "city":"New York", "state":"New York", "code":10001 }
+      }
+    ],
+    "products":[
+      { "id":1, "name":"Cola", "price":10.4 },
+      { "id":2, "name":"Beer", "price":14.4 }
+    ],
+    "shipadrs":{ "street":"9th", "city":"New York", "state":"New York", "code":10001 }
+  }
 ]
 ```
 :::
