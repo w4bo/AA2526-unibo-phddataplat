@@ -1233,9 +1233,9 @@ Word count
 ```scala
 textFile = sc.textFile("hdfs://...")
 counts = textFile
-    .flatMap(line => line.split(" "))
-    .map(lambda word: (word, 1))
-    .reduceByKey(lambda a, b: a + b)
+              .flatMap(line => line.split(" "))
+              .map(lambda word: (word, 1))
+              .reduceByKey(lambda a, b: a + b)
 counts.saveAsTextFile("hdfs://...")
 ```
 
