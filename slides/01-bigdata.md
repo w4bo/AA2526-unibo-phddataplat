@@ -1479,7 +1479,7 @@ Cloud providers are mature and offer comprehensive support for big data ecosyste
 
 * Forget all that is above
 
-# [Cloud computing](https://w4bo.github.io/AA2526-unibo-bigdataandcloudplatforms/07-computing
+# [Cloud computing](https://w4bo.github.io/AA2526-unibo-bigdataandcloudplatforms/07-computing)
 
 A model for enabling  **minimal management effort** or service provider interaction
 
