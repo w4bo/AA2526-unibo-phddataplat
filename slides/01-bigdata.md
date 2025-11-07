@@ -413,7 +413,7 @@ Different implementations of data lakes, relying on similar principles
 * Azure Data Lake
 * GCP Colossus
 
-# HDFS
+# HDFS [@shvachko2010hadoop]
 
 HDFS is a filesystem built to store very large files with streaming data access on clusters of commodity hardware.
 
