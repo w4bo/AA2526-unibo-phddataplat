@@ -1497,6 +1497,10 @@ A model for enabling  **minimal management effort** or service provider interact
 
 # Conclusions {background-color="#121011"}
 
+[Hype cycle of big data technologies](https://live-starburst.pantheonsite.io/wp-content/uploads/2025/07/gartner-hype-cycle-graphic.png)
+
+# Conclusions {background-color="#121011"}
+
 Learned the basis of big data (a summary of the Master's degree course)
 
 * Definitions and motivations
