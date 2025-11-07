@@ -1177,11 +1177,11 @@ As map-reduce calculations get more complex, it's useful to break them down into
 * The **different subsequent stages**
 * The output can be stored in the DFS, forming a **materialized view**
 
-Early stages of map-reduce operations often represent the heaviest amount of data access, so b
+Early stages of map-reduce operations often represent the heaviest amount of data access
 
-* Building and saving them once as a basis for many downstream uses saves a lot of work!
+* **Building and saving them** once as a basis for many downstream uses saves a lot of work!
 
-Slow due to data replication and disk I/O
+*Slow due to data replication and disk I/O*
 
 # Spark [@zaharia2010spark]
 
