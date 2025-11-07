@@ -1,3 +1,19 @@
+## [1.0.7](https://github.com/w4bo/AA2526-unibo-phddataplat/compare/1.0.6...1.0.7) (2025-11-07)
+
+### Bug Fixes
+
+* update slides ([b280172](https://github.com/w4bo/AA2526-unibo-phddataplat/commit/b2801726e9fef9172241860d00699a3cfb9e3a96))
+* update slides ([01d5ecc](https://github.com/w4bo/AA2526-unibo-phddataplat/commit/01d5ecce98f58e57db05d8cdd23843f2ed131ce8))
+* update slides ([506b9e4](https://github.com/w4bo/AA2526-unibo-phddataplat/commit/506b9e4578c53b24c5c453e97ca9789b6a790c8f))
+* update slides ([593fc85](https://github.com/w4bo/AA2526-unibo-phddataplat/commit/593fc85b3626b130338f6fb9d98a5bf6873b7958))
+* update slides ([14f9ea2](https://github.com/w4bo/AA2526-unibo-phddataplat/commit/14f9ea2293427958458a672689276f3ad3043060))
+* update slides ([9745260](https://github.com/w4bo/AA2526-unibo-phddataplat/commit/97452604ecef4dea8dc920bb36c533d4cd2c6ae1))
+* update slides ([d056a6e](https://github.com/w4bo/AA2526-unibo-phddataplat/commit/d056a6e08598e00087aa5070efab18a153786af7))
+* update slides ([a4087f8](https://github.com/w4bo/AA2526-unibo-phddataplat/commit/a4087f871a255b8973d868be91743006b7a107f5))
+* update slides ([22c25b0](https://github.com/w4bo/AA2526-unibo-phddataplat/commit/22c25b09b7e5fc511f4d3f8beea5522448b12919))
+* update slides ([04c8cef](https://github.com/w4bo/AA2526-unibo-phddataplat/commit/04c8cef92d1e0e755aebed89ee0df6d8e8ee05d8))
+* update slides ([3055159](https://github.com/w4bo/AA2526-unibo-phddataplat/commit/305515980fc295957c03d3b4607021253b760950))
+
 ## [1.0.6](https://github.com/w4bo/AA2526-unibo-phddataplat/compare/1.0.5...1.0.6) (2025-11-07)
 
 ### Bug Fixes
