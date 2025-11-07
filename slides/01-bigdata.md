@@ -1144,7 +1144,7 @@ When computations involve a large set of data, *it is cheaper (i.e., faster) to 
 
 # Disambiguation of MapReduce
 
-MapReduce *is a programming model* and an associated implementation for processing and generating large data sets.
+MapReduce [@dean2008mapreduce] *is a programming model* and an associated implementation for processing and generating large data sets.
 
 - A *map* function processes a key/value pair to generate a set of intermediate key/value pairs
 - A *reduce* function merges all intermediate values associated with the same intermediate key.
@@ -1179,13 +1179,13 @@ Early stages of map-reduce operations often represent the heaviest amount of dat
 
 Slow due to data replication and disk I/O
 
-# Spark
+# Spark [@zaharia2010spark]
 
 ::::{.columns}
 :::{.column width=40%}
 Spark project started in 2009
 
-* Developed at UC Berkeley's AMPLab by Matei Zaharia
+* Developed at UC Berkeley's AMPLab by [Matei Zaharia](https://scholar.google.com/citations?user=I1EvjZsAAAAJ&hl=en&oi=sra)
 * Open sourced in 2010, Apache project from 2013
   * In 2014, Zaharia founded Databricks
   * Written in Scala; supports Java and Python
@@ -1233,9 +1233,9 @@ Word count
 ```scala
 textFile = sc.textFile("hdfs://...")
 counts = textFile
- .flatMap(line => line.split(" "))
- .map(lambda word: (word, 1))
- .reduceByKey(lambda a, b: a + b)
+    .flatMap(line => line.split(" "))
+    .map(lambda word: (word, 1))
+    .reduceByKey(lambda a, b: a + b)
 counts.saveAsTextFile("hdfs://...")
 ```
 
