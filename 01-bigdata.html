@@ -1767,9 +1767,9 @@ Matteo Francia <br> DISI — University of Bologna <br> m.francia@unibo.it
 <p>Word count</p>
 <div class="sourceCode" id="cb9"><pre class="sourceCode numberSource scala number-lines"><code class="sourceCode scala"><span id="cb9-1"><a href=""></a>textFile <span class="op">=</span> sc<span class="op">.</span><span class="fu">textFile</span><span class="op">(</span><span class="st">"hdfs://..."</span><span class="op">)</span></span>
 <span id="cb9-2"><a href=""></a>counts <span class="op">=</span> textFile</span>
-<span id="cb9-3"><a href=""></a>    <span class="op">.</span><span class="fu">flatMap</span><span class="op">(</span>line <span class="op">=&gt;</span> line<span class="op">.</span><span class="fu">split</span><span class="op">(</span><span class="st">" "</span><span class="op">))</span></span>
-<span id="cb9-4"><a href=""></a>    <span class="op">.</span><span class="fu">map</span><span class="op">(</span>lambda word<span class="op">:</span> <span class="op">(</span>word<span class="op">,</span> <span class="dv">1</span><span class="op">))</span></span>
-<span id="cb9-5"><a href=""></a>    <span class="op">.</span><span class="fu">reduceByKey</span><span class="op">(</span>lambda a<span class="op">,</span> b<span class="op">:</span> a <span class="op">+</span> b<span class="op">)</span></span>
+<span id="cb9-3"><a href=""></a>              <span class="op">.</span><span class="fu">flatMap</span><span class="op">(</span>line <span class="op">=&gt;</span> line<span class="op">.</span><span class="fu">split</span><span class="op">(</span><span class="st">" "</span><span class="op">))</span></span>
+<span id="cb9-4"><a href=""></a>              <span class="op">.</span><span class="fu">map</span><span class="op">(</span>lambda word<span class="op">:</span> <span class="op">(</span>word<span class="op">,</span> <span class="dv">1</span><span class="op">))</span></span>
+<span id="cb9-5"><a href=""></a>              <span class="op">.</span><span class="fu">reduceByKey</span><span class="op">(</span>lambda a<span class="op">,</span> b<span class="op">:</span> a <span class="op">+</span> b<span class="op">)</span></span>
 <span id="cb9-6"><a href=""></a>counts<span class="op">.</span><span class="fu">saveAsTextFile</span><span class="op">(</span><span class="st">"hdfs://..."</span><span class="op">)</span></span></code></pre></div>
 
 <img data-src="./img/spark-wc.png" class="r-stretch quarto-figure-center"><p class="caption">Word count</p></section>
