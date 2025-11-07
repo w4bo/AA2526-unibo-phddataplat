@@ -1189,7 +1189,7 @@ Slow due to data replication and disk I/O
 :::{.column width=40%}
 Spark project started in 2009
 
-* Developed at UC Berkeley's AMPLab by [Matei Zaharia](https://scholar.google.com/citations?user=I1EvjZsAAAAJ&hl=en&oi=sra)
+* Developed at UC Berkeley's AMPLab by [Matei Zaharia](https://scholar.google.com/citations?user=I1EvjZsAAAAJ&hl=en&oi=sra) (co-founders of Databricks)
 * Open sourced in 2010, Apache project from 2013
   * In 2014, Zaharia founded Databricks
   * Written in Scala; supports Java and Python
