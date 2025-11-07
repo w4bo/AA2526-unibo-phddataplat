@@ -1504,7 +1504,7 @@ A model for enabling  **minimal management effort** or service provider interact
 Learned the basis of big data (a summary of the Master's degree course)
 
 * Definitions and motivations
-* Main components – focus on storage and processing
+* Main components, focus on storage and processing
 * Hardware and software architectures
 
 Up next: an overview of some of the main challenges
