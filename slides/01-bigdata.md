@@ -1003,27 +1003,33 @@ Collection answering the purple query
 
 ```json
 [
- {
-    "_id": 1,
-    "name": "Martin",
-    "adrs": [
- { "street": "Adam", "city": "Chicago", "state": "Illinois", "code": 60007 },
- { "street": "9th", "city": "New York", "state": "New York", "code": 10001 }
- ],
-    "orders": [
- {
-        "orderpayments": [
- { "card": 457, "billadrs": { "street": "Adam", "city": "Chicago", "state": "Illinois", "code": 60007 } },
- { "card": 457, "billadrs": { "street": "9th", "city": "New York", "state": "New York", "code": 10001 } }
- ],
-        "products": [
- { "id": 1, "name": "Cola", "price": 10.4 },
- { "id": 2, "name": "Beer", "price": 14.4 }
- ]
- }
- ],
-    "shipadrs": { "street": "9th", "city": "New York", "state": "New York", "code": 10001 }
- }
+  {
+    "_id":1,
+    "name":"Martin",
+    "adrs":[
+      { "street":"Adam", "city":"Chicago", "state":"Illinois", "code":60007 },
+      { "street":"9th", "city":"New York", "state":"New York", "code":10001 }
+    ],
+    "orders":[
+      {
+        "orderpayments":[
+          {
+            "card":457,
+            "billadrs":{ "street":"Adam", "city":"Chicago", "state":"Illinois", "code":60007 }
+          },
+          {
+            "card":457,
+            "billadrs":{ "street":"9th", "city":"New York", "state":"New York", "code":10001 }
+          }
+        ],
+        "products":[
+          { "id":1, "name":"Cola", "price":10.4 },
+          { "id":2, "name":"Beer", "price":14.4 }
+        ]
+      }
+    ],
+    "shipadrs":{ "street":"9th", "city":"New York", "state":"New York", "code":10001 }
+  }
 ]
 ```
 
