@@ -305,7 +305,7 @@ Adding more servers with fewer processors and RAM
   * Usually cheaper
   * Can literally scale infinitely
 * Cons
-  * More licensing fees
+  * [More licensing fees](https://w4bo.github.io/AA2425-unibo-bigdataandcloudplatforms/08-migration)
   * Bigger footprint in the Data Center
   * Higher utility cost (electricity and cooling)
   * More networking equipment (switches/routers)
