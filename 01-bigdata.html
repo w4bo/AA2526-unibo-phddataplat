@@ -1660,7 +1660,7 @@ Matteo Francia <br> DISI — University of Bologna <br> m.francia@unibo.it
 
 <section id="disambiguation-of-mapreduce" class="title-slide slide level1 center">
 <h1>Disambiguation of MapReduce</h1>
-<p>MapReduce <em>is a programming model</em> and an associated implementation for processing and generating large data sets.</p>
+<p>MapReduce <span class="citation" data-cites="dean2008mapreduce">(<a href="#/references" role="doc-biblioref" onclick="">Dean and Ghemawat 2008</a>)</span> <em>is a programming model</em> and an associated implementation for processing and generating large data sets.</p>
 <ul>
 <li>A <em>map</em> function processes a key/value pair to generate a set of intermediate key/value pairs</li>
 <li>A <em>reduce</em> function merges all intermediate values associated with the same intermediate key.</li>
@@ -1702,13 +1702,13 @@ Matteo Francia <br> DISI — University of Bologna <br> m.francia@unibo.it
 <p>Slow due to data replication and disk I/O</p>
 </section>
 
-<section id="spark" class="title-slide slide level1 center">
-<h1>Spark</h1>
+<section id="spark-zaharia2010spark" class="title-slide slide level1 center">
+<h1>Spark <span class="citation" data-cites="zaharia2010spark">(<a href="#/references" role="doc-biblioref" onclick="">Zaharia et al. 2010</a>)</span></h1>
 <div class="columns">
 <div class="column" style="width:40%;">
 <p>Spark project started in 2009</p>
 <ul>
-<li>Developed at UC Berkeley’s AMPLab by Matei Zaharia</li>
+<li>Developed at UC Berkeley’s AMPLab by <a href="https://scholar.google.com/citations?user=I1EvjZsAAAAJ&amp;hl=en&amp;oi=sra">Matei Zaharia</a></li>
 <li>Open sourced in 2010, Apache project from 2013
 <ul>
 <li>In 2014, Zaharia founded Databricks</li>
@@ -1767,9 +1767,9 @@ Matteo Francia <br> DISI — University of Bologna <br> m.francia@unibo.it
 <p>Word count</p>
 <div class="sourceCode" id="cb9"><pre class="sourceCode numberSource scala number-lines"><code class="sourceCode scala"><span id="cb9-1"><a href=""></a>textFile <span class="op">=</span> sc<span class="op">.</span><span class="fu">textFile</span><span class="op">(</span><span class="st">"hdfs://..."</span><span class="op">)</span></span>
 <span id="cb9-2"><a href=""></a>counts <span class="op">=</span> textFile</span>
-<span id="cb9-3"><a href=""></a> <span class="op">.</span><span class="fu">flatMap</span><span class="op">(</span>line <span class="op">=&gt;</span> line<span class="op">.</span><span class="fu">split</span><span class="op">(</span><span class="st">" "</span><span class="op">))</span></span>
-<span id="cb9-4"><a href=""></a> <span class="op">.</span><span class="fu">map</span><span class="op">(</span>lambda word<span class="op">:</span> <span class="op">(</span>word<span class="op">,</span> <span class="dv">1</span><span class="op">))</span></span>
-<span id="cb9-5"><a href=""></a> <span class="op">.</span><span class="fu">reduceByKey</span><span class="op">(</span>lambda a<span class="op">,</span> b<span class="op">:</span> a <span class="op">+</span> b<span class="op">)</span></span>
+<span id="cb9-3"><a href=""></a>    <span class="op">.</span><span class="fu">flatMap</span><span class="op">(</span>line <span class="op">=&gt;</span> line<span class="op">.</span><span class="fu">split</span><span class="op">(</span><span class="st">" "</span><span class="op">))</span></span>
+<span id="cb9-4"><a href=""></a>    <span class="op">.</span><span class="fu">map</span><span class="op">(</span>lambda word<span class="op">:</span> <span class="op">(</span>word<span class="op">,</span> <span class="dv">1</span><span class="op">))</span></span>
+<span id="cb9-5"><a href=""></a>    <span class="op">.</span><span class="fu">reduceByKey</span><span class="op">(</span>lambda a<span class="op">,</span> b<span class="op">:</span> a <span class="op">+</span> b<span class="op">)</span></span>
 <span id="cb9-6"><a href=""></a>counts<span class="op">.</span><span class="fu">saveAsTextFile</span><span class="op">(</span><span class="st">"hdfs://..."</span><span class="op">)</span></span></code></pre></div>
 
 <img data-src="./img/spark-wc.png" class="r-stretch quarto-figure-center"><p class="caption">Word count</p></section>
@@ -2121,8 +2121,14 @@ Matteo Francia <br> DISI — University of Bologna <br> m.francia@unibo.it
 <h1>References</h1>
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-dean2008mapreduce" class="csl-entry" role="listitem">
+Dean, Jeffrey, and Sanjay Ghemawat. 2008. <span>“MapReduce: Simplified Data Processing on Large Clusters.”</span> <em>Communications of the ACM</em> 51 (1): 107–13.
+</div>
 <div id="ref-meijer2012your" class="csl-entry" role="listitem">
 Meijer, Erik. 2012. <span>“Your Mouse Is a Database.”</span> <em>Communications of the ACM</em> 55 (5): 66–73.
+</div>
+<div id="ref-zaharia2010spark" class="csl-entry" role="listitem">
+Zaharia, Matei, Mosharaf Chowdhury, Michael J Franklin, Scott Shenker, and Ion Stoica. 2010. <span>“Spark: Cluster Computing with Working Sets.”</span> In <em>2nd USENIX Workshop on Hot Topics in Cloud Computing (HotCloud 10)</em>.
 </div>
 </div>
 </section>
