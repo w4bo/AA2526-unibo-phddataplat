@@ -829,40 +829,6 @@ Each DB contains one or more *graphs*
 
 ![Property graph](img/slides72.png)
 
-# Graph: storage
-
-**Index-free adjacency**
-
-- Each node directly references its adjacent (neighboring) nodes
-- Accessing relationships is simply a memory pointer lookup
-
-Graph processing time 
-
-- Proportional to the amount of data processed
-- Not increasing exponentially with the number of relationships traversed
-
-# 
-
-[Implementing a graph as a relational database](https://dist.neo4j.com/wp-content/uploads/20181218005826/non-native-graph-database-relying-on-index.png)
-
-#
-
-[Index-free adjacency](https://dist.neo4j.com/wp-content/uploads/20181218005743/native-graph-technology-index-free-adjacency.png)
-
-# Graph: querying
-
-Graph databases usually model relationship-rich scenarios.
-
-- *Query language based on detecting patterns* (e.g., Cypher)
-  - Simplifies the navigation of the relationships
-- Support for transactions, indexes, selections, and projections
-
-| Query | Pattern |
-|:- |:- |
-| Find friends of friends | `(user)-[:KNOWS]-(friend)-[:KNOWS]-(foaf)` |
-| Find shortest path from A to B | `shortestPath((userA)-[:KNOWS*..5]-(userB))` |
-| What products were bought by users who purchased the same items? | `(u)-[:PURCHASED]->(p)<-[:PURCHASED]-()-[:PURCHASED]->(otherP)` |
-
 # Data modeling example: graph model
 
 IDs are implicitly handled; different edge colors imply different edge types.
@@ -879,6 +845,40 @@ IDs are implicitly handled; different edge colors imply different edge types.
 
 :::
 ::::
+
+# Graph: storage
+
+**Index-free adjacency**
+
+- Each node directly references its adjacent (neighboring) nodes
+- Accessing relationships is simply a memory pointer lookup
+
+Graph processing time 
+
+- Proportional to the amount of data processed
+- Not increasing exponentially with the number of relationships traversed
+
+# 
+
+![Implementing a graph as a relational database](https://dist.neo4j.com/wp-content/uploads/20181218005826/non-native-graph-database-relying-on-index.png)
+
+#
+
+![Index-free adjacency](https://dist.neo4j.com/wp-content/uploads/20181218005743/native-graph-technology-index-free-adjacency.png)
+
+# Graph: querying
+
+Graph databases usually model relationship-rich scenarios.
+
+- *Query language based on detecting patterns* (e.g., Cypher)
+  - Simplifies the navigation of the relationships
+- Support for transactions, indexes, selections, and projections
+
+| Query | Pattern |
+|:- |:- |
+| Find friends of friends | `(user)-[:KNOWS]-(friend)-[:KNOWS]-(foaf)` |
+| Find shortest path from A to B | `shortestPath((userA)-[:KNOWS*..5]-(userB))` |
+| What products were bought by users who purchased the same items? | `(u)-[:PURCHASED]->(p)<-[:PURCHASED]-()-[:PURCHASED]->(otherP)` |
 
 # Graph vs Aggregate modeling
 
@@ -1497,7 +1497,7 @@ A model for enabling  **minimal management effort** or service provider interact
 
 # Conclusions {background-color="#121011"}
 
-[Hype cycle of big data technologies](https://live-starburst.pantheonsite.io/wp-content/uploads/2025/07/gartner-hype-cycle-graphic.png)
+![Hype cycle of big data technologies](https://live-starburst.pantheonsite.io/wp-content/uploads/2025/07/gartner-hype-cycle-graphic.png)
 
 # Conclusions {background-color="#121011"}
 
