@@ -602,7 +602,7 @@ One column per primitive type
 
 # Distributed databases {background-color="#121011"}
 
-New types of databases have emerged.
+After the relational model [@DBLP:journals/cacm/Codd70] new types of databases have emerged.
 
 # Strengths of RDBMSs?
 
@@ -675,12 +675,12 @@ Today, *NoSQL* indicates *DBMSs* adopting a *different data model from the relat
 *Google, 2005*
 
 - Goal: handle Big Data (web indexing, Maps, Gmail, etc.)
-- Solution: *BigTable*, designed for scalability and high performance on Petabytes of data
+- Solution: *BigTable* [@DBLP:journals/tocs/ChangDGHWBCFG08], designed for scalability and high performance on Petabytes of data
 
 *Amazon, 2007*
 
 - Goal: ensure the availability and reliability of its e-commerce service 24/7
-- Solution: *DynamoDB*, characterized by strong simplicity for data storage and manipulation
+- Solution: *DynamoDB* [@sivasubramanian2012amazon], characterized by strong simplicity for data storage and manipulation
 
 # NoSQL common features
 
@@ -815,7 +815,7 @@ Based on tables and rows
 
 ![Relational implementation](img/slides71.png)
 
-# Graph: data model
+# Graph: data model [@DBLP:conf/icde/Angles12]
 
 Each DB contains one or more *graphs*
 
@@ -853,12 +853,12 @@ IDs are implicitly handled; different edge colors imply different edge types.
 - Each node directly references its adjacent (neighboring) nodes
 - Accessing relationships is simply a memory pointer lookup
 
-Graph processing time 
+Graph processing time
 
 - Proportional to the amount of data processed
 - Not increasing exponentially with the number of relationships traversed
 
-# 
+#
 
 ![Implementing a graph as a relational database](https://dist.neo4j.com/wp-content/uploads/20181218005826/non-native-graph-database-relying-on-index.png)
 
