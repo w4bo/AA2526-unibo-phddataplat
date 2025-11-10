@@ -988,7 +988,7 @@ Matteo Francia <br> DISI — University of Bologna <br> m.francia@unibo.it
 
 <section id="distributed-databases" class="title-slide slide level1 center" data-background-color="#121011">
 <h1>Distributed databases</h1>
-<p>New types of databases have emerged.</p>
+<p>After the relational model <span class="citation" data-cites="DBLP:journals/cacm/Codd70">(<a href="#/references" role="doc-biblioref" onclick="">Codd 1970</a>)</span> new types of databases have emerged.</p>
 </section>
 
 <section id="strengths-of-rdbmss" class="title-slide slide level1 center">
@@ -1076,12 +1076,12 @@ Matteo Francia <br> DISI — University of Bologna <br> m.francia@unibo.it
 <p><em>Google, 2005</em></p>
 <ul>
 <li>Goal: handle Big Data (web indexing, Maps, Gmail, etc.)</li>
-<li>Solution: <em>BigTable</em>, designed for scalability and high performance on Petabytes of data</li>
+<li>Solution: <em>BigTable</em> <span class="citation" data-cites="DBLP:journals/tocs/ChangDGHWBCFG08">(<a href="#/references" role="doc-biblioref" onclick="">Chang et al. 2008</a>)</span>, designed for scalability and high performance on Petabytes of data</li>
 </ul>
 <p><em>Amazon, 2007</em></p>
 <ul>
 <li>Goal: ensure the availability and reliability of its e-commerce service 24/7</li>
-<li>Solution: <em>DynamoDB</em>, characterized by strong simplicity for data storage and manipulation</li>
+<li>Solution: <em>DynamoDB</em> <span class="citation" data-cites="sivasubramanian2012amazon">(<a href="#/references" role="doc-biblioref" onclick="">Sivasubramanian 2012</a>)</span>, characterized by strong simplicity for data storage and manipulation</li>
 </ul>
 </section>
 
@@ -1277,8 +1277,8 @@ Matteo Francia <br> DISI — University of Bologna <br> m.francia@unibo.it
 
 <img data-src="img/slides71.png" class="r-stretch quarto-figure-center"><p class="caption">Relational implementation</p></section>
 
-<section id="graph-data-model" class="title-slide slide level1 center">
-<h1>Graph: data model</h1>
+<section id="graph-data-model-dblpconficdeangles12" class="title-slide slide level1 center">
+<h1>Graph: data model <span class="citation" data-cites="DBLP:conf/icde/Angles12">(<a href="#/references" role="doc-biblioref" onclick="">Angles 2012</a>)</span></h1>
 <p>Each DB contains one or more <em>graphs</em></p>
 <ul>
 <li>Each graph contains <em>vertices</em> and <em>arcs</em></li>
@@ -2131,6 +2131,15 @@ Matteo Francia <br> DISI — University of Bologna <br> m.francia@unibo.it
 <h1>References</h1>
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-DBLP:conf/icde/Angles12" class="csl-entry" role="listitem">
+Angles, Renzo. 2012. <span>“A Comparison of Current Graph Database Models.”</span> In <em>Workshops Proceedings of the <span>IEEE</span> 28th International Conference on Data Engineering, <span>ICDE</span> 2012, Arlington, VA, USA, April 1-5, 2012</em>, edited by Anastasios Kementsietsidis and Marcos Antonio Vaz Salles, 171–77. <span>IEEE</span> Computer Society. <a href="https://doi.org/10.1109/ICDEW.2012.31">https://doi.org/10.1109/ICDEW.2012.31</a>.
+</div>
+<div id="ref-DBLP:journals/tocs/ChangDGHWBCFG08" class="csl-entry" role="listitem">
+Chang, Fay, Jeffrey Dean, Sanjay Ghemawat, Wilson C. Hsieh, Deborah A. Wallach, Michael Burrows, Tushar Chandra, Andrew Fikes, and Robert E. Gruber. 2008. <span>“Bigtable: <span>A</span> Distributed Storage System for Structured Data.”</span> <em><span>ACM</span> Trans. Comput. Syst.</em> 26 (2): 4:1–26. <a href="https://doi.org/10.1145/1365815.1365816">https://doi.org/10.1145/1365815.1365816</a>.
+</div>
+<div id="ref-DBLP:journals/cacm/Codd70" class="csl-entry" role="listitem">
+Codd, E. F. 1970. <span>“A Relational Model of Data for Large Shared Data Banks.”</span> <em>Commun. <span>ACM</span></em> 13 (6): 377–87. <a href="https://doi.org/10.1145/362384.362685">https://doi.org/10.1145/362384.362685</a>.
+</div>
 <div id="ref-dean2008mapreduce" class="csl-entry" role="listitem">
 Dean, Jeffrey, and Sanjay Ghemawat. 2008. <span>“MapReduce: Simplified Data Processing on Large Clusters.”</span> <em>Communications of the ACM</em> 51 (1): 107–13.
 </div>
@@ -2139,6 +2148,9 @@ Meijer, Erik. 2012. <span>“Your Mouse Is a Database.”</span> <em>Communicati
 </div>
 <div id="ref-shvachko2010hadoop" class="csl-entry" role="listitem">
 Shvachko, Konstantin, Hairong Kuang, Sanjay Radia, and Robert Chansler. 2010. <span>“The Hadoop Distributed File System.”</span> In <em>2010 IEEE 26th Symposium on Mass Storage Systems and Technologies (MSST)</em>, 1–10. Ieee.
+</div>
+<div id="ref-sivasubramanian2012amazon" class="csl-entry" role="listitem">
+Sivasubramanian, Swaminathan. 2012. <span>“Amazon dynamoDB: A Seamlessly Scalable Non-Relational Database Service.”</span> In <em>Proceedings of the 2012 ACM SIGMOD International Conference on Management of Data</em>, 729–30.
 </div>
 <div id="ref-zaharia2010spark" class="csl-entry" role="listitem">
 Zaharia, Matei, Mosharaf Chowdhury, Michael J Franklin, Scott Shenker, and Ion Stoica. 2010. <span>“Spark: Cluster Computing with Working Sets.”</span> In <em>2nd USENIX Workshop on Hot Topics in Cloud Computing (HotCloud 10)</em>.
