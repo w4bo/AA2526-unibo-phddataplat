@@ -19,11 +19,11 @@ Data model heterogeneity
 * Support multiple models in the same database
 * Or integrate data from different databases using different query languages
 
-Inter-collection: different records in __different__ collections have different schemas
+Inter-collection: different records in **different** collections have different schemas
 
 * Not a new problem: think federated databases, corporate mergers, etc.
 
-Intra-collection: different records in __the same__ collection have different schemas
+Intra-collection: different records in **the same** collection have different schemas
 
 * Emerged with NoSQL databases
 * Reconcile inconsistent versions of the same data (inter- or intra-collection)
@@ -40,10 +40,10 @@ Some DBMSs offer multi-model support.
     * KV implementable as a table with two fields: a string key, and a blob value
     * Cypher query language on top of a relational implementation of a graph
     * Hstore data type in PostgreSQL for wide-column-like implementation
-    * __Scalabilty issue remains__
+    * **Scalabilty issue remains**
 * Multi-model NoSQL DBMSs
     * ArangoDB, OrientDB
-    * __Support all NoSQL data models, but not the relational one__
+    * **Support all NoSQL data models, but not the relational one**
 
 Some approaches suggest strategies to model everything within RDBMSs
 
@@ -54,30 +54,30 @@ Some approaches suggest strategies to model everything within RDBMSs
 
 Federated database system
 
-* __Homogeneous__ data stores, exposes a __single__ standard query interface
+* **Homogeneous** data stores, exposes a **single** standard query interface
 * Features a mediator-wrapper architecture, employs schema-mapping and entity-merging techniques for integration of relational data
 
 Polyglot system
 
-* __Homogeneous__ data stores, exposes __multiple__ query interfaces
+* **Homogeneous** data stores, exposes **multiple** query interfaces
 * Takes advantage of the semantic expressiveness of multiple interfaces (e.g., declarative, procedural)
 
 Multistore system
 
-* __Heterogeneous__ data stores, exposes a __single__ query interface
+* **Heterogeneous** data stores, exposes a **single** query interface
 * Provides a unified querying layer by adopting ontologies and applying schema-mapping and entity-resolution techniques
 
 Polystore system
 
-* __Heterogeneous__ data stores, exposes __multiple__ query interfaces
+* **Heterogeneous** data stores, exposes **multiple** query interfaces
 * Choose from a variety of query interfaces to seamlessly query data residing in multiple data stores
 
 # Advanced solutions
 
 The challenge is to balance two often conflicting forces.
 
-* __Location Independence__: A query is written, and the system figures out which storage engine it targets
-* __Semantic Completeness__: A query can exploit the full set of features provided by a storage engine
+* **Location Independence**: A query is written, and the system figures out which storage engine it targets
+* **Semantic Completeness**: A query can exploit the full set of features provided by a storage engine
 
 Example of a polystore
 
@@ -90,10 +90,10 @@ Example of a polystore
 
 BigDAWG middleware consists of
 
-* __Optimizer__: parses the input query and creates a set of viable query plan trees with possible engines for each subquery
-* __Monitor__: uses performance data from prior queries to determine the query plan tree with the best engine for each subquery
-* __Executor__: figures out how to best join the collections and then executes the query
-* __Migrator__: moves data from engine to engine when the plan calls for such data motion
+* **Optimizer**: parses the input query and creates a set of viable query plan trees with possible engines for each subquery
+* **Monitor**: uses performance data from prior queries to determine the query plan tree with the best engine for each subquery
+* **Executor**: figures out how to best join the collections and then executes the query
+* **Migrator**: moves data from engine to engine when the plan calls for such data motion
 
 ![Middleware](img/phdslides_106.png)
 
@@ -101,7 +101,7 @@ BigDAWG middleware consists of
 
 ... and of course we have metadata
 
-__Catalog__: stores metadata about the system
+**Catalog**: stores metadata about the system
 
 * Databases: Databases, their engine membership, and connection authentication information.
 * Objects: Data objects (i.e., tables), field names, and object-to-database membership.
@@ -121,16 +121,16 @@ Most notable multistore/polystore proposals
 
 What else is there?
 
-* __Entity resolution__
+* **Entity resolution**
   * Every approach needs some kind of integrated knowledge
   * Ample research from federated database systems
   * Usually "out-of-scope"
-* Management of __schema heterogeneity __ and __data inconsistency__
+* Management of **schema heterogeneity ** and **data inconsistency**
   * Usually addressed as different problems in the literature
 
 # Schema heterogeneity
 
-Heterogeneous data stored with variant schemata and structural forms
+Heterogeneous data stored with variant schemas and structural forms
 
 * Missing/additional attributes
 * Different names/types of attributes
@@ -150,11 +150,11 @@ Early work on XML
 
 Recent work on JSON
 
-* __Concise view__: a single representation for all schema variations
+* **Concise view**: a single representation for all schema variations
     * Union of all attributes [@DBLP:conf/btw/KlettkeSS15]
     * A _skeleton _ as the smallest set of core attributes according to a frequency-based formula [@DBLP:journals/pvldb/WangHZS15]
-* __Comprehensive view__: multiple representations (a different schema for every document) [@DBLP:conf/er/RuizMM15]
-* __Schema profile__: _explain why _ there are different schemas [@DBLP:journals/is/GallinucciGR18]
+* **Comprehensive view**: multiple representations (a different schema for every document) [@DBLP:conf/er/RuizMM15]
+* **Schema profile**: _explain why _ there are different schemas [@DBLP:journals/is/GallinucciGR18]
 
 # Schema profiling
 
@@ -166,7 +166,7 @@ Schema profiles explain
 The problem of schema profiling is quite similar to a classification problem.
 
 * Classifiers are also used to describe the rules for assigning a class to an observation based on the other observation features
-* Based on the requirements collected from potential users, __decision trees __ emerged as the most adequate
+* Based on the requirements collected from potential users, **decision trees ** emerged as the most adequate
 
 | **SchemaID** | User | Activity | Weight | Duration | Repetitions |
 |:-: |:-: |:-: |:-: |:-: |:-: |
@@ -177,9 +177,9 @@ The problem of schema profiling is quite similar to a classification problem.
 
 # Schema profiling
 
-The __documents__ are the  **observations**
+The **documents** are the **observations**
 
-The __schema__ are the  **classes**
+The **schema** are the **classes**
 
 ![Schema profiling](img/phdslides_107.png)
 
@@ -213,18 +213,17 @@ Definition of schema profile characteristics
 
 ::::{.columns}
 :::{.column width="50%"}
-![](img/phdslides_111.png)
+![Value-based (VB)](img/exp1.png)
 :::
 :::{.column width="50%"}
-
-![](img/phdslides_112.png)
+![Schema-based (SB)](img/exp2.png)
 :::
 ::::
 
 Value-based (VB) conditions are preferred to schema-based (SB) ones
 
-* SB: __acknowledge__ a difference between schemata
-* VB: __explain__ it in terms of the values taken by an attribute
+* SB: **acknowledge** a difference between schemas
+* VB: **explain** it in terms of the values taken by an attribute
 
 The fewer the SB conditions, the more explicativeness
 
@@ -232,44 +231,40 @@ The fewer the SB conditions, the more explicativeness
 
 A decision tree is precise if all the leaves are pure.
 
-* A leaf is __pure__ if all its observations belong to the __same class__
-* Leaf vj is pure if _entropy(_ _v_ _j_ _) = 0_
-
-__Entropy__ is strictly related to __precision__: divisive approaches typically stop only when the leaves are all pure
+* A leaf $v_j$ is **pure** if all its observations belong to the **same class** (i.e., $entropy(v_j) = 0$)
+* **Entropy** is strictly related to **precision**: divisive approaches typically stop only when the leaves are all pure
 
 ::::{.columns}
 :::{.column width="50%"}
-![](img/polyglot06.png)
+![Entropy formulation](img/polyglot07.png)
 :::
 :::{.column width="50%"}
-![](img/polyglot07.png)
+![Leaf purity](img/polyglot06.png)
 :::
 ::::
 
 # Precision and conciseness
 
-__Minimization of entropy__ often leads to __splitting observations__ of the same class __among several leaves__
+**Minimization of entropy** often leads to **splitting observations** of the same class **among several leaves**
 
 * Entropy's sole focus is on node purity
 * More frequent when the number of classes is high
 
-Typically, precision is more important than readability.
-
-In schema profiling, this is a critical problem.
-
-* __It conflicts with the conciseness requirement__
-
 <div></div>
 
-![](img/polyglot08.png)
+![Documents with the same schema are sparse](img/polyglot08.png)
+
+Typically, precision is more important than readability.
+
+* In schema profiling, readability is a critical problem.
+* **It conflicts with the conciseness requirement**
 
 # Conciseness
 
-A maximally concise schema profile is one where there is __a single rule for each schema__
+A maximally concise schema profile is one where there is *a single rule for each schema*
 
-* **__Schema entropy__**: inverts the original definition of entropy, relating it to the __purity of the schemata __ instead of the purity of the leaves
-  * Entropy: __a leaf is pure__ if it contains only documents with the __same class__
-  * Schema entropy: __a schema is pure__ if all its documents are in the __same leaf__
+* Entropy: **a leaf is pure** if it contains only documents with the **same class**
+* Schema entropy: **a schema is pure** if all its documents are in the **same leaf**
 
 ::::{.columns}
 :::{.column width="50%"}
@@ -280,30 +275,34 @@ A maximally concise schema profile is one where there is __a single rule for eac
 :::
 ::::
 
+# Conciseness
+
+![Purity](img/conc1.png)
+
 # Schema profiling example
 
-![](img/polyglot09.png)
+![Examples](img/polyglot09.png)
 
 # Schema profiling algorithm
 
 Introduced the notion of _schema entropy loss_
 
-![](img/phdslides_116.png)
+![Loss](img/phdslides_116.png)
 
 Defined a criterion for comparing two splits in the decision tree
 
-![](img/phdslides_117.png)
+![Gain](img/phdslides_117.png)
 
 # Querying the data
 
-One thing is understanding the data; another thing is enabling querying over heterogeneous data.
+One thing is understanding the data; another is *enabling querying over heterogeneous data*.
 
 What we need
 
-* Integration techniques to solve schema heterogeneity and produce a global knowledge base
-* Query rewriting techniques to translate queries on the global knowledge to queries on the actual schemas
+1. *Integration techniques* to solve schema heterogeneity and produce a global knowledge base
+2. *Query rewriting techniques* to translate queries on the global knowledge to queries on the actual schemas
 
-(Focus on OLAP queries)
+Focus on OLAP queries
 
 # Integration techniques
 
@@ -314,7 +313,7 @@ Integration at the intensional level
   * Schema matching and mapping [@DBLP:journals/vldb/RahmB01]
     * A match is a correspondence between attributes
     * A mapping is a function to explain the relationship between attributes
-      * E.g., S1.FullName = CONCAT(S2.FirstName, S2.LastName)
+      * E.g., `S1.FullName = CONCAT(S2.FirstName, S2.LastName)`
 
 Integration at the extensional level
 
@@ -337,7 +336,7 @@ A first approach to OLAP on heterogeneous data
 
 ::::{.columns}
 :::{.column width="50%"}
-![](img/phdslides_119.png)
+![Execution plan](img/phdslides_119.png)
 :::
 :::{.column width="50%"}
 ![[@DBLP:journals/is/GallinucciGR19]](img/phdslides_120.png)
@@ -362,25 +361,25 @@ Some limitations
 
 ![[@DBLP:books/sp/20/Curry20a]](img/phdslides_122.png)
 
-#
+# Dataspace
 
 Replace the global schema with a _dataspace_ 
 [@DBLP:books/sp/20/Curry20a]
 
-  * A dataspace is a lightweight integration approach providing basic query expressive power on a variety of data sources, bypassing the complexity of traditional integration approaches and possibly returning best-effort or approximate answers [@DBLP:journals/sigmod/FranklinHM05]
+> A **dataspace** is a lightweight integration approach providing basic query expressive power on a variety of data sources, bypassing the complexity of traditional integration approaches and possibly returning best-effort or approximate answers [@DBLP:journals/sigmod/FranklinHM05]
 
 Replace traditional integration with a _pay-as-you-go_ approach.
 
-  * The system incrementally understands and integrates the data over time by asking users to confirm matches as the system runs [@DBLP:conf/sigmod/JefferyFH08]
+* The system incrementally integrates data over time by asking users to confirm matches as the system runs [@DBLP:conf/sigmod/JefferyFH08]
 
-#
+# Dataspace
 
 Introducing new concepts
 
-  * Entities: representation of a real-world entity
-    * E.g., customers, products, orders, etc.
-  * Features: univocal representation of a group of semantically equivalent attributes
-    * E.g., CustomerName = { S1.name, S2.fullname, S3.customer, S4.cName, ... }
+  * *Entities*: representation of a real-world entity
+    * E.g., `Customers`, `Products`, `Orders`, etc.
+  * *Features*: univocal representation of a group of semantically equivalent attributes
+    * E.g., `CustomerName = { S1.name, S2.fullname, S3.customer, S4.cName, ... }`
     * Mapping functions must be defined/definable between every couple
 
 The dataspace becomes an abstract view in terms of features and entities.
@@ -391,41 +390,41 @@ What it looks like
 
 ::::{.columns}
 :::{.column width="50%"}
-![](img/phdslides_123.png)
+![Entities and features](img/phdslides_123.png)
 :::
 :::{.column width="50%"}
-![](img/phdslides_124.png)
+![Execution plan](img/phdslides_124.png)
 :::
 ::::
 
 #
 
 ::::{.columns}
-:::{.column width="80%"}
+:::{.column width="60%"}
 Previous issues
 
-  * Expensive querying
+  * *Expensive querying*
     * Schema heterogeneity solved at query time
     * Requires complex - but feasible - algorithms
-  * Expensive integration
+  * *Expensive integration*
     * Pay-as-you-go approach is quicker, iterative, and more flexible
     * Dataspace is conceptual, untied to logical data modeling
 
-Now we have a multistore dealing with multiple data models and schema heterogeneity [@DBLP:journals/vldb/ForresiGGH21]
+Now we have a **multistore** dealing with multiple data models and schema heterogeneity
 
 :::
-:::{.column width="20%"}
-![](img/phdslides_125.png)
+:::{.column width="30%"}
+![[@DBLP:journals/vldb/ForresiGGH21]](img/phdslides_125.png)
 :::
 ::::
 
 # Data inconsistency
 
-Intra-collection
+*Intra-collection*
 
   * Due to denormalized data modeling
 
-Inter-collection
+*Inter-collection*
 
   * Due to analytical data offloading
     * To reduce costs and optimize performance, the historical depth of databases is kept limited
@@ -442,7 +441,7 @@ Solutions?
 
 # Data fusion
 
-Merge operator
+*Merge operator*
 
   * Originally introduced as "full outer join merge" [@DBLP:journals/is/NaumannFL04]
   * Aims to keep as much information as possible when joining the records of two schemas
@@ -450,25 +449,20 @@ Merge operator
     * Resolve mappings by providing transcoded output
     * Resolving conflicts whenever necessary
 
-![](img/phdslides_126.png)
+::::{.columns}
+:::{.column width="50%"}
+![Merge operator](img/phdslides_126.png)
+:::
+:::{.column width="50%"}
+:::{.fragment}
+![Fusion and entity resolution](img/phdslides_127.png)
+:::
+:::
+::::
 
-# 
+# Merge operator
 
-Merge operator
-
-  * Originally introduced as "full outer join merge" [@DBLP:journals/is/NaumannFL04]
-  * Aims to keep as much information as possible when joining the records of two schemas
-    * Avoid any loss of records
-    * Resolve mappings by providing transcoded output
-    * Resolving conflicts whenever necessary
-
-![](img/polyglot10.png)
-
-# 
-
-Merge operator
-
-![](img/phdslides_128.png)
+![Merge operator](img/phdslides_128.png)
 
 # On-the-fly data fusion
 
@@ -476,14 +470,14 @@ Merge operator
 :::{.column width="50%"}
 Merge operator in a query plan
 
-  * Take the data from heterogeneous sources (in different colors)
-  * Extract records of the single entities (e.g., customer, products)
-  * Merge each entity
-  * Join and produce the final result
+* Take the data from heterogeneous sources (in different colors)
+* Extract records of the single entities (e.g., customer, products)
+* Merge each entity
+* Join and produce the final result
 
 Now we have a multistore dealing with multiple data models, schema heterogeneity, and data inconsistency
 
-  * Are we done? Not yet!
+* Are we done? Not yet!
 
 :::
 :::{.column width="50%"}
@@ -491,26 +485,26 @@ Now we have a multistore dealing with multiple data models, schema heterogeneity
 :::
 ::::
 
-#
+# On-the-fly data fusion
 
 ::::{.columns}
 :::{.column width="50%"}
 
 Main issue: performance
 
-  * Collections accessed more than once
-  * Most effort pulled to the middleware
+* Collections accessed more than once
+* Most effort pulled to the middleware
 
 What can we do about it?
 
-  * Exploit more the local DBMSs
-  * Exploit local data modelling
-  * Carry out multi-entity merges
+* Exploit more the local DBMSs
+* Exploit local data modelling
+* Carry out multi-entity merges
 
 Issues
 
-  * Several query plans could be devised
-  * Hard to find the most efficient one
+* Several query plans could be devised
+* Hard to find the most efficient one
 
 :::
 :::{.column width="50%"}
@@ -522,11 +516,11 @@ Issues
 
 Logical rules to transform a query plan into a more efficent one
 
-  * Predicate push-down: applying selection predicates as close to the source as possible
+* *Predicate push-down*: applying selection predicates as close to the source as possible
     * Not always feasible (e.g., in the presence of inconsistent data)
-  * Column pruning: extracting the only attributes relevant for the query
+* *Column pruning*: extracting the only attributes relevant for the query
     * Not for granted when writing a custom query language
-  * Join sequence reordering: changing the order to do binary joins
+* *Join sequence reordering*: changing the order to do binary joins
     * Not so easy when merges are involved as well
     * Not so easy when data comes from different sources
 
@@ -562,19 +556,19 @@ Depends on several factors
 
 Cost-based evaluation of different plans
 
-  * White-box cost modelling
+* *White-box cost modelling*
     * Associate theoretical formulas with each query operator, then build up the cost of a query by summing the cost of each operation
     * Cost can be determined in terms of disk I/O, CPU, and network
     * Requires an enormous effort to effectively model the many factors that contribute to query costs in a complex and heterogeneous environment like a multistore
-  * Black-box cost modelling
+* *Black-box cost modelling*
     * Hide the behavior of an execution engine within a black-box, where the known information is mostly limited to the issued queries and the given response times
     * Cost is determined in terms of time
     * Easily adapts to evolving environments
     * Suffers from cold-start
 
-# 
+# Cost modelling
 
-White-box cost modellingexample [@DBLP:conf/adbis/ForresiFGG21]
+White-box cost modelling example [@DBLP:conf/adbis/ForresiFGG21]
 
 ::::{.columns}
 :::{.column width="50%"}
@@ -585,9 +579,9 @@ White-box cost modellingexample [@DBLP:conf/adbis/ForresiFGG21]
 :::
 ::::
 
-#
+# Cost modelling
 
-Black-box cost modellingexample [@DBLP:journals/isf/ForresiFGG23]
+Black-box cost modelling example [@DBLP:journals/isf/ForresiFGG23]
 
 ![](img/polyglot12.png)
 

@@ -20,13 +20,13 @@ Knowledge exploitation
 
 A classification of metadata [@sharma2016architecting]
 
-* __Technical__ metadata
+* **Technical** metadata
     * Capture the form and structure of each dataset
     * E.g.: type of data (text, JSON, Avro); structure of the data (the fields and their types)
-* __Operational__ metadata
+* **Operational** metadata
     * Capture lineage, quality, profile, and provenance of the data
     * E.g.: source and target locations of data, size, number of records, and lineage
-* __Business__ metadata
+* **Business** metadata
     * Captures what it all means to the user
     * E.g.: business names, descriptions, tags, quality, and masking rules for privacy
 
@@ -34,15 +34,15 @@ A classification of metadata [@sharma2016architecting]
 
 Another classification of metadata [@DBLP:conf/adbis/SawadogoSFFLD19]
 
-* __Intra-object__ metadata
+* **Intra-object** metadata
     * _Properties_ provide a general description of an object in the form of key-value pairs
     * _Summaries and previews_ provide an overview of the content or structure of an object
     * _Semantic metadata_ are annotations that help understand the meaning of data
-* __Inter-object__ metadata
+* **Inter-object** metadata
     * _Objects groupings_ organize objects into collections, each object being able to belong simultaneously to several collections
     * _Similarity links_ reflect the strength of the similarity between two objects
     * _Parenthood relationships_ reflect the fact that an object can be the result of joining several others
-* __Global__ metadata
+* **Global** metadata
     * _Semantic resources_ , i.e., knowledge bases (ontologies, taxonomies, thesauri, dictionaries) used to generate other metadata and improve analyses
     * _Indexes_ , i.e., data structures that help find an object quickly
     * _Logs_ , used to track user interactions with the data lake
@@ -376,7 +376,7 @@ A classification of functionalities enabled by metadata
   * Usage tracking
     * Records the interactions between users and the data
 
-Sawadogo, P. N., Scholly, E., Favre, C., Ferey, E., Loudcher, S., & Darmont, J. (2019, September). __Metadata systems for data lakes: models and features.__ In _European conference on advances in databases and information systems _ (pp. 440-451). Springer, Cham.
+Sawadogo, P. N., Scholly, E., Favre, C., Ferey, E., Loudcher, S., & Darmont, J. (2019, September). **Metadata systems for data lakes: models and features.** In _European conference on advances in databases and information systems _ (pp. 440-451). Springer, Cham.
 
 # Managing data platforms
 
@@ -542,9 +542,9 @@ Provenance: metadata pertaining to the history of a data item
   * Encompasses meta-data about entities, data, processes, activities, and persons involved in the production process
   * Essentially, it describes a transformation pipeline, including the origin of objects and the operations they are subject to
 
-J.Wang, D. Crawl, S. Purawat, M. H. Nguyen, I. Altintas, __Big data provenance: Challenges, state of the art and opportunities__ , in: _Proc. _ _BigData_ , Santa Clara, CA, USA, 2015, pp. 2509–2516.
+J.Wang, D. Crawl, S. Purawat, M. H. Nguyen, I. Altintas, **Big data provenance: Challenges, state of the art and opportunities** , in: _Proc. _ _BigData_ , Santa Clara, CA, USA, 2015, pp. 2509–2516.
 
-M. Herschel, R. Diestelk¨amper, H. Ben Lahmar, __A survey on provenance: What for? What form? What from?__ , _VLDB J._ 26 (6) (2017) 881–906.
+M. Herschel, R. Diestelk¨amper, H. Ben Lahmar, **A survey on provenance: What for? What form? What from?** , _VLDB J._ 26 (6) (2017) 881–906.
 
 #
 
@@ -653,7 +653,7 @@ PROV: a standard for provenance modeling
 
 ![](img/phdslides_207.png)
 
-L. Moreau, P. T. Groth, __Provenance: An Introduction to PROV__ , _Synthesis Lectures on the Semantic Web: Theory and Technology_ , Morgan & Claypool Publishers, 2013.
+L. Moreau, P. T. Groth, **Provenance: An Introduction to PROV** , _Synthesis Lectures on the Semantic Web: Theory and Technology_ , Morgan & Claypool Publishers, 2013.
 
 #
 
@@ -663,15 +663,15 @@ Knowledge exploitation
 
 Provenance functionalities (activated by metadata)
 
-  * __Data quality__
+  * **Data quality**
     * Monitoring accuracy, precision, and recall of produced objects to notify the data scientist when a transformation pipeline is not behaving as expected
-  * __Debugging__
+  * **Debugging**
     * Inferring the cause of pipeline failures is challenging and requires an investigation of the overall processing history, including input objects and the environmental settings
-  * __Reproducibility__
+  * **Reproducibility**
     * Re-execution of all or part of the operations belonging to a pipeline
-  * __Trustworthiness__
+  * **Trustworthiness**
     * Help data scientists to trust the objects produced by tracing them back to their sources and storing the agents who operated on those objects
-  * __Versioning__
+  * **Versioning**
     * Marking a generated object and its versions (e.g., due to changes in a database schema) helps in identifying relevant objects along with their semantic versions, and to operate with legacy objects
 
 Knowledge exploitation
@@ -680,13 +680,13 @@ Knowledge exploitation
 
 Measures of centrality
 
-  * __Betweenness centrality (A)__
+  * **Betweenness centrality (A)**
     * Number of shortest paths between two nodes that pass from a certain node
-  * __Closeness centrality (B)__
+  * **Closeness centrality (B)**
     * Sum of distances to all other nodes.
-  * __Eigenvector centrality (C)__
+  * **Eigenvector centrality (C)**
     * The score of a node is influenced by score of adjacent nodes (Page rank)
-  * __Degree centrality (D)__
+  * **Degree centrality (D)**
     * Number of adjacent nodes
 
 ![](img/phdslides_208.png)
@@ -698,14 +698,14 @@ Knowledge exploitation
 Some current research directions
 
   * Expand PROV to better suite big data scenarios
-    * Y. Gao, X. Chen and X. Du, __A Big Data Provenance Model for Data Security Supervision Based on PROV-DM Model__ , in _IEEE Access_ , vol. 8, pp. 38742-38752, 2020.
+    * Y. Gao, X. Chen and X. Du, **A Big Data Provenance Model for Data Security Supervision Based on PROV-DM Model** , in _IEEE Access_ , vol. 8, pp. 38742-38752, 2020.
   * Define provenance-based approaches to measure the quality of big data
-    * Taleb, I., Serhani, M.A., Bouhaddioui, C. et al. __Big data quality framework: a holistic approach to continuous quality management__ . _J Big Data _ 8, 76 (2021).
+    * Taleb, I., Serhani, M.A., Bouhaddioui, C. et al. **Big data quality framework: a holistic approach to continuous quality management** . _J Big Data _ 8, 76 (2021).
   * An outline of the challenges, including granularity identification, integration, security concerns
-    * A. Chacko and S. D. Madhu Kumar, __Big data provenance research directions__ ,  _TENCON 2017 - 2017 IEEE Region 10 Conference_ , 2017, pp. 651-656, doi: 10.1109/TENCON.2017.8227942.
+    * A. Chacko and S. D. Madhu Kumar, **Big data provenance research directions** ,  _TENCON 2017 - 2017 IEEE Region 10 Conference_ , 2017, pp. 651-656, doi: 10.1109/TENCON.2017.8227942.
   * Blockchain-based provenance systems
-    * Dang, T. K., & Duong, T. A. (2021). __An effective and elastic blockchain-based provenance preserving solution for the open data__ .  _International Journal of Web Information Systems_ .
-    * Ruan, P., Dinh, T. T. A., Lin, Q., Zhang, M., Chen, G., & Ooi, B. C. (2021). __LineageChain__ __: a fine-grained, secure and efficient data provenance system for blockchains__ .  _The VLDB Journal_ ,  _30_ (1), 3-24.
+    * Dang, T. K., & Duong, T. A. (2021). **An effective and elastic blockchain-based provenance preserving solution for the open data** .  _International Journal of Web Information Systems_ .
+    * Ruan, P., Dinh, T. T. A., Lin, Q., Zhang, M., Chen, G., & Ooi, B. C. (2021). **LineageChain** **: a fine-grained, secure and efficient data provenance system for blockchains** .  _The VLDB Journal_ ,  _30_ (1), 3-24.
 
 Knowledge exploitation
 
@@ -746,7 +746,7 @@ Knowledge exploitation
 
 Orchestration requirements & challenges
 
-Barika, M., Garg, S., Zomaya, A. Y., Wang, L., Moorsel, A. V., & Ranjan, R. (2019). __Orchestrating big data analysis workflows in the cloud: research challenges, survey, and future directions__ .  _ACM Computing Surveys (CSUR)_ ,  _52_ (5), 1-41.
+Barika, M., Garg, S., Zomaya, A. Y., Wang, L., Moorsel, A. V., & Ranjan, R. (2019). **Orchestrating big data analysis workflows in the cloud: research challenges, survey, and future directions** .  _ACM Computing Surveys (CSUR)_ ,  _52_ (5), 1-41.
 
 #
 
@@ -766,7 +766,7 @@ Orchestration requirements
   * R4 Synchronization and asynchronization
     * Manage the control and data flow dependencies across analytics tasks
 
-Barika, M., Garg, S., Zomaya, A. Y., Wang, L., Moorsel, A. V., & Ranjan, R. (2019). __Orchestrating big data analysis workflows in the cloud: research challenges, survey, and future directions__ .  _ACM Computing Surveys (CSUR)_ ,  _52_ (5), 1-41.
+Barika, M., Garg, S., Zomaya, A. Y., Wang, L., Moorsel, A. V., & Ranjan, R. (2019). **Orchestrating big data analysis workflows in the cloud: research challenges, survey, and future directions** .  _ACM Computing Surveys (CSUR)_ ,  _52_ (5), 1-41.
 
 #
 
@@ -787,7 +787,7 @@ Orchestration requirements
     * Ensure that everything is streamlined and executed as anticipated
     * As failures could happen at any time, handle those failures when they occur or predicting them before they happen
 
-Barika, M., Garg, S., Zomaya, A. Y., Wang, L., Moorsel, A. V., & Ranjan, R. (2019). __Orchestrating big data analysis workflows in the cloud: research challenges, survey, and future directions__ .  _ACM Computing Surveys (CSUR)_ ,  _52_ (5), 1-41.
+Barika, M., Garg, S., Zomaya, A. Y., Wang, L., Moorsel, A. V., & Ranjan, R. (2019). **Orchestrating big data analysis workflows in the cloud: research challenges, survey, and future directions** .  _ACM Computing Surveys (CSUR)_ ,  _52_ (5), 1-41.
 
 #
 
@@ -798,14 +798,14 @@ Knowledge exploitation
 Orchestration challenges
 
   * Cloud Platform Heterogeneity
-    * __Integration__ (different APIs, virtualization formats, pricing policies, hardware/software configurations)
-    * __Workflow Migration __ (e.g., to aspire to specific QoS features in the target cloud or better price)
+    * **Integration** (different APIs, virtualization formats, pricing policies, hardware/software configurations)
+    * **Workflow Migration ** (e.g., to aspire to specific QoS features in the target cloud or better price)
   * Cloud Resource Management
-    * __Resource Provisioning __ (selecting the right configuration of virtual resources; the resource configuration search space grows exponentially, and the problem is often NP-complete)
-    * __Resource-based Big Data Programming Frameworks Management __ (automatically select the configurations for both IaaS-level resource and PaaS-level framework to consistently accomplish the anticipated workflow-level SLA requirements, while maximizing the utilization of cloud datacenter resources)
-    * __Resource Volatility __ (at different levels: VM-level, big data progressing framework-level and workflow task-level)
+    * **Resource Provisioning ** (selecting the right configuration of virtual resources; the resource configuration search space grows exponentially, and the problem is often NP-complete)
+    * **Resource-based Big Data Programming Frameworks Management ** (automatically select the configurations for both IaaS-level resource and PaaS-level framework to consistently accomplish the anticipated workflow-level SLA requirements, while maximizing the utilization of cloud datacenter resources)
+    * **Resource Volatility ** (at different levels: VM-level, big data progressing framework-level and workflow task-level)
 
-Barika, M., Garg, S., Zomaya, A. Y., Wang, L., Moorsel, A. V., & Ranjan, R. (2019). __Orchestrating big data analysis workflows in the cloud: research challenges, survey, and future directions__ .  _ACM Computing Surveys (CSUR)_ ,  _52_ (5), 1-41.
+Barika, M., Garg, S., Zomaya, A. Y., Wang, L., Moorsel, A. V., & Ranjan, R. (2019). **Orchestrating big data analysis workflows in the cloud: research challenges, survey, and future directions** .  _ACM Computing Surveys (CSUR)_ ,  _52_ (5), 1-41.
 
 #
 
@@ -816,26 +816,26 @@ Knowledge exploitation
 Orchestration challenges
 
   * Data-related
-    * __Storage__ (where the data will be residing, which data format will be used)
-    * __Movement__ (minimize transfer rates, exploit _data locality _ in task-centric or worker-centric way)
-    * __Provenance__ (trade-off expressiveness with overhead)
-    * __Indexing__ (which dataset is worth indexing and how)
-    * __Security and Privacy __ (cryptography, access control, integrity, masking, etc.)
+    * **Storage** (where the data will be residing, which data format will be used)
+    * **Movement** (minimize transfer rates, exploit _data locality _ in task-centric or worker-centric way)
+    * **Provenance** (trade-off expressiveness with overhead)
+    * **Indexing** (which dataset is worth indexing and how)
+    * **Security and Privacy ** (cryptography, access control, integrity, masking, etc.)
 
-Barika, M., Garg, S., Zomaya, A. Y., Wang, L., Moorsel, A. V., & Ranjan, R. (2019). __Orchestrating big data analysis workflows in the cloud: research challenges, survey, and future directions__ .  _ACM Computing Surveys (CSUR)_ ,  _52_ (5), 1-41.
+Barika, M., Garg, S., Zomaya, A. Y., Wang, L., Moorsel, A. V., & Ranjan, R. (2019). **Orchestrating big data analysis workflows in the cloud: research challenges, survey, and future directions** .  _ACM Computing Surveys (CSUR)_ ,  _52_ (5), 1-41.
 
 Knowledge exploitation
 
 Orchestration challenges
 
   * Workflow-related
-    * __Specification Language __ (devising a high level, technology-/cloud-independent workflow language)
-    * __Initialization__ (subdivision into fragments considering dependencies, constraints, etc.)
-    * __Parallelization and Scheduling __ (with super-workflows defined at application and task level)
-    * __Fault-Tolerance__ (thing can go wrong at workflow-, application-, and cloud-level)
-    * __Security__ (securing workflow logic and computation)
+    * **Specification Language ** (devising a high level, technology-/cloud-independent workflow language)
+    * **Initialization** (subdivision into fragments considering dependencies, constraints, etc.)
+    * **Parallelization and Scheduling ** (with super-workflows defined at application and task level)
+    * **Fault-Tolerance** (thing can go wrong at workflow-, application-, and cloud-level)
+    * **Security** (securing workflow logic and computation)
 
-Barika, M., Garg, S., Zomaya, A. Y., Wang, L., Moorsel, A. V., & Ranjan, R. (2019). __Orchestrating big data analysis workflows in the cloud: research challenges, survey, and future directions__ .  _ACM Computing Surveys (CSUR)_ ,  _52_ (5), 1-41.
+Barika, M., Garg, S., Zomaya, A. Y., Wang, L., Moorsel, A. V., & Ranjan, R. (2019). **Orchestrating big data analysis workflows in the cloud: research challenges, survey, and future directions** .  _ACM Computing Surveys (CSUR)_ ,  _52_ (5), 1-41.
 
 #
 
@@ -894,7 +894,7 @@ E.g., on AWS (PUT, GET, DELETE), what about update?
 
 # CRISP-DM
 
-The  __CR__ oss  __I__ ndustry  __S__ tandard  __P__ rocess for  __D__ ata  __M__ ining ( _CRISP-DM_ ) is a process model that serves as the base for a [data science process](https://www.datascience-pm.com/data-science-process/). It has six sequential phases:
+The  **CR** oss  **I** ndustry  **S** tandard  **P** rocess for  **D** ata  **M** ining ( _CRISP-DM_ ) is a process model that serves as the base for a [data science process](https://www.datascience-pm.com/data-science-process/). It has six sequential phases:
 
   * Business understanding – What does the business need?
   * Data understanding – What data do we have / need? Is it clean?
@@ -913,9 +913,9 @@ The  __CR__ oss  __I__ ndustry  __S__ tandard  __P__ rocess for  __D__ ata�
 
 Tuning pipelines is hard
 
-  * At each __step__ , a technique must be selected
-  * For each technique, a set of __hyper-parameters__ must be set
-  * Each __hyper-parameter has its own search space__
+  * At each **step** , a technique must be selected
+  * For each technique, a set of **hyper-parameters** must be set
+  * Each **hyper-parameter has its own search space**
 
 ![](img/phdslides_219.png)
 
@@ -1084,19 +1084,19 @@ c2: ⇒   mandatory(⟨N ⟩, Cl).
 
 Settings:
 
-  * __Baseline__: 1 optimization it. of 60 mins;
-  * __PKB__ (Preliminary Knowledge Base):  1 optimization it. of 60 mins with non-empty LogicalKB;
-  * __IKA__ (Iterative Knowledge Augmentation): 4 optimization it. of 15 mins with empty LogicalKB;
-  * __PKB \+ IKA: __ 4 optimization it. of 15 mins  with non-empty LogicalKB.
+  * **Baseline**: 1 optimization it. of 60 mins;
+  * **PKB** (Preliminary Knowledge Base):  1 optimization it. of 60 mins with non-empty LogicalKB;
+  * **IKA** (Iterative Knowledge Augmentation): 4 optimization it. of 15 mins with empty LogicalKB;
+  * **PKB \+ IKA: ** 4 optimization it. of 15 mins  with non-empty LogicalKB.
 
 ![](img/phdslides_230.png)
 
 Settings:
 
-  * __Baseline__: 1 optimization it. of 60 mins;
-  * __PKB__ (Preliminary Knowledge Base):  1 optimization it. of 60 mins with non-empty LogicalKB;
-  * __IKA__ (Iterative Knowledge Augmentation): 4 optimization it. of 15 mins with empty LogicalKB;
-  * __PKB \+ IKA: __ 4 optimization it. of 15 mins  with non-empty LogicalKB.
+  * **Baseline**: 1 optimization it. of 60 mins;
+  * **PKB** (Preliminary Knowledge Base):  1 optimization it. of 60 mins with non-empty LogicalKB;
+  * **IKA** (Iterative Knowledge Augmentation): 4 optimization it. of 15 mins with empty LogicalKB;
+  * **PKB \+ IKA: ** 4 optimization it. of 15 mins  with non-empty LogicalKB.
 
 ![](img/phdslides_231.png)
 
@@ -1487,11 +1487,11 @@ We introduce COOL (COnversational OLap) [3]
 
 ![](img/phdslides_248.png)
 
-[1] Panos Vassiliadis, Patrick Marcel, Stefano Rizzi: Beyond roll-up's and drill-down's: An intentional analytics model to reinvent OLAP. __Inf__ __ormation__ __ Systems__ . (2019)
+[1] Panos Vassiliadis, Patrick Marcel, Stefano Rizzi: Beyond roll-up's and drill-down's: An intentional analytics model to reinvent OLAP. **Inf** **ormation** ** Systems** . (2019)
 
-[2] Matteo Francia, Matteo Golfarelli, Stefano Rizzi: A-BI\+: A framework for Augmented Business Intelligence. __Inf__ __ormation__ __ Systems__ . (2020)
+[2] Matteo Francia, Matteo Golfarelli, Stefano Rizzi: A-BI\+: A framework for Augmented Business Intelligence. **Inf** **ormation** ** Systems** . (2020)
 
-[3] Matteo Francia, Enrico Gallinucci, Matteo Golfarelli: COOL: A Framework for Conversational OLAP. __Inf__ __ormation__ __ Systems__ . (2021)
+[3] Matteo Francia, Enrico Gallinucci, Matteo Golfarelli: COOL: A Framework for Conversational OLAP. **Inf** **ormation** ** Systems** . (2021)
 
 #
 
@@ -1624,9 +1624,9 @@ Jagadish: The linguistic parse trees in our system are dependency parse trees, i
   * Users provided good feedback on the interface...
   * ... as well as on the interpretation accuracy
 
-|  | __Full Query__ |  | __OLAP operator__ |  |
+|  | **Full Query** |  | **OLAP operator** |  |
 |:-: |:-: |:-: |:-: |:-: |
-| __OLAP Familiarity__ | __Accuracy__ | __Time (s)__ | __Accuracy__ | __Time (s)__ |
+| **OLAP Familiarity** | **Accuracy** | **Time (s)** | **Accuracy** | **Time (s)** |
 | Low | 0.91 | 141 | 0.86 | 102 |
 | High | 0.91 | 97 | 0.92 | 71 |
 
@@ -1638,7 +1638,7 @@ Jagadish: The linguistic parse trees in our system are dependency parse trees, i
 
 ![](img/phdslides_260.png)
 
-[3] Matteo Francia, Enrico Gallinucci, Matteo Golfarelli: Conversational OLAP in Action. __EDBT (best demo award)__ 2021: 646-649
+[3] Matteo Francia, Enrico Gallinucci, Matteo Golfarelli: Conversational OLAP in Action. **EDBT (best demo award)** 2021: 646-649
 
 ![](img/phdslides_261.png)
 

@@ -14,22 +14,22 @@
 
 # Why data matters
 
-__Data-Driven Innovation__
+**Data-Driven Innovation**
 
   * Use of data and  **analytics** to foster new products, processes, and markets
   * Drive discovery and execution of innovation, achieving new services with a business value
 
-__Analytics__
+**Analytics**
 
 * A catch-all term for different business intelligence (BI)- and application-related initiatives
   * E.g., of analyzing information from a particular domain
   * E.g., applying BI capabilities to a specific content area (e.g., sales, service, supply chain)
 
-__Advanced Analytics__
+**Advanced Analytics**
 
 * (Semi-)Autonomous examination of data to discover deeper insights, make predictions, or generate recommendations (e.g., through data/text mining and machine learning)
 
-__Augmented Analytics__
+**Augmented Analytics**
 
 * Use of technologies such as machine learning and AI to assist with data preparation, insight generation, and insight explanation to augment how people explore and analyze data
 
@@ -585,7 +585,7 @@ HDFS is not ideal for some use cases:
 
 # Parquet
 
-A columnar storage format for efficient querying of __nested structures__ in a __flat format__
+A columnar storage format for efficient querying of **nested structures** in a **flat format**
 
 * Supported by most frameworks and query engines
 
@@ -1225,7 +1225,7 @@ Based on the user application and on the lineage graphs, Spark computes a  **log
 
 The DAG (Directed Acyclic Graph) is  **a sequence of computations performed on data**
 
-* Nodes are __RDDs__
+* Nodes are **RDDs**
 * Edges are operations on RDDs
 * The graph is Directed: transformations from a partition A to a partition B
 * The graph is Acyclic: transformations cannot return an old partition
@@ -1247,7 +1247,7 @@ counts.saveAsTextFile("hdfs://...")
 
 # DAG decomposed into stages
 
-The execution plan is compiled into physical __stages__
+The execution plan is compiled into physical **stages**
 
 * Stages' boundaries are defined by shuffle operations
 * Operations with narrow dependencies are pipelined as much as possible
@@ -1256,7 +1256,7 @@ The execution plan is compiled into physical __stages__
 
 # Stages decomposed into tasks
 
-The fundamental unit of execution is the one of __tasks__
+The fundamental unit of execution is the one of **tasks**
 
 * A task is created for each partition in the new RDD
 * Tasks are scheduled and assigned to the worker nodes based on data locality
