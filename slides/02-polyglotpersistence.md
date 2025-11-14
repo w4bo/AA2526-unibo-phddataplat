@@ -386,14 +386,14 @@ The dataspace becomes an abstract view in terms of features and entities.
 
 # New OLAP querying
 
-What it looks like
-
 ::::{.columns}
 :::{.column width="50%"}
 ![Entities and features](img/phdslides_123.png)
 :::
 :::{.column width="50%"}
+:::{.fragment}
 ![Execution plan](img/phdslides_124.png)
+:::
 :::
 ::::
 
@@ -548,23 +548,26 @@ Depends on several factors
 
 :::
 :::{.column width="50%"}
-![](img/polyglot11.png)
+![Normalized vs nested representation](img/polyglot11.png)
 :::
 ::::
 
 # Cost modelling
 
-Cost-based evaluation of different plans
 
-* *White-box cost modelling*
-    * Associate theoretical formulas with each query operator, then build up the cost of a query by summing the cost of each operation
-    * Cost can be determined in terms of disk I/O, CPU, and network
-    * Requires an enormous effort to effectively model the many factors that contribute to query costs in a complex and heterogeneous environment like a multistore
-* *Black-box cost modelling*
-    * Hide the behavior of an execution engine within a black-box, where the known information is mostly limited to the issued queries and the given response times
-    * Cost is determined in terms of time
-    * Easily adapts to evolving environments
-    * Suffers from cold-start
+*White-box cost modelling*
+
+  * Associate theoretical formulas with each query operator, then build up the cost of a query by summing the cost of each operation
+  * Cost can be determined in terms of disk I/O, CPU, and network
+  * Requires an enormous effort to effectively model the many factors that contribute to query costs in a heterogeneous multistore
+
+*Black-box cost modelling*
+
+* Hide the behavior of an execution engine within a black-box
+    * The known information is mostly limited to the issued queries and the given response times
+* Cost is determined in terms of time
+* Easily adapts to evolving environments
+* Suffers from cold-start
 
 # Cost modelling
 
@@ -572,10 +575,9 @@ White-box cost modelling example [@DBLP:conf/adbis/ForresiFGG21]
 
 ::::{.columns}
 :::{.column width="50%"}
-![](img/phdslides_133.png)
-![](img/phdslides_134.png)
-:::
-:::{.column width="50%"}
+![Statistics](img/phdslides_133.png)
+
+![Operations](img/phdslides_134.png)
 :::
 ::::
 
@@ -583,6 +585,6 @@ White-box cost modelling example [@DBLP:conf/adbis/ForresiFGG21]
 
 Black-box cost modelling example [@DBLP:journals/isf/ForresiFGG23]
 
-![](img/polyglot12.png)
+![Regression tree](img/polyglot12.png)
 
 # References
