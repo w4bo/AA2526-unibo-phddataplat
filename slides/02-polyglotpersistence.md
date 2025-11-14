@@ -112,10 +112,10 @@ BigDAWG middleware consists of
 
 Most notable multistore/polystore proposals
 
-* BigDAWG: Focus on the ability to "move" data from one DB to another to improve query efficiency [@DBLP:books/mc/19/MattsonRE14]
-* Estocada: Focus on taking advantage of possible (consistent) redundancy and previous query results [@DBLP:journals/pvldb/AlotaibiCDLMY20]
-* Awesome: Focus on supporting common analytical functions [@DBLP:conf/bigdataconf/DasguptaCG16]
-* CloudMdsQL: Focus on taking advantage of local data store native functionalities [@DBLP:journals/dpd/KolevVBJPP16]
+* *BigDAWG*: Focus on the ability to "move" data from one DB to another to improve query efficiency [@DBLP:books/mc/19/MattsonRE14]
+* *Estocada*: Focus on taking advantage of possible (consistent) redundancy and previous query results [@DBLP:journals/pvldb/AlotaibiCDLMY20]
+* *Awesome*: Focus on supporting common analytical functions [@DBLP:conf/bigdataconf/DasguptaCG16]
+* *CloudMdsQL*: Focus on taking advantage of local data store native functionalities [@DBLP:journals/dpd/KolevVBJPP16]
 
 # Beyond data model heterogeneity
 
@@ -326,7 +326,7 @@ Integration at the extensional level
 
 :::
 :::{.column width="20%"}
-![](img/phdslides_118.png)
+![Integration](img/phdslides_118.png)
 :::
 ::::
 
