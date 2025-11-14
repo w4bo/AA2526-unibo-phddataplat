@@ -686,7 +686,6 @@ Matteo Francia <br> DISI — University of Bologna <br> m.francia@unibo.it
 
 <section id="new-olap-querying" class="title-slide slide level1 center">
 <h1>New OLAP querying</h1>
-<p>What it looks like</p>
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="quarto-figure quarto-figure-center">
@@ -696,11 +695,13 @@ Matteo Francia <br> DISI — University of Bologna <br> m.francia@unibo.it
 </figure>
 </div>
 </div><div class="column" style="width:50%;">
+<div class="fragment">
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="img/phdslides_124.png"></p>
 <figcaption>Execution plan</figcaption>
 </figure>
+</div>
 </div>
 </div></div>
 </section>
@@ -882,27 +883,32 @@ Matteo Francia <br> DISI — University of Bologna <br> m.francia@unibo.it
 </ul>
 <p>… which can change over time</p>
 </div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
 <p><img data-src="img/polyglot11.png"></p>
+<figcaption>Normalized vs nested representation</figcaption>
+</figure>
+</div>
 </div></div>
 </section>
 
 <section id="cost-modelling" class="title-slide slide level1 center">
 <h1>Cost modelling</h1>
-<p>Cost-based evaluation of different plans</p>
-<ul>
-<li><em>White-box cost modelling</em>
+<p><em>White-box cost modelling</em></p>
 <ul>
 <li>Associate theoretical formulas with each query operator, then build up the cost of a query by summing the cost of each operation</li>
 <li>Cost can be determined in terms of disk I/O, CPU, and network</li>
-<li>Requires an enormous effort to effectively model the many factors that contribute to query costs in a complex and heterogeneous environment like a multistore</li>
-</ul></li>
-<li><em>Black-box cost modelling</em>
+<li>Requires an enormous effort to effectively model the many factors that contribute to query costs in a heterogeneous multistore</li>
+</ul>
+<p><em>Black-box cost modelling</em></p>
 <ul>
-<li>Hide the behavior of an execution engine within a black-box, where the known information is mostly limited to the issued queries and the given response times</li>
+<li>Hide the behavior of an execution engine within a black-box
+<ul>
+<li>The known information is mostly limited to the issued queries and the given response times</li>
+</ul></li>
 <li>Cost is determined in terms of time</li>
 <li>Easily adapts to evolving environments</li>
 <li>Suffers from cold-start</li>
-</ul></li>
 </ul>
 </section>
 
@@ -911,9 +917,18 @@ Matteo Francia <br> DISI — University of Bologna <br> m.francia@unibo.it
 <p>White-box cost modelling example <span class="citation" data-cites="DBLP:conf/adbis/ForresiFGG21">(<a href="#/references" role="doc-biblioref" onclick="">Forresi, Francia, et al. 2021</a>)</span></p>
 <div class="columns">
 <div class="column" style="width:50%;">
-<p><img data-src="img/phdslides_133.png"> <img data-src="img/phdslides_134.png"></p>
-</div><div class="column" style="width:50%;">
-
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/phdslides_133.png"></p>
+<figcaption>Statistics</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/phdslides_134.png"></p>
+<figcaption>Operations</figcaption>
+</figure>
+</div>
 </div></div>
 </section>
 
@@ -921,7 +936,7 @@ Matteo Francia <br> DISI — University of Bologna <br> m.francia@unibo.it
 <h1>Cost modelling</h1>
 <p>Black-box cost modelling example <span class="citation" data-cites="DBLP:journals/isf/ForresiFGG23">(<a href="#/references" role="doc-biblioref" onclick="">Forresi et al. 2023</a>)</span></p>
 
-<img data-src="img/polyglot12.png" class="r-stretch"></section>
+<img data-src="img/polyglot12.png" class="r-stretch quarto-figure-center"><p class="caption">Regression tree</p></section>
 
 <section id="references" class="title-slide slide level1 smaller scrollable">
 <h1>References</h1>
