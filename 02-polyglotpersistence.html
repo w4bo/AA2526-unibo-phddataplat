@@ -312,7 +312,7 @@ Matteo Francia <br> DISI — University of Bologna <br> m.francia@unibo.it
 
 <section id="schema-heterogeneity" class="title-slide slide level1 center">
 <h1>Schema heterogeneity</h1>
-<p>Heterogeneous data stored with variant schemata and structural forms</p>
+<p>Heterogeneous data stored with variant schemas and structural forms</p>
 <ul>
 <li>Missing/additional attributes</li>
 <li>Different names/types of attributes</li>
@@ -446,13 +446,23 @@ Matteo Francia <br> DISI — University of Bologna <br> m.francia@unibo.it
 <h1>Explicativeness</h1>
 <div class="columns">
 <div class="column" style="width:50%;">
-<p><img data-src="img/phdslides_111.png"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/exp1.png"></p>
+<figcaption>Value-based (VB)</figcaption>
+</figure>
+</div>
 </div><div class="column" style="width:50%;">
-<p><img data-src="img/phdslides_112.png"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/exp2.png"></p>
+<figcaption>Schema-based (SB)</figcaption>
+</figure>
+</div>
 </div></div>
 <p>Value-based (VB) conditions are preferred to schema-based (SB) ones</p>
 <ul>
-<li>SB: <strong>acknowledge</strong> a difference between schemata</li>
+<li>SB: <strong>acknowledge</strong> a difference between schemas</li>
 <li>VB: <strong>explain</strong> it in terms of the values taken by an attribute</li>
 </ul>
 <p>The fewer the SB conditions, the more explicativeness</p>
@@ -462,15 +472,24 @@ Matteo Francia <br> DISI — University of Bologna <br> m.francia@unibo.it
 <h1>Precision</h1>
 <p>A decision tree is precise if all the leaves are pure.</p>
 <ul>
-<li>A leaf is <strong>pure</strong> if all its observations belong to the <strong>same class</strong></li>
-<li>Leaf vj is pure if <em>entropy(</em> <em>v</em> <em>j</em> <em>) = 0</em></li>
+<li>A leaf <span class="math inline">\(v_j\)</span> is <strong>pure</strong> if all its observations belong to the <strong>same class</strong> (i.e., <span class="math inline">\(entropy(v_j) = 0\)</span>)</li>
+<li><strong>Entropy</strong> is strictly related to <strong>precision</strong>: divisive approaches typically stop only when the leaves are all pure</li>
 </ul>
-<p><strong>Entropy</strong> is strictly related to <strong>precision</strong>: divisive approaches typically stop only when the leaves are all pure</p>
 <div class="columns">
 <div class="column" style="width:50%;">
-<p><img data-src="img/polyglot06.png"></p>
-</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
 <p><img data-src="img/polyglot07.png"></p>
+<figcaption>Entropy formulation</figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/polyglot06.png"></p>
+<figcaption>Leaf purity</figcaption>
+</figure>
+</div>
 </div></div>
 </section>
 
@@ -481,26 +500,23 @@ Matteo Francia <br> DISI — University of Bologna <br> m.francia@unibo.it
 <li>Entropy’s sole focus is on node purity</li>
 <li>More frequent when the number of classes is high</li>
 </ul>
-<p>Typically, precision is more important than readability.</p>
-<p>In schema profiling, this is a critical problem.</p>
-<ul>
-<li><strong>It conflicts with the conciseness requirement</strong></li>
-</ul>
 <div>
 
 </div>
 
-<img data-src="img/polyglot08.png" class="r-stretch"></section>
+<img data-src="img/polyglot08.png" class="r-stretch quarto-figure-center"><p class="caption">Documents with the same schema are sparse</p><p>Typically, precision is more important than readability.</p>
+<ul>
+<li>In schema profiling, readability is a critical problem.</li>
+<li><strong>It conflicts with the conciseness requirement</strong></li>
+</ul>
+</section>
 
 <section id="conciseness" class="title-slide slide level1 center">
 <h1>Conciseness</h1>
-<p>A maximally concise schema profile is one where there is <strong>a single rule for each schema</strong></p>
-<ul>
-<li><strong><strong>Schema entropy</strong></strong>: inverts the original definition of entropy, relating it to the <strong>purity of the schemata </strong> instead of the purity of the leaves
+<p>A maximally concise schema profile is one where there is <em>a single rule for each schema</em></p>
 <ul>
 <li>Entropy: <strong>a leaf is pure</strong> if it contains only documents with the <strong>same class</strong></li>
 <li>Schema entropy: <strong>a schema is pure</strong> if all its documents are in the <strong>same leaf</strong></li>
-</ul></li>
 </ul>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -520,28 +536,43 @@ Matteo Francia <br> DISI — University of Bologna <br> m.francia@unibo.it
 </div></div>
 </section>
 
+<section id="conciseness-1" class="title-slide slide level1 center">
+<h1>Conciseness</h1>
+
+<img data-src="img/conc1.png" class="r-stretch quarto-figure-center"><p class="caption">Purity</p></section>
+
 <section id="schema-profiling-example" class="title-slide slide level1 center">
 <h1>Schema profiling example</h1>
 
-<img data-src="img/polyglot09.png" class="r-stretch"></section>
+<img data-src="img/polyglot09.png" class="r-stretch quarto-figure-center"><p class="caption">Examples</p></section>
 
 <section id="schema-profiling-algorithm" class="title-slide slide level1 center">
 <h1>Schema profiling algorithm</h1>
 <p>Introduced the notion of <em>schema entropy loss</em></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
 <p><img data-src="img/phdslides_116.png"></p>
+<figcaption>Loss</figcaption>
+</figure>
+</div>
 <p>Defined a criterion for comparing two splits in the decision tree</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
 <p><img data-src="img/phdslides_117.png"></p>
+<figcaption>Gain</figcaption>
+</figure>
+</div>
 </section>
 
 <section id="querying-the-data" class="title-slide slide level1 center">
 <h1>Querying the data</h1>
-<p>One thing is understanding the data; another thing is enabling querying over heterogeneous data.</p>
+<p>One thing is understanding the data; another is <em>enabling querying over heterogeneous data</em>.</p>
 <p>What we need</p>
-<ul>
-<li>Integration techniques to solve schema heterogeneity and produce a global knowledge base</li>
-<li>Query rewriting techniques to translate queries on the global knowledge to queries on the actual schemas</li>
-</ul>
-<p>(Focus on OLAP queries)</p>
+<ol type="1">
+<li><em>Integration techniques</em> to solve schema heterogeneity and produce a global knowledge base</li>
+<li><em>Query rewriting techniques</em> to translate queries on the global knowledge to queries on the actual schemas</li>
+</ol>
+<p>Focus on OLAP queries</p>
 </section>
 
 <section id="integration-techniques" class="title-slide slide level1 center">
@@ -555,7 +586,7 @@ Matteo Francia <br> DISI — University of Bologna <br> m.francia@unibo.it
 <li>A match is a correspondence between attributes</li>
 <li>A mapping is a function to explain the relationship between attributes
 <ul>
-<li>E.g., S1.FullName = CONCAT(S2.FirstName, S2.LastName)</li>
+<li>E.g., <code>S1.FullName = CONCAT(S2.FirstName, S2.LastName)</code></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -582,7 +613,12 @@ Matteo Francia <br> DISI — University of Bologna <br> m.francia@unibo.it
 <p>A first approach to OLAP on heterogeneous data</p>
 <div class="columns">
 <div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
 <p><img data-src="img/phdslides_119.png"></p>
+<figcaption>Execution plan</figcaption>
+</figure>
+</div>
 </div><div class="column" style="width:50%;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
@@ -619,29 +655,29 @@ Matteo Francia <br> DISI — University of Bologna <br> m.francia@unibo.it
 
 <img data-src="img/phdslides_122.png" class="r-stretch quarto-figure-center"><p class="caption"><span class="citation" data-cites="DBLP:books/sp/20/Curry20a">(<a href="#/references" role="doc-biblioref" onclick="">Curry 2020</a>)</span></p></section>
 
-<section id="section-3" class="title-slide slide level1 center">
-<h1></h1>
+<section id="dataspace" class="title-slide slide level1 center">
+<h1>Dataspace</h1>
 <p>Replace the global schema with a <em>dataspace</em> <span class="citation" data-cites="DBLP:books/sp/20/Curry20a">(<a href="#/references" role="doc-biblioref" onclick="">Curry 2020</a>)</span></p>
-<ul>
-<li>A dataspace is a lightweight integration approach providing basic query expressive power on a variety of data sources, bypassing the complexity of traditional integration approaches and possibly returning best-effort or approximate answers <span class="citation" data-cites="DBLP:journals/sigmod/FranklinHM05">(<a href="#/references" role="doc-biblioref" onclick="">Franklin, Halevy, and Maier 2005</a>)</span></li>
-</ul>
+<blockquote>
+<p>A <strong>dataspace</strong> is a lightweight integration approach providing basic query expressive power on a variety of data sources, bypassing the complexity of traditional integration approaches and possibly returning best-effort or approximate answers <span class="citation" data-cites="DBLP:journals/sigmod/FranklinHM05">(<a href="#/references" role="doc-biblioref" onclick="">Franklin, Halevy, and Maier 2005</a>)</span></p>
+</blockquote>
 <p>Replace traditional integration with a <em>pay-as-you-go</em> approach.</p>
 <ul>
-<li>The system incrementally understands and integrates the data over time by asking users to confirm matches as the system runs <span class="citation" data-cites="DBLP:conf/sigmod/JefferyFH08">(<a href="#/references" role="doc-biblioref" onclick="">Jeffery, Franklin, and Halevy 2008</a>)</span></li>
+<li>The system incrementally integrates data over time by asking users to confirm matches as the system runs <span class="citation" data-cites="DBLP:conf/sigmod/JefferyFH08">(<a href="#/references" role="doc-biblioref" onclick="">Jeffery, Franklin, and Halevy 2008</a>)</span></li>
 </ul>
 </section>
 
-<section id="section-4" class="title-slide slide level1 center">
-<h1></h1>
+<section id="dataspace-1" class="title-slide slide level1 center">
+<h1>Dataspace</h1>
 <p>Introducing new concepts</p>
 <ul>
-<li>Entities: representation of a real-world entity
+<li><em>Entities</em>: representation of a real-world entity
 <ul>
-<li>E.g., customers, products, orders, etc.</li>
+<li>E.g., <code>Customers</code>, <code>Products</code>, <code>Orders</code>, etc.</li>
 </ul></li>
-<li>Features: univocal representation of a group of semantically equivalent attributes
+<li><em>Features</em>: univocal representation of a group of semantically equivalent attributes
 <ul>
-<li>E.g., CustomerName = { S1.name, S2.fullname, S3.customer, S4.cName, … }</li>
+<li>E.g., <code>CustomerName = { S1.name, S2.fullname, S3.customer, S4.cName, ... }</code></li>
 <li>Mapping functions must be defined/definable between every couple</li>
 </ul></li>
 </ul>
@@ -653,42 +689,57 @@ Matteo Francia <br> DISI — University of Bologna <br> m.francia@unibo.it
 <p>What it looks like</p>
 <div class="columns">
 <div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
 <p><img data-src="img/phdslides_123.png"></p>
+<figcaption>Entities and features</figcaption>
+</figure>
+</div>
 </div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
 <p><img data-src="img/phdslides_124.png"></p>
+<figcaption>Execution plan</figcaption>
+</figure>
+</div>
 </div></div>
 </section>
 
-<section id="section-5" class="title-slide slide level1 center">
+<section id="section-3" class="title-slide slide level1 center">
 <h1></h1>
 <div class="columns">
-<div class="column" style="width:80%;">
+<div class="column" style="width:60%;">
 <p>Previous issues</p>
 <ul>
-<li>Expensive querying
+<li><em>Expensive querying</em>
 <ul>
 <li>Schema heterogeneity solved at query time</li>
 <li>Requires complex - but feasible - algorithms</li>
 </ul></li>
-<li>Expensive integration
+<li><em>Expensive integration</em>
 <ul>
 <li>Pay-as-you-go approach is quicker, iterative, and more flexible</li>
 <li>Dataspace is conceptual, untied to logical data modeling</li>
 </ul></li>
 </ul>
-<p>Now we have a multistore dealing with multiple data models and schema heterogeneity <span class="citation" data-cites="DBLP:journals/vldb/ForresiGGH21">(<a href="#/references" role="doc-biblioref" onclick="">Forresi, Gallinucci, et al. 2021</a>)</span></p>
-</div><div class="column" style="width:20%;">
+<p>Now we have a <strong>multistore</strong> dealing with multiple data models and schema heterogeneity</p>
+</div><div class="column" style="width:30%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
 <p><img data-src="img/phdslides_125.png"></p>
+<figcaption><span class="citation" data-cites="DBLP:journals/vldb/ForresiGGH21">(<a href="#/references" role="doc-biblioref" onclick="">Forresi, Gallinucci, et al. 2021</a>)</span></figcaption>
+</figure>
+</div>
 </div></div>
 </section>
 
 <section id="data-inconsistency" class="title-slide slide level1 center">
 <h1>Data inconsistency</h1>
-<p>Intra-collection</p>
+<p><em>Intra-collection</em></p>
 <ul>
 <li>Due to denormalized data modeling</li>
 </ul>
-<p>Inter-collection</p>
+<p><em>Inter-collection</em></p>
 <ul>
 <li>Due to analytical data offloading
 <ul>
@@ -711,7 +762,7 @@ Matteo Francia <br> DISI — University of Bologna <br> m.francia@unibo.it
 
 <section id="data-fusion" class="title-slide slide level1 center">
 <h1>Data fusion</h1>
-<p>Merge operator</p>
+<p><em>Merge operator</em></p>
 <ul>
 <li>Originally introduced as “full outer join merge” <span class="citation" data-cites="DBLP:journals/is/NaumannFL04">(<a href="#/references" role="doc-biblioref" onclick="">Naumann, Freytag, and Leser 2004</a>)</span></li>
 <li>Aims to keep as much information as possible when joining the records of two schemas
@@ -721,29 +772,30 @@ Matteo Francia <br> DISI — University of Bologna <br> m.francia@unibo.it
 <li>Resolving conflicts whenever necessary</li>
 </ul></li>
 </ul>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/phdslides_126.png"></p>
+<figcaption>Merge operator</figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="fragment">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/phdslides_127.png"></p>
+<figcaption>Fusion and entity resolution</figcaption>
+</figure>
+</div>
+</div>
+</div></div>
+</section>
 
-<img data-src="img/phdslides_126.png" class="r-stretch"></section>
+<section id="merge-operator" class="title-slide slide level1 center">
+<h1>Merge operator</h1>
 
-<section id="section-6" class="title-slide slide level1 center">
-<h1></h1>
-<p>Merge operator</p>
-<ul>
-<li>Originally introduced as “full outer join merge” <span class="citation" data-cites="DBLP:journals/is/NaumannFL04">(<a href="#/references" role="doc-biblioref" onclick="">Naumann, Freytag, and Leser 2004</a>)</span></li>
-<li>Aims to keep as much information as possible when joining the records of two schemas
-<ul>
-<li>Avoid any loss of records</li>
-<li>Resolve mappings by providing transcoded output</li>
-<li>Resolving conflicts whenever necessary</li>
-</ul></li>
-</ul>
-
-<img data-src="img/polyglot10.png" class="r-stretch"></section>
-
-<section id="section-7" class="title-slide slide level1 center">
-<h1></h1>
-<p>Merge operator</p>
-
-<img data-src="img/phdslides_128.png" class="r-stretch"></section>
+<img data-src="img/phdslides_128.png" class="r-stretch quarto-figure-center"><p class="caption">Merge operator</p></section>
 
 <section id="on-the-fly-data-fusion" class="title-slide slide level1 center">
 <h1>On-the-fly data fusion</h1>
@@ -765,8 +817,8 @@ Matteo Francia <br> DISI — University of Bologna <br> m.francia@unibo.it
 </div></div>
 </section>
 
-<section id="section-8" class="title-slide slide level1 center">
-<h1></h1>
+<section id="on-the-fly-data-fusion-1" class="title-slide slide level1 center">
+<h1>On-the-fly data fusion</h1>
 <div class="columns">
 <div class="column" style="width:50%;">
 <p>Main issue: performance</p>
@@ -794,15 +846,15 @@ Matteo Francia <br> DISI — University of Bologna <br> m.francia@unibo.it
 <h1>Logical optimization</h1>
 <p>Logical rules to transform a query plan into a more efficent one</p>
 <ul>
-<li>Predicate push-down: applying selection predicates as close to the source as possible
+<li><em>Predicate push-down</em>: applying selection predicates as close to the source as possible
 <ul>
 <li>Not always feasible (e.g., in the presence of inconsistent data)</li>
 </ul></li>
-<li>Column pruning: extracting the only attributes relevant for the query
+<li><em>Column pruning</em>: extracting the only attributes relevant for the query
 <ul>
 <li>Not for granted when writing a custom query language</li>
 </ul></li>
-<li>Join sequence reordering: changing the order to do binary joins
+<li><em>Join sequence reordering</em>: changing the order to do binary joins
 <ul>
 <li>Not so easy when merges are involved as well</li>
 <li>Not so easy when data comes from different sources</li>
@@ -838,13 +890,13 @@ Matteo Francia <br> DISI — University of Bologna <br> m.francia@unibo.it
 <h1>Cost modelling</h1>
 <p>Cost-based evaluation of different plans</p>
 <ul>
-<li>White-box cost modelling
+<li><em>White-box cost modelling</em>
 <ul>
 <li>Associate theoretical formulas with each query operator, then build up the cost of a query by summing the cost of each operation</li>
 <li>Cost can be determined in terms of disk I/O, CPU, and network</li>
 <li>Requires an enormous effort to effectively model the many factors that contribute to query costs in a complex and heterogeneous environment like a multistore</li>
 </ul></li>
-<li>Black-box cost modelling
+<li><em>Black-box cost modelling</em>
 <ul>
 <li>Hide the behavior of an execution engine within a black-box, where the known information is mostly limited to the issued queries and the given response times</li>
 <li>Cost is determined in terms of time</li>
@@ -854,9 +906,9 @@ Matteo Francia <br> DISI — University of Bologna <br> m.francia@unibo.it
 </ul>
 </section>
 
-<section id="section-9" class="title-slide slide level1 center">
-<h1></h1>
-<p>White-box cost modellingexample <span class="citation" data-cites="DBLP:conf/adbis/ForresiFGG21">(<a href="#/references" role="doc-biblioref" onclick="">Forresi, Francia, et al. 2021</a>)</span></p>
+<section id="cost-modelling-1" class="title-slide slide level1 center">
+<h1>Cost modelling</h1>
+<p>White-box cost modelling example <span class="citation" data-cites="DBLP:conf/adbis/ForresiFGG21">(<a href="#/references" role="doc-biblioref" onclick="">Forresi, Francia, et al. 2021</a>)</span></p>
 <div class="columns">
 <div class="column" style="width:50%;">
 <p><img data-src="img/phdslides_133.png"> <img data-src="img/phdslides_134.png"></p>
@@ -865,9 +917,9 @@ Matteo Francia <br> DISI — University of Bologna <br> m.francia@unibo.it
 </div></div>
 </section>
 
-<section id="section-10" class="title-slide slide level1 center">
-<h1></h1>
-<p>Black-box cost modellingexample <span class="citation" data-cites="DBLP:journals/isf/ForresiFGG23">(<a href="#/references" role="doc-biblioref" onclick="">Forresi et al. 2023</a>)</span></p>
+<section id="cost-modelling-2" class="title-slide slide level1 center">
+<h1>Cost modelling</h1>
+<p>Black-box cost modelling example <span class="citation" data-cites="DBLP:journals/isf/ForresiFGG23">(<a href="#/references" role="doc-biblioref" onclick="">Forresi et al. 2023</a>)</span></p>
 
 <img data-src="img/polyglot12.png" class="r-stretch"></section>
 
