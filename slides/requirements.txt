@@ -10,7 +10,7 @@ xlrd==2.0.2
 openpyxl==3.1.5
 pptx2md==2.0.6
 scipy==1.16.3
-awswrangler==3.13.0
+awswrangler==3.14.0
 prov[dot]==2.1.1
 pydot==4.0.1
 traitlets==5.14.3
