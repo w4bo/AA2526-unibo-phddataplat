@@ -12,6 +12,93 @@ To each application, the appropriate DBMS: works well for OLTP
 
 ![Polyglot Persistence](img/polyglot01.png)
 
+# Support multiple models in the same database
+
+How can we meta-model graphs into a relational database?
+
+# Support multiple models in the same database
+
+```sql
+CREATE TABLE node (
+    node_id        INT PRIMARY KEY,
+    created_at     TIMESTAMP
+);
+CREATE TABLE edge (
+    edge_id        INT PRIMARY KEY,
+    from_node_id   INT NOT NULL,
+    to_node_id     INT NOT NULL,
+    edge_type      VARCHAR(255) NOT NULL,
+    created_at     TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (from_node_id) REFERENCES node(node_id) ON DELETE CASCADE,
+    FOREIGN KEY (to_node_id)   REFERENCES node(node_id) ON DELETE CASCADE
+);
+CREATE TABLE node_label (
+    node_id    INT NOT NULL REFERENCES node(node_id) ON DELETE CASCADE,
+    label      VARCHAR(255) NOT NULL,
+    PRIMARY KEY (node_id, label)
+);
+CREATE TABLE node_property (
+    node_id        INT NOT NULL REFERENCES node(node_id) ON DELETE CASCADE,
+    property_key   VARCHAR(255) NOT NULL,
+    property_value TEXT,
+    PRIMARY KEY (node_id, property_key)
+);
+CREATE TABLE edge_property (
+    edge_id        INT NOT NULL REFERENCES edge(edge_id) ON DELETE CASCADE,
+    property_key   VARCHAR(255) NOT NULL,
+    property_value TEXT,
+    PRIMARY KEY (edge_id, property_key)
+);
+```
+
+# Support multiple models in the same database
+
+How can we meta-model JSON documents into a relational database?
+
+# Support multiple models in the same database
+
+```sql
+CREATE TABLE document (
+    document_id INT PRIMARY KEY,
+    created_at  TIMESTAMP
+);
+CREATE TABLE node (
+    node_id          INT PRIMARY KEY,
+    document_id      INT NOT NULL REFERENCES document(document_id) ON DELETE CASCADE,
+    parent_node_id   INT NULL     REFERENCES node(node_id)         ON DELETE CASCADE,
+    key              VARCHAR(255) NULL,
+    index_in_array   INT NULL,
+    node_type        VARCHAR(10) NOT NULL CHECK (node_type IN ('OBJECT','ARRAY','VALUE')),
+);
+CREATE TABLE node_value (
+    node_id       INT PRIMARY KEY REFERENCES node(node_id) ON DELETE CASCADE,
+    value_type    VARCHAR(10) NOT NULL CHECK (value_type IN ('STRING','NUMBER','BOOLEAN','NULL')),
+    value_string  TEXT NULL,
+    value_number  NUMERIC NULL,
+    value_boolean BOOLEAN NULL
+);
+```
+
+# Polyglot Persistence in PostgreSQL
+
+PostgreSQL enables polyglot persistence by blending:
+  - **JSON** for semi-structured document data  
+  - **Apache AGE** for graph data (Cypher + property graphs)  
+  - **TimescaleDB** for time-series and analytical workloads  
+  - **PostGIS** for geospatial and GIS operations  
+
+Multiple data models coexist in one engine and one SQL interface  
+
+- Enables hybrid relational/document/graph/time-series/geospatial systems
+
+```sql
+CREATE TABLE sensor_event (
+    event_id     SERIAL PRIMARY KEY,
+    payload      JSONB,                  -- document model
+    location     geography(Point, 4326) -- PostGIS
+);
+```
+
 # Polyglot persistence: main challenges
 
 Data model heterogeneity
@@ -103,8 +190,8 @@ BigDAWG middleware consists of
 
 **Catalog**: stores metadata about the system
 
-* Databases: Databases, their engine membership, and connection authentication information.
-* Objects: Data objects (i.e., tables), field names, and object-to-database membership.
+* *Databases*: Databases, their engine membership, and connection authentication information.
+* *Objects*: Data objects (i.e., tables), field names, and object-to-database membership.
 
 ![Middleware](img/phdslides_106.png)
 
@@ -119,27 +206,31 @@ Most notable multistore/polystore proposals
 
 # Beyond data model heterogeneity
 
-What else is there?
+**Entity resolution**
 
-* **Entity resolution**
-  * Every approach needs some kind of integrated knowledge
-  * Ample research from federated database systems
-  * Usually "out-of-scope"
-* Management of **schema heterogeneity ** and **data inconsistency**
-  * Usually addressed as different problems in the literature
+* Every approach needs some kind of integrated knowledge
+* Ample research from federated database systems
+* Usually "out-of-scope"
+
 
 # Schema heterogeneity
 
 Heterogeneous data stored with variant schemas and structural forms
 
+* Management of **schema heterogeneity** and **data inconsistency**
+  * Usually addressed as different problems in the literature
 * Missing/additional attributes
 * Different names/types of attributes
 * Different nested structures
+
+# Schema heterogeneity
 
 Two main problems
   
 * Understand the data
 * Query the data
+
+# Understanding the data {background-color="#121011"}
 
 # Understanding the data
 
@@ -152,9 +243,9 @@ Recent work on JSON
 
 * **Concise view**: a single representation for all schema variations
     * Union of all attributes [@DBLP:conf/btw/KlettkeSS15]
-    * A _skeleton _ as the smallest set of core attributes according to a frequency-based formula [@DBLP:journals/pvldb/WangHZS15]
+    * A _skeleton_ as the smallest set of core attributes according to a frequency-based formula [@DBLP:journals/pvldb/WangHZS15]
 * **Comprehensive view**: multiple representations (a different schema for every document) [@DBLP:conf/er/RuizMM15]
-* **Schema profile**: _explain why _ there are different schemas [@DBLP:journals/is/GallinucciGR18]
+* **Schema profile**: _explain why_ there are different schemas [@DBLP:journals/is/GallinucciGR18]
 
 # Schema profiling
 
@@ -254,6 +345,8 @@ A decision tree is precise if all the leaves are pure.
 
 ![Documents with the same schema are sparse](img/polyglot08.png)
 
+# Precision and conciseness
+
 Typically, precision is more important than readability.
 
 * In schema profiling, readability is a critical problem.
@@ -293,7 +386,9 @@ Defined a criterion for comparing two splits in the decision tree
 
 ![Gain](img/phdslides_117.png)
 
-# Querying the data
+# Query the data {background-color="#121011"}
+
+# Query the data
 
 One thing is understanding the data; another is *enabling querying over heterogeneous data*.
 
