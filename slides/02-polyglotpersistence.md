@@ -63,12 +63,12 @@ CREATE TABLE document (
     created_at  TIMESTAMP
 );
 CREATE TABLE node (
-    node_id          INT PRIMARY KEY,
-    document_id      INT NOT NULL REFERENCES document(document_id) ON DELETE CASCADE,
-    parent_node_id   INT NULL     REFERENCES node(node_id)         ON DELETE CASCADE,
-    key              VARCHAR(255) NULL,
-    index_in_array   INT NULL,
-    node_type        VARCHAR(10) NOT NULL CHECK (node_type IN ('OBJECT','ARRAY','VALUE')),
+    node_id        INT PRIMARY KEY,
+    document_id    INT NOT NULL REFERENCES document(document_id) ON DELETE CASCADE,
+    parent_node_id INT NULL     REFERENCES node(node_id)         ON DELETE CASCADE,
+    key            VARCHAR(255) NULL,
+    index_in_array INT NULL,
+    node_type      VARCHAR(10) NOT NULL CHECK (node_type IN ('OBJECT','ARRAY','VALUE')),
 );
 CREATE TABLE node_value (
     node_id       INT PRIMARY KEY REFERENCES node(node_id) ON DELETE CASCADE,
@@ -94,7 +94,7 @@ Multiple data models coexist in one engine and one SQL interface
 ```sql
 CREATE TABLE sensor_event (
     event_id     SERIAL PRIMARY KEY,
-    payload      JSONB,                  -- document model
+    payload      JSONB,                 -- document model
     location     geography(Point, 4326) -- PostGIS
 );
 ```
