@@ -1036,7 +1036,6 @@ Matteo Francia <br> DISI — University of Bologna <br> m.francia@unibo.it
 <h1>Same query, several query plans</h1>
 <div class="columns">
 <div class="column" style="width:50%;">
-<p>Consistent representation of customers, orders, and order lines</p>
 <p>What is the most efficient solution?</p>
 <ul>
 <li>Single-entity merge and subsequent joins</li>
@@ -1069,6 +1068,57 @@ Matteo Francia <br> DISI — University of Bologna <br> m.francia@unibo.it
 <li>Cost can be determined in terms of disk I/O, CPU, and network</li>
 <li>Requires an enormous effort to effectively model the many factors that contribute to query costs in a heterogeneous multistore</li>
 </ul>
+</section>
+
+<section id="cost-modelling-1" class="title-slide slide level1 center">
+<h1>Cost modelling</h1>
+<p>Relational algebra</p>
+<ul>
+<li>Use algebraic structures for modeling data and defining queries on it with well founded semantics.</li>
+<li>Operate on relations, i.e.&nbsp;homogeneous sets of tuples <span class="math inline">\(S=\{(s_{j1},s_{j2},...s_{jn})|j\in 1...m\}\)</span>
+<ul>
+<li><span class="math inline">\(m\)</span> is the number of tuples in a table</li>
+<li><span class="math inline">\(n\)</span> is the number of columns.</li>
+<li>All entries in each column have the same type.</li>
+</ul></li>
+<li>A relation also has a unique tuple called the <em>header</em> which gives each column a unique <em>name</em> or attribute inside the relation.</li>
+<li>Projection is a unary operation <span class="math inline">\(\Pi _{a_{1},\ldots ,a_{n}}(R)\)</span> where <span class="math inline">\(a_{1},\ldots ,a_{n}\)</span> is a set of attribute names.</li>
+<li>Selection is a unary operation <span class="math inline">\(\sigma _{\varphi }(R)\)</span>
+<ul>
+<li>E.g., <span class="math inline">\(\sigma _{{\text{isFriend = true}}\,\lor \,{\text{isBusinessContact = true}}}({\text{addressBook}})\)</span></li>
+</ul></li>
+<li>Cartesian product is a binary operator <span class="math inline">\(R\times S:=\{(r_{1},r_{2},\dots ,r_{n},s_{1},s_{2},\dots ,s_{m})|(r_{1},r_{2},\dots ,r_{n})\in R,(s_{1},s_{2},\dots ,s_{m})\in S\}\)</span></li>
+</ul>
+</section>
+
+<section id="cost-modelling-2" class="title-slide slide level1 center">
+<h1>Cost modelling</h1>
+<p>Nested relational algebra</p>
+
+<img data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEitkjzNLM9OG14ri0m3KJR9YR0CuCcP_gDebS96-AGkYkeK5THSzoLdqeXHATtYPGjkEdNV9-QmY05FATuC_pHjMHbe2YCbyeJvprKW6y25wR92kQNMhBPoPPVCLLAWqdSC1H-Hi6gevss/s1600/Fig-2.png" class="r-stretch quarto-figure-center"><p class="caption">Nested data</p></section>
+
+<section id="cost-modelling-3" class="title-slide slide level1 center">
+<h1>Cost modelling</h1>
+<p>White-box cost modelling example <span class="citation" data-cites="DBLP:conf/adbis/ForresiFGG21">(<a href="#/references" role="doc-biblioref" onclick="">Forresi, Francia, et al. 2021</a>)</span></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/phdslides_134.png"></p>
+<figcaption>Operations</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/phdslides_133.png"></p>
+<figcaption>Statistics</figcaption>
+</figure>
+</div>
+</div></div>
+</section>
+
+<section id="cost-modelling-4" class="title-slide slide level1 center">
+<h1>Cost modelling</h1>
 <p><em>Black-box cost modelling</em></p>
 <ul>
 <li>Hide the behavior of an execution engine within a black-box
@@ -1081,27 +1131,7 @@ Matteo Francia <br> DISI — University of Bologna <br> m.francia@unibo.it
 </ul>
 </section>
 
-<section id="cost-modelling-1" class="title-slide slide level1 center">
-<h1>Cost modelling</h1>
-<p>White-box cost modelling example <span class="citation" data-cites="DBLP:conf/adbis/ForresiFGG21">(<a href="#/references" role="doc-biblioref" onclick="">Forresi, Francia, et al. 2021</a>)</span></p>
-<div class="columns">
-<div class="column" style="width:50%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="img/phdslides_133.png"></p>
-<figcaption>Statistics</figcaption>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="img/phdslides_134.png"></p>
-<figcaption>Operations</figcaption>
-</figure>
-</div>
-</div></div>
-</section>
-
-<section id="cost-modelling-2" class="title-slide slide level1 center">
+<section id="cost-modelling-5" class="title-slide slide level1 center">
 <h1>Cost modelling</h1>
 <p>Black-box cost modelling example <span class="citation" data-cites="DBLP:journals/isf/ForresiFGG23">(<a href="#/references" role="doc-biblioref" onclick="">Forresi et al. 2023</a>)</span></p>
 
