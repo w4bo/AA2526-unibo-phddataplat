@@ -1,3 +1,27 @@
+## [1.0.13](https://github.com/w4bo/AA2526-unibo-phddataplat/compare/1.0.12...1.0.13) (2025-11-21)
+
+### Dependency updates
+
+* **deps:** update dependency awswrangler to v3.14.0 ([#10](https://github.com/w4bo/AA2526-unibo-phddataplat/issues/10)) ([8f2e0c6](https://github.com/w4bo/AA2526-unibo-phddataplat/commit/8f2e0c645f27e6bfb95c6ea99473582991eb589e))
+* **deps:** update dependency matplotlib to v3.10.7 ([#5](https://github.com/w4bo/AA2526-unibo-phddataplat/issues/5)) ([8ee0cad](https://github.com/w4bo/AA2526-unibo-phddataplat/commit/8ee0cadd5dc5829da726491414fd723a398a7117))
+* **deps:** update dependency notebook to v7.5.0 ([#14](https://github.com/w4bo/AA2526-unibo-phddataplat/issues/14)) ([82e3a95](https://github.com/w4bo/AA2526-unibo-phddataplat/commit/82e3a95cef8fd65eff89c56a66e6282dc78bbf22))
+* **deps:** update dependency pandas to v2.3.3 ([#2](https://github.com/w4bo/AA2526-unibo-phddataplat/issues/2)) ([044e476](https://github.com/w4bo/AA2526-unibo-phddataplat/commit/044e476a73ce5bda8499794f09f6f66d9751dfd7))
+* **deps:** update dependency scipy to v1.16.3 ([#9](https://github.com/w4bo/AA2526-unibo-phddataplat/issues/9)) ([73e0fc2](https://github.com/w4bo/AA2526-unibo-phddataplat/commit/73e0fc2f329157c7576f728953aa970ff7e4241a))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.157 ([#7](https://github.com/w4bo/AA2526-unibo-phddataplat/issues/7)) ([5c970f6](https://github.com/w4bo/AA2526-unibo-phddataplat/commit/5c970f65c4c30a0262b78d3f573d16762e6e79ec))
+* **deps:** update node.js to 22.21 ([#8](https://github.com/w4bo/AA2526-unibo-phddataplat/issues/8)) ([c09826e](https://github.com/w4bo/AA2526-unibo-phddataplat/commit/c09826e41e7d30362bf758f59c276853e9648be7))
+* **deps:** update node.js to v24 ([#11](https://github.com/w4bo/AA2526-unibo-phddataplat/issues/11)) ([2881c5f](https://github.com/w4bo/AA2526-unibo-phddataplat/commit/2881c5fefa5ccb58ef491a218b8770e4458be6c5))
+
+### Bug Fixes
+
+* update slides ([b6321b5](https://github.com/w4bo/AA2526-unibo-phddataplat/commit/b6321b5d35eb643d995d9b3190d9caab74f407d9))
+* update slides ([f5c88e5](https://github.com/w4bo/AA2526-unibo-phddataplat/commit/f5c88e509d603f2afcea144d5ff4557eba505017))
+
+### Build and continuous integration
+
+* **deps:** update actions/checkout action to v6 ([#16](https://github.com/w4bo/AA2526-unibo-phddataplat/issues/16)) ([a167789](https://github.com/w4bo/AA2526-unibo-phddataplat/commit/a167789fbbb07673fd068635ed16eab545f57fe1))
+* **deps:** update actions/setup-node action to v6 ([#6](https://github.com/w4bo/AA2526-unibo-phddataplat/issues/6)) ([5ab68b2](https://github.com/w4bo/AA2526-unibo-phddataplat/commit/5ab68b2db358c10d08acc242dccab7d6ed65952b))
+* **deps:** update jamesives/github-pages-deploy-action action to v4.7.4 ([#12](https://github.com/w4bo/AA2526-unibo-phddataplat/issues/12)) ([da8e669](https://github.com/w4bo/AA2526-unibo-phddataplat/commit/da8e66938f56744b5d57dfa7a2ff8a2116e80f7f))
+
 ## [1.0.12](https://github.com/w4bo/AA2526-unibo-phddataplat/compare/1.0.11...1.0.12) (2025-11-14)
 
 ### Bug Fixes
