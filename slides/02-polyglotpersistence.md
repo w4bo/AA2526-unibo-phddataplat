@@ -624,20 +624,18 @@ Logical rules to transform a query plan into a more efficent one
 ::::{.columns}
 :::{.column width="50%"}
 
-Consistent representation of customers, orders, and order lines
-
 What is the most efficient solution?
 
-  * Single-entity merge and subsequent joins
-  * Nest relational data and multi-merge with documents
-  * Join relational data and multi-merge with flattened documents
+* Single-entity merge and subsequent joins
+* Nest relational data and multi-merge with documents
+* Join relational data and multi-merge with flattened documents
 
 Depends on several factors
 
-  * On the capabilities of each DBMS/middleware
-  * On the presence of indexes and statistics
-  * On the resources available to each DBMS/middleware
-  * On the number of records involved on each side
+* On the capabilities of each DBMS/middleware
+* On the presence of indexes and statistics
+* On the resources available to each DBMS/middleware
+* On the number of records involved on each side
 
 ... which can change over time
 
@@ -652,9 +650,44 @@ Depends on several factors
 
 *White-box cost modelling*
 
-  * Associate theoretical formulas with each query operator, then build up the cost of a query by summing the cost of each operation
-  * Cost can be determined in terms of disk I/O, CPU, and network
-  * Requires an enormous effort to effectively model the many factors that contribute to query costs in a heterogeneous multistore
+* Associate theoretical formulas with each query operator, then build up the cost of a query by summing the cost of each operation
+* Cost can be determined in terms of disk I/O, CPU, and network
+* Requires an enormous effort to effectively model the many factors that contribute to query costs in a heterogeneous multistore
+
+# Cost modelling
+
+Relational algebra
+
+- Use algebraic structures for modeling data and defining queries on it with well founded semantics.
+- Operate on relations, i.e. homogeneous sets of tuples $S=\{(s_{j1},s_{j2},...s_{jn})|j\in 1...m\}$ 
+  - $m$ is the number of tuples in a table 
+  - $n$ is the number of columns.
+  - All entries in each column have the same type.
+- A relation also has a unique tuple called the *header* which gives each column a unique *name* or attribute inside the relation.
+- Projection is a unary operation $\Pi _{a_{1},\ldots ,a_{n}}(R)$ where $a_{1},\ldots ,a_{n}$ is a set of attribute names.
+- Selection is a unary operation $\sigma _{\varphi }(R)$
+  - E.g., $\sigma _{{\text{isFriend = true}}\,\lor \,{\text{isBusinessContact = true}}}({\text{addressBook}})$
+- Cartesian product is a binary operator $R\times S:=\{(r_{1},r_{2},\dots ,r_{n},s_{1},s_{2},\dots ,s_{m})|(r_{1},r_{2},\dots ,r_{n})\in R,(s_{1},s_{2},\dots ,s_{m})\in S\}$
+
+# Cost modelling
+
+Nested relational algebra
+
+![Nested data](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEitkjzNLM9OG14ri0m3KJR9YR0CuCcP_gDebS96-AGkYkeK5THSzoLdqeXHATtYPGjkEdNV9-QmY05FATuC_pHjMHbe2YCbyeJvprKW6y25wR92kQNMhBPoPPVCLLAWqdSC1H-Hi6gevss/s1600/Fig-2.png)
+
+# Cost modelling
+
+White-box cost modelling example [@DBLP:conf/adbis/ForresiFGG21]
+
+::::{.columns}
+:::{.column width="50%"}
+![Operations](img/phdslides_134.png)
+
+![Statistics](img/phdslides_133.png)
+:::
+::::
+
+# Cost modelling
 
 *Black-box cost modelling*
 
@@ -663,18 +696,6 @@ Depends on several factors
 * Cost is determined in terms of time
 * Easily adapts to evolving environments
 * Suffers from cold-start
-
-# Cost modelling
-
-White-box cost modelling example [@DBLP:conf/adbis/ForresiFGG21]
-
-::::{.columns}
-:::{.column width="50%"}
-![Statistics](img/phdslides_133.png)
-
-![Operations](img/phdslides_134.png)
-:::
-::::
 
 # Cost modelling
 
