@@ -461,3 +461,5 @@ RETURN o, s, a, r, o2, o3, o4
 ![MOSES: [@DBLP:journals/fgcs/FranciaGGLRS21]](img/phdslides_197.png)
 :::
 ::::
+
+# References
