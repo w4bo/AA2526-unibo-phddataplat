@@ -10,6 +10,7 @@ slides/publish.sh
 !**/_site/.dummy
 **/.quarto
 **/*_files/
+**/removed-img/*
 
 # Created by https://www.toptal.com/developers/gitignore/api/venv,node,java,scala,macos,linux,gradle,python,windows,virtualenv,microsoftoffice
 # Edit at https://www.toptal.com/developers/gitignore?templates=venv,node,java,scala,macos,linux,gradle,python,windows,virtualenv,microsoftoffice
@@ -38,7 +39,6 @@ slides/publish.sh
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
-<<<<<<< HEAD
 replay_pid*
 
 ### LaTeX ###
@@ -349,8 +349,6 @@ TSWLatexianTemp*
 
 # glossaries
 *.glstex
-=======
->>>>>>> template/master
 
 ### Linux ###
 *~
@@ -396,13 +394,10 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
-<<<<<<< HEAD
 ### macOS Patch ###
 # iCloud generated files
 *.icloud
 
-=======
->>>>>>> template/master
 ### MicrosoftOffice ###
 *.tmp
 
@@ -480,12 +475,9 @@ web_modules/
 # Optional eslint cache
 .eslintcache
 
-<<<<<<< HEAD
 # Optional stylelint cache
 .stylelintcache
 
-=======
->>>>>>> template/master
 # Microbundle cache
 .rpt2_cache/
 .rts2_cache_cjs/
@@ -501,19 +493,12 @@ web_modules/
 # Yarn Integrity file
 .yarn-integrity
 
-<<<<<<< HEAD
 # dotenv environment variable files
 .env
 .env.development.local
 .env.test.local
 .env.production.local
 .env.local
-=======
-# dotenv environment variables file
-.env
-.env.test
-.env.production
->>>>>>> template/master
 
 # parcel-bundler cache (https://parceljs.org/)
 .cache
@@ -536,15 +521,12 @@ dist
 # vuepress build output
 .vuepress/dist
 
-<<<<<<< HEAD
 # vuepress v2.x temp and cache directory
 .temp
 
 # Docusaurus cache and generated files
 .docusaurus
 
-=======
->>>>>>> template/master
 # Serverless directories
 .serverless/
 
@@ -571,14 +553,11 @@ dist
 # Serverless Webpack directories
 .webpack/
 
-<<<<<<< HEAD
 # Optional stylelint cache
 
 # SvelteKit build / generate output
 .svelte-kit
 
-=======
->>>>>>> template/master
 ### Python ###
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -674,7 +653,6 @@ ipython_config.py
 #   install all needed dependencies.
 #Pipfile.lock
 
-<<<<<<< HEAD
 # poetry
 #   Similar to Pipfile.lock, it is generally recommended to include poetry.lock in version control.
 #   This is especially recommended for binary packages to ensure reproducibility, and is more
@@ -691,9 +669,6 @@ ipython_config.py
 .pdm.toml
 
 # PEP 582; used by e.g. github.com/David-OConnor/pyflow and github.com/pdm-project/pdm
-=======
-# PEP 582; used by e.g. github.com/David-OConnor/pyflow
->>>>>>> template/master
 __pypackages__/
 
 # Celery stuff
@@ -735,7 +710,6 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 
-<<<<<<< HEAD
 # PyCharm
 #  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
 #  be found at https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore
@@ -753,8 +727,6 @@ poetry.toml
 # LSP config files
 pyrightconfig.json
 
-=======
->>>>>>> template/master
 ### Scala ###
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
@@ -803,11 +775,8 @@ $RECYCLE.BIN/
 
 ### Gradle ###
 .gradle
-<<<<<<< HEAD
 **/build/
 !src/**/build/
-=======
->>>>>>> template/master
 
 # Ignore Gradle GUI config
 gradle-app.setting
@@ -815,36 +784,20 @@ gradle-app.setting
 # Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
 !gradle-wrapper.jar
 
-<<<<<<< HEAD
 # Avoid ignore Gradle wrappper properties
 !gradle-wrapper.properties
 
 # Cache of project
 .gradletasknamecache
 
-=======
-# Cache of project
-.gradletasknamecache
-
-# # Work around https://youtrack.jetbrains.com/issue/IDEA-116898
-# gradle/wrapper/gradle-wrapper.properties
-
-### Gradle Patch ###
-**/build/
-
->>>>>>> template/master
 # Eclipse Gradle plugin generated files
 # Eclipse Core
 .project
 # JDT-specific (Eclipse Java Development Tools)
 .classpath
 
-<<<<<<< HEAD
 ### Gradle Patch ###
 # Java heap dump
 *.hprof
 
 # End of https://www.toptal.com/developers/gitignore/api/java,node,venv,linux,macos,scala,gradle,python,windows,virtualenv,microsoftoffice,latex
-=======
-# End of https://www.toptal.com/developers/gitignore/api/venv,node,java,scala,macos,linux,gradle,python,windows,virtualenv,microsoftoffice
->>>>>>> template/master
