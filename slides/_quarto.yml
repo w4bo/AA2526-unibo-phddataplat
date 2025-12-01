@@ -47,7 +47,7 @@ author: Matteo Francia <br/> DISI --- University of Bologna <br/> m.francia@unib
 title: Data Platforms and Artificial Intelligence
 subtitle: Challenges and Applications
 bibliography:
-  - refs.bib
+  - refs/refs.bib
 
 execute:
     enabled: false
