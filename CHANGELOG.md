@@ -1,3 +1,9 @@
+## [1.0.17](https://github.com/w4bo/AA2526-unibo-phddataplat/compare/1.0.16...1.0.17) (2025-12-01)
+
+### Bug Fixes
+
+* refactoring css ([ef3175e](https://github.com/w4bo/AA2526-unibo-phddataplat/commit/ef3175e249b94168bd4b5ed442e19b5f905cba47))
+
 ## [1.0.16](https://github.com/w4bo/AA2526-unibo-phddataplat/compare/1.0.15...1.0.16) (2025-11-27)
 
 ### Bug Fixes
