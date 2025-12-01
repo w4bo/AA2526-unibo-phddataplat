@@ -7,8 +7,8 @@ project:
     watch-inputs: true
 
 format:
-  revealjs: 
-    theme: [white, slides.scss]
+  revealjs:
+    theme: [white, utils/slides.scss]
     menu: true
     progress: true
     slide-number: true
