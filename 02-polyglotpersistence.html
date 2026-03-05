@@ -5,8 +5,8 @@
 <script src="02-polyglotpersistence_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="02-polyglotpersistence_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="02-polyglotpersistence_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="02-polyglotpersistence_files/libs/quarto-html/quarto-syntax-highlighting-cdaacfc258cb6f151192107f105ac881.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.9.12">
+<link href="02-polyglotpersistence_files/libs/quarto-html/quarto-syntax-highlighting-dfa48a90d809c806c7ea2d5aecd9fc66.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.9.29">
 
   <meta name="author" content="Matteo Francia   DISI — University of Bologna   m.francia@unibo.it">
   <title>Data Platforms and Artificial Intelligence</title>
@@ -16,6 +16,9 @@
   <link rel="stylesheet" href="02-polyglotpersistence_files/libs/revealjs/dist/reset.css">
   <link rel="stylesheet" href="02-polyglotpersistence_files/libs/revealjs/dist/reveal.css">
   <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
     div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -97,7 +100,6 @@
     div.csl-bib-body { }
     div.csl-entry {
       clear: both;
-      margin-bottom: 0em;
     }
     .hanging-indent div.csl-entry {
       margin-left:2em;
@@ -114,7 +116,7 @@
     div.csl-indent {
       margin-left: 2em;
     }  </style>
-  <link rel="stylesheet" href="02-polyglotpersistence_files/libs/revealjs/dist/theme/quarto-b3aa9dda08c8fde6dffd4aadb76df7d0.css">
+  <link rel="stylesheet" href="02-polyglotpersistence_files/libs/revealjs/dist/theme/quarto-0e668b1a546779e99dcb54481cac3728.css">
   <link href="02-polyglotpersistence_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="02-polyglotpersistence_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="02-polyglotpersistence_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -366,7 +368,7 @@ Matteo Francia <br> DISI — University of Bologna <br> m.francia@unibo.it
 <p>Some approaches suggest strategies to model everything within RDBMSs</p>
 <ul>
 <li><span class="citation" data-cites="DBLP:conf/sigmod/DiScalaA16">(<a href="#/references" role="doc-biblioref" onclick="">DiScala and Abadi 2016</a>)</span></li>
-<li><span class="citation" data-cites="DBLP:conf/sigmod/TaharaDA14">(<a href="#/references" role="doc-biblioref" onclick="">Tahara, Diamond, and Abadi 2014</a>)</span></li>
+<li><span class="citation" data-cites="DBLP:conf/sigmod/TaharaDA14">(<a href="#/references" role="doc-biblioref" onclick="">Tahara et al. 2014</a>)</span></li>
 </ul>
 </section>
 
@@ -407,7 +409,7 @@ Matteo Francia <br> DISI — University of Bologna <br> m.francia@unibo.it
 <li><em>Shim</em> = a wrapper to convert from the island’s query language to the target DB’s query language</li>
 </ul>
 
-<img data-src="img/phdslides_105.png" class="r-stretch quarto-figure-center"><p class="caption">BigDAWG <span class="citation" data-cites="DBLP:books/mc/19/MattsonRE14">(<a href="#/references" role="doc-biblioref" onclick="">Mattson, Rogers, and Elmore 2019</a>)</span></p></section>
+<img data-src="img/phdslides_105.png" class="r-stretch quarto-figure-center"><p class="caption">BigDAWG <span class="citation" data-cites="DBLP:books/mc/19/MattsonRE14">(<a href="#/references" role="doc-biblioref" onclick="">Mattson et al. 2019</a>)</span></p></section>
 
 <section id="advanced-solutions-1" class="title-slide slide level1 center">
 <h1>Advanced solutions</h1>
@@ -436,9 +438,9 @@ Matteo Francia <br> DISI — University of Bologna <br> m.francia@unibo.it
 <h1></h1>
 <p>Most notable multistore/polystore proposals</p>
 <ul>
-<li><em>BigDAWG</em>: Focus on the ability to “move” data from one DB to another to improve query efficiency <span class="citation" data-cites="DBLP:books/mc/19/MattsonRE14">(<a href="#/references" role="doc-biblioref" onclick="">Mattson, Rogers, and Elmore 2019</a>)</span></li>
+<li><em>BigDAWG</em>: Focus on the ability to “move” data from one DB to another to improve query efficiency <span class="citation" data-cites="DBLP:books/mc/19/MattsonRE14">(<a href="#/references" role="doc-biblioref" onclick="">Mattson et al. 2019</a>)</span></li>
 <li><em>Estocada</em>: Focus on taking advantage of possible (consistent) redundancy and previous query results <span class="citation" data-cites="DBLP:journals/pvldb/AlotaibiCDLMY20">(<a href="#/references" role="doc-biblioref" onclick="">Alotaibi et al. 2020</a>)</span></li>
-<li><em>Awesome</em>: Focus on supporting common analytical functions <span class="citation" data-cites="DBLP:conf/bigdataconf/DasguptaCG16">(<a href="#/references" role="doc-biblioref" onclick="">Dasgupta, Coakley, and Gupta 2016</a>)</span></li>
+<li><em>Awesome</em>: Focus on supporting common analytical functions <span class="citation" data-cites="DBLP:conf/bigdataconf/DasguptaCG16">(<a href="#/references" role="doc-biblioref" onclick="">Dasgupta et al. 2016</a>)</span></li>
 <li><em>CloudMdsQL</em>: Focus on taking advantage of local data store native functionalities <span class="citation" data-cites="DBLP:journals/dpd/KolevVBJPP16">(<a href="#/references" role="doc-biblioref" onclick="">Kolev et al. 2016</a>)</span></li>
 </ul>
 </section>
@@ -492,11 +494,11 @@ Matteo Francia <br> DISI — University of Bologna <br> m.francia@unibo.it
 <ul>
 <li><strong>Concise view</strong>: a single representation for all schema variations
 <ul>
-<li>Union of all attributes <span class="citation" data-cites="DBLP:conf/btw/KlettkeSS15">(<a href="#/references" role="doc-biblioref" onclick="">Klettke, Störl, and Scherzinger 2015</a>)</span></li>
+<li>Union of all attributes <span class="citation" data-cites="DBLP:conf/btw/KlettkeSS15">(<a href="#/references" role="doc-biblioref" onclick="">Klettke et al. 2015</a>)</span></li>
 <li>A <em>skeleton</em> as the smallest set of core attributes according to a frequency-based formula <span class="citation" data-cites="DBLP:journals/pvldb/WangHZS15">(<a href="#/references" role="doc-biblioref" onclick="">Wang et al. 2015</a>)</span></li>
 </ul></li>
-<li><strong>Comprehensive view</strong>: multiple representations (a different schema for every document) <span class="citation" data-cites="DBLP:conf/er/RuizMM15">(<a href="#/references" role="doc-biblioref" onclick="">Ruiz, Morales, and Molina 2015</a>)</span></li>
-<li><strong>Schema profile</strong>: <em>explain why</em> there are different schemas <span class="citation" data-cites="DBLP:journals/is/GallinucciGR18">(<a href="#/references" role="doc-biblioref" onclick="">Gallinucci, Golfarelli, and Rizzi 2018</a>)</span></li>
+<li><strong>Comprehensive view</strong>: multiple representations (a different schema for every document) <span class="citation" data-cites="DBLP:conf/er/RuizMM15">(<a href="#/references" role="doc-biblioref" onclick="">Ruiz et al. 2015</a>)</span></li>
+<li><strong>Schema profile</strong>: <em>explain why</em> there are different schemas <span class="citation" data-cites="DBLP:journals/is/GallinucciGR18">(<a href="#/references" role="doc-biblioref" onclick="">Gallinucci et al. 2018</a>)</span></li>
 </ul>
 </section>
 
@@ -793,7 +795,7 @@ Matteo Francia <br> DISI — University of Bologna <br> m.francia@unibo.it
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="img/phdslides_120.png"></p>
-<figcaption><span class="citation" data-cites="DBLP:journals/is/GallinucciGR19">(<a href="#/references" role="doc-biblioref" onclick="">Gallinucci, Golfarelli, and Rizzi 2019</a>)</span></figcaption>
+<figcaption><span class="citation" data-cites="DBLP:journals/is/GallinucciGR19">(<a href="#/references" role="doc-biblioref" onclick="">Gallinucci et al. 2019</a>)</span></figcaption>
 </figure>
 </div>
 </div></div>
@@ -829,11 +831,11 @@ Matteo Francia <br> DISI — University of Bologna <br> m.francia@unibo.it
 <h1>Dataspace</h1>
 <p>Replace the global schema with a <em>dataspace</em> <span class="citation" data-cites="DBLP:books/sp/20/Curry20a">(<a href="#/references" role="doc-biblioref" onclick="">Curry 2020</a>)</span></p>
 <blockquote>
-<p>A <strong>dataspace</strong> is a lightweight integration approach providing basic query expressive power on a variety of data sources, bypassing the complexity of traditional integration approaches and possibly returning best-effort or approximate answers <span class="citation" data-cites="DBLP:journals/sigmod/FranklinHM05">(<a href="#/references" role="doc-biblioref" onclick="">Franklin, Halevy, and Maier 2005</a>)</span></p>
+<p>A <strong>dataspace</strong> is a lightweight integration approach providing basic query expressive power on a variety of data sources, bypassing the complexity of traditional integration approaches and possibly returning best-effort or approximate answers <span class="citation" data-cites="DBLP:journals/sigmod/FranklinHM05">(<a href="#/references" role="doc-biblioref" onclick="">Franklin et al. 2005</a>)</span></p>
 </blockquote>
 <p>Replace traditional integration with a <em>pay-as-you-go</em> approach.</p>
 <ul>
-<li>The system incrementally integrates data over time by asking users to confirm matches as the system runs <span class="citation" data-cites="DBLP:conf/sigmod/JefferyFH08">(<a href="#/references" role="doc-biblioref" onclick="">Jeffery, Franklin, and Halevy 2008</a>)</span></li>
+<li>The system incrementally integrates data over time by asking users to confirm matches as the system runs <span class="citation" data-cites="DBLP:conf/sigmod/JefferyFH08">(<a href="#/references" role="doc-biblioref" onclick="">Jeffery et al. 2008</a>)</span></li>
 </ul>
 </section>
 
@@ -935,7 +937,7 @@ Matteo Francia <br> DISI — University of Bologna <br> m.francia@unibo.it
 <h1>Data fusion</h1>
 <p><em>Merge operator</em></p>
 <ul>
-<li>Originally introduced as “full outer join merge” <span class="citation" data-cites="DBLP:journals/is/NaumannFL04">(<a href="#/references" role="doc-biblioref" onclick="">Naumann, Freytag, and Leser 2004</a>)</span></li>
+<li>Originally introduced as “full outer join merge” <span class="citation" data-cites="DBLP:journals/is/NaumannFL04">(<a href="#/references" role="doc-biblioref" onclick="">Naumann et al. 2004</a>)</span></li>
 <li>Aims to keep as much information as possible when joining the records of two schemas
 <ul>
 <li>Avoid any loss of records</li>
@@ -1141,24 +1143,24 @@ Matteo Francia <br> DISI — University of Bologna <br> m.francia@unibo.it
 <section id="references" class="title-slide slide level1 smaller scrollable">
 <h1>References</h1>
 
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
 <div id="ref-DBLP:journals/pvldb/AlotaibiCDLMY20" class="csl-entry" role="listitem">
 Alotaibi, Rana, Bogdan Cautis, Alin Deutsch, Moustafa Latrache, Ioana Manolescu, and Yifei Yang. 2020. <span>“<span>ESTOCADA:</span> Towards Scalable Polystore Systems.”</span> <em>Proc. <span>VLDB</span> Endow.</em> 13 (12): 2949–52. <a href="https://doi.org/10.14778/3415478.3415516">https://doi.org/10.14778/3415478.3415516</a>.
 </div>
 <div id="ref-DBLP:books/sp/20/Curry20a" class="csl-entry" role="listitem">
-Curry, Edward. 2020. <span>“Dataspaces: Fundamentals, Principles, and Techniques.”</span> In <em>Real-Time Linked Dataspaces - Enabling Data Ecosystems for Intelligent Systems</em>, edited by Edward Curry, 45–62. Springer. <a href="https://doi.org/10.1007/978-3-030-29665-0\_3">https://doi.org/10.1007/978-3-030-29665-0\_3</a>.
+Curry, Edward. 2020. <span>“Dataspaces: Fundamentals, Principles, and Techniques.”</span> In <em>Real-Time Linked Dataspaces - Enabling Data Ecosystems for Intelligent Systems</em>, edited by Edward Curry. Springer. <a href="https://doi.org/10.1007/978-3-030-29665-0\_3">https://doi.org/10.1007/978-3-030-29665-0\_3</a>.
 </div>
 <div id="ref-DBLP:conf/bigdataconf/DasguptaCG16" class="csl-entry" role="listitem">
-Dasgupta, Subhasis, Kevin L. Coakley, and Amarnath Gupta. 2016. <span>“Analytics-Driven Data Ingestion and Derivation in the <span>AWESOME</span> Polystore.”</span> In <em>2016 <span>IEEE</span> International Conference on Big Data <span>(IEEE</span> BigData 2016), Washington DC, USA, December 5-8, 2016</em>, edited by James Joshi, George Karypis, Ling Liu, Xiaohua Hu, Ronay Ak, Yinglong Xia, Weijia Xu, et al., 2555–64. <span>IEEE</span> Computer Society. <a href="https://doi.org/10.1109/BIGDATA.2016.7840897">https://doi.org/10.1109/BIGDATA.2016.7840897</a>.
+Dasgupta, Subhasis, Kevin L. Coakley, and Amarnath Gupta. 2016. <span>“Analytics-Driven Data Ingestion and Derivation in the <span>AWESOME</span> Polystore.”</span> In <em>2016 <span>IEEE</span> International Conference on Big Data <span>(IEEE</span> BigData 2016), Washington DC, USA, December 5-8, 2016</em>, edited by James Joshi, George Karypis, Ling Liu, et al. <span>IEEE</span> Computer Society. <a href="https://doi.org/10.1109/BIGDATA.2016.7840897">https://doi.org/10.1109/BIGDATA.2016.7840897</a>.
 </div>
 <div id="ref-DBLP:conf/sigmod/DiScalaA16" class="csl-entry" role="listitem">
-DiScala, Michael, and Daniel J. Abadi. 2016. <span>“Automatic Generation of Normalized Relational Schemas from Nested Key-Value Data.”</span> In <em>Proceedings of the 2016 International Conference on Management of Data, <span>SIGMOD</span> Conference 2016, San Francisco, CA, USA, June 26 - July 01, 2016</em>, edited by Fatma Özcan, Georgia Koutrika, and Sam Madden, 295–310. <span>ACM</span>. <a href="https://doi.org/10.1145/2882903.2882924">https://doi.org/10.1145/2882903.2882924</a>.
+DiScala, Michael, and Daniel J. Abadi. 2016. <span>“Automatic Generation of Normalized Relational Schemas from Nested Key-Value Data.”</span> In <em>Proceedings of the 2016 International Conference on Management of Data, <span>SIGMOD</span> Conference 2016, San Francisco, CA, USA, June 26 - July 01, 2016</em>, edited by Fatma Özcan, Georgia Koutrika, and Sam Madden. <span>ACM</span>. <a href="https://doi.org/10.1145/2882903.2882924">https://doi.org/10.1145/2882903.2882924</a>.
 </div>
 <div id="ref-DBLP:conf/adbis/ForresiFGG21" class="csl-entry" role="listitem">
-Forresi, Chiara, Matteo Francia, Enrico Gallinucci, and Matteo Golfarelli. 2021. <span>“Optimizing Execution Plans in a Multistore.”</span> In <em>Advances in Databases and Information Systems - 25th European Conference, <span>ADBIS</span> 2021, Tartu, Estonia, August 24-26, 2021, Proceedings</em>, edited by Ladjel Bellatreche, Marlon Dumas, Panagiotis Karras, and Raimundas Matulevicius, 12843:136–51. Lecture Notes in Computer Science. Springer. <a href="https://doi.org/10.1007/978-3-030-82472-3\_11">https://doi.org/10.1007/978-3-030-82472-3\_11</a>.
+Forresi, Chiara, Matteo Francia, Enrico Gallinucci, and Matteo Golfarelli. 2021. <span>“Optimizing Execution Plans in a Multistore.”</span> In <em>Advances in Databases and Information Systems - 25th European Conference, <span>ADBIS</span> 2021, Tartu, Estonia, August 24-26, 2021, Proceedings</em>, edited by Ladjel Bellatreche, Marlon Dumas, Panagiotis Karras, and Raimundas Matulevicius, vol. 12843. Lecture Notes in Computer Science. Springer. <a href="https://doi.org/10.1007/978-3-030-82472-3\_11">https://doi.org/10.1007/978-3-030-82472-3\_11</a>.
 </div>
 <div id="ref-DBLP:journals/isf/ForresiFGG23" class="csl-entry" role="listitem">
-———. 2023. <span>“Cost-Based Optimization of Multistore Query Plans.”</span> <em>Inf. Syst. Frontiers</em> 25 (5): 1925–51. <a href="https://doi.org/10.1007/S10796-022-10320-2">https://doi.org/10.1007/S10796-022-10320-2</a>.
+Forresi, Chiara, Matteo Francia, Enrico Gallinucci, and Matteo Golfarelli. 2023. <span>“Cost-Based Optimization of Multistore Query Plans.”</span> <em>Inf. Syst. Frontiers</em> 25 (5): 1925–51. <a href="https://doi.org/10.1007/S10796-022-10320-2">https://doi.org/10.1007/S10796-022-10320-2</a>.
 </div>
 <div id="ref-DBLP:journals/vldb/ForresiGGH21" class="csl-entry" role="listitem">
 Forresi, Chiara, Enrico Gallinucci, Matteo Golfarelli, and Hamdi Ben Hamadou. 2021. <span>“A Dataspace-Based Framework for <span>OLAP</span> Analyses in a High-Variety Multistore.”</span> <em>The VLDB Journal</em> 30 (6): 1017–40. <a href="https://doi.org/10.1007/S00778-021-00682-5">https://doi.org/10.1007/S00778-021-00682-5</a>.
@@ -1170,22 +1172,22 @@ Franklin, Michael J., Alon Y. Halevy, and David Maier. 2005. <span>“From Datab
 Gallinucci, Enrico, Matteo Golfarelli, and Stefano Rizzi. 2018. <span>“Schema Profiling of Document-Oriented Databases.”</span> <em>Inf. Syst.</em> 75: 13–25. <a href="https://doi.org/10.1016/J.IS.2018.02.007">https://doi.org/10.1016/J.IS.2018.02.007</a>.
 </div>
 <div id="ref-DBLP:journals/is/GallinucciGR19" class="csl-entry" role="listitem">
-———. 2019. <span>“Approximate <span>OLAP</span> of Document-Oriented Databases: <span>A</span> Variety-Aware Approach.”</span> <em>Inf. Syst.</em> 85: 114–30. <a href="https://doi.org/10.1016/J.IS.2019.02.004">https://doi.org/10.1016/J.IS.2019.02.004</a>.
+Gallinucci, Enrico, Matteo Golfarelli, and Stefano Rizzi. 2019. <span>“Approximate <span>OLAP</span> of Document-Oriented Databases: <span>A</span> Variety-Aware Approach.”</span> <em>Inf. Syst.</em> 85: 114–30. <a href="https://doi.org/10.1016/J.IS.2019.02.004">https://doi.org/10.1016/J.IS.2019.02.004</a>.
 </div>
 <div id="ref-DBLP:conf/sigmod/JefferyFH08" class="csl-entry" role="listitem">
-Jeffery, Shawn R., Michael J. Franklin, and Alon Y. Halevy. 2008. <span>“Pay-as-You-Go User Feedback for Dataspace Systems.”</span> In <em>Proceedings of the <span>ACM</span> <span>SIGMOD</span> International Conference on Management of Data, <span>SIGMOD</span> 2008, Vancouver, BC, Canada, June 10-12, 2008</em>, edited by Jason Tsong-Li Wang, 847–60. <span>ACM</span>. <a href="https://doi.org/10.1145/1376616.1376701">https://doi.org/10.1145/1376616.1376701</a>.
+Jeffery, Shawn R., Michael J. Franklin, and Alon Y. Halevy. 2008. <span>“Pay-as-You-Go User Feedback for Dataspace Systems.”</span> In <em>Proceedings of the <span>ACM</span> <span>SIGMOD</span> International Conference on Management of Data, <span>SIGMOD</span> 2008, Vancouver, BC, Canada, June 10-12, 2008</em>, edited by Jason Tsong-Li Wang. <span>ACM</span>. <a href="https://doi.org/10.1145/1376616.1376701">https://doi.org/10.1145/1376616.1376701</a>.
 </div>
 <div id="ref-DBLP:conf/btw/KlettkeSS15" class="csl-entry" role="listitem">
-Klettke, Meike, Uta Störl, and Stefanie Scherzinger. 2015. <span>“Schema Extraction and Structural Outlier Detection for JSON-Based NoSQL Data Stores.”</span> In <em>Datenbanksysteme f<span>ü</span>r Business, Technologie Und Web (BTW), 16. Fachtagung Des GI-Fachbereichs "Datenbanken Und Informationssysteme" (DBIS), 4.-6.3.2015 in Hamburg, Germany. Proceedings</em>, edited by Thomas Seidl, Norbert Ritter, Harald Schöning, Kai-Uwe Sattler, Theo Härder, Steffen Friedrich, and Wolfram Wingerath, <span>P-241</span>:425–44. <span>LNI</span>. <span>GI</span>. <a href="https://dl.gi.de/handle/20.500.12116/2420">https://dl.gi.de/handle/20.500.12116/2420</a>.
+Klettke, Meike, Uta Störl, and Stefanie Scherzinger. 2015. <span>“Schema Extraction and Structural Outlier Detection for JSON-Based NoSQL Data Stores.”</span> In <em>Datenbanksysteme f<span>ü</span>r Business, Technologie Und Web (BTW), 16. Fachtagung Des GI-Fachbereichs "Datenbanken Und Informationssysteme" (DBIS), 4.-6.3.2015 in Hamburg, Germany. Proceedings</em>, edited by Thomas Seidl, Norbert Ritter, Harald Schöning, et al., <span>P-241</span>. <span>LNI</span>. <span>GI</span>. <a href="https://dl.gi.de/handle/20.500.12116/2420">https://dl.gi.de/handle/20.500.12116/2420</a>.
 </div>
 <div id="ref-DBLP:journals/dpd/KolevVBJPP16" class="csl-entry" role="listitem">
 Kolev, Boyan, Patrick Valduriez, Carlyna Bondiombouy, Ricardo Jiménez-Peris, Raquel Pau, and José Pereira. 2016. <span>“CloudMdsQL: Querying Heterogeneous Cloud Data Stores with a Common Language.”</span> <em>Distributed Parallel Databases</em> 34 (4): 463–503. <a href="https://doi.org/10.1007/S10619-015-7185-Y">https://doi.org/10.1007/S10619-015-7185-Y</a>.
 </div>
 <div id="ref-mandreoli2019dealing" class="csl-entry" role="listitem">
-Mandreoli, Federica, and Manuela Montangero. 2019. <span>“Dealing with Data Heterogeneity in a Data Fusion Perspective: Models, Methodologies, and Algorithms.”</span> In <em>Data Handling in Science and Technology</em>, 31:235–70. Elsevier.
+Mandreoli, Federica, and Manuela Montangero. 2019. <span>“Dealing with Data Heterogeneity in a Data Fusion Perspective: Models, Methodologies, and Algorithms.”</span> In <em>Data Handling in Science and Technology</em>, vol. 31. Elsevier.
 </div>
 <div id="ref-DBLP:books/mc/19/MattsonRE14" class="csl-entry" role="listitem">
-Mattson, Tim, Jennie Rogers, and Aaron J. Elmore. 2019. <span>“The BigDAWG Polystore System.”</span> In <em>Making Databases Work: The Pragmatic Wisdom of Michael Stonebraker</em>, edited by Michael L. Brodie, 22:279–89. <span>ACM</span> Books. <span>ACM</span> / Morgan <span>&amp;</span> Claypool. <a href="https://doi.org/10.1145/3226595.3226620">https://doi.org/10.1145/3226595.3226620</a>.
+Mattson, Tim, Jennie Rogers, and Aaron J. Elmore. 2019. <span>“The BigDAWG Polystore System.”</span> In <em>Making Databases Work: The Pragmatic Wisdom of Michael Stonebraker</em>, edited by Michael L. Brodie, vol. 22. <span>ACM</span> Books. <span>ACM</span> / Morgan <span>&amp;</span> Claypool. <a href="https://doi.org/10.1145/3226595.3226620">https://doi.org/10.1145/3226595.3226620</a>.
 </div>
 <div id="ref-DBLP:journals/is/NaumannFL04" class="csl-entry" role="listitem">
 Naumann, Felix, Johann Christoph Freytag, and Ulf Leser. 2004. <span>“Completeness of Integrated Information Sources.”</span> <em>Inf. Syst.</em> 29 (7): 583–615. <a href="https://doi.org/10.1016/J.IS.2003.12.005">https://doi.org/10.1016/J.IS.2003.12.005</a>.
@@ -1194,16 +1196,16 @@ Naumann, Felix, Johann Christoph Freytag, and Ulf Leser. 2004. <span>“Complete
 Rahm, Erhard, and Philip A. Bernstein. 2001. <span>“A Survey of Approaches to Automatic Schema Matching.”</span> <em><span>VLDB</span> J.</em> 10 (4): 334–50. <a href="https://doi.org/10.1007/S007780100057">https://doi.org/10.1007/S007780100057</a>.
 </div>
 <div id="ref-DBLP:conf/er/RuizMM15" class="csl-entry" role="listitem">
-Ruiz, Diego Sevilla, Severino Feliciano Morales, and Jesús Garcı́a Molina. 2015. <span>“Inferring Versioned Schemas from NoSQL Databases and Its Applications.”</span> In <em>Conceptual Modeling - 34th International Conference, <span>ER</span> 2015, Stockholm, Sweden, October 19-22, 2015, Proceedings</em>, edited by Paul Johannesson, Mong-Li Lee, Stephen W. Liddle, Andreas L. Opdahl, and Oscar Pastor López, 9381:467–80. Lecture Notes in Computer Science. Springer. <a href="https://doi.org/10.1007/978-3-319-25264-3\_35">https://doi.org/10.1007/978-3-319-25264-3\_35</a>.
+Ruiz, Diego Sevilla, Severino Feliciano Morales, and Jesús Garcı́a Molina. 2015. <span>“Inferring Versioned Schemas from NoSQL Databases and Its Applications.”</span> In <em>Conceptual Modeling - 34th International Conference, <span>ER</span> 2015, Stockholm, Sweden, October 19-22, 2015, Proceedings</em>, edited by Paul Johannesson, Mong-Li Lee, Stephen W. Liddle, Andreas L. Opdahl, and Oscar Pastor López, vol. 9381. Lecture Notes in Computer Science. Springer. <a href="https://doi.org/10.1007/978-3-319-25264-3\_35">https://doi.org/10.1007/978-3-319-25264-3\_35</a>.
 </div>
 <div id="ref-DBLP:conf/sigmod/TaharaDA14" class="csl-entry" role="listitem">
-Tahara, Daniel, Thaddeus Diamond, and Daniel J. Abadi. 2014. <span>“Sinew: A <span>SQL</span> System for Multi-Structured Data.”</span> In <em>International Conference on Management of Data, <span>SIGMOD</span> 2014, Snowbird, UT, USA, June 22-27, 2014</em>, edited by Curtis E. Dyreson, Feifei Li, and M. Tamer Özsu, 815–26. <span>ACM</span>. <a href="https://doi.org/10.1145/2588555.2612183">https://doi.org/10.1145/2588555.2612183</a>.
+Tahara, Daniel, Thaddeus Diamond, and Daniel J. Abadi. 2014. <span>“Sinew: A <span>SQL</span> System for Multi-Structured Data.”</span> In <em>International Conference on Management of Data, <span>SIGMOD</span> 2014, Snowbird, UT, USA, June 22-27, 2014</em>, edited by Curtis E. Dyreson, Feifei Li, and M. Tamer Özsu. <span>ACM</span>. <a href="https://doi.org/10.1145/2588555.2612183">https://doi.org/10.1145/2588555.2612183</a>.
 </div>
 <div id="ref-DBLP:conf/bigdataconf/TanCGM17" class="csl-entry" role="listitem">
-Tan, Ran, Rada Chirkova, Vijay Gadepally, and Timothy G. Mattson. 2017. <span>“Enabling Query Processing Across Heterogeneous Data Models: <span>A</span> Survey.”</span> In <em>2017 <span>IEEE</span> International Conference on Big Data <span>(IEEE</span> BigData 2017), Boston, MA, USA, December 11-14, 2017</em>, edited by Jian-Yun Nie, Zoran Obradovic, Toyotaro Suzumura, Rumi Ghosh, Raghunath Nambiar, Chonggang Wang, Hui Zang, et al., 3211–20. <span>IEEE</span> Computer Society. <a href="https://doi.org/10.1109/BIGDATA.2017.8258302">https://doi.org/10.1109/BIGDATA.2017.8258302</a>.
+Tan, Ran, Rada Chirkova, Vijay Gadepally, and Timothy G. Mattson. 2017. <span>“Enabling Query Processing Across Heterogeneous Data Models: <span>A</span> Survey.”</span> In <em>2017 <span>IEEE</span> International Conference on Big Data <span>(IEEE</span> BigData 2017), Boston, MA, USA, December 11-14, 2017</em>, edited by Jian-Yun Nie, Zoran Obradovic, Toyotaro Suzumura, et al. <span>IEEE</span> Computer Society. <a href="https://doi.org/10.1109/BIGDATA.2017.8258302">https://doi.org/10.1109/BIGDATA.2017.8258302</a>.
 </div>
 <div id="ref-DBLP:journals/pvldb/WangHZS15" class="csl-entry" role="listitem">
-Wang, Lanjun, Oktie Hassanzadeh, Shuo Zhang, Juwei Shi, Limei Jiao, Jia Zou, and Chen Wang. 2015. <span>“Schema Management for Document Stores.”</span> <em>Proc. <span>VLDB</span> Endow.</em> 8 (9): 922–33. <a href="https://doi.org/10.14778/2777598.2777601">https://doi.org/10.14778/2777598.2777601</a>.
+Wang, Lanjun, Oktie Hassanzadeh, Shuo Zhang, et al. 2015. <span>“Schema Management for Document Stores.”</span> <em>Proc. <span>VLDB</span> Endow.</em> 8 (9): 922–33. <a href="https://doi.org/10.14778/2777598.2777601">https://doi.org/10.14778/2777598.2777601</a>.
 </div>
 </div>
 </section>
