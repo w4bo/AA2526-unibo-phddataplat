@@ -5,8 +5,8 @@
 <script src="03-metadata_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="03-metadata_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="03-metadata_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="03-metadata_files/libs/quarto-html/quarto-syntax-highlighting-dfa48a90d809c806c7ea2d5aecd9fc66.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.9.29">
+<link href="03-metadata_files/libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.10.18">
 
   <meta name="author" content="Matteo Francia   DISI — University of Bologna   m.francia@unibo.it">
   <title>Data Platforms and Artificial Intelligence</title>
@@ -19,10 +19,13 @@
     /* Default styles provided by pandoc.
     ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
     */
-    code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
     ul.task-list li input[type="checkbox"] {
@@ -220,7 +223,7 @@
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Matteo Francia <br> DISI — University of Bologna <br> m.francia@unibo.it 
+Matteo Francia <br> DISI — University of Bologna <br> m.francia@unibo.it
 </div>
 </div>
 </div>
@@ -669,15 +672,15 @@ Matteo Francia <br> DISI — University of Bologna <br> m.francia@unibo.it
 <div class="columns">
 <div class="column" style="width:50%;">
 <p>Return all objects of a given project</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource cypher number-lines"><code class="sourceCode"><span id="cb1-1"><a href=""></a>MATCH (o:Object)-[]-(:Project {name:"ABC"})</span>
-<span id="cb1-2"><a href=""></a>RETURN o</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource cypher number-lines"><code class="sourceCode"><span id="cb1-1"><a href="" aria-label="1"></a>MATCH (o:Object)-[]-(:Project {name:"ABC"})</span>
+<span id="cb1-2"><a href="" aria-label="2"></a>RETURN o</span></code></pre></div>
 <p>Return small objects with a given name pattern in the landing area</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource cypher number-lines"><code class="sourceCode"><span id="cb2-1"><a href=""></a>MATCH (o:Object)-[]-(d:DataLakeArea)</span>
-<span id="cb2-2"><a href=""></a>WHERE d.name = "Landing" AND o.name LIKE "2021_%"AND o.size &lt; 100000</span>
-<span id="cb2-3"><a href=""></a>RETURN o</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource cypher number-lines"><code class="sourceCode"><span id="cb2-1"><a href="" aria-label="1"></a>MATCH (o:Object)-[]-(d:DataLakeArea)</span>
+<span id="cb2-2"><a href="" aria-label="2"></a>WHERE d.name = "Landing" AND o.name LIKE "2021_%"AND o.size &lt; 100000</span>
+<span id="cb2-3"><a href="" aria-label="3"></a>RETURN o</span></code></pre></div>
 <p>Schema-driven search: return objects that contain information referring to a given Domain</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource cypher number-lines"><code class="sourceCode"><span id="cb3-1"><a href=""></a>MATCH (o:Object)-[]-(:Schema)-[]-(a:Attribute), (a)-[]-(:Domain {name: "FiscalCode"})</span>
-<span id="cb3-2"><a href=""></a>RETURN o</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource cypher number-lines"><code class="sourceCode"><span id="cb3-1"><a href="" aria-label="1"></a>MATCH (o:Object)-[]-(:Schema)-[]-(a:Attribute), (a)-[]-(:Domain {name: "FiscalCode"})</span>
+<span id="cb3-2"><a href="" aria-label="2"></a>RETURN o</span></code></pre></div>
 </div><div class="column" style="width:50%;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
@@ -693,14 +696,14 @@ Matteo Francia <br> DISI — University of Bologna <br> m.francia@unibo.it
 <div class="columns">
 <div class="column" style="width:50%;">
 <p>Provenance-driven search</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource cypher number-lines"><code class="sourceCode"><span id="cb4-1"><a href=""></a>MATCH (obj1:Object)-[:readsFrom]-(o:Operation)-[:writesTo]-(obj2:Object)</span>
-<span id="cb4-2"><a href=""></a>CREATE (obj1)-[:ancestorOf]-&gt;(obj2)</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource cypher number-lines"><code class="sourceCode"><span id="cb4-1"><a href="" aria-label="1"></a>MATCH (obj1:Object)-[:readsFrom]-(o:Operation)-[:writesTo]-(obj2:Object)</span>
+<span id="cb4-2"><a href="" aria-label="2"></a>CREATE (obj1)-[:ancestorOf]-&gt;(obj2)</span></code></pre></div>
 <p>Discover objects obtained from a given ancestor</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource cypher number-lines"><code class="sourceCode"><span id="cb5-1"><a href=""></a>MATCH (:Object {id:123})-[:ancestorOf\*]-(obj:Object)</span>
-<span id="cb5-2"><a href=""></a>RETURN obj</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource cypher number-lines"><code class="sourceCode"><span id="cb5-1"><a href="" aria-label="1"></a>MATCH (:Object {id:123})-[:ancestorOf\*]-(obj:Object)</span>
+<span id="cb5-2"><a href="" aria-label="2"></a>RETURN obj</span></code></pre></div>
 <p>Discover object(s) from which another has originated</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource cypher number-lines"><code class="sourceCode"><span id="cb6-1"><a href=""></a>MATCH (obj:Object)-[:ancestorOf\*]-(:Object {id:123})</span>
-<span id="cb6-2"><a href=""></a>RETURN obj</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource cypher number-lines"><code class="sourceCode"><span id="cb6-1"><a href="" aria-label="1"></a>MATCH (obj:Object)-[:ancestorOf\*]-(:Object {id:123})</span>
+<span id="cb6-2"><a href="" aria-label="2"></a>RETURN obj</span></code></pre></div>
 <p>Example: a ML team wants to use datasets that were publicized as <em>canonical </em> for certain domains, but they find these datasets being too “groomed” for ML</p>
 <ul>
 <li>Provenance links can be used to browse upstream and identify the less-groomed datasets that were used to derive the canonical datasets</li>
@@ -721,13 +724,13 @@ Matteo Francia <br> DISI — University of Bologna <br> m.francia@unibo.it
 <div class="column" style="width:50%;">
 <p>Similarity-driven search</p>
 <p>Discover datasets to be merged in a certain query</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource cypher number-lines"><code class="sourceCode"><span id="cb7-1"><a href=""></a>MATCH (:Object {id:123})-[r:similarTo]-(o:Object)</span>
-<span id="cb7-2"><a href=""></a>WHERE r.similarityType="affinity"</span>
-<span id="cb7-3"><a href=""></a>RETURN o</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource cypher number-lines"><code class="sourceCode"><span id="cb7-1"><a href="" aria-label="1"></a>MATCH (:Object {id:123})-[r:similarTo]-(o:Object)</span>
+<span id="cb7-2"><a href="" aria-label="2"></a>WHERE r.similarityType="affinity"</span>
+<span id="cb7-3"><a href="" aria-label="3"></a>RETURN o</span></code></pre></div>
 <p>Discover datasets to be joined in a certain query</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource cypher number-lines"><code class="sourceCode"><span id="cb8-1"><a href=""></a>MATCH (:Object {id:123})-[r:similarTo]-(o:Object)</span>
-<span id="cb8-2"><a href=""></a>WHERE r.similarityType="joinability"</span>
-<span id="cb8-3"><a href=""></a>RETURN o</span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource cypher number-lines"><code class="sourceCode"><span id="cb8-1"><a href="" aria-label="1"></a>MATCH (:Object {id:123})-[r:similarTo]-(o:Object)</span>
+<span id="cb8-2"><a href="" aria-label="2"></a>WHERE r.similarityType="joinability"</span>
+<span id="cb8-3"><a href="" aria-label="3"></a>RETURN o</span></code></pre></div>
 <p>Group similar objects and enrich the search results</p>
 <ul>
 <li>List the main objects from each group</li>
@@ -748,11 +751,11 @@ Matteo Francia <br> DISI — University of Bologna <br> m.francia@unibo.it
 <div class="columns">
 <div class="column" style="width:50%;">
 <p>Semantics-driven search</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource cypher number-lines"><code class="sourceCode"><span id="cb9-1"><a href=""></a>MATCH (o:Object)-[:isDescribedBy]-(:OntologyTerm {uri:"http://..."})</span>
-<span id="cb9-2"><a href=""></a>RETURN o</span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource cypher number-lines"><code class="sourceCode"><span id="cb9-1"><a href="" aria-label="1"></a>MATCH (o:Object)-[:isDescribedBy]-(:OntologyTerm {uri:"http://..."})</span>
+<span id="cb9-2"><a href="" aria-label="2"></a>RETURN o</span></code></pre></div>
 <p>Search objects without having any knowledge of theirphysical or intensional properties, but simply exploitingtheir traceability to a certain semantic concept</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource cypher number-lines"><code class="sourceCode"><span id="cb10-1"><a href=""></a>MATCH (o:Object)-[\*]-(any), (any)-[:isDescribedBy]-(:OntologyTerm {uri:"http://..."})</span>
-<span id="cb10-2"><a href=""></a>RETURN o</span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource cypher number-lines"><code class="sourceCode"><span id="cb10-1"><a href="" aria-label="1"></a>MATCH (o:Object)-[\*]-(any), (any)-[:isDescribedBy]-(:OntologyTerm {uri:"http://..."})</span>
+<span id="cb10-2"><a href="" aria-label="2"></a>RETURN o</span></code></pre></div>
 </div><div class="column" style="width:50%;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
@@ -768,12 +771,12 @@ Matteo Francia <br> DISI — University of Bologna <br> m.francia@unibo.it
 <div class="columns">
 <div class="column" style="width:50%;">
 <p>Profiling</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode numberSource cypher number-lines"><code class="sourceCode"><span id="cb11-1"><a href=""></a>MATCH (o:Object)-[]-(:OntologyType {name:"Table"}),</span>
-<span id="cb11-2"><a href=""></a>      (o)-[]-(s:Schema)-[]-(a:Attribute),</span>
-<span id="cb11-3"><a href=""></a>      (o)-[r:similarTo]-(o2:Object),</span>
-<span id="cb11-4"><a href=""></a>      (o)-[:ancestorOf]-(o3:Object),</span>
-<span id="cb11-5"><a href=""></a>      (o4:Object)-[:ancestorOf]-(o)</span>
-<span id="cb11-6"><a href=""></a>RETURN o, s, a, r, o2, o3, o4</span></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode numberSource cypher number-lines"><code class="sourceCode"><span id="cb11-1"><a href="" aria-label="1"></a>MATCH (o:Object)-[]-(:OntologyType {name:"Table"}),</span>
+<span id="cb11-2"><a href="" aria-label="2"></a>      (o)-[]-(s:Schema)-[]-(a:Attribute),</span>
+<span id="cb11-3"><a href="" aria-label="3"></a>      (o)-[r:similarTo]-(o2:Object),</span>
+<span id="cb11-4"><a href="" aria-label="4"></a>      (o)-[:ancestorOf]-(o3:Object),</span>
+<span id="cb11-5"><a href="" aria-label="5"></a>      (o4:Object)-[:ancestorOf]-(o)</span>
+<span id="cb11-6"><a href="" aria-label="6"></a>RETURN o, s, a, r, o2, o3, o4</span></code></pre></div>
 <ul>
 <li>Shows an object’s properties, list the relationships with other objects in terms of similarity and provenance</li>
 <li>Compute a representation of the intensional features that mostly characterize a group of objects(see slides on schema heterogeneity)</li>

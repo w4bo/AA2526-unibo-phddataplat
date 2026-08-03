@@ -5,8 +5,8 @@
 <script src="01-bigdata_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="01-bigdata_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="01-bigdata_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="01-bigdata_files/libs/quarto-html/quarto-syntax-highlighting-dfa48a90d809c806c7ea2d5aecd9fc66.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.9.29">
+<link href="01-bigdata_files/libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.10.18">
 
   <meta name="author" content="Matteo Francia   DISI — University of Bologna   m.francia@unibo.it">
   <title>Data Platforms and Artificial Intelligence</title>
@@ -19,10 +19,13 @@
     /* Default styles provided by pandoc.
     ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
     */
-    code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
     ul.task-list li input[type="checkbox"] {
@@ -220,7 +223,7 @@
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Matteo Francia <br> DISI — University of Bologna <br> m.francia@unibo.it 
+Matteo Francia <br> DISI — University of Bologna <br> m.francia@unibo.it
 </div>
 </div>
 </div>
@@ -1175,26 +1178,26 @@ Matteo Francia <br> DISI — University of Bologna <br> m.francia@unibo.it
 </tbody>
 </table>
 </div><div class="column" style="width:50%;">
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource json number-lines"><code class="sourceCode json"><span id="cb1-1"><a href=""></a><span class="ot">[</span></span>
-<span id="cb1-2"><a href=""></a>    <span class="fu">{</span></span>
-<span id="cb1-3"><a href=""></a>        <span class="dt">"Product"</span><span class="fu">:</span> <span class="st">"P1"</span><span class="fu">,</span></span>
-<span id="cb1-4"><a href=""></a>        <span class="dt">"Name"</span><span class="fu">:</span> <span class="st">"Beer"</span><span class="fu">,</span></span>
-<span id="cb1-5"><a href=""></a>        <span class="dt">"Price"</span><span class="fu">:</span> <span class="dv">6</span><span class="fu">,</span></span>
-<span id="cb1-6"><a href=""></a>        <span class="dt">"Quantity"</span><span class="fu">:</span> <span class="st">"0.4L"</span></span>
-<span id="cb1-7"><a href=""></a>    <span class="fu">}</span><span class="ot">,</span></span>
-<span id="cb1-8"><a href=""></a>    <span class="fu">{</span></span>
-<span id="cb1-9"><a href=""></a>        <span class="dt">"Product"</span><span class="fu">:</span> <span class="st">"P2"</span><span class="fu">,</span></span>
-<span id="cb1-10"><a href=""></a>        <span class="dt">"Name"</span><span class="fu">:</span> <span class="st">"Milk"</span><span class="fu">,</span></span>
-<span id="cb1-11"><a href=""></a>        <span class="dt">"Price"</span><span class="fu">:</span> <span class="dv">1</span><span class="fu">,</span></span>
-<span id="cb1-12"><a href=""></a>        <span class="dt">"Expiration"</span><span class="fu">:</span> <span class="st">"2024-11-30"</span></span>
-<span id="cb1-13"><a href=""></a>    <span class="fu">}</span><span class="ot">,</span></span>
-<span id="cb1-14"><a href=""></a>    <span class="fu">{</span></span>
-<span id="cb1-15"><a href=""></a>        <span class="dt">"Product"</span><span class="fu">:</span> <span class="st">"P3"</span><span class="fu">,</span></span>
-<span id="cb1-16"><a href=""></a>        <span class="dt">"Name"</span><span class="fu">:</span> <span class="st">"Pizza"</span><span class="fu">,</span></span>
-<span id="cb1-17"><a href=""></a>        <span class="dt">"Price"</span><span class="fu">:</span> <span class="dv">6</span><span class="fu">,</span></span>
-<span id="cb1-18"><a href=""></a>        <span class="dt">"Ingredients"</span><span class="fu">:</span> <span class="ot">[</span><span class="er">...</span><span class="ot">]</span></span>
-<span id="cb1-19"><a href=""></a>    <span class="fu">}</span></span>
-<span id="cb1-20"><a href=""></a><span class="ot">]</span></span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource json number-lines"><code class="sourceCode json"><span id="cb1-1"><a href="" aria-label="1"></a><span class="ot">[</span></span>
+<span id="cb1-2"><a href="" aria-label="2"></a>    <span class="fu">{</span></span>
+<span id="cb1-3"><a href="" aria-label="3"></a>        <span class="dt">"Product"</span><span class="fu">:</span> <span class="st">"P1"</span><span class="fu">,</span></span>
+<span id="cb1-4"><a href="" aria-label="4"></a>        <span class="dt">"Name"</span><span class="fu">:</span> <span class="st">"Beer"</span><span class="fu">,</span></span>
+<span id="cb1-5"><a href="" aria-label="5"></a>        <span class="dt">"Price"</span><span class="fu">:</span> <span class="dv">6</span><span class="fu">,</span></span>
+<span id="cb1-6"><a href="" aria-label="6"></a>        <span class="dt">"Quantity"</span><span class="fu">:</span> <span class="st">"0.4L"</span></span>
+<span id="cb1-7"><a href="" aria-label="7"></a>    <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb1-8"><a href="" aria-label="8"></a>    <span class="fu">{</span></span>
+<span id="cb1-9"><a href="" aria-label="9"></a>        <span class="dt">"Product"</span><span class="fu">:</span> <span class="st">"P2"</span><span class="fu">,</span></span>
+<span id="cb1-10"><a href="" aria-label="10"></a>        <span class="dt">"Name"</span><span class="fu">:</span> <span class="st">"Milk"</span><span class="fu">,</span></span>
+<span id="cb1-11"><a href="" aria-label="11"></a>        <span class="dt">"Price"</span><span class="fu">:</span> <span class="dv">1</span><span class="fu">,</span></span>
+<span id="cb1-12"><a href="" aria-label="12"></a>        <span class="dt">"Expiration"</span><span class="fu">:</span> <span class="st">"2024-11-30"</span></span>
+<span id="cb1-13"><a href="" aria-label="13"></a>    <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb1-14"><a href="" aria-label="14"></a>    <span class="fu">{</span></span>
+<span id="cb1-15"><a href="" aria-label="15"></a>        <span class="dt">"Product"</span><span class="fu">:</span> <span class="st">"P3"</span><span class="fu">,</span></span>
+<span id="cb1-16"><a href="" aria-label="16"></a>        <span class="dt">"Name"</span><span class="fu">:</span> <span class="st">"Pizza"</span><span class="fu">,</span></span>
+<span id="cb1-17"><a href="" aria-label="17"></a>        <span class="dt">"Price"</span><span class="fu">:</span> <span class="dv">6</span><span class="fu">,</span></span>
+<span id="cb1-18"><a href="" aria-label="18"></a>        <span class="dt">"Ingredients"</span><span class="fu">:</span> <span class="ot">[</span><span class="er">...</span><span class="ot">]</span></span>
+<span id="cb1-19"><a href="" aria-label="19"></a>    <span class="fu">}</span></span>
+<span id="cb1-20"><a href="" aria-label="20"></a><span class="ot">]</span></span></code></pre></div>
 </div></div>
 </section>
 
@@ -1414,22 +1417,22 @@ Matteo Francia <br> DISI — University of Bologna <br> m.francia@unibo.it
 <ul>
 <li>Return more documents with one query</li>
 </ul>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource js number-lines"><code class="sourceCode javascript"><span id="cb2-1"><a href=""></a>db<span class="op">.</span><span class="at">collection</span><span class="op">.</span><span class="fu">find</span>({})  <span class="co">// retrieves multiple documents matching the filter</span></span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource js number-lines"><code class="sourceCode javascript"><span id="cb2-1"><a href="" aria-label="1"></a>db<span class="op">.</span><span class="at">collection</span><span class="op">.</span><span class="fu">find</span>({})  <span class="co">// retrieves multiple documents matching the filter</span></span></code></pre></div>
 <ul>
 <li>Select which fields to project</li>
 </ul>
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource js number-lines"><code class="sourceCode javascript"><span id="cb3-1"><a href=""></a>db<span class="op">.</span><span class="at">collection</span><span class="op">.</span><span class="fu">find</span>({}<span class="op">,</span> { <span class="dt">field1</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span> <span class="dt">field2</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span> <span class="dt">_id</span><span class="op">:</span> <span class="dv">0</span> })  <span class="co">// only include specific fields</span></span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource js number-lines"><code class="sourceCode javascript"><span id="cb3-1"><a href="" aria-label="1"></a>db<span class="op">.</span><span class="at">collection</span><span class="op">.</span><span class="fu">find</span>({}<span class="op">,</span> { <span class="dt">field1</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span> <span class="dt">field2</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span> <span class="dt">_id</span><span class="op">:</span> <span class="dv">0</span> })  <span class="co">// only include specific fields</span></span></code></pre></div>
 <ul>
 <li>Filter on the fields</li>
 </ul>
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource js number-lines"><code class="sourceCode javascript"><span id="cb4-1"><a href=""></a>db<span class="op">.</span><span class="at">collection</span><span class="op">.</span><span class="fu">find</span>({ <span class="dt">status</span><span class="op">:</span> <span class="st">"active"</span><span class="op">,</span> <span class="dt">age</span><span class="op">:</span> { <span class="dt">$gt</span><span class="op">:</span> <span class="dv">30</span> } })  <span class="co">// filter by conditions</span></span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource js number-lines"><code class="sourceCode javascript"><span id="cb4-1"><a href="" aria-label="1"></a>db<span class="op">.</span><span class="at">collection</span><span class="op">.</span><span class="fu">find</span>({ <span class="dt">status</span><span class="op">:</span> <span class="st">"active"</span><span class="op">,</span> <span class="dt">age</span><span class="op">:</span> { <span class="dt">$gt</span><span class="op">:</span> <span class="dv">30</span> } })  <span class="co">// filter by conditions</span></span></code></pre></div>
 <ul>
 <li>Update specific fields</li>
 </ul>
-<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource js number-lines"><code class="sourceCode javascript"><span id="cb5-1"><a href=""></a>db<span class="op">.</span><span class="at">collection</span><span class="op">.</span><span class="fu">updateMany</span>(</span>
-<span id="cb5-2"><a href=""></a>    { <span class="dt">status</span><span class="op">:</span> <span class="st">"active"</span> }<span class="op">,</span>           <span class="co">// filter</span></span>
-<span id="cb5-3"><a href=""></a>    { <span class="dt">$set</span><span class="op">:</span> { <span class="dt">verified</span><span class="op">:</span> <span class="kw">true</span> } }    <span class="co">// update specific field(s)</span></span>
-<span id="cb5-4"><a href=""></a>)</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource js number-lines"><code class="sourceCode javascript"><span id="cb5-1"><a href="" aria-label="1"></a>db<span class="op">.</span><span class="at">collection</span><span class="op">.</span><span class="fu">updateMany</span>(</span>
+<span id="cb5-2"><a href="" aria-label="2"></a>    { <span class="dt">status</span><span class="op">:</span> <span class="st">"active"</span> }<span class="op">,</span>           <span class="co">// filter</span></span>
+<span id="cb5-3"><a href="" aria-label="3"></a>    { <span class="dt">$set</span><span class="op">:</span> { <span class="dt">verified</span><span class="op">:</span> <span class="kw">true</span> } }    <span class="co">// update specific field(s)</span></span>
+<span id="cb5-4"><a href="" aria-label="4"></a>)</span></code></pre></div>
 <p>Different implementations, different functionalities</p>
 <ul>
 <li>Create indexes on fields and (materialized) views</li>
@@ -1450,39 +1453,39 @@ Matteo Francia <br> DISI — University of Bologna <br> m.francia@unibo.it
 </div>
 </div><div class="column" style="width:60%;">
 <p>Collection answering the blue query</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource json number-lines"><code class="sourceCode json"><span id="cb6-1"><a href=""></a><span class="ot">[</span></span>
-<span id="cb6-2"><a href=""></a>  <span class="fu">{</span></span>
-<span id="cb6-3"><a href=""></a>    <span class="dt">"_id"</span><span class="fu">:</span> <span class="dv">1</span><span class="fu">,</span></span>
-<span id="cb6-4"><a href=""></a>    <span class="dt">"name"</span><span class="fu">:</span> <span class="st">"Martin"</span><span class="fu">,</span></span>
-<span id="cb6-5"><a href=""></a>    <span class="dt">"adrs"</span><span class="fu">:</span> <span class="ot">[</span></span>
-<span id="cb6-6"><a href=""></a>      <span class="fu">{</span> <span class="dt">"street"</span><span class="fu">:</span> <span class="st">"Adam"</span><span class="fu">,</span> <span class="dt">"city"</span><span class="fu">:</span> <span class="st">"Chicago"</span><span class="fu">,</span> <span class="dt">"state"</span><span class="fu">:</span> <span class="st">"Illinois"</span><span class="fu">,</span> <span class="dt">"code"</span><span class="fu">:</span> <span class="dv">60007</span> <span class="fu">}</span><span class="ot">,</span></span>
-<span id="cb6-7"><a href=""></a>      <span class="fu">{</span> <span class="dt">"street"</span><span class="fu">:</span> <span class="st">"9th"</span><span class="fu">,</span> <span class="dt">"city"</span><span class="fu">:</span> <span class="st">"New York"</span><span class="fu">,</span> <span class="dt">"state"</span><span class="fu">:</span> <span class="st">"New York"</span><span class="fu">,</span> <span class="dt">"code"</span><span class="fu">:</span> <span class="dv">10001</span> <span class="fu">}</span></span>
-<span id="cb6-8"><a href=""></a>    <span class="ot">]</span></span>
-<span id="cb6-9"><a href=""></a>  <span class="fu">}</span></span>
-<span id="cb6-10"><a href=""></a><span class="ot">]</span></span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource json number-lines"><code class="sourceCode json"><span id="cb6-1"><a href="" aria-label="1"></a><span class="ot">[</span></span>
+<span id="cb6-2"><a href="" aria-label="2"></a>  <span class="fu">{</span></span>
+<span id="cb6-3"><a href="" aria-label="3"></a>    <span class="dt">"_id"</span><span class="fu">:</span> <span class="dv">1</span><span class="fu">,</span></span>
+<span id="cb6-4"><a href="" aria-label="4"></a>    <span class="dt">"name"</span><span class="fu">:</span> <span class="st">"Martin"</span><span class="fu">,</span></span>
+<span id="cb6-5"><a href="" aria-label="5"></a>    <span class="dt">"adrs"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb6-6"><a href="" aria-label="6"></a>      <span class="fu">{</span> <span class="dt">"street"</span><span class="fu">:</span> <span class="st">"Adam"</span><span class="fu">,</span> <span class="dt">"city"</span><span class="fu">:</span> <span class="st">"Chicago"</span><span class="fu">,</span> <span class="dt">"state"</span><span class="fu">:</span> <span class="st">"Illinois"</span><span class="fu">,</span> <span class="dt">"code"</span><span class="fu">:</span> <span class="dv">60007</span> <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb6-7"><a href="" aria-label="7"></a>      <span class="fu">{</span> <span class="dt">"street"</span><span class="fu">:</span> <span class="st">"9th"</span><span class="fu">,</span> <span class="dt">"city"</span><span class="fu">:</span> <span class="st">"New York"</span><span class="fu">,</span> <span class="dt">"state"</span><span class="fu">:</span> <span class="st">"New York"</span><span class="fu">,</span> <span class="dt">"code"</span><span class="fu">:</span> <span class="dv">10001</span> <span class="fu">}</span></span>
+<span id="cb6-8"><a href="" aria-label="8"></a>    <span class="ot">]</span></span>
+<span id="cb6-9"><a href="" aria-label="9"></a>  <span class="fu">}</span></span>
+<span id="cb6-10"><a href="" aria-label="10"></a><span class="ot">]</span></span></code></pre></div>
 <div class="fragment">
 <p>Collection answering the purple query</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource json number-lines"><code class="sourceCode json"><span id="cb7-1"><a href=""></a><span class="ot">[</span></span>
-<span id="cb7-2"><a href=""></a>  <span class="fu">{</span></span>
-<span id="cb7-3"><a href=""></a>    <span class="dt">"_id"</span><span class="fu">:</span><span class="dv">1</span><span class="fu">,</span></span>
-<span id="cb7-4"><a href=""></a>    <span class="dt">"customer"</span><span class="fu">:</span><span class="st">"1"</span><span class="fu">,</span></span>
-<span id="cb7-5"><a href=""></a>    <span class="dt">"orderpayments"</span><span class="fu">:</span><span class="ot">[</span></span>
-<span id="cb7-6"><a href=""></a>      <span class="fu">{</span></span>
-<span id="cb7-7"><a href=""></a>        <span class="dt">"card"</span><span class="fu">:</span><span class="dv">457</span><span class="fu">,</span></span>
-<span id="cb7-8"><a href=""></a>        <span class="dt">"billadrs"</span><span class="fu">:</span> <span class="fu">{</span> <span class="dt">"street"</span><span class="fu">:</span><span class="st">"Adam"</span><span class="fu">,</span> <span class="dt">"city"</span><span class="fu">:</span><span class="st">"Chicago"</span><span class="fu">,</span> <span class="dt">"state"</span><span class="fu">:</span><span class="st">"Illinois"</span><span class="fu">,</span> <span class="dt">"code"</span><span class="fu">:</span><span class="dv">60007</span> <span class="fu">}</span></span>
-<span id="cb7-9"><a href=""></a>      <span class="fu">}</span><span class="ot">,</span></span>
-<span id="cb7-10"><a href=""></a>      <span class="fu">{</span></span>
-<span id="cb7-11"><a href=""></a>        <span class="dt">"card"</span><span class="fu">:</span><span class="dv">457</span><span class="fu">,</span></span>
-<span id="cb7-12"><a href=""></a>        <span class="dt">"billadrs"</span><span class="fu">:</span> <span class="fu">{</span> <span class="dt">"street"</span><span class="fu">:</span><span class="st">"9th"</span><span class="fu">,</span> <span class="dt">"city"</span><span class="fu">:</span><span class="st">"New York"</span><span class="fu">,</span> <span class="dt">"state"</span><span class="fu">:</span><span class="st">"New York"</span><span class="fu">,</span> <span class="dt">"code"</span><span class="fu">:</span><span class="dv">10001</span> <span class="fu">}</span></span>
-<span id="cb7-13"><a href=""></a>      <span class="fu">}</span></span>
-<span id="cb7-14"><a href=""></a>    <span class="ot">]</span><span class="fu">,</span></span>
-<span id="cb7-15"><a href=""></a>    <span class="dt">"products"</span><span class="fu">:</span><span class="ot">[</span></span>
-<span id="cb7-16"><a href=""></a>      <span class="fu">{</span> <span class="dt">"id"</span><span class="fu">:</span><span class="dv">1</span><span class="fu">,</span> <span class="dt">"name"</span><span class="fu">:</span><span class="st">"Cola"</span><span class="fu">,</span> <span class="dt">"price"</span><span class="fu">:</span><span class="fl">10.4</span> <span class="fu">}</span><span class="ot">,</span></span>
-<span id="cb7-17"><a href=""></a>      <span class="fu">{</span> <span class="dt">"id"</span><span class="fu">:</span><span class="dv">2</span><span class="fu">,</span> <span class="dt">"name"</span><span class="fu">:</span><span class="st">"Beer"</span><span class="fu">,</span> <span class="dt">"price"</span><span class="fu">:</span><span class="fl">14.4</span> <span class="fu">}</span></span>
-<span id="cb7-18"><a href=""></a>    <span class="ot">]</span><span class="fu">,</span></span>
-<span id="cb7-19"><a href=""></a>    <span class="dt">"shipadrs"</span><span class="fu">:{</span> <span class="dt">"street"</span><span class="fu">:</span><span class="st">"9th"</span><span class="fu">,</span> <span class="dt">"city"</span><span class="fu">:</span><span class="st">"New York"</span><span class="fu">,</span> <span class="dt">"state"</span><span class="fu">:</span><span class="st">"New York"</span><span class="fu">,</span> <span class="dt">"code"</span><span class="fu">:</span><span class="dv">10001</span> <span class="fu">}</span></span>
-<span id="cb7-20"><a href=""></a>  <span class="fu">}</span></span>
-<span id="cb7-21"><a href=""></a><span class="ot">]</span></span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource json number-lines"><code class="sourceCode json"><span id="cb7-1"><a href="" aria-label="1"></a><span class="ot">[</span></span>
+<span id="cb7-2"><a href="" aria-label="2"></a>  <span class="fu">{</span></span>
+<span id="cb7-3"><a href="" aria-label="3"></a>    <span class="dt">"_id"</span><span class="fu">:</span><span class="dv">1</span><span class="fu">,</span></span>
+<span id="cb7-4"><a href="" aria-label="4"></a>    <span class="dt">"customer"</span><span class="fu">:</span><span class="st">"1"</span><span class="fu">,</span></span>
+<span id="cb7-5"><a href="" aria-label="5"></a>    <span class="dt">"orderpayments"</span><span class="fu">:</span><span class="ot">[</span></span>
+<span id="cb7-6"><a href="" aria-label="6"></a>      <span class="fu">{</span></span>
+<span id="cb7-7"><a href="" aria-label="7"></a>        <span class="dt">"card"</span><span class="fu">:</span><span class="dv">457</span><span class="fu">,</span></span>
+<span id="cb7-8"><a href="" aria-label="8"></a>        <span class="dt">"billadrs"</span><span class="fu">:</span> <span class="fu">{</span> <span class="dt">"street"</span><span class="fu">:</span><span class="st">"Adam"</span><span class="fu">,</span> <span class="dt">"city"</span><span class="fu">:</span><span class="st">"Chicago"</span><span class="fu">,</span> <span class="dt">"state"</span><span class="fu">:</span><span class="st">"Illinois"</span><span class="fu">,</span> <span class="dt">"code"</span><span class="fu">:</span><span class="dv">60007</span> <span class="fu">}</span></span>
+<span id="cb7-9"><a href="" aria-label="9"></a>      <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb7-10"><a href="" aria-label="10"></a>      <span class="fu">{</span></span>
+<span id="cb7-11"><a href="" aria-label="11"></a>        <span class="dt">"card"</span><span class="fu">:</span><span class="dv">457</span><span class="fu">,</span></span>
+<span id="cb7-12"><a href="" aria-label="12"></a>        <span class="dt">"billadrs"</span><span class="fu">:</span> <span class="fu">{</span> <span class="dt">"street"</span><span class="fu">:</span><span class="st">"9th"</span><span class="fu">,</span> <span class="dt">"city"</span><span class="fu">:</span><span class="st">"New York"</span><span class="fu">,</span> <span class="dt">"state"</span><span class="fu">:</span><span class="st">"New York"</span><span class="fu">,</span> <span class="dt">"code"</span><span class="fu">:</span><span class="dv">10001</span> <span class="fu">}</span></span>
+<span id="cb7-13"><a href="" aria-label="13"></a>      <span class="fu">}</span></span>
+<span id="cb7-14"><a href="" aria-label="14"></a>    <span class="ot">]</span><span class="fu">,</span></span>
+<span id="cb7-15"><a href="" aria-label="15"></a>    <span class="dt">"products"</span><span class="fu">:</span><span class="ot">[</span></span>
+<span id="cb7-16"><a href="" aria-label="16"></a>      <span class="fu">{</span> <span class="dt">"id"</span><span class="fu">:</span><span class="dv">1</span><span class="fu">,</span> <span class="dt">"name"</span><span class="fu">:</span><span class="st">"Cola"</span><span class="fu">,</span> <span class="dt">"price"</span><span class="fu">:</span><span class="fl">10.4</span> <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb7-17"><a href="" aria-label="17"></a>      <span class="fu">{</span> <span class="dt">"id"</span><span class="fu">:</span><span class="dv">2</span><span class="fu">,</span> <span class="dt">"name"</span><span class="fu">:</span><span class="st">"Beer"</span><span class="fu">,</span> <span class="dt">"price"</span><span class="fu">:</span><span class="fl">14.4</span> <span class="fu">}</span></span>
+<span id="cb7-18"><a href="" aria-label="18"></a>    <span class="ot">]</span><span class="fu">,</span></span>
+<span id="cb7-19"><a href="" aria-label="19"></a>    <span class="dt">"shipadrs"</span><span class="fu">:{</span> <span class="dt">"street"</span><span class="fu">:</span><span class="st">"9th"</span><span class="fu">,</span> <span class="dt">"city"</span><span class="fu">:</span><span class="st">"New York"</span><span class="fu">,</span> <span class="dt">"state"</span><span class="fu">:</span><span class="st">"New York"</span><span class="fu">,</span> <span class="dt">"code"</span><span class="fu">:</span><span class="dv">10001</span> <span class="fu">}</span></span>
+<span id="cb7-20"><a href="" aria-label="20"></a>  <span class="fu">}</span></span>
+<span id="cb7-21"><a href="" aria-label="21"></a><span class="ot">]</span></span></code></pre></div>
 </div>
 </div></div>
 </section>
@@ -1498,35 +1501,35 @@ Matteo Francia <br> DISI — University of Bologna <br> m.francia@unibo.it
 </figure>
 </div>
 </div><div class="column" style="width:60%;">
-<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource json number-lines"><code class="sourceCode json"><span id="cb8-1"><a href=""></a><span class="ot">[</span></span>
-<span id="cb8-2"><a href=""></a>  <span class="fu">{</span></span>
-<span id="cb8-3"><a href=""></a>    <span class="dt">"_id"</span><span class="fu">:</span><span class="dv">1</span><span class="fu">,</span></span>
-<span id="cb8-4"><a href=""></a>    <span class="dt">"name"</span><span class="fu">:</span><span class="st">"Martin"</span><span class="fu">,</span></span>
-<span id="cb8-5"><a href=""></a>    <span class="dt">"adrs"</span><span class="fu">:</span><span class="ot">[</span></span>
-<span id="cb8-6"><a href=""></a>      <span class="fu">{</span> <span class="dt">"street"</span><span class="fu">:</span><span class="st">"Adam"</span><span class="fu">,</span> <span class="dt">"city"</span><span class="fu">:</span><span class="st">"Chicago"</span><span class="fu">,</span> <span class="dt">"state"</span><span class="fu">:</span><span class="st">"Illinois"</span><span class="fu">,</span> <span class="dt">"code"</span><span class="fu">:</span><span class="dv">60007</span> <span class="fu">}</span><span class="ot">,</span></span>
-<span id="cb8-7"><a href=""></a>      <span class="fu">{</span> <span class="dt">"street"</span><span class="fu">:</span><span class="st">"9th"</span><span class="fu">,</span> <span class="dt">"city"</span><span class="fu">:</span><span class="st">"New York"</span><span class="fu">,</span> <span class="dt">"state"</span><span class="fu">:</span><span class="st">"New York"</span><span class="fu">,</span> <span class="dt">"code"</span><span class="fu">:</span><span class="dv">10001</span> <span class="fu">}</span></span>
-<span id="cb8-8"><a href=""></a>    <span class="ot">]</span><span class="fu">,</span></span>
-<span id="cb8-9"><a href=""></a>    <span class="dt">"orders"</span><span class="fu">:</span><span class="ot">[</span></span>
-<span id="cb8-10"><a href=""></a>      <span class="fu">{</span></span>
-<span id="cb8-11"><a href=""></a>        <span class="dt">"orderpayments"</span><span class="fu">:</span><span class="ot">[</span></span>
-<span id="cb8-12"><a href=""></a>          <span class="fu">{</span></span>
-<span id="cb8-13"><a href=""></a>            <span class="dt">"card"</span><span class="fu">:</span><span class="dv">457</span><span class="fu">,</span></span>
-<span id="cb8-14"><a href=""></a>            <span class="dt">"billadrs"</span><span class="fu">:{</span> <span class="dt">"street"</span><span class="fu">:</span><span class="st">"Adam"</span><span class="fu">,</span> <span class="dt">"city"</span><span class="fu">:</span><span class="st">"Chicago"</span><span class="fu">,</span> <span class="dt">"state"</span><span class="fu">:</span><span class="st">"Illinois"</span><span class="fu">,</span> <span class="dt">"code"</span><span class="fu">:</span><span class="dv">60007</span> <span class="fu">}</span></span>
-<span id="cb8-15"><a href=""></a>          <span class="fu">}</span><span class="ot">,</span></span>
-<span id="cb8-16"><a href=""></a>          <span class="fu">{</span></span>
-<span id="cb8-17"><a href=""></a>            <span class="dt">"card"</span><span class="fu">:</span><span class="dv">457</span><span class="fu">,</span></span>
-<span id="cb8-18"><a href=""></a>            <span class="dt">"billadrs"</span><span class="fu">:{</span> <span class="dt">"street"</span><span class="fu">:</span><span class="st">"9th"</span><span class="fu">,</span> <span class="dt">"city"</span><span class="fu">:</span><span class="st">"New York"</span><span class="fu">,</span> <span class="dt">"state"</span><span class="fu">:</span><span class="st">"New York"</span><span class="fu">,</span> <span class="dt">"code"</span><span class="fu">:</span><span class="dv">10001</span> <span class="fu">}</span></span>
-<span id="cb8-19"><a href=""></a>          <span class="fu">}</span></span>
-<span id="cb8-20"><a href=""></a>        <span class="ot">]</span><span class="fu">,</span></span>
-<span id="cb8-21"><a href=""></a>        <span class="dt">"products"</span><span class="fu">:</span><span class="ot">[</span></span>
-<span id="cb8-22"><a href=""></a>          <span class="fu">{</span> <span class="dt">"id"</span><span class="fu">:</span><span class="dv">1</span><span class="fu">,</span> <span class="dt">"name"</span><span class="fu">:</span><span class="st">"Cola"</span><span class="fu">,</span> <span class="dt">"price"</span><span class="fu">:</span><span class="fl">10.4</span> <span class="fu">}</span><span class="ot">,</span></span>
-<span id="cb8-23"><a href=""></a>          <span class="fu">{</span> <span class="dt">"id"</span><span class="fu">:</span><span class="dv">2</span><span class="fu">,</span> <span class="dt">"name"</span><span class="fu">:</span><span class="st">"Beer"</span><span class="fu">,</span> <span class="dt">"price"</span><span class="fu">:</span><span class="fl">14.4</span> <span class="fu">}</span></span>
-<span id="cb8-24"><a href=""></a>        <span class="ot">]</span></span>
-<span id="cb8-25"><a href=""></a>      <span class="fu">}</span></span>
-<span id="cb8-26"><a href=""></a>    <span class="ot">]</span><span class="fu">,</span></span>
-<span id="cb8-27"><a href=""></a>    <span class="dt">"shipadrs"</span><span class="fu">:{</span> <span class="dt">"street"</span><span class="fu">:</span><span class="st">"9th"</span><span class="fu">,</span> <span class="dt">"city"</span><span class="fu">:</span><span class="st">"New York"</span><span class="fu">,</span> <span class="dt">"state"</span><span class="fu">:</span><span class="st">"New York"</span><span class="fu">,</span> <span class="dt">"code"</span><span class="fu">:</span><span class="dv">10001</span> <span class="fu">}</span></span>
-<span id="cb8-28"><a href=""></a>  <span class="fu">}</span></span>
-<span id="cb8-29"><a href=""></a><span class="ot">]</span></span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource json number-lines"><code class="sourceCode json"><span id="cb8-1"><a href="" aria-label="1"></a><span class="ot">[</span></span>
+<span id="cb8-2"><a href="" aria-label="2"></a>  <span class="fu">{</span></span>
+<span id="cb8-3"><a href="" aria-label="3"></a>    <span class="dt">"_id"</span><span class="fu">:</span><span class="dv">1</span><span class="fu">,</span></span>
+<span id="cb8-4"><a href="" aria-label="4"></a>    <span class="dt">"name"</span><span class="fu">:</span><span class="st">"Martin"</span><span class="fu">,</span></span>
+<span id="cb8-5"><a href="" aria-label="5"></a>    <span class="dt">"adrs"</span><span class="fu">:</span><span class="ot">[</span></span>
+<span id="cb8-6"><a href="" aria-label="6"></a>      <span class="fu">{</span> <span class="dt">"street"</span><span class="fu">:</span><span class="st">"Adam"</span><span class="fu">,</span> <span class="dt">"city"</span><span class="fu">:</span><span class="st">"Chicago"</span><span class="fu">,</span> <span class="dt">"state"</span><span class="fu">:</span><span class="st">"Illinois"</span><span class="fu">,</span> <span class="dt">"code"</span><span class="fu">:</span><span class="dv">60007</span> <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb8-7"><a href="" aria-label="7"></a>      <span class="fu">{</span> <span class="dt">"street"</span><span class="fu">:</span><span class="st">"9th"</span><span class="fu">,</span> <span class="dt">"city"</span><span class="fu">:</span><span class="st">"New York"</span><span class="fu">,</span> <span class="dt">"state"</span><span class="fu">:</span><span class="st">"New York"</span><span class="fu">,</span> <span class="dt">"code"</span><span class="fu">:</span><span class="dv">10001</span> <span class="fu">}</span></span>
+<span id="cb8-8"><a href="" aria-label="8"></a>    <span class="ot">]</span><span class="fu">,</span></span>
+<span id="cb8-9"><a href="" aria-label="9"></a>    <span class="dt">"orders"</span><span class="fu">:</span><span class="ot">[</span></span>
+<span id="cb8-10"><a href="" aria-label="10"></a>      <span class="fu">{</span></span>
+<span id="cb8-11"><a href="" aria-label="11"></a>        <span class="dt">"orderpayments"</span><span class="fu">:</span><span class="ot">[</span></span>
+<span id="cb8-12"><a href="" aria-label="12"></a>          <span class="fu">{</span></span>
+<span id="cb8-13"><a href="" aria-label="13"></a>            <span class="dt">"card"</span><span class="fu">:</span><span class="dv">457</span><span class="fu">,</span></span>
+<span id="cb8-14"><a href="" aria-label="14"></a>            <span class="dt">"billadrs"</span><span class="fu">:{</span> <span class="dt">"street"</span><span class="fu">:</span><span class="st">"Adam"</span><span class="fu">,</span> <span class="dt">"city"</span><span class="fu">:</span><span class="st">"Chicago"</span><span class="fu">,</span> <span class="dt">"state"</span><span class="fu">:</span><span class="st">"Illinois"</span><span class="fu">,</span> <span class="dt">"code"</span><span class="fu">:</span><span class="dv">60007</span> <span class="fu">}</span></span>
+<span id="cb8-15"><a href="" aria-label="15"></a>          <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb8-16"><a href="" aria-label="16"></a>          <span class="fu">{</span></span>
+<span id="cb8-17"><a href="" aria-label="17"></a>            <span class="dt">"card"</span><span class="fu">:</span><span class="dv">457</span><span class="fu">,</span></span>
+<span id="cb8-18"><a href="" aria-label="18"></a>            <span class="dt">"billadrs"</span><span class="fu">:{</span> <span class="dt">"street"</span><span class="fu">:</span><span class="st">"9th"</span><span class="fu">,</span> <span class="dt">"city"</span><span class="fu">:</span><span class="st">"New York"</span><span class="fu">,</span> <span class="dt">"state"</span><span class="fu">:</span><span class="st">"New York"</span><span class="fu">,</span> <span class="dt">"code"</span><span class="fu">:</span><span class="dv">10001</span> <span class="fu">}</span></span>
+<span id="cb8-19"><a href="" aria-label="19"></a>          <span class="fu">}</span></span>
+<span id="cb8-20"><a href="" aria-label="20"></a>        <span class="ot">]</span><span class="fu">,</span></span>
+<span id="cb8-21"><a href="" aria-label="21"></a>        <span class="dt">"products"</span><span class="fu">:</span><span class="ot">[</span></span>
+<span id="cb8-22"><a href="" aria-label="22"></a>          <span class="fu">{</span> <span class="dt">"id"</span><span class="fu">:</span><span class="dv">1</span><span class="fu">,</span> <span class="dt">"name"</span><span class="fu">:</span><span class="st">"Cola"</span><span class="fu">,</span> <span class="dt">"price"</span><span class="fu">:</span><span class="fl">10.4</span> <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb8-23"><a href="" aria-label="23"></a>          <span class="fu">{</span> <span class="dt">"id"</span><span class="fu">:</span><span class="dv">2</span><span class="fu">,</span> <span class="dt">"name"</span><span class="fu">:</span><span class="st">"Beer"</span><span class="fu">,</span> <span class="dt">"price"</span><span class="fu">:</span><span class="fl">14.4</span> <span class="fu">}</span></span>
+<span id="cb8-24"><a href="" aria-label="24"></a>        <span class="ot">]</span></span>
+<span id="cb8-25"><a href="" aria-label="25"></a>      <span class="fu">}</span></span>
+<span id="cb8-26"><a href="" aria-label="26"></a>    <span class="ot">]</span><span class="fu">,</span></span>
+<span id="cb8-27"><a href="" aria-label="27"></a>    <span class="dt">"shipadrs"</span><span class="fu">:{</span> <span class="dt">"street"</span><span class="fu">:</span><span class="st">"9th"</span><span class="fu">,</span> <span class="dt">"city"</span><span class="fu">:</span><span class="st">"New York"</span><span class="fu">,</span> <span class="dt">"state"</span><span class="fu">:</span><span class="st">"New York"</span><span class="fu">,</span> <span class="dt">"code"</span><span class="fu">:</span><span class="dv">10001</span> <span class="fu">}</span></span>
+<span id="cb8-28"><a href="" aria-label="28"></a>  <span class="fu">}</span></span>
+<span id="cb8-29"><a href="" aria-label="29"></a><span class="ot">]</span></span></code></pre></div>
 </div></div>
 </section>
 
@@ -1773,12 +1776,12 @@ Matteo Francia <br> DISI — University of Bologna <br> m.francia@unibo.it
 <section id="spark-sample-dag" class="title-slide slide level1 center">
 <h1>Spark sample DAG</h1>
 <p>Word count</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource scala number-lines"><code class="sourceCode scala"><span id="cb9-1"><a href=""></a>textFile <span class="op">=</span> sc<span class="op">.</span><span class="fu">textFile</span><span class="op">(</span><span class="st">"hdfs://..."</span><span class="op">)</span></span>
-<span id="cb9-2"><a href=""></a>counts <span class="op">=</span> textFile</span>
-<span id="cb9-3"><a href=""></a>              <span class="op">.</span><span class="fu">flatMap</span><span class="op">(</span>line <span class="op">=&gt;</span> line<span class="op">.</span><span class="fu">split</span><span class="op">(</span><span class="st">" "</span><span class="op">))</span></span>
-<span id="cb9-4"><a href=""></a>              <span class="op">.</span><span class="fu">map</span><span class="op">(</span>lambda word<span class="op">:</span> <span class="op">(</span>word<span class="op">,</span> <span class="dv">1</span><span class="op">))</span></span>
-<span id="cb9-5"><a href=""></a>              <span class="op">.</span><span class="fu">reduceByKey</span><span class="op">(</span>lambda a<span class="op">,</span> b<span class="op">:</span> a <span class="op">+</span> b<span class="op">)</span></span>
-<span id="cb9-6"><a href=""></a>counts<span class="op">.</span><span class="fu">saveAsTextFile</span><span class="op">(</span><span class="st">"hdfs://..."</span><span class="op">)</span></span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource scala number-lines"><code class="sourceCode scala"><span id="cb9-1"><a href="" aria-label="1"></a>textFile <span class="op">=</span> sc<span class="op">.</span><span class="fu">textFile</span><span class="op">(</span><span class="st">"hdfs://..."</span><span class="op">)</span></span>
+<span id="cb9-2"><a href="" aria-label="2"></a>counts <span class="op">=</span> textFile</span>
+<span id="cb9-3"><a href="" aria-label="3"></a>              <span class="op">.</span><span class="fu">flatMap</span><span class="op">(</span>line <span class="op">=&gt;</span> line<span class="op">.</span><span class="fu">split</span><span class="op">(</span><span class="st">" "</span><span class="op">))</span></span>
+<span id="cb9-4"><a href="" aria-label="4"></a>              <span class="op">.</span><span class="fu">map</span><span class="op">(</span>lambda word<span class="op">:</span> <span class="op">(</span>word<span class="op">,</span> <span class="dv">1</span><span class="op">))</span></span>
+<span id="cb9-5"><a href="" aria-label="5"></a>              <span class="op">.</span><span class="fu">reduceByKey</span><span class="op">(</span>lambda a<span class="op">,</span> b<span class="op">:</span> a <span class="op">+</span> b<span class="op">)</span></span>
+<span id="cb9-6"><a href="" aria-label="6"></a>counts<span class="op">.</span><span class="fu">saveAsTextFile</span><span class="op">(</span><span class="st">"hdfs://..."</span><span class="op">)</span></span></code></pre></div>
 
 <img data-src="./img/spark-wc.png" class="r-stretch quarto-figure-center"><p class="caption">Word count</p></section>
 
